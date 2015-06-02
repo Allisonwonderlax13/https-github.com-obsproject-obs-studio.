@@ -6,7 +6,7 @@ Will give better instructions later when things are in a more complete state.
 ###Windows:
 * Load git submodules (required):
 
-        git submodule init && git submodule update
+         git submodule update --init
 
 * NOTE: OBS on windows currently requires VS2013, as obs-studio uses C99 and C++11.  Express might not be supported at this time (though I'll fix it at some point). You can always just get VS2013 Community Edition for free.
 
@@ -58,7 +58,7 @@ Will give better instructions later when things are in a more complete state.
 ###Mac OSX
 * Load git submodules (required):
 
-        git submodule init && git submodule update
+         git submodule update --init
 
 * Use macports or homebrew and install FFmpeg, x264, Qt5, and cmake.
 
@@ -86,7 +86,7 @@ Will give better instructions later when things are in a more complete state.
 
 ###Linux
 
-**(Ubuntu 14.04/14.10/15.04 installation)**
+**Ubuntu 14.04/14.10/15.04 installation**
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
     For Ubuntu 14.04/14.10:
@@ -104,19 +104,19 @@ Will give better instructions later when things are in a more complete state.
         sudo apt-get update && sudo apt-get install obs-studio
 
 
-**Linux (Arch Linux installation, unofficial)**
+**Arch Linux installation, unofficial**
 * Link:  https://aur.archlinux.org/packages/obs-studio-git
 
 
-**Linux (OpenSUSE installation, unofficial)**
+**OpenSUSE installation, unofficial**
 * Link:  http://packman.links2linux.org/package/obs-studio
 
 
-**Linux (Gentoo installation, unofficial)**
+**Gentoo installation, unofficial**
 * Link:  https://github.com/saintdev/obs-studio-overlay
 
 
-**Linux (NixOS installation)**
+**NixOS installation**
 * Get the latest Nix packages:
 
         git clone https://github.com/nixos/nixpkgs ~/nixpkgs
@@ -126,7 +126,7 @@ Will give better instructions later when things are in a more complete state.
         nix-env -f ~/nixpkgs -Q -i obs-studio
 
 
-**Linux (Manually compiling on Redhat-based distros such as Fedora)**
+**Manually compiling on Redhat-based distros such as Fedora**
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
 * Set up a build environment:
@@ -154,7 +154,7 @@ Will give better instructions later when things are in a more complete state.
         sudo make install
 
 
-**Linux (Manually compiling on Debian-based distros)**
+**Manually compiling on Debian-based distros**
 * Set up a build environment:
 
         sudo apt-get install build-essential pkg-config cmake git checkinstall
