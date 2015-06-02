@@ -10,16 +10,17 @@ Will give better instructions later when things are in a more complete state.
 
 * NOTE: OBS on windows currently requires VS2013, as obs-studio uses C99 and C++11.  Express might not be supported at this time (though I'll fix it at some point). You can always just get VS2013 Community Edition for free.
 
-* Download (or build) development packages of FFmpeg, x264, Qt5.
+* Download (or build) development packages of FFmpeg, x264, Qt5, cURL.
 
 * Download windows version of cmake from: http://www.cmake.org/
 
 * Add windows environment variables:
 > FFMpegPath    (path to FFmpeg include directory)  
 > x264Path      (path to x264 include directory)  
-> QTDIR         (path to Qt build base directory)
+> QTDIR         (path to Qt build base directory)  
+> curlPath      (path to cURL include directory)
 
-* NOTE: Each of these environment variables can specify 32bit and 64bit by appending 32 and 64 to the end of the environment variable names. So if you want to separate locations for 32bit or 64bit, you can set: FFmpegPath32, FFmpegPath64, x264Path32, x264Path64, QTDIR32, QTDIR64, etc.
+* NOTE: Each of these environment variables can specify 32bit and 64bit by appending 32 and 64 to the end of the environment variable names. So if you want to separate locations for 32bit or 64bit, you can set: FFmpegPath32, FFmpegPath64, x264Path32, x264Path64, QTDIR32, QTDIR64, curlPath32, curlPath64 etc.
 
 * NOTE: These variables are optional and these can be entered in to cmake while generating, but having these variables makes life much easier in case you need to regenerate your cmake data from scratch for whatever reason.
 
