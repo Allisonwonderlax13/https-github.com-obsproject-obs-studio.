@@ -159,7 +159,7 @@ Will give better instructions later when things are in a more complete state.
 
         sudo apt-get install build-essential pkg-config cmake git checkinstall
 
-*FFmpeg is required, and not commonly available on debian-based distros. If you want a custom compilation with FDK AAC encoder and such, see:
+* FFmpeg is required, and not commonly available on debian-based distros. If you want a custom compilation with FDK AAC encoder and such, see:
 
         https://trac.ffmpeg.org/wiki/CompilationGuide
 
