@@ -106,7 +106,8 @@ Will give better instructions later when things are in a more complete state.
 
 
 **Arch Linux installation, unofficial**
-* Link:  https://aur.archlinux.org/packages/obs-studio-git
+* Link for the "Git" version:  https://aur.archlinux.org/packages/obs-studio-git
+* Link for the "release" version:  https://aur.archlinux.org/packages/obs-studio
 
 
 **OpenSUSE installation, unofficial**
