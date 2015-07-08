@@ -110,8 +110,39 @@ Will give better instructions later when things are in a more complete state.
 * Link for the "release" version:  https://aur4.archlinux.org/packages/obs-studio
 
 
-**OpenSUSE installation, unofficial**
-* Link:  http://packman.links2linux.org/package/obs-studio
+**openSUSE installation, unofficial**
+  - The Packman repository contains the obs-studio package since it requires
+    the fuller version of FFmpeg which is in Packman for legal reasons. If you
+    do not already have the Packman repository add it as shown below.
+
+    For openSUSE Tumbleweed:
+
+        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Tumbleweed packman
+
+    For openSUSE 13.2:
+
+        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_13.2 packman
+
+    It is recommended to set the priority for Packman lower so it takes
+    precedence over base repositories.
+
+        sudo zypper mr --priority 90 packman
+
+  - The Packman version of FFmpeg should be used for full codec support. To
+    ensure any existing FFmpeg packages are switched to Packman versions
+    execute the following before installing obs-studio.
+
+        sudo zypper dup --repo packman
+
+  - Install the obs-studio package.
+
+        sudo zypper in obs-studio
+
+  - Links:
+    - 1 click install, direct rpm links, and download counts:
+      http://packman.links2linux.org/package/obs-studio
+    - Build information:
+      https://pmbs.links2linux.de/package/show/Multimedia/obs-studio
 
 
 **Gentoo installation, unofficial**
