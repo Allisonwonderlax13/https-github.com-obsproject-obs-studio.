@@ -224,6 +224,38 @@ Will give better instructions later when things are in a more complete state.
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
 
+**Manually compiling on openSUSE**
+  - See openSUSE installation instructions (above) for details on adding Packman repository.
+
+  - Install build dependencies:
+
+        sudo zypper in cmake \
+          fontconfig-devel \
+          freetype2-devel \
+          gcc \
+          gcc-c++ \
+          libcurl-devel \
+          libffmpeg-devel \
+          libjansson-devel \
+          libpulse-devel \
+          libqt5-qtbase-devel \
+          libqt5-qtx11extras-devel \
+          libudev-devel \
+          libv4l-devel \
+          libXcomposite-devel \
+          libXinerama-devel \
+          libXrandr-devel
+
+  - Building and installing OBS:
+
+        git clone https://github.com/jp9000/obs-studio.git
+        cd obs-studio
+        mkdir build && cd build
+        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+        make -j4
+        sudo make install
+
+
 **Linux portable mode**
 * You can also build in portable mode on Linux, which installs all the
     files to an isolated directory:
