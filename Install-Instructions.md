@@ -15,9 +15,9 @@ Will give better instructions later when things are in a more complete state.
 * Download windows version of cmake from: http://www.cmake.org/
 
 * The follow variables must be used to specify dependencies, these variables can either be specified via a windows environment variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
-> DepsPath      (path to the include or base path for all dependencies if they're all in one place, not including Qt)
-> FFMpegPath    (path to FFmpeg include directory)
-> x264Path      (path to x264 include directory)
+> DepsPath      (path to the include or base path for all dependencies if they're all in one place, not including Qt)  
+> FFMpegPath    (path to FFmpeg include directory)  
+> x264Path      (path to x264 include directory)  
 > curlPath      (path to cURL include directory)
 
 * NOTE: Search paths and search order for base dependency library/binary files, relative to their include directories:
