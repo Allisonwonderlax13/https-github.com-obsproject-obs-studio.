@@ -8,27 +8,19 @@ Will give better instructions later when things are in a more complete state.
 
          git submodule update --init
 
-* NOTE: OBS on windows currently requires VS2013, as obs-studio uses C99 and C++11.  Express might not be supported at this time (though I'll fix it at some point). You can always just get VS2013 Community Edition for free.
+* NOTE: OBS on windows currently requires VS2013 with the latest update, as obs-studio uses both C99 and C++11.  Express might not be supported at this time (though if not, then it'll be fixed it at some point).  You can always just get VS2013 Community Edition for free.
 
 * Download (or build) development packages of FFmpeg, x264, Qt5, cURL.
 
 * Download windows version of cmake from: http://www.cmake.org/
 
-* Add windows environment variables:
-> FFMpegPath    (path to FFmpeg include directory)  
-> x264Path      (path to x264 include directory)  
-> QTDIR         (path to Qt build base directory)  
+* The follow variables must be used to specify dependencies, these variables can either be specified via a windows environment variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
+> DepsPath      (path to the include or base path for all dependencies if they're all in one place, not including Qt)
+> FFMpegPath    (path to FFmpeg include directory)
+> x264Path      (path to x264 include directory)
 > curlPath      (path to cURL include directory)
 
-* NOTE: Each of these environment variables can specify 32bit and 64bit by appending 32 and 64 to the end of the environment variable names. So if you want to separate locations for 32bit or 64bit, you can set: FFmpegPath32, FFmpegPath64, x264Path32, x264Path64, QTDIR32, QTDIR64, curlPath32, curlPath64 etc.
-
-* NOTE: These variables are optional and these can be entered in to cmake while generating, but having these variables makes life much easier in case you need to regenerate your cmake data from scratch for whatever reason.
-
-* NOTE: An example Qt directory you would use here if you installed Qt5 to D:\Qt would usually look something like this:
-> (32bit) D:\Qt\5.3\msvc2013  
-> (64bit) D:\Qt\5.3\msvc2013_64
-
-* NOTE: Search paths and search order for FFmpeg and x264 library/binary files, relative to their include directories:
+* NOTE: Search paths and search order for base dependency library/binary files, relative to their include directories:
 
     Library files  
     * ../lib  
@@ -46,9 +38,18 @@ Will give better instructions later when things are in a more complete state.
     * ./bin32 (if 32bit)  
     * ./bin64 (if 64bit)
 
+* If you're building the GUI, the following cmake or windows environment variable must be used separately from the other dependencies to specify Qt5's location.  Like the other environment variables, append 32 or 64 if you wish to build both architectures:
+> QTDIR         (path to Qt build base directory)
+
+* NOTE: The GUI builds by default.  If you don't want to build the GUI, add a cmake boolean variable DISABLE_UI, set to true.
+
+* NOTE: An example Qt directory you would use here if you installed Qt5 to D:\Qt would usually look something like this:
+> (32bit) D:\Qt\5.3\msvc2013  
+> (64bit) D:\Qt\5.3\msvc2013_64
+
 * Run cmake-gui.  In "where is the source code", enter in the repo directory (example: D:/obs).  In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
-* NOTE: The subdirectories 'build', 'release', and 'debug' are meant for builds, and are excluded from the repo in .gitignore, so they are safe to use for building.
+* NOTE: You should create one or more of the following subdirectories within the repository for building: release, debug, and build (suffixed with or without 32/64 to specify architecture).  They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
 * Press 'Configure', then enable the COPY_DEPENDENCIES option, then press 'Configure' again, and then press 'Generate' to generate visual studio project files in the 'build' subdirectory.
 
