@@ -1,4 +1,4 @@
-**Note:** If you want to make a change to these instructions, it is recommended you come to #obs-dev on Quakenet if you have question first.
+**Note:** If you want to make a change to these instructions, it is recommended you come to #obs-dev on Quakenet if you have questions first.
 
 ***
 
