@@ -209,7 +209,7 @@ Will give better instructions later when things are in a more complete state.
         sudo apt-get install zlib1g-dev yasm
         git clone --depth 1 git://source.ffmpeg.org/ffmpeg.git
         cd ffmpeg
-        ./configure --enable-shared --prefix=/usr
+        ./configure --enable-shared --enable-gpl --enable-libx264 --prefix=/usr
         make -j4
         sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
                 --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
