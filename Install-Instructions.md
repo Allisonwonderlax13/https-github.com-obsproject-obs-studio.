@@ -204,12 +204,12 @@ Will give better instructions later when things are in a more complete state.
 
         https://trac.ffmpeg.org/wiki/CompilationGuide
 
-* Otherwise, I will only give easy and brief instructions for a very minimal FFmpeg installation:
+* Otherwise, I will only give easy and brief instructions for a very minimal FFmpeg installation (note that it does not require the inclusion of packages such as x264/etc, but you can include them if you wish):
 
         sudo apt-get install zlib1g-dev yasm
         git clone --depth 1 git://source.ffmpeg.org/ffmpeg.git
         cd ffmpeg
-        ./configure --enable-shared --enable-gpl --enable-libx264 --prefix=/usr
+        ./configure --enable-shared --prefix=/usr
         make -j4
         sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
                 --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
