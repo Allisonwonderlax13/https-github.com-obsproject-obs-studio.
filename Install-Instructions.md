@@ -193,6 +193,13 @@ Will give better instructions later when things are in a more complete state.
 
         sudo apt-get install build-essential pkg-config cmake git checkinstall
 
+* Get the required packages:
+
+        sudo apt-get install libx11-dev libgl1-mesa-dev libpulse-dev libxcomposite-dev \
+                libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev \
+                libfontconfig-dev qtbase5-dev libqt5x11extras5-dev libx264-dev \
+                libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev
+
 * FFmpeg is required, and not commonly available on debian-based distros. If you want a custom compilation with FDK AAC encoder and such, see:
 
         https://trac.ffmpeg.org/wiki/CompilationGuide
@@ -202,17 +209,10 @@ Will give better instructions later when things are in a more complete state.
         sudo apt-get install zlib1g-dev yasm
         git clone --depth 1 git://source.ffmpeg.org/ffmpeg.git
         cd ffmpeg
-        ./configure --enable-shared --prefix=/usr
+        ./configure --enable-shared --enable-gpl --enable-libx264 --enable-libfreetype --prefix=/usr
         make -j4
         sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
                 --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
-
-* Get the required packages:
-
-        sudo apt-get install libx11-dev libgl-dev libpulse-dev libxcomposite-dev \
-                libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev \
-                libfontconfig-dev qtbase5-dev libqt5x11extras5-dev libx264-dev \
-                libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl-dev
 
 * Building and installing OBS:
 
