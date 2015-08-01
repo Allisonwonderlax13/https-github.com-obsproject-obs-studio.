@@ -110,6 +110,18 @@
 * Link for the "release" version:  https://aur4.archlinux.org/packages/obs-studio
 
 
+**Fedora 22 installation**
+* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it from the rpmfusion repos with the following commands:
+
+        sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-22.noarch.rpm
+
+* Then you can install OBS with the following commands (This pulls all dependencies, including ffmpeg):
+
+        sudo sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
+        sudo wget -O /etc/yum.repos.d/tech-3.repo http://repo.tech-3.net/Fedora/tech-3.repo
+        sudo dnf update && sudo dnf install obs-studio
+
+
 **openSUSE installation, unofficial**
   - The Packman repository contains the obs-studio package since it requires
     the fuller version of FFmpeg which is in Packman for legal reasons. If you
