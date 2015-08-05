@@ -174,7 +174,7 @@
 **Manually compiling on Redhat-based distros such as Fedora**
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
-* Set up a build environment:
+* Set up a build environment (substitute yum with dnf on Fedora 22):
 
         sudo yum install gcc gcc-c++ gcc-objc cmake git
 
