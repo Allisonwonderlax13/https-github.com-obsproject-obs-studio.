@@ -187,7 +187,8 @@
         sudo yum install libX11-devel libGL-devel libv4l-devel \
                 pulseaudio-libs-devel x264-devel freetype-devel \
                 fontconfig-devel libXcomposite-devel libXinerama-devel \
-                qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel
+                qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
+                systemd-devel
 
 * Building and installing OBS:
 
