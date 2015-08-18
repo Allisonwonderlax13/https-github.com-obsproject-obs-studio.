@@ -106,8 +106,8 @@
 
 
 **Arch Linux installation, unofficial**
-* Link for the "Git" version:  https://aur4.archlinux.org/packages/obs-studio-git
-* Link for the "release" version:  https://aur4.archlinux.org/packages/obs-studio
+* Link for the "Git" version:  https://aur.archlinux.org/packages/obs-studio-git
+* Link for the "release" version:  https://aur.archlinux.org/packages/obs-studio
 
 
 **Fedora 22 installation**
