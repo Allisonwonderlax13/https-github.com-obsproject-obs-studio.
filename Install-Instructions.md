@@ -117,7 +117,7 @@
 
 * Then you can install OBS with the following commands (This pulls all dependencies, including ffmpeg):
 
-        sudo sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
+        sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
         sudo wget -O /etc/yum.repos.d/tech-3.repo http://repo.tech-3.net/Fedora/tech-3.repo
         sudo dnf update && sudo dnf install obs-studio
 
