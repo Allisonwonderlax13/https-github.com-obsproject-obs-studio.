@@ -13,7 +13,7 @@
 
 * Download windows version of cmake from: http://www.cmake.org/
 
-* The follow variables must be used to specify dependencies, these variables can either be specified via a windows environment variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
+* The following variables must be used to specify dependencies, these variables can either be specified via a windows environment variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
    * `DepsPath`      (path to the include for all dependencies, not including Qt)  
    * `FFMpegPath`    (path to just FFmpeg include directory)  
    * `x264Path`      (path to just x264 include directory)  
