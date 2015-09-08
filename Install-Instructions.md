@@ -87,6 +87,9 @@
 
 ###Linux
 
+**NOTE:** OpenGL 3.2 or later is required to use OBS Multiplatform on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
+* glxinfo | grep "OpenGL"
+
 **Ubuntu 14.04/14.10/15.04 installation**
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
