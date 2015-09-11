@@ -1,4 +1,6 @@
-**Note:** If you want to make a change to these instructions, it is recommended you come to #obs-dev on Quakenet if you have questions first.
+If you want to develop for OBS, please visit #obs-dev on Quakenet and get to know the devs or have questions answered!
+
+Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in IRC first.
 
 ***
 
