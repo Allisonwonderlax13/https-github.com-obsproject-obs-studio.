@@ -126,6 +126,10 @@ Also, if there is something in this guide you want to change/improve on, it is r
         sudo wget -O /etc/yum.repos.d/tech-3.repo http://repo.tech-3.net/Fedora/tech-3.repo
         sudo dnf update && sudo dnf install obs-studio
 
+* To do updates, you may need to do the following:
+
+        sudo dnf clean all && sudo dnf update -y
+
 
 **openSUSE installation, unofficial**
   - The Packman repository contains the obs-studio package since it requires
