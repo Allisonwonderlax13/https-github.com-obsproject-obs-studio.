@@ -4,6 +4,23 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
+### Table of Contents:
+* [Windows](#windows)
+* [Mac OSX](#mac-osx)
+* [Linux](#linux)
+    * [Ubuntu 14.04 LTS/15.04 installation](#ubuntu-1404-lts1504-installation)
+    * [Arch Linux installation, unofficial](#arch-linux-installation-unofficial)
+    * [Fedora 22 installation](#fedora-22-installation)
+    * [openSUSE installation, unofficial](#opensuse-installation-unofficial)
+    * [Gentoo installation, unofficial](#gentoo-installation-unofficial)
+    * [NixOS installation](#nixos-installation)
+    * [Manually compiling on Redhat-based distros such as Fedora](#manually-compiling-on-redhat-based-distros-such-as-fedora)
+    * [Manually compiling on Debian-based distros](#manually-compiling-on-debian-based-distros)
+    * [Manually compiling on openSUSE](#manually-compiling-on-opensuse)
+    * [Linux portable mode](#linux-portable-mode)
+
+***
+
 ###Windows:
 * Load git submodules (required):
 
@@ -92,7 +109,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 **NOTE:** OpenGL 3.2 or later is required to use OBS Multiplatform on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
 * glxinfo | grep "OpenGL"
 
-**Ubuntu 14.04 LTS/15.04 installation**
+***
+
+### Ubuntu 14.04 LTS/15.04 installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
     For Ubuntu 14.04 LTS:
@@ -109,13 +128,15 @@ Also, if there is something in this guide you want to change/improve on, it is r
         sudo add-apt-repository ppa:obsproject/obs-studio
         sudo apt-get update && sudo apt-get install obs-studio
 
+***
 
-**Arch Linux installation, unofficial**
+### Arch Linux installation, unofficial
 * Link for the "Git" version:  https://aur.archlinux.org/packages/obs-studio-git
 * Link for the "release" version:  https://aur.archlinux.org/packages/obs-studio
 
+***
 
-**Fedora 22 installation**
+### Fedora 22 installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it from the rpmfusion repos with the following commands:
 
         sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-22.noarch.rpm
@@ -130,8 +151,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
         sudo dnf clean all && sudo dnf update -y
 
+***
 
-**openSUSE installation, unofficial**
+### openSUSE installation, unofficial
   - The Packman repository contains the obs-studio package since it requires
     the fuller version of FFmpeg which is in Packman for legal reasons. If you
     do not already have the Packman repository add it as shown below.
@@ -165,12 +187,14 @@ Also, if there is something in this guide you want to change/improve on, it is r
     - Build information:
       https://pmbs.links2linux.de/package/show/Multimedia/obs-studio
 
+***
 
-**Gentoo installation, unofficial**
+### Gentoo installation, unofficial
 * Link:  https://github.com/saintdev/obs-studio-overlay
 
+***
 
-**NixOS installation**
+### NixOS installation
 * Get the latest Nix packages:
 
         git clone https://github.com/nixos/nixpkgs ~/nixpkgs
@@ -179,8 +203,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
         nix-env -f ~/nixpkgs -Q -i obs-studio
 
+***
 
-**Manually compiling on Redhat-based distros such as Fedora**
+### Manually compiling on Redhat-based distros such as Fedora
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
 * Set up a build environment (substitute yum with dnf on Fedora 22 and up):
@@ -208,8 +233,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
         make -j4
         sudo make install
 
+***
 
-**Manually compiling on Debian-based distros**
+### Manually compiling on Debian-based distros
 * Set up a build environment:
 
         sudo apt-get install build-essential pkg-config cmake git checkinstall
@@ -245,8 +271,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
         sudo checkinstall --pkgname=obs-studio --fstrans=no --backup=no \
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
+***
 
-**Manually compiling on openSUSE**
+### Manually compiling on openSUSE
   - See openSUSE installation instructions (above) for details on adding Packman repository.
 
   - Install build dependencies:
@@ -277,8 +304,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
         make -j4
         sudo make install
 
+***
 
-**Linux portable mode**
+### Linux portable mode
 * You can also build in portable mode on Linux, which installs all the
     files to an isolated directory:
 
