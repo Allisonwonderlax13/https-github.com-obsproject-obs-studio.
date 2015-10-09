@@ -261,6 +261,10 @@ Also, if there is something in this guide you want to change/improve on, it is r
         sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
                 --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
+* Alternatively, Debian Jessie non-free, and Ubuntu 14.04 LTS multiverse has packages for FDK AAC.  Add non-free (Debian) or multiverse (Ubuntu) to your /etc/apt/sources.list.  Tested on Debian Stretch:
+
+        sudo apt-get install libavcodec-dev libavfilter-dev libavdevice-dev libfdk-aac-dev
+
 * Building and installing OBS:
 
         git clone https://github.com/jp9000/obs-studio.git
