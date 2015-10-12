@@ -34,7 +34,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 * The following variables must be used to specify dependencies, these variables can either be specified via a windows environment variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
    * `DepsPath`      (path to the include for all dependencies, not including Qt)  
-   * `FFMpegPath`    (path to just FFmpeg include directory)  
+   * `FFmpegPath`    (path to just FFmpeg include directory)  
    * `x264Path`      (path to just x264 include directory)  
    * `curlPath`      (path to just cURL include directory)
 
