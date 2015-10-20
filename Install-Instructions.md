@@ -198,6 +198,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
     nix-env -i obs-studio
 
+See https://nixos.org/wiki/OBS for further instructions
 ***
 
 ### Manually compiling on Redhat-based distros such as Fedora
