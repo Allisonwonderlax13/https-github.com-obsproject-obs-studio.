@@ -195,13 +195,8 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ***
 
 ### NixOS installation
-* Get the latest Nix packages:
 
-        git clone https://github.com/nixos/nixpkgs ~/nixpkgs
-
-* Install:
-
-        nix-env -f ~/nixpkgs -Q -i obs-studio
+    nix-env -i obs-studio
 
 ***
 
