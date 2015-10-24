@@ -22,13 +22,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ***
 
 ###Windows:
-* Clone the repository:
+* Clone the repository and submodules:
 
-         git clone https://github.com/jp9000/obs-studio.git
-
-* Load git submodules (required):
-
-         git submodule update --init
+         git clone --recursive https://github.com/jp9000/obs-studio.git
 
 * NOTE: OBS on windows currently requires VS2013 with the latest update, as obs-studio uses both C99 and C++11.  Express might not be supported at this time (though if not, then it'll be fixed it at some point).  You can always just get VS2013 Community Edition for free.
 
@@ -80,13 +76,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ***
 
 ###Mac OSX
-* Clone the repository:
+* Clone the repository and submodules:
 
-         git clone https://github.com/jp9000/obs-studio.git
-
-* Load git submodules (required):
-
-         git submodule update --init
+         git clone --recursive https://github.com/jp9000/obs-studio.git
 
 * Use macports or homebrew and install FFmpeg, x264, Qt5, and cmake.
 
