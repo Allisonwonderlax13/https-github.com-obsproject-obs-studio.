@@ -80,6 +80,10 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ***
 
 ###Mac OSX
+* Clone the repository:
+
+         git clone https://github.com/jp9000/obs-studio.git
+
 * Load git submodules (required):
 
          git submodule update --init
