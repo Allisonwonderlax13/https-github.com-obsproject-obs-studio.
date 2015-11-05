@@ -162,6 +162,10 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
         sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Tumbleweed packman
 
+    For openSUSE Leap 42.1:
+
+        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.1 packman
+
     For openSUSE 13.2:
 
         sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_13.2 packman
