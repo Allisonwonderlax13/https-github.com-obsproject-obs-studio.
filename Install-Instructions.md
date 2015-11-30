@@ -71,7 +71,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 * Press 'Configure', then enable the COPY_DEPENDENCIES option, then press 'Configure' again, and then press 'Generate' to generate visual studio project files in the 'build' subdirectory.
 
-* Open obs-studio.sln from the 'build' subdirectory, and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully fuctional build environment.
+* Open obs-studio.sln from the 'build' subdirectory, and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully fuctional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
 ***
 
