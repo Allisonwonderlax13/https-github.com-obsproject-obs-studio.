@@ -136,10 +136,10 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
-### Fedora 22 installation
-* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it from the rpmfusion repos with the following commands:
+### Fedora 22/23 installation
+* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it from the rpmfusion repos with the following commands (replace the XX with your Fedora version number, e.g. 23):
 
-        sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-22.noarch.rpm
+        sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-XX.noarch.rpm
 
 * Then you can install OBS with the following commands (This pulls all dependencies, including ffmpeg):
 
