@@ -10,7 +10,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 * [Linux](#linux)
     * [Ubuntu 14.04 LTS/15.04 installation](#ubuntu-1404-lts1504-installation)
     * [Arch Linux installation, unofficial](#arch-linux-installation-unofficial)
-    * [Fedora 22 installation](#fedora-22-installation)
+    * [Fedora 22+ installation, unofficial](#fedora-installation-unofficial)
     * [openSUSE installation, unofficial](#opensuse-installation-unofficial)
     * [Gentoo installation, unofficial](#gentoo-installation-unofficial)
     * [NixOS installation](#nixos-installation)
@@ -136,7 +136,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
-### Fedora 22/23 installation
+### Fedora installation, unofficial
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it from the rpmfusion repos with the following commands (replace the XX with your Fedora version number, e.g. 23):
 
         sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-XX.noarch.rpm
