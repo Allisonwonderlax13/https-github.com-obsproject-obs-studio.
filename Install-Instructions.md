@@ -205,7 +205,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 See https://nixos.org/wiki/OBS for further instructions
 ***
 
-### Manually compiling on Redhat-based distros such as Fedora
+### Manually compiling on Red Hat based distros such as Fedora
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
 * Set up a build environment (substitute yum with dnf on Fedora 22 and up):
