@@ -141,6 +141,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
         sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-XX.noarch.rpm
 
+
 * Then you can install OBS with the following commands (This pulls all dependencies, including ffmpeg):
 
         sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
@@ -151,6 +152,17 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
         sudo dnf clean all && sudo dnf update -y
 
+* For Hardware Acceleration support, choose an FFmpeg build that has NVidia nvenc or Intel QSync enabled in the build options
+* FFmpeg with hardware acceleration: http://negativo17.org/handbrake-makemkv-ffmpeg-and-skype-available-for-centosrhel-7/
+
+        sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
+        sudo dnf install ffmpeg --setopt=install_weak_deps=True
+        ffmpeg -codecs | grep nvenc
+
+        sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
+        sudo dnf config-manager --add-repo http://repo.tech-3.net/Fedora/tech-3.repo
+        sudo dnf clean all && sudo dnf update -y
+        sudo dnf install obs-studio
 ***
 
 ### openSUSE installation, unofficial
