@@ -172,7 +172,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
     For openSUSE Tumbleweed:
 
-        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Tumbleweed packman
+        sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Tumbleweed packman
 
     For openSUSE Leap 42.1:
 
@@ -183,7 +183,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
         sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_13.2 packman
 
     It is recommended to set the priority for Packman lower so it takes
-    precedence over base repositories.
+    precedence over base repositories (skip on Tumbleweed as included in initial command).
 
         sudo zypper mr --priority 90 packman
 
