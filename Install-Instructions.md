@@ -26,7 +26,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
          git clone --recursive https://github.com/jp9000/obs-studio.git
 
-* NOTE: OBS on windows currently requires VS2013 with the latest update, as obs-studio uses both C99 and C++11.  Express might not be supported at this time (though if not, then it'll be fixed it at some point).  You can always just get VS2013 Community Edition for free.
+* NOTE: OBS on windows currently requires VS2013 with the latest update, as obs-studio uses both C99 and C++11.  Express might not be supported at this time (though if not, then it'll be fixed it at some point).  You can always just get VS2013 Community Edition for free. In case you want to try with VS2015, [this hint](http://stackoverflow.com/a/32418900/2896619) might be useful regarding a linking error (*LNK2001 : unresolved external symbol _sprintf*) in the `text-freetype2` project.
 
 * Download (or build) development packages of FFmpeg, x264, Qt5, cURL.  Pre-built windows dependencies (excluding Qt) for VS2013 can be found here:  http://code.fosshub.com/OBS/downloads
 
