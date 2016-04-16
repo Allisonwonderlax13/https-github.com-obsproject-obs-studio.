@@ -8,8 +8,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 * [Windows](#windows)
 * [Mac OSX](#mac-osx)
 * [Linux](#linux)
-    * [Ubuntu 14.04 LTS/15.04 installation](#ubuntu-1404-lts1504-installation)
+    * [Ubuntu installation (14.04 and following)](#ubuntu-installation)
     * [Arch Linux installation, unofficial](#arch-linux-installation-unofficial)
+    * [Manjaro installation, unofficial](#manjaro-installation-unofficial)
     * [Fedora 22+ installation, unofficial](#fedora-installation-unofficial)
     * [openSUSE installation, unofficial](#opensuse-installation-unofficial)
     * [Gentoo installation, unofficial](#gentoo-installation-unofficial)
@@ -111,15 +112,15 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
-### Ubuntu 14.04 LTS/15.04 installation
+### Ubuntu installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
-    For Ubuntu 14.04 LTS:
+    For Ubuntu 14.04 LTS or 14.10, FFmpeg is not officially included so you will need a specific PPA:
 
         sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
         sudo apt-get update && sudo apt-get install ffmpeg
 
-    For Ubuntu 15.04:
+    For Ubuntu 15.04 and following versions, FFmpeg is officially included:
 
         sudo apt-get install ffmpeg
 
@@ -131,8 +132,20 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ***
 
 ### Arch Linux installation, unofficial
-* Link for the "Git" version:  https://aur.archlinux.org/packages/obs-studio-git
-* Link for the "release" version:  https://aur.archlinux.org/packages/obs-studio
+* "Release" version is available on community repository:
+
+        sudo pacman -S obs-studio
+
+* "Git" version is available on AUR:  https://aur.archlinux.org/packages/obs-studio-git
+
+
+***
+
+### Manjaro installation, unofficial
+* Graphical: search "obs-studio" on Pamac Manager or Octopi
+* Command-line: install it via pacman with the following command:
+
+        sudo pacman -S obs-studio
 
 ***
 
