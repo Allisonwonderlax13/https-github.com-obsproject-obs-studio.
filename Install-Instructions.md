@@ -115,12 +115,12 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ### Ubuntu installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
-    For Ubuntu 14.04 LTS or 14.10, FFmpeg is not officially included so you will need a specific PPA:
+    **For Ubuntu 14.04 LTS or 14.10**, FFmpeg is not officially included so you will need a specific PPA:
 
         sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
         sudo apt-get update && sudo apt-get install ffmpeg
 
-    For Ubuntu 15.04 and following versions, FFmpeg is officially included:
+    **For Ubuntu 15.04 and following versions**, FFmpeg is officially included:
 
         sudo apt-get install ffmpeg
 
