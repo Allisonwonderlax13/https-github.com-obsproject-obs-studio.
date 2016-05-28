@@ -23,56 +23,61 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ***
 
 ###Windows:
-* Clone the repository and submodules:
+* **Requirements for building OBS on windows**
+  * Development packages of `FFmpeg`, `x264`, and `cURL`.  
+    * Pre-built windows dependencies for VS2013 and VS2015 can be found here:  http://code.fosshub.com/OBS/downloads
+  * [Qt5](http://www.qt.io/)
+  * Windows version of [cmake](http://www.cmake.org/)
+  * Visual Studio 2013 (Latest update) or Visual Studio 2015
 
-         git clone --recursive https://github.com/jp9000/obs-studio.git
+* **Installation Procedure**
+  * Clone the repository and submodules:
 
-* NOTE: OBS on windows currently requires VS2013 with the latest update, as obs-studio uses both C99 and C++11.  Express might not be supported at this time (though if not, then it'll be fixed it at some point).  You can always just get VS2013 Community Edition for free. In case you want to try with VS2015, [this hint](http://stackoverflow.com/a/32418900/2896619) might be useful regarding a linking error (*LNK2001 : unresolved external symbol _sprintf*) in the `text-freetype2` project.
+         `git clone --recursive https://github.com/jp9000/obs-studio.git`
 
-* Download (or build) development packages of FFmpeg, x264, Qt5, cURL.  Pre-built windows dependencies (excluding Qt) for VS2013 can be found here:  http://code.fosshub.com/OBS/downloads
+  * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
-* Download windows version of cmake from: http://www.cmake.org/
+  * Specify the following in cmake. These variables can either be specified via a Windows Environment Variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
+    * **Required**
+      * `DepsPath` (Path to the include for all dependencies, not including Qt.)
+	  * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required.)
+	    * NOTE: An example Qt directory you would use here if you installed Qt5 to D:\Qt would usually look something like this:
+          * `(32bit) D:\Qt\5.3\msvc2013`
+          * `(64bit) D:\Qt\5.3\msvc2013_64`
+    * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
+      * `FFmpegPath` (Path to just FFmpeg include directory.)  
+      * `x264Path` (Path to just x264 include directory.)  
+      * `curlPath` (Path to just cURL include directory.)
 
-* The following variables must be used to specify dependencies, these variables can either be specified via a windows environment variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
-   * `DepsPath`      (path to the include for all dependencies, not including Qt)  
-   * `FFmpegPath`    (path to just FFmpeg include directory)  
-   * `x264Path`      (path to just x264 include directory)  
-   * `curlPath`      (path to just cURL include directory)
+    * **NOTE**: Search paths and search order for base dependency library/binary files, relative to their include directories:
 
-* NOTE: Search paths and search order for base dependency library/binary files, relative to their include directories:
+      Library files  
+      * ../lib  
+      * ../lib32 (if 32bit)  
+      * ../lib64 (if 64bit)  
+      * ./lib  
+      * ./lib32 (if 32bit)  
+      * ./lib64 (if 64bit)
 
-    Library files  
-    * ../lib  
-    * ../lib32 (if 32bit)  
-    * ../lib64 (if 64bit)  
-    * ./lib  
-    * ./lib32 (if 32bit)  
-    * ./lib64 (if 64bit)
+      Binary files: 
+      * ../bin  
+      *  ../bin32 (if 32bit)  
+      * ../bin64 (if 64bit)  
+      * ./bin  
+      * ./bin32 (if 32bit)  
+      * ./bin64 (if 64bit)
 
-    Binary files:  
-    * ../bin  
-    *  ../bin32 (if 32bit)  
-    * ../bin64 (if 64bit)  
-    * ./bin  
-    * ./bin32 (if 32bit)  
-    * ./bin64 (if 64bit)
+  * Run cmake-gui.  
+    * In "where is the source code", enter in the repo directory (example: D:/obs).  
+	* In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
-* If you're building the GUI, the following cmake or windows environment variable must be used separately from the other dependencies to specify Qt5's location.  Like the other environment variables, append 32 or 64 if you wish to build both architectures:
-> QTDIR         (path to Qt build base directory)
+  * Press 'Configure'
+  
+  * Enable the COPY_DEPENDENCIES option, then press 'Configure' again. 
+  
+  * Press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
 
-* NOTE: The GUI builds by default.  If you don't want to build the GUI, add a cmake boolean variable DISABLE_UI, set to true.
-
-* NOTE: An example Qt directory you would use here if you installed Qt5 to D:\Qt would usually look something like this:
-> (32bit) D:\Qt\5.3\msvc2013  
-> (64bit) D:\Qt\5.3\msvc2013_64
-
-* Run cmake-gui.  In "where is the source code", enter in the repo directory (example: D:/obs).  In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
-
-* NOTE: You should create one or more of the following subdirectories within the repository for building: release, debug, and build (suffixed with or without 32/64 to specify architecture).  They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
-
-* Press 'Configure', then enable the COPY_DEPENDENCIES option, then press 'Configure' again, and then press 'Generate' to generate visual studio project files in the 'build' subdirectory.
-
-* Open obs-studio.sln from the 'build' subdirectory, and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully fuctional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
+  * Open obs-studio.sln from the 'build' subdirectory in Visual Studio, and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully fuctional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
 ***
 
