@@ -15,7 +15,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
     * [openSUSE installation, unofficial](#opensuse-installation-unofficial)
     * [Gentoo installation, unofficial](#gentoo-installation-unofficial)
     * [NixOS installation](#nixos-installation)
-    * [Manually compiling on Red Hat based distros such as Fedora](#manually-compiling-on-redhat-based-distros-such-as-fedora)
+    * [Manually compiling on Red Hat based distros such as Fedora](#manually-compiling-on-red-hat-based-distros-such-as-fedora)
     * [Manually compiling on Debian-based distros](#manually-compiling-on-debian-based-distros)
     * [Manually compiling on openSUSE](#manually-compiling-on-opensuse)
     * [Linux portable mode](#linux-portable-mode)
