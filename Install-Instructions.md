@@ -37,7 +37,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
   * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
-  * Specify the following in cmake. These variables can either be specified via a Windows Environment Variable, or through a cmake variable (optionally suffixed with '32' or '64' to specify architecture):
+  * You can set the following Variables in cmake-gui or set them as Windows Environment Variables (optionally suffixed with '32' or '64' to specify architecture):
     * **Required**
       * `DepsPath` (Path to the include for all dependencies, not including Qt.)
 	  * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required.)
@@ -69,10 +69,13 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
   * Run cmake-gui.  
     * In "where is the source code", enter in the repo directory (example: D:/obs).  
-	* In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
+    * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
-  * Press 'Configure'
+  * Press 'Configure' and select the generator that fits to your installed VS Version:  
+Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you want to build the 64bit version of OBS
   
+  * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
+
   * Enable the COPY_DEPENDENCIES option, then press 'Configure' again. 
   
   * Press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
