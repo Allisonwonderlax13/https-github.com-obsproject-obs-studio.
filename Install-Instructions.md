@@ -272,7 +272,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
   and then run  
 
-        sudo ldconfig
+       sudo ldconfig
 
 ***
 
