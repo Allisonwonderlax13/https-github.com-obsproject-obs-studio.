@@ -266,7 +266,11 @@ See https://nixos.org/wiki/OBS for further instructions
         make -j4
         sudo make install
 
-* By default obs installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line /usr/local/lib and then run
+* By default obs installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line 
+
+        /usr/local/lib
+
+and then run
 
         sudo ldconfig
 
