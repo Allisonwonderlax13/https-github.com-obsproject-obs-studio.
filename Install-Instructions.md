@@ -25,7 +25,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 ###Windows:
 * **Requirements for building OBS on windows**
   * Development packages of `FFmpeg`, `x264`, and `cURL`.  
-    * Pre-built windows dependencies for VS2013 and VS2015 can be found here:  http://code.fosshub.com/OBS/downloads
+    * Pre-built windows dependencies for VS2013 and VS2015 can be found here:
+      * VS2013: https://obsproject.com/downloads/dependencies2013.zip
+      * VS2015: https://obsproject.com/downloads/dependencies2015.zip
   * [Qt5](http://www.qt.io/)
   * Windows version of [cmake](http://www.cmake.org/)
   * Visual Studio 2013 (Latest update) or Visual Studio 2015
