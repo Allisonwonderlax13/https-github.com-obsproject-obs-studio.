@@ -90,6 +90,7 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 * Clone the repository and submodules:
 
          git clone --recursive https://github.com/jp9000/obs-studio.git
+         git submodule update --init
 
 * Use macports or homebrew and install FFmpeg, x264, Qt5, and cmake.
 
