@@ -318,8 +318,6 @@ See https://nixos.org/wiki/OBS for further instructions
         sudo checkinstall --pkgname=obs-studio --fstrans=no --backup=no \
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
-* You can also use the following installation script: [https://github.com/yoones/obsondeb](https://github.com/yoones/obsondeb)
-
 ***
 
 ### Manually compiling on openSUSE
