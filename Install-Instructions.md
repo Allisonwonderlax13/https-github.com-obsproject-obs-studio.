@@ -11,7 +11,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
     * [Ubuntu installation (14.04 and following)](#ubuntu-installation)
     * [Arch Linux installation, unofficial](#arch-linux-installation-unofficial)
     * [Manjaro installation, unofficial](#manjaro-installation-unofficial)
-    * [Fedora 22+ installation, unofficial](#fedora-installation-unofficial)
+    * [Fedora installation](#fedora-installation)
     * [openSUSE installation, unofficial](#opensuse-installation-unofficial)
     * [Gentoo installation, unofficial](#gentoo-installation-unofficial)
     * [NixOS installation](#nixos-installation)
@@ -159,21 +159,19 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
-### Fedora installation, unofficial
-* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it from the rpmfusion repos with the following commands (replace the XX with your Fedora version number, e.g. 23):
+### Fedora installation
+* OBS-studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
-        sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-XX.noarch.rpm
+        su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
 
-* Then you can install OBS with the following commands (This pulls all dependencies, including ffmpeg):
+* Then you can install OBS with the following command (This pulls all dependencies, including ffmpeg):
 
-        sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
-        sudo wget -O /etc/yum.repos.d/tech-3.repo http://repo.tech-3.net/Fedora/tech-3.repo
-        sudo dnf update && sudo dnf install obs-studio
+        sudo dnf install obs-studio
 
 * To do updates, you may need to do the following:
 
-        sudo dnf clean all && sudo dnf update -y
+        sudo dnf clean all && sudo dnf upgrade
 
 * For Hardware Acceleration support, choose an FFmpeg build that has NVidia nvenc or Intel QSync enabled in the build options
 * FFmpeg with hardware acceleration: http://negativo17.org/handbrake-makemkv-ffmpeg-and-skype-available-for-centosrhel-7/
@@ -182,8 +180,7 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
         sudo dnf install ffmpeg --setopt=install_weak_deps=True
         ffmpeg -codecs | grep nvenc
 
-        sudo rpm --import http://repo.tech-3.net/Fedora/TECH3-GPG-KEY.public
-        sudo dnf config-manager --add-repo http://repo.tech-3.net/Fedora/tech-3.repo
+        su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
         sudo dnf clean all && sudo dnf update -y
         sudo dnf install obs-studio
 ***
