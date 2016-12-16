@@ -33,9 +33,11 @@ Also, if there is something in this guide you want to change/improve on, it is r
   * Visual Studio 2013 (Latest update) or Visual Studio 2015
 
 * **Installation Procedure**
-  * Clone the repository and submodules:
+  * Clone the repository and **submodules**:
 
          `git clone --recursive https://github.com/jp9000/obs-studio.git`
+
+  * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
   * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
@@ -87,9 +89,11 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 ***
 
 ###Mac OSX
-* Clone the repository and submodules:
+* Clone the repository and **submodules**:
 
          git clone --recursive https://github.com/jp9000/obs-studio.git
+
+* If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
 * Use macports or homebrew and install FFmpeg, x264, Qt5, and cmake.
 
