@@ -169,24 +169,14 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
         su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 
 
-* Then you can install OBS with the following command (This pulls all dependencies, including ffmpeg):
+* Then you can install OBS with the following command (this pulls all dependencies, including NVENC-enabled ffmpeg):
 
         sudo dnf install obs-studio
 
-* To do updates, you may need to do the following:
+* For NVIDIA Hardware accelerated encoding make sure you have CUDA installed (in case of an older card, install xorg-x11-drv-nvidia-340xx-cuda instead):
 
-        sudo dnf clean all && sudo dnf upgrade
+        sudo dnf install xorg-x11-drv-nvidia-cuda
 
-* For Hardware Acceleration support, choose an FFmpeg build that has NVidia nvenc or Intel QSync enabled in the build options
-* FFmpeg with hardware acceleration: http://negativo17.org/handbrake-makemkv-ffmpeg-and-skype-available-for-centosrhel-7/
-
-        sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-handbrake.repo
-        sudo dnf install ffmpeg --setopt=install_weak_deps=True
-        ffmpeg -codecs | grep nvenc
-
-        su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
-        sudo dnf clean all && sudo dnf update -y
-        sudo dnf install obs-studio
 ***
 
 ### openSUSE installation, unofficial
@@ -244,13 +234,9 @@ See https://nixos.org/wiki/OBS for further instructions
 ### Manually compiling on Red Hat based distros such as Fedora
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
-* Set up a build environment (substitute yum with dnf on Fedora 22 and up):
+* Set up a build environment:
 
-        sudo yum install gcc gcc-c++ gcc-objc cmake git
-
-* If you don't care much about FFmpeg features, just get it from RPM fusion:
-
-        sudo yum install ffmpeg-devel
+        sudo dnf install gcc gcc-c++ gcc-objc cmake git
 
 * Get the required packages:
 
@@ -258,7 +244,7 @@ See https://nixos.org/wiki/OBS for further instructions
                 pulseaudio-libs-devel x264-devel freetype-devel \
                 fontconfig-devel libXcomposite-devel libXinerama-devel \
                 qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
-                systemd-devel
+                systemd-devel ffmpeg
 
 * Building and installing OBS:
 
