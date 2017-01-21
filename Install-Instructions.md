@@ -318,7 +318,12 @@ See https://nixos.org/wiki/OBS for further instructions
           gcc \
           gcc-c++ \
           libcurl-devel \
-          libffmpeg-devel \
+          libavcodec-devel \
+          libavdevice-devel \
+          libavfilter-devel \
+          libavformat-devel \
+          libswscale-devel \
+          libx264-devel \
           libjansson-devel \
           libpulse-devel \
           libqt5-qtbase-devel \
