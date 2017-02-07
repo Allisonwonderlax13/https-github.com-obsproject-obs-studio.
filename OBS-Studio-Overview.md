@@ -14,7 +14,7 @@ This guide is broken into these main sections:
 
 ![OBS Settings Window](https://i.imgur.com/52Hu5NI.png)
 
-Overall, most settings will be fairly self-explanatory. This will not cover everything, but will give you an 
+Overall, most settings will be fairly self-explanatory. This will not cover everything, but will be an overview of the basics and what you can do in each section.
 
 ###General
 - Change theme (light/dark)
