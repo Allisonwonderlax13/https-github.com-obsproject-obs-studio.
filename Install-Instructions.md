@@ -126,6 +126,14 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
+### Debian installation
+* OBS Studio requires an OpenGL 3.2 compatible video card.
+
+    **For Debian 9 "Stretch"**, execute the following commands:
+
+        sudo apt-get update
+        sudo apt-get install obs-studio
+
 ### Ubuntu installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
