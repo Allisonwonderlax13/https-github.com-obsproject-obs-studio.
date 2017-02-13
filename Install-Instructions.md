@@ -295,6 +295,10 @@ See https://nixos.org/wiki/OBS for further instructions
 
         sudo apt-get install libavcodec-dev libavfilter-dev libavdevice-dev libfdk-aac-dev
 
+* Install optional dependencies (for noise-suppress filter, etc.).  Tested on Ubuntu 16.14:
+
+        sudo apt-get install libspeex-dev libspeexdsp-dev libvlc-dev libasound2-dev
+
 * Building and installing OBS:
 
         git clone https://github.com/jp9000/obs-studio.git
