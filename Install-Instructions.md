@@ -127,8 +127,6 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 ***
 
 ### Debian installation
-* OBS Studio requires an OpenGL 3.2 compatible video card.
-
     **For Debian 9 "Stretch"**, execute the following commands:
 
         sudo apt-get update
