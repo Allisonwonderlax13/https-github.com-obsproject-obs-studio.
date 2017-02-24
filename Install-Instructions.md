@@ -4,25 +4,44 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
-### Table of Contents:
+###Table of Contents:
+
 * [Windows](#windows)
-* [Mac OSX](#mac-osx)
+  * [Install](#windows-install-directions)
+  * [Build from source](#windows-build-directions)
+* [macOS](#macos)
+  * [Install](#macos-install-directions)
+  * [Build from source](#macos-build-directions)
 * [Linux](#linux)
-    * [Ubuntu installation (14.04 and following)](#ubuntu-installation)
-    * [Arch Linux installation, unofficial](#arch-linux-installation-unofficial)
-    * [Manjaro installation, unofficial](#manjaro-installation-unofficial)
-    * [Fedora installation](#fedora-installation)
-    * [openSUSE installation, unofficial](#opensuse-installation-unofficial)
-    * [Gentoo installation, unofficial](#gentoo-installation-unofficial)
-    * [NixOS installation](#nixos-installation)
-    * [Manually compiling on Red Hat based distros such as Fedora](#manually-compiling-on-red-hat-based-distros-such-as-fedora)
-    * [Manually compiling on Debian-based distros](#manually-compiling-on-debian-based-distros)
-    * [Manually compiling on openSUSE](#manually-compiling-on-opensuse)
-    * [Linux portable mode](#linux-portable-mode)
+  * [Install Directions](#linux-install-directions)
+  	* [Ubuntu (14.04+)](#ubuntu-installation)
+  	* [Arch Linux (Unofficial)](#arch-linux-installation-unofficial)
+  	* [Manjaro (Unofficial)](#manjaro-installation-unofficial)
+  	* [Fedora (Unofficial)](#fedora-installation-unofficial)
+  	* [openSUSE (Unofficial)](#opensuse-installation-unofficial)
+  	* [Gentoo (Unofficial)](#gentoo-installation-unofficial)
+  	* [NixOS (Unofficial)](#nixos-installation-unofficial)
+  * [Build Directions](#linux-build-directions)
+    * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
+    * [Debian-based](#debian-based-build-directions)
+    * [openSUSE](#opensuse-build-directions)
 
 ***
 
-###Windows:
+#Windows
+
+###Windows Install Directions:
+Pre-built windows versions can be found here: https://github.com/jp9000/obs-studio/releases/
+
+The full .exe installer and .zip contains OBS Studio 32bit, 64bit, Browser Source, and Intel® RealSense™ plugin. You will be prompted during install for the Browser Source and RealSense plugin to be installed if using the .exe installer, otherwise the components are included in the .zip.
+
+The small .exe installer contains the base OBS Studio 32bit, 64bit, Intel® RealSense™ plugin, but does not contain the Browser Source plugin.
+
+NOTE: If using the .zip method for either the full or small install and installing to a non-standard program location (i.e. outside Program Files), you will need to add the security group ALL APPLICATION PACKAGES to have full control over the main OBS Studio directory and sub-directories. Certain features may not function properly without these security rights.
+
+***
+
+###Windows Build Directions:
 * **Requirements for building OBS on windows**
   * Development packages of `FFmpeg`, `x264`, and `cURL`.  
     * Pre-built windows dependencies for VS2013 and VS2015 can be found here:
@@ -30,12 +49,12 @@ Also, if there is something in this guide you want to change/improve on, it is r
       * VS2015: https://obsproject.com/downloads/dependencies2015.zip
   * [Qt5](http://www.qt.io/)
   * Windows version of [cmake](http://www.cmake.org/)
-  * Visual Studio 2013 (Latest update) or Visual Studio 2015
+  * [Visual Studio 2013 (Latest update) or Visual Studio 2015](https://www.visualstudio.com/free-developer-offers/)
 
 * **Installation Procedure**
   * Clone the repository and **submodules**:
 
-         `git clone --recursive https://github.com/jp9000/obs-studio.git`
+             git clone --recursive https://github.com/jp9000/obs-studio.git
 
   * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
@@ -46,8 +65,8 @@ Also, if there is something in this guide you want to change/improve on, it is r
       * `DepsPath` (Path to the include for all dependencies, not including Qt.)
 	  * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required.)
 	    * NOTE: An example Qt directory you would use here if you installed Qt5 to D:\Qt would usually look something like this:
-          * `(32bit) D:\Qt\5.3\msvc2013`
-          * `(64bit) D:\Qt\5.3\msvc2013_64`
+          * `(32bit) D:\Qt\5.8\msvc2013`
+          * `(64bit) D:\Qt\5.8\msvc2013_64`
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)  
       * `x264Path` (Path to just x264 include directory.)  
@@ -76,19 +95,28 @@ Also, if there is something in this guide you want to change/improve on, it is r
     * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
   * Press 'Configure' and select the generator that fits to your installed VS Version:  
-Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you want to build the 64bit version of OBS
+Visual Studio 12 2013, Visual Studio 14 2015, or their 64bit equivalents if you want to build the 64bit version of OBS
+      * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
   
   * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
-
-  * Enable the COPY_DEPENDENCIES option, then press 'Configure' again. 
   
   * Press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
 
-  * Open obs-studio.sln from the 'build' subdirectory in Visual Studio, and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully fuctional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
+  * Open obs-studio.sln from the 'build' subdirectory in Visual Studio (or click the Open Project button from the cmake-gui in 3.7+), and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully functional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
+
+#macOS
+
+###macOS Install Directions
+
+Pre-built macOS versions can be found here: https://github.com/jp9000/obs-studio/releases
+
+Simply run the installer and follow the on-screen directions to install OBS Studio.
+
+**NOTE**: The macOS build server is currently down and undergoing a rebuild. Official macOS builds are only available up until 0.16.2. If you require a newer version, follow the build directions below. There is no concrete ETA to the build server being back up and running at this time.
 
 ***
 
-###Mac OSX
+###macOS Build Directions
 * Clone the repository and **submodules**:
 
          git clone --recursive https://github.com/jp9000/obs-studio.git
@@ -97,7 +125,7 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 * Use macports or homebrew and install FFmpeg, x264, Qt5, and cmake.
 
-* NOTE: Qt5 can also be downloaded/installed via the Qt website, though keep in mind that you will have to set the QTDIR environment variable to the Qt5 build base directory.
+  * NOTE: Qt5 can also be downloaded/installed via the Qt website, though keep in mind that you will have to set the QTDIR environment variable to the Qt5 build base directory.
 
 * Make sure to have the OSX 10.9 or newer SDK installed (comes with recent versions of Xcode)
 
@@ -117,16 +145,26 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 * To create an app bundle instead, use the command: `make package`. This will create a .dmg file with an app bundle inside.
 
-***
+#Linux
 
-###Linux
-
-**NOTE:** OpenGL 3.2 or later is required to use OBS Multiplatform on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
+**NOTE:** OpenGL 3.2 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
 * glxinfo | grep "OpenGL"
+* Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable
 
-***
+**Linux portable mode (all distros)**
 
-### Ubuntu installation
+* You can build in portable mode on Linux, which installs all the files to an isolated directory:
+
+        mkdir build && cd build
+        cmake -DUNIX_STRUCTURE=0 \
+                -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+        make -j4 && make install
+
+  After that you should have a portable install in ~/obs-studio-portable Change to bin/64bit or bin/32bit and then simply run: ./obs
+
+##Linux Install Directions
+
+###Ubuntu Installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
     **For Ubuntu 14.04 LTS**, FFmpeg is not officially included so you will need a specific PPA:
@@ -145,7 +183,7 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
-### Arch Linux installation, unofficial
+###Arch Linux Installation (Unofficial)
 * "Release" version is available on community repository:
 
         sudo pacman -S obs-studio
@@ -155,7 +193,7 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
-### Manjaro installation, unofficial
+###Manjaro Installation (Unofficial)
 * Graphical: search "obs-studio" on Pamac Manager or Octopi
 * Command-line: install it via pacman with the following command:
 
@@ -163,8 +201,8 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
-### Fedora installation
-* OBS-studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
+###Fedora Installation (Unofficial)
+* OBS Studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
         sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
@@ -179,7 +217,7 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
-### openSUSE installation, unofficial
+###openSUSE Installation (Unofficial)
   - The Packman repository contains the obs-studio package since it requires
     the fuller version of FFmpeg which is in Packman for legal reasons. If you
     do not already have the Packman repository add it as shown below.
@@ -219,19 +257,22 @@ Visual Studio 12 2013 or Visual Studio 14 2015 or their 64bit equivalents if you
 
 ***
 
-### Gentoo installation, unofficial
+###Gentoo Installation (Unofficial)
 * Link:  https://github.com/saintdev/obs-studio-overlay
 
 ***
 
-### NixOS installation
+###NixOS Installation (Unofficial)
 
     nix-env -i obs-studio
 
 See https://nixos.org/wiki/OBS for further instructions
+
 ***
 
-### Manually compiling on Red Hat based distros such as Fedora
+##Linux Build Directions
+
+###Red Hat/Fedora-based Build Directions
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
 * Set up a build environment:
@@ -265,7 +306,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-### Manually compiling on Debian-based distros
+###Debian-based Build Directions
 * Set up a build environment:
 
         sudo apt-get install build-essential pkg-config cmake git checkinstall
@@ -295,10 +336,6 @@ See https://nixos.org/wiki/OBS for further instructions
 
         sudo apt-get install libavcodec-dev libavfilter-dev libavdevice-dev libfdk-aac-dev
 
-* Install optional dependencies (for noise-suppress filter, etc.).  Tested on Ubuntu 16.14:
-
-        sudo apt-get install libspeex-dev libspeexdsp-dev libvlc-dev libasound2-dev
-
 * Building and installing OBS:
 
         git clone https://github.com/jp9000/obs-studio.git
@@ -311,7 +348,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-### Manually compiling on openSUSE
+###openSUSE Build Directions
   - See openSUSE installation instructions (above) for details on adding Packman repository.
 
   - Install build dependencies:
@@ -341,17 +378,3 @@ See https://nixos.org/wiki/OBS for further instructions
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
         make -j4
         sudo make install
-
-***
-
-### Linux portable mode
-* You can also build in portable mode on Linux, which installs all the
-    files to an isolated directory:
-
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=0 \
-                -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
-        make -j4 && make install
-
-    After that you should have a portable install in ~/obs-studio-portable
-    Change to bin/64bit or bin/32bit and then simply run:  ./obs
