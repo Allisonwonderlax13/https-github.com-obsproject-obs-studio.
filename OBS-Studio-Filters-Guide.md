@@ -137,7 +137,7 @@ OBS Studio will search for plugins in the following locations:
   - ~/.lxvst/
   - NOTE: If the user has set the VST_PATH environmental variable, OBS will ignore the other search locations and just use the locations listed in VST_PATH.
 
-A short list of free plugins that were used to develop and test the VST support in OBS Studio can be found here. Your experiences may differ, but these are the ones we know have been tested to work in our environments:
+A short list of free plugins that were used to develop and test the VST support in OBS Studio can be found below. Your experiences may differ, but these are the ones we know have been tested to work in our environments:
 
 
 - http://www.reaper.fm/reaplugs/
