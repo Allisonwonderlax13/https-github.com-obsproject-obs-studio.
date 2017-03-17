@@ -1,4 +1,4 @@
-In OBS Studio we have the ability to add filters to our Sources, Scenes and even our Audio Devices. The following filters are available in OBS Studio 18.0.0:
+In OBS Studio we have the ability to add filters to our Sources, Scenes and even our Audio Devices. The following filters are available in OBS Studio 18.0.1:
 
 * [Scene and Source Filters](#scene-and-source-filters)
   * [Image Mask/Blend](#image-maskblend)
@@ -18,9 +18,9 @@ In OBS Studio we have the ability to add filters to our Sources, Scenes and even
 
 You can add them by right-click your desired Scene, Source or Device and selecting "Filters" (for Audio Devices, click on the gear icon next to your device). But let me explain what the different filters allow you to do.
 
-##Scene and Source Filters
+## Scene and Source Filters
 
-###Image Mask/Blend
+### Image Mask/Blend
 ![Image Mask](http://www.helping-squad.com/wp-content/uploads/2015/07/image_mask.png)
 
 The Image Mask/Blend filter gives us the option to use the Color or Alpha Channel of an Image as a Mask or to Blend an Image (multiply, addition, subtraction) over your Scene or Source. This can be used to give your webcam a round border for example:
@@ -28,28 +28,28 @@ The Image Mask/Blend filter gives us the option to use the Color or Alpha Channe
 
 ***
 
-###Crop
+### Crop
 ![Crop Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/crop_filter.png)
 
 The crop filter should explain itself but in short it lets you cut off the top/left/right/bottom of your source/scene to only show the parts you want.
 
 ***
 
-###Color Correction
+### Color Correction
 ![Color Correction Filter](http://i.imgur.com/MJwx4Ep.png)
 
 Again, the name says it all. You can change the contrast, brightness and gamma of your source and even provide a color overlay.
 
 ***
 
-###Scroll
+### Scroll
 ![Scroll Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/scroll_filter.png)
 
 The scroll filter gives us the ability to give our text for example a scrolling effect, left-to-right and top-to-bottom. Negative and positive values will change the direction in which your source will scroll and you can limit the height and width if necessary.
 
 ***
 
-###Color Key and Chroma Key
+### Color Key and Chroma Key
 
 Color Key:
 
@@ -63,34 +63,34 @@ Both the Color Key and Chroma Key filter can be used to remove a certain color o
 
 ***
 
-###LUT Filter
+### LUT Filter
 This filter allows you to apply a LUT to your video sources.
 
 ***
 
-###Sharpen
+### Sharpen
 ![Sharpen Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/sharpen_filter.png)
 
 The sharpen filter should explain itself as well, if you feel your webcam input for example is a bit blurred and you want to improve the overall sharpness a bit, add the filter and test with different values.
 
-##Audio Device Filters
+## Audio Device Filters
 
-###Gain
+### Gain
 For very quiet audio sources you can add some gain to increase the volume using this filter.
 
 ***
 
-###Noise Gate
+### Noise Gate
 The Noise Gate allows you to cut off all background noise while you are not talking. Select a close threshold above the noise volume and an open threshold slightly below your voice input to get good results.
 
 ***
 
-###Noise Suppression
+### Noise Suppression
 The Noise Suppression filter can be used to remove mild background noise or white noise that may be in any of your audio sources. While this is generally not effective at large amounts of background noise (i.e. in a loud room) it can be quite effective at reducing things like PC fan noise or other environmental noises.
 
 ***
 
-###Compressor
+### Compressor
 
 A compressor is very useful if your input (usually a microphone) is tuned for a normal volume, but can sometimes spike to much louder levels, such as impromptu shouting or getting into a heated discussion. It will automatically turn down the input's volume so that it doesn't peak, which can cause distortion and other audio artifacting, and then turn it back up once the volume is back to normal.
 
@@ -104,7 +104,7 @@ In order, the sliders do the following:
 
 ***
 
-###VST Plugin
+### VST Plugin
 OBS Studio supports many VST2.x plugins. Adding a VST plugin is as simple as adding any other audio filter, but there are some limitations. VST1.x, VST3.x, MIDI control/input in VST plugins, and shell VST plugins are not supported at this time. We have not tested all plugins, and some VST plugins may cause crashes. Make sure you save and back up any settings to avoid loss of data when experimenting with VST.
 
 Lastly, always keep an eye on CPU usage, some VST plugins can be very CPU hungry!
