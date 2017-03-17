@@ -11,7 +11,7 @@ This guide is broken into these main sections:
 
 ***
 
-##Quickstart
+## Quickstart
 
 Getting started with OBS Studio is relatively simple, with only a few steps needed before you're on your way to creating content.
 
@@ -25,13 +25,13 @@ Getting started with OBS Studio is relatively simple, with only a few steps need
 
 ***
 
-##Settings
+## Settings
 
 ![OBS Settings Window](https://i.imgur.com/52Hu5NI.png)
 
 Overall, most settings will be fairly self-explanatory. This will not cover everything, but will be an overview of the basics and what you can do in each section.
 
-###General
+### General
 - Change theme (light/dark)
 - Enable automatic recording while streaming
 - Enable/disable system tray icon (required for hiding to tray)
@@ -39,32 +39,32 @@ Overall, most settings will be fairly self-explanatory. This will not cover ever
 - Enable/Disable Source snapping
 - Enable/Disable automatically record when streaming
 
-###Stream
+### Stream
 - Select one of the included Services (Check "Show all services" to see the full list in the dropdown) or set Custom Streaming Server
 - Select the server (or enter its URL for Custom Streaming Servers)
 - Enter your Streamkey
 
-###Output
+### Output
 Note: This section covers Simple output mode. Advanced output mode gives you further options to configure your Stream and Recording independently if you want to. We will not be covering advanced options in this guide (see links at the end). Generally, unless you know why you need to change it, the default options are recommended.
 
-####For Streaming:
+#### For Streaming:
 - Set your Video Bitrate. This changes according to your upload speed and the limitations of the service you use (for example, 3500kbps max for Twitch.tv)
 - Set your Audio Bitrate. Around 160kbps for streaming, or lower if you have a low upload speed
 
-####For Recording:
+#### For Recording:
 - Set your Recording Path
 - Record using a preset (Same as stream, High Quality, Indistinguishable Quality, and Lossless) and a different Encoder (if available)
 - Select a Hardware Encoder if available (only if you use a different preset than "same as stream" and if a Hardware Encoder is available)[QuickSync, NVENC or AMD VCE]
   - Encoder option will not show up until you select a recording quality other than Same as stream
 - Enable the Replay Buffer (hotkey to save the buffer must be set under the Hotkeys section)
 
-###Audio
+### Audio
 - Change the Sampling Rate
 - Select up to two Desktop Audio Device's
 - Select up to three Microphone/Auxiliary Device's
 - Enable Push-to-mute or Push-to-talk for each device (keys configured in the Hotkeys section)
 
-###Video
+### Video
 - Base (Canvas) Resolution
   - This is the amount of space you have to fit your sources. You usually want this to match your monitor display resolution, or if you are playing games, the game resolution. Default is your primary monitor.
 - Output (Scaled) Resolution should be the Stream Output Resolution (720p,480p,etc)
@@ -72,7 +72,7 @@ Note: This section covers Simple output mode. Advanced output mode gives you fur
 - Common FPS Value should match your desired output FPS (30/60 for example)
   - Note that 60fps streaming can be very taxing on your system compared to 30fps. Test ahead of time and ensure your system has enough resources available.
 
-###Hotkeys
+### Hotkeys
 Here you can set hotkeys that do a variety of things. Some examples:
 - Start/Stop Streaming/Recording
 - Hide/Show Sources
@@ -81,7 +81,7 @@ Here you can set hotkeys that do a variety of things. Some examples:
 - Capture active window for Game Capture
 - Start/Stop/Save Replay Buffer
 
-###Advanced
+### Advanced
 Most of these settings should not be changed unless you understand exactly why you need to change them. However, some settings can be useful for new streamers, such as:
 - Change the Filename Formatting (or use folders: %CCYY\%MM\%DD\%hh-%mm-%ss = 2016 \ 07 \ 10 \ 12:35:25.flv)
   - Hover over the field for a popup that explains each available variable for naming
@@ -91,7 +91,7 @@ Most of these settings should not be changed unless you understand exactly why y
 
 ***
 
-##Scenes and Sources
+## Scenes and Sources
 ![Scenes and Source](https://i.imgur.com/yt6bmb9.png)
 
 Scenes and Sources are the meat of OBS Studio. These are where you set up your stream layout, add your games, webcams, and any other devices or media that you want in the output.
@@ -136,11 +136,11 @@ Edit Transform menu:
 
 ***
 
-##Filters
+## Filters
 
 ![Filters Window](http://i.imgur.com/T49neou.png)
 
-Filters can be added to each Source/Audio Device, and even to a Scene. You add a filter by right-clicking onto the desired Source or Scene in the list, and then selecting Filters. For Audio devices, click the little cogwheel next to the volume bar in the Audio Mixer and select Filters. Clicking the eye icon next to an added filter will enable/disable that filter, similar to showing/hiding a source. See the resource links for a more in-depth guide on Filters and their specific function. 
+Filters can be added to each Source/Audio Device, and even to a Scene. You add a filter by right-clicking onto the desired Source or Scene in the list, and then selecting Filters. For Audio devices, click the little cogwheel next to the volume bar in the Audio Mixer and select Filters. Clicking the eye icon next to an added filter will enable/disable that filter, similar to showing/hiding a source. See the [[OBS Studio Filters Guide]] link for a more in-depth guide on Filters and their specific function. 
 
 List of Effect Filters:
 - Image Mask/Blend
@@ -160,7 +160,7 @@ List of Audio/Video Filters:
 
 ***
 
-##Studio Mode
+## Studio Mode
 
 ![Studio Mode](https://i.imgur.com/rhS1Yjv.png?2)
 
@@ -170,7 +170,7 @@ Activating Studio Mode allows you to change your Scenes in the background withou
 
 After you are done editing the Scene you can click on "Transition" (or use a Quick Transition/Hotkey if you added one) to swap the left and right, making the Scene you were editing the live Scene. If you are changing Scenes, the last active Scene will be shown in the edit area on the left. After you are done with everything and transitioned to the changed Scene, you can deactivate Studio Mode until you need to edit again. Viewers cannot see when Studio Mode is enabled or not.
 
-###Scene Transitions
+### Scene Transitions
 Some Transitions in OBS Studio are available from the first launch: Fade and Cut Transition. You can add more using the plus button in the Scene Transitions section. Currently Swipe, Slide, Fade to color, and Luma Wipe (with several wipe options) are available. More may come in the future.
 
 You can switch the currently active Transition with the drop-down menu and change its duration.
@@ -179,11 +179,11 @@ After you have configured a Transition, you can also add it as a Quick Transitio
 
 ***
 
-##Testing
+## Testing
 
 There are many more options and functions inside OBS Studio, but I hope you got a good idea of the different things that are possible with this great tool.
 
-###Test, test, test!
+### Test, test, test!
 Now it's time to start testing! Are the settings working? Is the stream running smooth? Are all your Scenes configured how you want them? It's strongly recommended that you test everything as best as you can before starting your first live stream. This can help work out any kinks or performance issues you might be having ahead of time, and save the embarrassment of any issues on the stream itself.
 
 If you have problems, start a thread in the [Support section of the forums](https://obsproject.com/forum/categories/obs-studio-support.30/). Be sure to [include a log file](https://obsproject.com/forum/threads/please-post-a-log-with-your-issue-heres-how.23074/). Alternately, you can join our [community chat](https://obsproject.com/chat/) to get live help from community volunteers.
@@ -192,15 +192,15 @@ If you want more control over your Recording settings or want to record multiple
 
 ***
 
-##Resource Links
+## Resource Links
 
-- [Advanced local recording guide](https://obsproject.com/forum/resources/obs-studio-high-quality-recording-and-multiple-- audio-tracks.221/)
+- [Advanced local recording guide](https://obsproject.com/forum/resources/obs-studio-high-quality-recording-and-multiple--audio-tracks.221/)
 - [Video guide for OBS Studio](https://obsproject.com/forum/resources/full-video-guide-for-obs-studio-and-twitch.377/)
 - [Buffering issues](https://obsproject.com/forum/threads/my-stream-lags-buffers-loads-constantly-for-my-viewers-but-why.18465/)
 - [CPU overload/High Encoding issues](https://obsproject.com/forum/threads/high-cpu-usage-high-encoding-taking-too-long-to-encode-read-this-first.23334/)
 - [Dropped Frame issues](https://obsproject.com/forum/threads/dropped-frames-disconnecting-lag-read-this-first.8870/)
 - [Laptop troubleshooting](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
-- [In-depth filters guide](https://obsproject.com/forum/resources/obs-studio-filters-for-sources-scenes-devices.226/)
+- [In-depth filters guide](https://github.com/jp9000/obs-studio/wiki/OBS-Studio-Filters-Guide)
 - [Enabled CoreAudio encoder for better audio quality](https://obsproject.com/forum/resources/obs-studio-enable-coreaudio-aac-encoder-windows.220/)
 
 `Original guide created by Jack0r, edits/updates by Fenrir`
