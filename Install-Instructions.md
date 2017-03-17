@@ -4,7 +4,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
-###Table of Contents:
+### Table of Contents:
 
 * [Windows](#windows)
   * [Install](#windows-install-directions)
@@ -28,9 +28,9 @@ Also, if there is something in this guide you want to change/improve on, it is r
 
 ***
 
-#Windows
+# Windows
 
-###Windows Install Directions:
+### Windows Install Directions:
 Pre-built windows versions can be found here: https://github.com/jp9000/obs-studio/releases/
 
 The full .exe installer and .zip contains OBS Studio 32bit, 64bit, Browser Source, and Intel® RealSense™ plugin. You will be prompted during install for the Browser Source and RealSense plugin to be installed if using the .exe installer, otherwise the components are included in the .zip.
@@ -41,7 +41,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 
 ***
 
-###Windows Build Directions:
+### Windows Build Directions:
 * **Requirements for building OBS on windows**
   * Development packages of `FFmpeg`, `x264`, and `cURL`.  
     * Pre-built windows dependencies for VS2013 and VS2015 can be found here:
@@ -104,19 +104,19 @@ Visual Studio 12 2013, Visual Studio 14 2015, or their 64bit equivalents if you 
 
   * Open obs-studio.sln from the 'build' subdirectory in Visual Studio (or click the Open Project button from the cmake-gui in 3.7+), and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully functional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
-#macOS
+# macOS
 
-###macOS Install Directions
+### macOS Install Directions
 
 Pre-built macOS versions can be found here: https://github.com/jp9000/obs-studio/releases
 
 Simply run the installer and follow the on-screen directions to install OBS Studio.
 
-**NOTE**: The macOS build server is currently down and undergoing a rebuild. Official macOS builds are only available up until 0.16.2. If you require a newer version, follow the build directions below. There is no concrete ETA to the build server being back up and running at this time.
+Official macOS builds are available again as of 18.0.1.
 
 ***
 
-###macOS Build Directions
+### macOS Build Directions
 * Clone the repository and **submodules**:
 
          git clone --recursive https://github.com/jp9000/obs-studio.git
@@ -145,11 +145,9 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 
 * To create an app bundle instead, use the command: `make package`. This will create a .dmg file with an app bundle inside.
 
-#Linux
+# Linux
 
-**NOTE:** OpenGL 3.2 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
-* glxinfo | grep "OpenGL"
-* Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable
+Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable.
 
 **Linux portable mode (all distros)**
 
@@ -160,11 +158,14 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
                 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
         make -j4 && make install
 
-  After that you should have a portable install in ~/obs-studio-portable Change to bin/64bit or bin/32bit and then simply run: ./obs
+  After that you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
 
-##Linux Install Directions
+**NOTE:** OpenGL 3.2 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
+* glxinfo | grep "OpenGL"
 
-###Ubuntu Installation
+## Linux Install Directions
+
+### Ubuntu Installation
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
     **For Ubuntu 14.04 LTS**, FFmpeg is not officially included so you will need a specific PPA:
@@ -183,7 +184,7 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 
 ***
 
-###Arch Linux Installation (Unofficial)
+### Arch Linux Installation (Unofficial)
 * "Release" version is available on community repository:
 
         sudo pacman -S obs-studio
@@ -193,7 +194,7 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 
 ***
 
-###Manjaro Installation (Unofficial)
+### Manjaro Installation (Unofficial)
 * Graphical: search "obs-studio" on Pamac Manager or Octopi
 * Command-line: install it via pacman with the following command:
 
@@ -201,7 +202,7 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 
 ***
 
-###Fedora Installation (Unofficial)
+### Fedora Installation (Unofficial)
 * OBS Studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
         sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -217,7 +218,7 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 
 ***
 
-###openSUSE Installation (Unofficial)
+### openSUSE Installation (Unofficial)
   - The Packman repository contains the obs-studio package since it requires
     the fuller version of FFmpeg which is in Packman for legal reasons. If you
     do not already have the Packman repository add it as shown below.
@@ -257,12 +258,12 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 
 ***
 
-###Gentoo Installation (Unofficial)
+### Gentoo Installation (Unofficial)
 * Link:  https://github.com/saintdev/obs-studio-overlay
 
 ***
 
-###NixOS Installation (Unofficial)
+### NixOS Installation (Unofficial)
 
     nix-env -i obs-studio
 
@@ -270,9 +271,9 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-##Linux Build Directions
+## Linux Build Directions
 
-###Red Hat/Fedora-based Build Directions
+### Red Hat/Fedora-based Build Directions
 * Get RPM fusion at http://rpmfusion.org/Configuration/
 
 * Set up a build environment:
@@ -306,7 +307,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-###Debian-based Build Directions
+### Debian-based Build Directions
 * Set up a build environment:
 
         sudo apt-get install build-essential pkg-config cmake git checkinstall
@@ -348,7 +349,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-###openSUSE Build Directions
+### openSUSE Build Directions
   - See openSUSE installation instructions (above) for details on adding Packman repository.
 
   - Install build dependencies:
