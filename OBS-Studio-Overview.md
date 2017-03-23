@@ -48,7 +48,7 @@ Overall, most settings will be fairly self-explanatory. This will not cover ever
 Note: This section covers Simple output mode. Advanced output mode gives you further options to configure your Stream and Recording independently if you want to. We will not be covering advanced options in this guide (see links at the end). Generally, unless you know why you need to change it, the default options are recommended.
 
 #### For Streaming:
-- Set your Video Bitrate. This changes according to your upload speed and the limitations of the service you use (for example, 3500kbps max for Twitch.tv)
+- Set your Video Bitrate. This changes according to your upload speed and the limitations of the service you use (for example, 6000kbps max for Twitch.tv)
 - Set your Audio Bitrate. Around 160kbps for streaming, or lower if you have a low upload speed
 
 #### For Recording:
