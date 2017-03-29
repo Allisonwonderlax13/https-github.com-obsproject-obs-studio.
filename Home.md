@@ -7,7 +7,7 @@ It is the re-write of the widely used [Open Broadcaster Software](https://obspro
 The community has created a few guides on how to use OBS Studio:
 * Overview Guide: [[OBS Studio Overview]]
 * Guide to Filters in Studio: [[OBS Studio Filters Guide]]
-* General Troubleshooting: [[Troubleshooting Guide]]
+* General Troubleshooting Guides: [[Troubleshooting Guides]]
 
 For Support Questions, the forum and chat are available:  
 * [OBS Studio Forum](https://obsproject.com/forum/categories/obs-multiplatform-support.30/)  
