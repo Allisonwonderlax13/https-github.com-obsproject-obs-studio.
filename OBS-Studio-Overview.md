@@ -140,7 +140,7 @@ Edit Transform menu:
 
 ![Filters Window](http://i.imgur.com/T49neou.png)
 
-Filters can be added to each Source/Audio Device, and even to a Scene. You add a filter by right-clicking onto the desired Source or Scene in the list, and then selecting Filters. For Audio devices, click the little cogwheel next to the volume bar in the Audio Mixer and select Filters. Clicking the eye icon next to an added filter will enable/disable that filter, similar to showing/hiding a source. See the [[OBS Studio Filters Guide]] link for a more in-depth guide on Filters and their specific function. 
+Filters can be added to each Source/Audio Device, and even to a Scene. You add a filter by right-clicking onto the desired Source or Scene in the list, and then selecting Filters. For Audio devices, click the little cogwheel next to the volume bar in the Audio Mixer and select Filters. Clicking the eye icon next to an added filter will enable/disable that filter, similar to showing/hiding a source. See the [Filters Guide](https://github.com/jp9000/obs-studio/wiki/Filters-Guide) link for a more in-depth guide on Filters and their specific function. 
 
 List of Effect Filters:
 - Image Mask/Blend
@@ -200,7 +200,7 @@ If you want more control over your Recording settings or want to record multiple
 - [CPU overload/High Encoding issues](https://obsproject.com/forum/threads/high-cpu-usage-high-encoding-taking-too-long-to-encode-read-this-first.23334/)
 - [Dropped Frame issues](https://obsproject.com/forum/threads/dropped-frames-disconnecting-lag-read-this-first.8870/)
 - [Laptop troubleshooting](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
-- [In-depth filters guide](https://github.com/jp9000/obs-studio/wiki/OBS-Studio-Filters-Guide)
+- [In-depth filters guide](https://github.com/jp9000/obs-studio/wiki/Filters-Guide)
 - [Enabled CoreAudio encoder for better audio quality](https://obsproject.com/forum/resources/obs-studio-enable-coreaudio-aac-encoder-windows.220/)
 
 `Original guide created by Jack0r, edits/updates by Fenrir`
