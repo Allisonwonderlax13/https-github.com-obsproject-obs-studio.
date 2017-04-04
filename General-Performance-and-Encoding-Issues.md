@@ -28,13 +28,13 @@ Quicksync, AMF, and NVENC are hardware encoders that come on recent Intel Integr
 
 If you have one of the mentioned hardware encoders, you can see if those options are available to you in Encoding settings. 
 
-- Quicksync is a bit trickier to set up, but here is a guide: [[https://obsproject.com/forum/resources/how-to-use-quicksync.82/]]
-- Likewise, here is the troubleshooting guide for the AMF encoder: [[https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Troubleshooting-Guide]]
+- Quicksync is a bit trickier to set up, but here is a guide: [https://obsproject.com/forum/resources/how-to-use-quicksync.82/](https://obsproject.com/forum/resources/how-to-use-quicksync.82/)
+- Likewise, here is the troubleshooting guide for the AMF encoder: [https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Troubleshooting-Guide](https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Troubleshooting-Guide)
 
 ## Check your sources
 Some sources such as webcams and capture cards can use a lot of CPU just by being on your scene as they have to decode the video data. If you're using a webcam, check it isn't running at too high of a resolution (more than 480p is rarely needed if it isn't full screen). The Logitech C920 in particular has issues on many systems when running at the full 1080p resolution. Browser sources can also consume CPU if there are complex animations or scripts active.
 
-Check this video for a more detailed explanation (while the video is a bit old and using OBS Classic, this information is still very accurate!): [[https://www.youtube.com/watch?v=a274YynXRwI]]
+Check this video for a more detailed explanation (while the video is a bit old and using OBS Classic, this information is still very accurate!): [https://www.youtube.com/watch?v=a274YynXRwI](https://www.youtube.com/watch?v=a274YynXRwI)
 
 ## Upgrade your hardware
 Some CPUs are so weak that they are near-hopeless for getting anything decent working. Dual-core CPUs and AMD APUs are particularly notorious for this. They might be able to get away with a 360p stream at 25 FPS using the ultrafast preset, but it certainly won't look good. That's up to you to decide. If you have a Sandy Bridge i5 or i7 or later, or an AMD 6-core or 8-core or later, then you should be able to come up with a decent-looking stream at reasonable resolutions and frame rates.
