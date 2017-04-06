@@ -2,7 +2,7 @@
 It is the re-write of the widely used [Open Broadcaster Software](https://obsproject.com/), to allow even more features and multi-platform support. Currently Linux, Mac and Windows Builds are available.
 
 * Official OBS Studio Builds: https://github.com/jp9000/obs-studio/releases
-* Building OBS Studio: [[Install Instructions]]
+* Building OBS Studio Manually: [[Install Instructions]]
 
 The community has created a few guides on how to use OBS Studio:
 * Overview Guide: [[OBS Studio Overview]]
