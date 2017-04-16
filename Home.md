@@ -15,10 +15,10 @@ For Support Questions, the forum and chat are available:
 * [OBS Community Chat](https://obsproject.com/chat)
 
 More info about OBS Studio can be found in the Readme:
-* [ReadMe](https://github.com/jp9000/obs-studio/blob/master/README)
+* [ReadMe](https://github.com/jp9000/obs-studio/blob/master/README.rst)
 
 Developers see the contributing guidelines and copying info:
-* [Contributing](https://github.com/jp9000/obs-studio/blob/master/CONTRIBUTING)
+* [Contributing](https://github.com/jp9000/obs-studio/blob/master/CONTRIBUTING.rst)
 * [Copying](https://github.com/jp9000/obs-studio/blob/master/COPYING)
 
 For Development related Questions there is also a forum available:  
