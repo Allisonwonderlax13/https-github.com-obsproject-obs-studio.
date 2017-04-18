@@ -43,8 +43,3 @@ OBS is different from many other streaming/recording programs in that it makes u
 
 ## Other programs/games use CPU too
 Certain programs (particularly games) can use a lot of CPU. This includes some obvious ones, such as Battlefield 4, and some non-obvious ones, such as games played via emulators. If a game uses a lot of CPU, it can interfere with OBS just as OBS can interfere with the game, so you will need to consider turning down these settings to compensate for the game you're playing. You can also use the "Process priority" setting in Settings > Advanced to increase or reduce processor priority of the program. It's common to give OBS "Above normal" process priority to ensure that OBS is prioritized by the system and running smoothly, though use it with caution.
-
-## Ubuntu Dropped Frames with Full Screen Preview
-Certain optimized versions of Ubuntu have done tweaks to the Xserver configuration.  This can cause CPU usage to exponentially increase when you enable full screen projector on a second screen.  The problem is most noticeable about 5 to 10 minutes and recording/streaming.   In order to make sure you avoid this issue, make sure you use and install the xserver-xorg-core and appropriate video support (i.e. xserver-xorg-video-intel) packages for your distribution. If you use items like xserver-xorg-hwe-core or other related items, you may run into the cpu usage increase, and this can affect overall system stability and FPS count.
-
-For Ubuntu 16.04 make sure you are using at least xserver-xorg 3.18.4 which is what is distributed with the base packages.
