@@ -166,6 +166,8 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 ## Linux Install Directions
 
 ### Ubuntu Installation
+* xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
+
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
     **For Ubuntu 14.04 LTS**, FFmpeg is not officially included so you will need a specific PPA:
