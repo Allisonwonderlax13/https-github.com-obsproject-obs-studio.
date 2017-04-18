@@ -47,4 +47,4 @@ Certain programs (particularly games) can use a lot of CPU. This includes some o
 ## Ubuntu Dropped Frames with Full Screen Preview
 Certain optimized versions of Ubuntu have done tweaks to the Xserver configuration.  This can cause CPU usage to exponentially increase when you enable full screen projector on a second screen.  The problem is most noticeable about 5 to 10 minutes and recording/streaming.   In order to make sure you avoid this issue, make sure you use and install the xserver-xorg-core and appropriate video support (i.e. xserver-xorg-video-intel) packages for your distribution. If you use items like xserver-xorg-hwe-core or other related items, you may run into the cpu usage increase, and this can affect overall system stability and FPS count.
 
-For Ubuntu 16.04 make sure you are using at least xserver-xorg 3.18.4 which is what is distributed with the base packages.
+For Ubuntu 16.04 make sure you are using at least xserver-xorg 1.18.4 which is what is distributed with the base packages.
