@@ -25,6 +25,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
     * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
     * [Debian-based](#debian-based-build-directions)
     * [openSUSE](#opensuse-build-directions)
+    * [Linux portable mode (all distros)](#linux-portable-mode-all-distros)
 
 ***
 
@@ -148,17 +149,6 @@ Official macOS builds are available again as of 18.0.1.
 # Linux
 
 Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable.
-
-**Linux portable mode (all distros)**
-
-* You can build in portable mode on Linux, which installs all the files to an isolated directory:
-
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=0 \
-                -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
-        make -j4 && make install
-
-  After that you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
 
 **NOTE:** OpenGL 3.2 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
 * glxinfo | grep "OpenGL"
@@ -381,3 +371,15 @@ See https://nixos.org/wiki/OBS for further instructions
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
         make -j4
         sudo make install
+
+***
+
+### Linux portable mode (all distros)
+* You can build in portable mode on Linux, which installs all the files to an isolated directory:
+
+        mkdir build && cd build
+        cmake -DUNIX_STRUCTURE=0 \
+                -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+        make -j4 && make install
+
+  After that you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
