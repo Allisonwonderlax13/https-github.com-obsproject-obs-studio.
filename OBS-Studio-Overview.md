@@ -81,7 +81,7 @@ Here you can set hotkeys that do a variety of things. Some examples:
 - Capture active window for Game Capture
 - Start/Stop/Save Replay Buffer
 
-Keyboard keys are supported. To use joysticks as hotkeys on Linux, you can use [antimicro](https://github.com/AntiMicro/antimicro) to map the joystick keys to common keyboard keys and then use them in OBS.
+Keyboard keys are supported. To use joysticks as hotkeys on Linux and Windows, you can use [antimicro](https://github.com/AntiMicro/antimicro) to map the joystick keys to common keyboard keys and then use them in OBS.
 
 ### Advanced
 Most of these settings should not be changed unless you understand exactly why you need to change them. However, some settings can be useful for new streamers, such as:
