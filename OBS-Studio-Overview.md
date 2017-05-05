@@ -33,11 +33,10 @@ Overall, most settings will be fairly self-explanatory. This will not cover ever
 
 ### General
 - Change theme (light/dark)
-- Enable automatic recording while streaming
 - Enable/disable system tray icon (required for hiding to tray)
 - Show confirmation for starting/stopping streams
 - Enable/Disable Source snapping
-- Enable/Disable automatically record when streaming
+- Enable/Disable automatic recording when streaming
 
 ### Stream
 - Select one of the included Services (Check "Show all services" to see the full list in the dropdown) or set Custom Streaming Server
