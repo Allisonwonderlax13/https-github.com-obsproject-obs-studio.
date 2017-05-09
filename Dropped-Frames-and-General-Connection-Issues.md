@@ -40,5 +40,8 @@ Speed tests are a very rough estimate - they mean very little with regards to st
 ### Update Network Adapter Driver
 In some rare cases, dropped frames can be caused by an old network adapter driver doing a poor job of handing the high speeds being consumed. It's not a bad idea to just check to see if there are any new drivers for your network adapter, just to be sure.
 
+### Try the "new network code"
+In the advanced settings of OBS Studio is an option to use new network code. Enabling this makes OBS use an event based API instead of non-blocking sockets. While this should technically behave no differently to the regular network code, some users have reported that this helps with their dropped frames or disconnection issues. The new network code also includes detailed logging of network events which can help when you're posting a log file.
+
 ### Bad router or bad networking hardware
 Faulty hardware is usually quite rare, but if you suspect your hardware is malfunctioning, plug in to your modem directly, bypassing the router, so you can check to see if that's the issue. If you have another network card available (including the one in a laptop or other PC you might have lying around) try that plugged into the modem to check for network card problems on your streaming PC. Try using different Ethernet cables too.
