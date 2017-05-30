@@ -120,7 +120,7 @@ OBS Studio will search for plugins in the following locations:
 - macOS (*.vst)
   - /Library/Audio/Plug-Ins/VST/
   - ~/Library/Audio/Plug-ins/VST/
-- Linux (*.so and *.o)
+- Linux - NOT YET IMPLEMENTED (*.so and *.o)
   - /usr/lib/vst/
   - /usr/lib/lxvst/
   - /usr/lib/linux_vst/
