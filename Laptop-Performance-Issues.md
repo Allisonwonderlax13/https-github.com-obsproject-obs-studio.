@@ -30,8 +30,6 @@ Alternative directions - this sets the global default so all applications will r
 - Click the drop down box below that, select "High-performance NVIDIA processor" and click Apply, then OK
 - Re-open OBS and test again
 
-NOTE: If you are planning on using QuickSync (QSV), Set QSVHelper.exe to run on the the Intel instead of the NVIDIA.
-
 ***
 
 #### AMD-based Laptops
