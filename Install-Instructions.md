@@ -266,7 +266,7 @@ See https://nixos.org/wiki/OBS for further instructions
 ## Linux Build Directions
 
 ### Red Hat/Fedora-based Build Directions
-* Get RPM fusion at http://rpmfusion.org/Configuration/
+* Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7 and newer Fedora)
 
 * Set up a build environment:
 
@@ -279,6 +279,7 @@ See https://nixos.org/wiki/OBS for further instructions
                 fontconfig-devel libXcomposite-devel libXinerama-devel \
                 qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
                 systemd-devel ffmpeg
+  (Note: you might also need to install `ffmpeg-devel`)
 
 * Building and installing OBS:
 
