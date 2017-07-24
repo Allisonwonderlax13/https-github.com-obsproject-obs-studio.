@@ -100,7 +100,7 @@ In order, the sliders do the following:
 - Threshold: Once the input reaches this volume, the compressor will kick in.
 - Attack: How quickly, in milliseconds, you want the compressor to kick in when it detects high volumes.
 - Release: How quickly, in milliseconds, you want the compressor volume to return to normal once loud volumes calm down.
-- Output gain: This acts similarly to the standalone [Gain Filter](#Gain Filter). When you compress a signal, usually it ends up quieter, so you apply make-up gain to compensate and bring the overall volume of the source back up.
+- Output gain: This acts similarly to the standalone [Gain Filter](#gain). When you compress a signal, usually it ends up quieter, so you apply make-up gain to compensate and bring the overall volume of the source back up.
 
 ***
 
