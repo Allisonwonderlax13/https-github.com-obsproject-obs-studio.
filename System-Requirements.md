@@ -1,14 +1,15 @@
-OBS Studio requires the following hardware and operating systems to function. Having a compatible system does not guarantee that it is capable of streaming or recording using OBS.
+OBS Studio requires the following hardware and operating systems to function. Having a compatible system does not guarantee that it is capable of streaming or recording using OBS. The CPU requirements vary considerably depending on the chosen encoder, resolution, FPS and your scene complexity. Try the Tools -> Auto Configuration Wizard in OBS itself to find appropriate settings for your specs.
 
 ## Basic Requirements
 
 Windows:
-- DirectX 11 compatible GPU
+- DirectX 10.1 compatible GPU
 - Windows 7 or newer
 
-MacOS:
-- Intel CPU
-- Mac OSX 10.8.5 or newer (MacOS 10.10 or newer recommended)
+macOS:
+- Intel CPU (PPC is not supported)
+- OpenGL 3.2 compatible GPU
+- macOS 10.9.5 or newer (macOS 10.10 or newer recommended)
 
 Linux/Unix
 - OpenGL 3.2 compatible GPU
@@ -16,16 +17,16 @@ Linux/Unix
 
 ## Hardware Encoders
 
-Hardware encoders are generally recommended for local recordings but not streaming, but can be a last resort if software encoding is not possible. They offer minimal performance impact in trade for a reduction in quality at the same bitrates as software (x264) encoding.
+Hardware encoders are generally recommended for local recordings, but not streaming. They can be a last resort if software encoding is not possible. They offer minimal performance impact in trade for a reduction in quality at the same bitrates as software (x264) encoding using the default preset of veryfast. Currently, all consumer-level hardware encoders are provided by certain GPUs, as listed below.
 
 Please make sure to use the latest drivers for your GPU:
 - [NVIDIA](https://www.geforce.com/drivers)
 - [AMD](http://support.amd.com)
-- Intel GPU drivers are usually available from your mainboard manufacturer
+- Intel GPU drivers are usually available from your mainboard manufacturer, but can also be [found here](https://downloadcenter.intel.com/)
 
 ### NVIDIA NVENC
 NVIDIA GeForce GTX-class GPU with Kepler architecture (GKxx) or newer (starting with some cards of GTX 600 series).
-Support for mobile GPUs can vary.
+Support for mobile GPUs can exist, but most will not support NVENC. If you get an error when trying to use the NVENC encoder and your drivers are already up to date, your GPU very likely does not support NVENC.
 
 ### Intel Quick Sync Video (QSV)
 Intel HD Graphics GPU on Intel Core-i-CPU 2xxx (Sandy Bridge) or newer.
