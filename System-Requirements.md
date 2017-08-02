@@ -9,7 +9,7 @@ Windows:
 macOS:
 - Intel CPU (PPC is not supported)
 - OpenGL 3.2 compatible GPU
-- macOS 10.9.5 or newer (macOS 10.10 or newer recommended)
+- macOS 10.9 or newer (macOS 10.10 or newer recommended)
 
 Linux/Unix
 - OpenGL 3.2 compatible GPU
@@ -17,7 +17,7 @@ Linux/Unix
 
 ## Hardware Encoders
 
-Hardware encoders are generally recommended for local recordings, but not streaming. They can be a last resort if software encoding is not possible. They offer minimal performance impact in trade for a reduction in quality at the same bitrates as software (x264) encoding using the default preset of veryfast. Currently, all consumer-level hardware encoders are provided by certain GPUs, as listed below.
+Hardware encoders are generally recommended for local recordings, but not streaming. They can be a last resort if software encoding is not possible. They offer minimal performance impact in exchange for a reduction in quality at the same bitrates as software (x264) encoding using the default preset of veryfast. Currently, all consumer-level hardware encoders are provided by certain GPUs, as listed below.
 
 Please make sure to use the latest drivers for your GPU:
 - [NVIDIA](https://www.geforce.com/drivers)
