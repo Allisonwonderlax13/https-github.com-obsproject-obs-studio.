@@ -19,12 +19,13 @@ Linux/Unix
 Hardware encoders are generally recommended for local recordings but not streaming, but can be a last resort if software encoding is not possible. They offer minimal performance impact in trade for a reduction in quality at the same bitrates as software (x264) encoding.
 
 Please make sure to use the latest drivers for your GPU:
-- [Nvidia](https://www.geforce.com/drivers)
+- [NVIDIA](https://www.geforce.com/drivers)
 - [AMD](http://support.amd.com)
 - Intel GPU drivers are usually available from your mainboard manufacturer
 
-### Nvidia NVenc
-Nvidia GeForce GTX-class GPU with Kepler architecture (GKxx) or newer (starting with some cards of GTX 600 series).
+### NVIDIA NVENC
+NVIDIA GeForce GTX-class GPU with Kepler architecture (GKxx) or newer (starting with some cards of GTX 600 series).
+Support for mobile GPUs can vary.
 
 ### Intel Quick Sync Video (QSV)
 Intel HD Graphics GPU on Intel Core-i-CPU 2xxx (Sandy Bridge) or newer.
