@@ -34,4 +34,4 @@ Due to low quality of early iterations of QSV, Intel Core-i-CPU 4xxx (Haswell) o
 QSV can be unstable on Windows 7 and may require [workarounds to enable it](https://obsproject.com/forum/resources/how-to-use-quicksync.82/).
 
 ### AMD Advanced Media Framework (AMF)
-Please read the [AMF plugin documentation for compatible GPUs](https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Hardware-Support).
+Please read the [AMF plugin documentation for compatible GPUs](https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Hardware-Support) as well as the [troubleshooting guide](https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Guide%3A-Troubleshooting) for issues.
