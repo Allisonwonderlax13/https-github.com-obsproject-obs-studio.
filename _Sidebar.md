@@ -1,13 +1,15 @@
 # [Home](https://github.com/jp9000/obs-studio/wiki)
 # Guides
+  * [System Requirements](System-Requirements)
   * [Overview/Quickstart Guide](OBS-Studio-Overview)
   * [Sources Guide](Sources-Guide)
   * [Filters Guide](Filters-Guide)
+  * [Keyboard Shortcuts](Keyboard-Shortcuts)
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
     * [Buffering](Stream-Buffering-Issues)
     * [Laptop performance/black screen](Laptop-Performance-Issues)
-    * [Performance and Encoding Issues](General-Performance-and-Encoding-Issues)    
+    * [Performance and Encoding Issues](General-Performance-and-Encoding-Issues)
 
 # [Install Instructions](install-instructions)
   * [Windows](install-instructions#windows)
