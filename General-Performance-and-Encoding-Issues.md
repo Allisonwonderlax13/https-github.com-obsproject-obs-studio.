@@ -17,7 +17,7 @@ If you're streaming above 30 FPS, another option is to consider is lowering your
 ## Change your x264 preset
 The video encoder, x264, has a number of "presets" that will change your video quality and CPU usage accordingly. The OBS default is veryfast, which for the majority of cases is the best balance between CPU usage and video quality. This setting can be changed in Settings > Output (check the Enable Advanced Encoder Settings if you're in Simple mode) > Encoder Preset.
 
-The name of the preset is intended to indicate how "fast" the encoder should run. Faster presets will use less CPU at the cost of quality computations. Slower presets will use use more computations for quality, but will use much more CPU.
+The name of the preset is intended to indicate how "fast" the encoder should run. Faster presets will use less CPU at the cost of quality computations. Slower presets will use more computations for quality, but will use much more CPU.
 
 For example, if you would like to try to reduce CPU usage without modifying your resolution or FPS, you can reduce your CPU usage by changing your x264 preset to superfast or ultrafast, and x264 will spend less time trying to make the image look good, and will spare you some CPU cycles. The image may look a bit blockier or pixelated, but you will be able to retain your resolution/fps.
 
