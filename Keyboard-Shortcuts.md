@@ -23,6 +23,7 @@
 * Nudge source down: Down arrow
 * Nudge source left: Left arrow
 * Nudge source right: Right arrow
+* Crop a source: Hold alt and drag the bounding box (edges turn green to indicate they are cropped)
 * Temporarily disable source snapping (if enabled): Hold ctrl while moving/adjusting bounding box
 
 #### Only active when the preview is set to fixed scaling (canvas or output)
