@@ -3,10 +3,10 @@ This section will be updated as new troubleshooting guides become available. See
 #### Table of Contents
 
 Completed Sections:
-* [Dropped Frames/Connection Issues](https://github.com/jp9000/obs-studio/wiki/dropped-frames-and-general-connection-issues)
-* [Stream Buffering/Lag](https://github.com/jp9000/obs-studio/wiki/stream-buffering-issues)
-* [Laptop Performance/Black Screen](https://github.com/jp9000/obs-studio/wiki/laptop-performance-issues)
-* [General Performance and Encoding Issues](https://github.com/jp9000/obs-studio/wiki/general-performance-and-encoding-issues)
+* [Dropped Frames/Connection Issues](https://github.com/jp9000/obs-studio/wiki/Dropped-Frames-And-General-Connection-Issues)
+* [Stream Buffering/Lag](https://github.com/jp9000/obs-studio/wiki/Stream-Buffering-Issues)
+* [Laptop Performance/Black Screen](https://github.com/jp9000/obs-studio/wiki/Laptop-Performance-Issues)
+* [General Performance and Encoding Issues](https://github.com/jp9000/obs-studio/wiki/General-Performance-And-Encoding-Issues)
 
 Work in Progress:
 * [Source Capture Issues/black screen](#source-capture-issues)
