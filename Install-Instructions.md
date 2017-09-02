@@ -127,7 +127,7 @@ Official macOS builds are available again as of 18.0.1.
 * Use macports or homebrew and install FFmpeg, x264, Qt5, and cmake.
 
   * NOTE: Qt5 can also be downloaded/installed via the Qt website, though keep in mind that you will have to set the QTDIR environment variable to the Qt5 build base directory.
-  * export QTDIR=/usr/local/opt/qt
+  * For example: `export QTDIR=/usr/local/opt/qt`
 
 * Make sure to have the OSX 10.9 or newer SDK installed (comes with recent versions of Xcode)
 
