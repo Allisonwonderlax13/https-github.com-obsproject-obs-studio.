@@ -284,7 +284,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 * Building and installing OBS:
 
-        git clone https://github.com/jp9000/obs-studio.git
+        git clone --recursive https://github.com/jp9000/obs-studio.git
         cd obs-studio
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 ..
@@ -333,7 +333,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 * Building and installing OBS:
 
-        git clone https://github.com/jp9000/obs-studio.git
+        git clone --recursive https://github.com/jp9000/obs-studio.git
         cd obs-studio
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
@@ -367,7 +367,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
   - Building and installing OBS:
 
-        git clone https://github.com/jp9000/obs-studio.git
+        git clone --recursive https://github.com/jp9000/obs-studio.git
         cd obs-studio
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
