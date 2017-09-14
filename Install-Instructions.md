@@ -266,8 +266,6 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ## Linux Build Directions
 
-NOTE: If you want to build OBS Studio with FTL support. Do `git submodule update --init` before you build OBS Studio.
-
 ### Red Hat/Fedora-based Build Directions
 * Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7 and newer Fedora)
 
