@@ -61,7 +61,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 
   * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
-  * You can set the following Variables in cmake-gui or set them as Windows Environment Variables (optionally suffixed with '32' or '64' to specify architecture):
+  * You can set the following Variables in cmake-gui or set them as Windows Environment Variables:
     * **Required**
       * `DepsPath` (Path to the include for all dependencies, not including Qt.).
         * An example path if you extracted the dependancies .zip to c:\obs-deps would be:
