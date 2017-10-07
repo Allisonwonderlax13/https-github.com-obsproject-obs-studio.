@@ -312,7 +312,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 * Get the required packages:
 
-        sudo apt-get install libx11-dev libgl1-mesa-dev libpulse-dev libxcomposite-dev \
+        sudo apt-get install libx11-dev libgl1-mesa-dev libvlc-dev libpulse-dev libxcomposite-dev \
                 libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev \
                 libfontconfig-dev qtbase5-dev libqt5x11extras5-dev libx264-dev \
                 libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev
