@@ -48,9 +48,10 @@ NOTE: If using the .zip method for either the full or small install and installi
     * Pre-built windows dependencies for VS2013 and VS2015 can be found here:
       * VS2013: https://obsproject.com/downloads/dependencies2013.zip
       * VS2015: https://obsproject.com/downloads/dependencies2015.zip
+      * VS2017: [ABI compatible with VS2015](https://obsproject.com/downloads/dependencies2015.zip)
   * [Qt5](http://www.qt.io/)
   * Windows version of [cmake](http://www.cmake.org/)
-  * [Visual Studio 2013 (Latest update) or Visual Studio 2015](https://www.visualstudio.com/free-developer-offers/)
+  * [Visual Studio 2013 (Latest update) or Visual Studio 2015 or Visual Studio 2017](https://www.visualstudio.com/free-developer-offers/)
 
 * **Installation Procedure**
   * Clone the repository and **submodules**:
