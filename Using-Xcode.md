@@ -4,7 +4,7 @@ The project’s structure is quite complex and it’s not meant made to be debug
 ### Steps
 
 1) Configure the CMake project using the Makefile generator
-
+> 
     mkdir -p builds/mk 
     cd builds/mk
     CMAKE_PREFIX_PATH=/usr/local/opt/qt5/ cmake ../../
@@ -12,7 +12,7 @@ The project’s structure is quite complex and it’s not meant made to be debug
 (we will speak of a release build. add -DCMAKE_BUILD_TYPE=Debug if you want a Debug build)
 
 2) Configure the CMake project using the Xcode Generator
-
+> 
     mkdir -p builds/xcode
     cd builds/xcode
     CMAKE_PREFIX_PATH=/usr/local/opt/qt5/ cmake ../../ -G Xcode
