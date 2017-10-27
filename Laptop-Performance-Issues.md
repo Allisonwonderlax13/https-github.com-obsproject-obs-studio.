@@ -1,14 +1,16 @@
+### If you are getting a black screen with your Capture Sources or are otherwise having performance issues with OBS on your laptop, read the following as it applies to you:
+- [Game/Window Capture for NVIDIA-based laptop](#nvidia-based-laptops)
+- [Game/Window Capture for AMD-based laptop](#amd-based-laptops)
+- [I want to use Display Capture](#how-to-use-display-capture)
+
+***
+
 When using OBS on a laptop, you may run into performance issues or issues using a specific capture type (i.e. Game or Window capture). This can be very frustrating. The reason this happens is because most modern laptops will come with two GPUs:
 
 - An Intel GPU for 2D applications/your desktop
 - A discrete graphics chip (either NVIDIA or AMD) for 3D apps and games.
 
 OBS can only run on one of these GPUs, but your open applications and games could be running on either. For example, if OBS is running on the Intel GPU, you will not be able to use Game Capture for your games running on the discrete (NVIDIA or AMD) GPU. Additionally, if OBS is not running on the discrete GPU, you might run into performance issues. In rare cases, trying to capture a game running on a different GPU than OBS can cause the game to crash. This is not really an issue with OBS, but rather a design choice by laptop manufacturers in order to save power and there's little that can be done on our side. However, we do have several troubleshooting suggestions to try and assist with any issues. If you tried everything in this guide and are still having issues, please make a post on the [forums](https://obsproject.com/forum) or stop by the [support chat](https://obsproject.com/chat).
-
-### If you are getting a black screen with your Capture Sources or are otherwise having performance issues with OBS on your laptop, read the following as it applies to you:
-- [Game/Window Capture for NVIDIA-based laptop](#nvidia-based-laptops)
-- [Game/Window Capture for AMD-based laptop](#amd-based-laptops)
-- [I want to use Display Capture](#how-to-use-display-capture)
 
 ***
 
