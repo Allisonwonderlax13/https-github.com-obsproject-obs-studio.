@@ -36,8 +36,8 @@ Alternative directions - this sets the global default so all applications will r
 
 #### AMD-based Laptops
 If you are using an AMD-based laptop, check the guides here:
-- https://community.amd.com/docs/DOC-1581 (AMD Community guide)
-- http://support.amd.com/en-us/kb-articles/Pages/DH-017.aspx (Official AMD support documentation)
+- [AMD Community guide](https://community.amd.com/docs/DOC-1581)
+- [Official AMD support documentation](http://support.amd.com/en-us/kb-articles/Pages/DH-017.aspx)
 
 ***
 
