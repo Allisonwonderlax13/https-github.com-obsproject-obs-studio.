@@ -309,7 +309,7 @@ See https://nixos.org/wiki/OBS for further instructions
 ### Debian-based Build Directions
 * Set up a build environment:
 
-        sudo apt-get install build-essential pkg-config cmake git checkinstall
+        sudo apt-get install build-essential pkg-config cmake git-core checkinstall
 
 * Get the required packages:
 
