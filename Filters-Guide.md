@@ -147,6 +147,7 @@ Untested, but highly reviewed:
 
 - https://varietyofsound.wordpress.com/
 - http://www.vst4free.com/index.php?dev=Kjaerhus_Audio
+- http://www.lesliesanford.com/vst/plugins/
 
 ***
 
