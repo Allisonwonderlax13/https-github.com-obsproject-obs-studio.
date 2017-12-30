@@ -20,7 +20,7 @@ Getting started with OBS Studio is relatively simple, with only a few steps need
 3. Set your streaming bitrate or recording quality in Settings -> Output:
   - For Streaming, set the bitrate you wish to stream at. Recommended for 720p 30 FPS is 2500. If your internet cannot support this much bitrate, you may need to downscale resolution further to accommodate a lower bitrate.
   - For Recording, select a Recording Quality from the dropdown menu. Indistinguishable Quality is our recommended starting point. If you have an available hardware encoder (NVENC, QSV, or AMF), you can select that here as well.
-4. Add your [Scenes and Sources](#scenes-and-sources) for the content you wish to stream or record.
+4. Add your [Scenes and Sources](#scenes-and-sources) (use the + symbol under the Sources list, or right click and select **Add**) for the content you wish to stream or record.
 5. Click on Start Stream or Start Recording, and enjoy!
 
 ***
