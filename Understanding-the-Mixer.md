@@ -16,7 +16,7 @@ _[Insert image with areas numbered as above here]_
 ### The Basics
 The volume meter is made up of 3 primary sections signified by the green, yellow and red zones.
 
-* No sound should ever hit the far right of the red zone - this will cause clipping and sound bad in the stream/recording
+* No sound should ever hit the beyond the start of the red zone - this will cause clipping and sound bad in the stream/recording
 * Speech should ideally always fall in the yellow zone, occasionally touching the red zone
 * Everything else like music, game audio, and alert sound effects should remain in the green zone, ONLY touching the yellow zone if you want something to be as loud as your voice (spooky alerts, for example)
 
