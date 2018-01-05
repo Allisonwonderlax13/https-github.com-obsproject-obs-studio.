@@ -43,6 +43,12 @@ _**More coming soon.**_
 
 ## Technical Details
 
+### decibel relative to Full Scale (dBFS)
+Audio is measured in decibel (dB), which is a logarithmic scale which closely resembles how our ear and brain perceives audio volume.
+
+dB is however a relative measure and we could put the value 0 dB anywhere on the meter and be correct. In digital audio it is the convention to use 0 dBFS (the FS suffix is to indicate this convention) as the maximum volume that the sound card, audio interface, DA/AD-convertor can handle. Lower volume levels are shown with negative dBFS values.
+
+OBS internally uses floating point calculations for audio processing, so it does, in many cases, have the ability to process audio that is louder than 0 dBFS. However in the end when OBS record or streams the video, the audio will need be below 0 dBFS or the viewer will hear a nasty distortion called clipping.
 
 ### The Peak Programme Meter (PPM)
 The PPM is the main visual feature on the OBS meters, it shows as a bar filling the background of the meter.
@@ -58,6 +64,18 @@ The Permitted Maximum Level (PML) is the level where if you go above this value 
 * When reading PPM meters it is difficult to see the actual peak, so another 3 dB margin is added, this problem is eliminated in OBS due to the peak-hold feature which makes reading accurate.
 * Alignment errors, with multiple pieces of equipment in the chain an extra 3 dB margin was added for difference is levels.
 
+_OBS currently implements a "Sample peak program meter (SPPM)", in the future it will be nice if we replace it with a proper "4x Over-sampling peak programme meter", which would make it more accurate for measuring maximum peaks._
+
+### Peak and Hold
+There is a small line that moves right with the PPM meter, but then stays there when the PPM moves left again. It will stay there for 20 seconds before returning back to where the PPM meter currently is. This allows you to easily check what the maximum level was after you accidentally made a loud noise.
+
+### VU-meter
+A second small line on the meter, black and inside the bar of the PPM meter, is a VU-meter. This meter was traditionally used to determine loudness, because it was cheap to manufacture, and in OBS easy to implement.
+
+It measure the root-mean-square, integrated over a period of 300 ms. Due to the calculation it shows more closely the sound pressure levels then does a peak-meter.
+
+_This meter is less useful, but it kept some structure of the code in tacks so we can replace it with a proper loudness meter based on ITU-R BS.1770-2._
+
 ### Input Level
 The input level are the small square indicator at the far left of the meter. This is the best place to see if the audio is too loud for the audio interface that captures your microphone.
 
@@ -70,3 +88,5 @@ The colours have the following meters:
 * white: the input level is  larger than -0.5 dBFS
 
 If the indicator is missing it means there is no audio streaming toward OBS. This may be simply due to no audio being available yet, waiting for the user to start playback of an audio file. Or it may indicate a problem like the audio interface having been disconnected.
+
+_The input level meter is before the volume fader, but it is behind any filters that are in use by a source. To correctly determine input level you will need to disable the filters for this source._
