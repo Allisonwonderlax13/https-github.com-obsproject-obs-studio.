@@ -28,7 +28,7 @@ Each audio source will have at least one volume meter assigned to it.
 * (2) Stereo audio source. Left first is shown first, right second. Viewers will only hear these as they're assigned.
   1) If you have an audio source that appears to be stereo (two bars), but only one meter is lighting up (the first), it's recommended to enable "Mixdown to Mono" in the Advanced Audio Properties, otherwise your viewers will only hear it in their left ear.
 * (3 or more) Surround audio source. OBS will by default always mix extra channels down into stereo for the final stream/recording so viewers hear everything.
-   1) _[TODO Insert how they're ordered here, FL, FR, etc etc]_
+   1) _[TODO Insert how they're ordered here, FL, FR, etc etc. Ordering is based on surround mode]_
 
 _[Insert image examples of mono, stereo and surround sources here]_
 
