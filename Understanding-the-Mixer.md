@@ -1,3 +1,6 @@
+_**Note: This documentation is for a feature that has not yet been released.**_
+_It's only available to get feedback._
+
 # General Overview
 
 Each entry in the mixer is made up of 5 parts
