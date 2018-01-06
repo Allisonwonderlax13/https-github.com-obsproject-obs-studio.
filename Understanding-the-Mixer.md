@@ -3,6 +3,7 @@ _**Note: This documentation is for a feature that has not yet been released.**_
 _It's only available to gather feedback on formatting, structure and wording._
 
 ***
+
 ### Table of Contents:
 
 * [General Overview](#general-overview)
@@ -17,6 +18,8 @@ _It's only available to gather feedback on formatting, structure and wording._
   * [Peak and Hold](#peak-and-hold)
   * [VU-meter](#vu-meter)
   * [Input Level](#input-level)
+
+***
 
 # General Overview
 
