@@ -1,15 +1,16 @@
 # General Overview
 
-Each entry in the mixer is made up of 4 parts
+Each entry in the mixer is made up of 5 parts
 
 1. The (Volume) Meter - the coloured bars that light up as audio goes through a source
 2. The Fader - the volume slider for that source
-3. Mute icon - usually a speaker icon, but changes when the source is muted (fader at minimum)
+3. Mute button - a speaker icon to mute the source without adjusting the fader
 4. Options button - provides extra settings for the source
+5. Volume level - The exact value adjusted by the fader or volume % number, measured in decibels
 
 Most of the time, you want to keep a close eye on the meters. The rest should be 'set once run forever'.
 
-_[Insert image with areas numbered as above here]_
+![Mixer with number indicators](https://i.imgur.com/JYNCE01.png)
 
 ## Reading the Volume Meter
 
@@ -20,17 +21,18 @@ The volume meter is made up of 3 primary sections signified by the green, yellow
 * Speech should ideally always fall in the yellow zone, occasionally touching the red zone
 * Everything else like music, game audio, and alert sound effects should remain in the green zone, ONLY touching the yellow zone if you want something to be as loud as your voice (spooky alerts, for example)
 
-_[Insert image showing zones here]_
+![Mixer zones](https://i.imgur.com/eCYfThu.png)
 
 Each audio source will have at least one volume meter assigned to it.
 
 * (1) Mono audio source. Viewers will automatically hear this in both left and right channels (headphones/speakers)
-* (2) Stereo audio source. Left first is shown first, right second. Viewers will only hear these as they're assigned.
+* (2) Stereo audio source. Left is shown first, right second. Viewers will only hear these as they're assigned.
   1) If you have an audio source that appears to be stereo (two bars), but only one meter is lighting up (the first), it's recommended to enable "Mixdown to Mono" in the Advanced Audio Properties, otherwise your viewers will only hear it in their left ear.
 * (3 or more) Surround audio source. OBS will by default always mix extra channels down into stereo for the final stream/recording so viewers hear everything.
-   1) _[TODO Insert how they're ordered here, FL, FR, etc etc. Ordering is based on surround mode]_
+   1) Usually as Front Left, Front Right, Front Center, LFE/Sub, Rear Left, Rear Right, Side Left, Side Right
+   2) These devices will only show as surround if you have Settings->Audio->Channels set above Stereo
 
-_[Insert image examples of mono, stereo and surround sources here]_
+![Mono, Stereo and Surround example devices](https://i.imgur.com/y1OfYOl.png)
 
 ### Setting Audio Levels
 There are a number of ways to configure an audio source's volume. 
