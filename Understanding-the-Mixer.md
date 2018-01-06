@@ -62,7 +62,7 @@ Traditionally a sinus tone is played through the whole system and gain is config
 
 The Permitted Maximum Level (PML) is the level where if you go above this value there is a small but potential chance that the sound will get clipped before it reaches the viewer. -9 dBFS was chosen because:
 
-* With most PPM meters, including the one in OBS, the audio may have a peak level 3 dB higher then what is read from the meter.
+* With most PPM meters, including the one in OBS, the audio may have a peak level 3 dB higher than what is read from the meter.
 * When reading PPM meters it is difficult to see the actual peak, so another 3 dB margin is added, this problem is eliminated in OBS due to the peak-hold feature which makes reading accurate.
 * Alignment errors, with multiple pieces of equipment in the chain an extra 3 dB margin was added for difference is levels.
 
@@ -74,7 +74,7 @@ There is a small line that moves right with the PPM meter, but then stays there 
 ### VU-meter
 A second small line on the meter, black and inside the bar of the PPM meter, is a VU-meter. This meter was traditionally used to determine loudness, because it was cheap to manufacture, and in OBS easy to implement.
 
-It measure the root-mean-square, integrated over a period of 300 ms. Due to the calculation it shows more closely the sound pressure levels then does a peak-meter.
+It measure the root-mean-square, integrated over a period of 300 ms. Due to the calculation it shows more closely the sound pressure levels than does a peak-meter.
 
 _This meter is less useful, but it kept some structure of the code in tacks so we can replace it with a proper loudness meter based on ITU-R BS.1770-2._
 
