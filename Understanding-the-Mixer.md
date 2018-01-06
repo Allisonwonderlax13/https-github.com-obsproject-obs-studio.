@@ -18,9 +18,11 @@ Each entry in the mixer is made up of 5 parts
 
 Most of the time, you want to keep a close eye on the meters. The rest should be 'set once run forever'.
 
-## Reading the Volume Meter
+***
 
-### The Basics
+# Reading the Volume Meter
+
+## Zones
 The volume meter is made up of 3 primary sections signified by the green, yellow and red zones.
 
 ![Mixer zones](https://i.imgur.com/eCYfThu.png)
@@ -30,8 +32,7 @@ The volume meter is made up of 3 primary sections signified by the green, yellow
 * **Green Zone** - Everything else including music, game audio and alert sound effects should remain here
    1) Even if other sounds look to be the same volume as your voice, they may in reality sound louder to viewers
 
-# 
-
+## Channels
 
 Each audio source will have at least one volume meter assigned to it.
 
@@ -44,10 +45,16 @@ Each audio source will have at least one volume meter assigned to it.
    1) OBS automatically mixes down surround sources to Stereo unless otherwise specified
    2) Ordered as Front Left, Front Right, Front Center, LFE/Sub, Rear Left (5.1), Rear Right (5.1), Side Left (7.1), Side Right (7.1)
 
-# 
+## Indicators
 
+![Animated Indicators Example](https://i.imgur.com/UYBtRDG.gif)
 
-### Setting Audio Levels
+1. Left Dot (static): __Input level__ - Live indicator of the volume meter's status (green/yellow/red)
+2. Black Dot (always moving): __Vu-meter__ - Shows 'sound pressure', a more accurate indicator of 'loudness'
+3. Main Line (always moving): __Peak Programme Meter__ - Has a 'fall-off decay'. After sound stops the bar will slowly go down rather than displaying completely live data, until it reaches -60 dB (empty) or receives new, louder data
+4. Right Dot (sometimes static): __Peak__ - Displays the loudest the meter has been in 20 seconds, a great way to see if you're peaking
+
+## Setting Audio Levels
 There are a number of ways to configure an audio source's volume.
 
 As you adjust the volume at each step of the process, listen to the device both as early as possible (some devices will have a 'headphone' output or a 'monitor' jack) and again when it hits OBS using Audio Monitoring via Edit->Advanced Audio Properties.
@@ -79,16 +86,16 @@ Other things to keep in mind:
 ***
 
 
-## Technical Details
+# Technical Details
 
-### decibel relative to Full Scale (dBFS)
+## decibel relative to Full Scale (dBFS)
 Audio is measured in decibel (dB), which is a logarithmic scale which closely resembles how our ears and brain perceive audio volume.
 
 dB is a **relative** measurement. We could put the value 0 dB anywhere on the meter and be correct. In digital audio it is the convention to use 0 **dBFS** (the FS suffix is to indicate this convention) as the maximum volume that the sound card, audio interface, DA/AD-converter can handle. Lower volume levels are shown with negative dBFS values.
 
 OBS internally uses floating point calculations for audio processing, so it does have the ability to process audio that is louder than 0 dBFS. However in the end when OBS records or streams the video, the audio will **need be below 0 dBFS** or the viewer will hear a nasty distortion called clipping (described at this start of this guide).
 
-### The Peak Programme Meter (PPM)
+## The Peak Programme Meter (PPM)
 The PPM is the main visual feature on the OBS meter, lighting up as part of the overall volume meter.
 The length of the bar indicates the peak volume level of what the viewer will hear when playing your video or stream. You can change the volume by moving the fader which is directly below.
 
@@ -104,17 +111,17 @@ The Permitted Maximum Level (PML) is the level where if you go above this value 
 
 _OBS currently implements a "Sample peak program meter (SPPM)", in the future it would be preferred to replace it with a proper "4x Over-sampling peak programme meter", which would make it more accurate for measuring maximum peaks._
 
-### Peak and Hold
+## Peak and Hold
 There is a small line that moves right with the PPM meter, but then stays there when the PPM moves left again. It will stay there for 20 seconds before returning back to where the PPM meter currently is. This allows you to easily check what the maximum level was after you accidentally made a loud noise.
 
-### VU-meter
+## VU-meter
 A second small line on the meter, black and inside the bar of the PPM meter, is a VU-meter. This meter was traditionally used to determine loudness, because it was cheap to manufacture, and in OBS easy to implement.
 
 It measure the root-mean-square, integrated over a period of 300 ms. Due to the calculation it shows more closely the sound pressure levels than does a peak-meter.
 
 _This meter is less useful, but it kept some structure of the code in tacks so we can replace it with a proper loudness meter based on ITU-R BS.1770-2._
 
-### Input Level
+## Input Level
 The input level are the small square indicator at the far left of the meter. This is the best place to see if the audio is too loud for the audio interface that captures your microphone.
 
 The colours have the following meters:
