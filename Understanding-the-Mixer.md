@@ -140,7 +140,7 @@ A second small line on the meter, black and inside the bar of the PPM meter, is 
 
 It measure the root-mean-square, integrated over a period of 300 ms. Due to the calculation it shows more closely the sound pressure levels than does a peak-meter.
 
-_This meter is less useful, but it kept some structure of the code in tacks so we can replace it with a proper loudness meter based on ITU-R BS.1770-2._
+_This meter is less useful, but it kept some structure of the code intact so we can replace it with a proper loudness meter based on ITU-R BS.1770-2._
 
 ## Input Level
 The input level are the small square indicator at the far left of the meter. This is the best place to see if the audio is too loud for the audio interface that captures your microphone.
