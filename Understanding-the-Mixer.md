@@ -84,7 +84,8 @@ As you adjust the volume at each step of the process, listen to the device both 
    3) **Physical mixers:** these have individual gain knobs for their own sources, and a 'Master' before it's sent to your computer & OBS
    4) **For other devices** including audio interfaces, check their user manuals to see how to configure them, as they may require third party software by the manufacturer.
 * **Your Operating System** (Windows, macOS, Linux, etc) also has its own volume sliders and mixer
-   1) Note that some devices may have a 'safe zone' that is well below the 100% mark. The Samson C01U for example can start clipping around 60% if the input (your voice) is loud enough. Be sure to experiment heavily before attempting to record audio
+   1) Note that some devices may have a 'safe zone' that is well below the 100% mark. 
+      * In Windows for example, Control Panel->Hardware and Sound->Sound, under the Recording tab, select the device in question (like your mic) and click Properties. In the Levels tab, right click the % value and choose 'decibels'. You want this to be at (or around) 0.0dB for the least amount of clipping. It will retain the setting when you switch back to 'percent'.
    2) Your system's primary volume slider **does not** affect the volume of the sound that OBS hears
    3) Individual application volume sliders **do** affect the volume of the sound that OBS hears
 
