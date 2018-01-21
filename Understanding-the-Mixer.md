@@ -72,7 +72,7 @@ Each audio source will have at least one volume meter assigned to it.
 2. Black Dot (always moving): __Vu-meter__ - Shows 'sound pressure', a more accurate indicator of 'loudness'
 3. Main Line (always moving): __Peak Programme Meter__ - Has a 'fall-off decay'. After sound stops the bar will slowly go down rather than displaying completely live data, until it reaches -60 dB (empty) or receives new, louder data
    * The 'Audio Meter Decay Rate' (how quickly the bar goes down) can be changed in the Audio screen of Settings
-4. Right Dot (sometimes static): __Peak__ - Displays the loudest the meter has been in 20 seconds, a great way to see if you're peaking
+4. Right Dot (sometimes static): __Peak__ - Displays the loudest the meter has been in 20 seconds, a great way to see if you're clipping
 
 ## Setting Audio Levels
 There are a number of ways to configure an audio source's volume.
