@@ -5,6 +5,7 @@
   * [Sources Guide](Sources-Guide)
   * [Filters Guide](Filters-Guide)
   * [Keyboard Shortcuts](Keyboard-Shortcuts)
+  * [Understanding the Mixer](Understanding-the-Mixer)
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
     * [Buffering](Stream-Buffering-Issues)
