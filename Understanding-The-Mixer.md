@@ -1,4 +1,4 @@
-_**This mixer is available in OBS Studio 21.0 or newer.** Click Help -> Check for updates if you're out of date._
+_**This mixer is available in OBS Studio 21.0 or newer.**_
 
 ***
 
