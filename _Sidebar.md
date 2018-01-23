@@ -5,7 +5,7 @@
   * [Sources Guide](Sources-Guide)
   * [Filters Guide](Filters-Guide)
   * [Keyboard Shortcuts](Keyboard-Shortcuts)
-  * [Surround Sound (Multichannel) Streaming and Recording](Surround-Sound-(Multichannel)-Streaming-And-Recording)
+  * [Surround Sound (Multichannel) Streaming and Recording](Surround-Sound-%28Multichannel%29-Streaming-And-Recording)
   * [Understanding the Mixer](Understanding-The-Mixer)
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
