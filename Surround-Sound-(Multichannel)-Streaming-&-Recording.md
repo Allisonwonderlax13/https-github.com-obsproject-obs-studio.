@@ -5,22 +5,22 @@ _These features require OBS-Studio 21.0 or newer._
 ### Table of Contents:
 
 * [Overview](#overview)    
-  * [Case Uses](#case-uses)
+  * [Case uses](#case-uses)
 * [Setup](#setup)
 * [Gaming and Streaming Services Support](#gaming-and-streaming-services-support)
   * [Compatible Streaming Services](#compatible-streaming-services)
   * [Incompatible Services](#incompatible-services)
-* [Streaming Servers And Players](#streaming-servers-and-players)
+* [Streaming Servers and Players](#streaming-servers-and-players)
   * [Compatible Streaming Servers](#compatible-streaming-servers)
   * [Compatible Web Players](#compatible-web-players)
 * [Streaming Music](#streaming-music)
-  * [Filters And VST](#filters-and-vst)
+  * [Filters and VST](#filters-and-vst)
   * [High Quality Recording](#high-quality-recording)
-  * [Interfacing With A DAW](#interfacing-with-a-daw)
+  * [Interfacing with a DAW](#interfacing-with-a-daw)
 * [Ambisonics](#ambisonics)
   * [Higher Order Ambisonics](#higher-order-ambisonics)
 * [Multilingual Streaming](#multilingual-streaming)
-* [Detailed List Of Surround Sound Features](#detailed-list-of-surround-sound-features)
+* [Detailed list of surround sound features](#detailed-list-of-surround-sound-features)
 
 ***
 
@@ -30,7 +30,7 @@ Traditionally this is a feature reserved to professional broadcast appliances.
 OBS-Studio can stream and record up to 8 audio channels.  
 The audio channels can be surround sound channels or more general multichannel ones. 
 
-## **Case Uses:**
+## **Case uses:**
 * **gaming**
 * **music**
 * **ambisonics**
@@ -60,7 +60,7 @@ Streams can be encoded in ac3 /eac (using Output > Advanced > Custom FFmpeg reco
 Modify this wiki if this works.    
 Capture of dolby can be tricky if the channels are lumped into two PCM channels; in order to be decoded correctly and encoded all the channels should be held in different PCM channels.    
 
-# **Gaming And Streaming Services Support** 
+# **Gaming and Streaming Services Support** 
  
 ## **Compatible Streaming Services**
 As of now, the following services have been tested and are compatible with live surround sound streaming:
@@ -76,7 +76,7 @@ As of now, the following services have been tested and are compatible with live 
 * **YouTube Live** (discards channels beyond the first two).
 * **Facebook Live** (downmixes all the channels).
 
-# **Streaming Servers And Players**
+# **Streaming Servers and Players**
 
 Apart from streaming to services like Twitch or Facebook Live, you might use your own streaming server which delivers streams to your website.
 
@@ -102,14 +102,14 @@ NB: Flash player accepts rtmp surround sound in Dolby; it might work ==> unteste
 For music bands, Djing, ... , bring your production with surround sound to the World !   
 Up to 7.1 surround sound is available. (For more channels (up to 16.0) check [this fork](https://github.com/pkviet/obs-studio/releases)).    
 
-## **Filters And VST**
+## **Filters and VST**
 OBS-Studio has built-in audio filters as well as VST 2 support. The filters are compatible with surround sound; the VST also **if** they originally support multichannel. Check the [Filters Guide here](https://github.com/jp9000/obs-studio/wiki/Filters-Guide).
 
 ## **High Quality Recording**
 Select Custom FFmpeg recording and a PCM format (e.g. pcm_s24le for 24 bit samples) for uncompressed audio.
 For compressed formats, you can select also libopus and aac which will work very well (target at least 64 kbs per channel).  
 
-## **Interfacing With A DAW**
+## **Interfacing with a DAW**
 For that you will need some application ensuring the routing.
 ### windows
  **Reaper** :
