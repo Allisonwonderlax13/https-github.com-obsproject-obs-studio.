@@ -5,22 +5,22 @@ _These features require OBS-Studio 21.0 or newer._
 ### Table of Contents:
 
 * [Overview](#overview)    
-  * [Case uses](#case-uses)
+  * [Case Uses](#case-uses)
 * [Setup](#setup)
-* [Gaming and Streaming services support](#gaming-and-streaming-services-support)
-  * [Compatible streaming services](#compatible-streaming-services)
-  * [Incompatible services](#incompatible-services)
-* [Streaming servers and players](#streaming-servers-and-players)
-  * [Compatible streaming servers](#compatible-streaming-servers)
-  * [Compatible web players](#compatible-web-players)
-* [Streaming music](#streaming-music)
-  * [Filters and VST](#filters-and-vst)
-  * [High quality recording](#high-quality-recording)
-  * [Interfacing with a DAW](#interfacing-with-a-daw)
+* [Gaming and Streaming Services Support](#gaming-and-streaming-services-support)
+  * [Compatible Streaming Services](#compatible-streaming-services)
+  * [Incompatible Services](#incompatible-services)
+* [Streaming Servers And Players](#streaming-servers-and-players)
+  * [Compatible Streaming Servers](#compatible-streaming-servers)
+  * [Compatible Web Players](#compatible-web-players)
+* [Streaming Music](#streaming-music)
+  * [Filters And VST](#filters-and-vst)
+  * [High Quality Recording](#high-quality-recording)
+  * [Interfacing With A DAW](#interfacing-with-a-daw)
 * [Ambisonics](#ambisonics)
-  * [Higher order ambisonics](#higher-order-ambisonics)
-* [Multilingual streaming](#multilingual-streaming)
-* [Detailed list of surround sound features](#detailed-list-of-surround-sound-features)
+  * [Higher Order Ambisonics](#higher-order-ambisonics)
+* [Multilingual Streaming](#multilingual-streaming)
+* [Detailed List Of Surround Sound Features](#detailed-list-of-surround-sound-features)
 
 ***
 
@@ -30,7 +30,7 @@ Traditionally this is a feature reserved to professional broadcast appliances.
 OBS-Studio can stream and record up to 8 audio channels.  
 The audio channels can be surround sound channels or more general multichannel ones. 
 
-## **Case uses:**
+## **Case Uses:**
 * **gaming**
 * **music**
 * **ambisonics**
@@ -60,9 +60,9 @@ Streams can be encoded in ac3 /eac (using Output > Advanced > Custom FFmpeg reco
 Modify this wiki if this works.    
 Capture of dolby can be tricky if the channels are lumped into two PCM channels; in order to be decoded correctly and encoded all the channels should be held in different PCM channels.    
 
-# **Gaming and Streaming services support** 
+# **Gaming And Streaming Services Support** 
  
-## **Compatible streaming services**
+## **Compatible Streaming Services**
 As of now, the following services have been tested and are compatible with live surround sound streaming:
    
 * **Twitch**,  
@@ -71,23 +71,23 @@ As of now, the following services have been tested and are compatible with live 
 * **Facebook Live 360 with spacial audio** (requires ambisonics capture device)
 
  
-## **Incompatible services**
+## **Incompatible Services**
 
 * **YouTube Live** (discards channels beyond the first two).
 * **Facebook Live** (downmixes all the channels).
 
-# **Streaming servers and players**
+# **Streaming Servers And Players**
 
 Apart from streaming to services like Twitch or Facebook Live, you might use your own streaming server which delivers streams to your website.
 
-### **Compatible streaming servers**
+### **Compatible Streaming Servers**
 The following servers have been tested and ingest surround sound in rtmp protocol : 
 * wowza
 * nginx with rtmp module
 
 Note however that server-side recordings only keep the first two channels although.
 
-### **Compatible web players**
+### **Compatible Web Players**
 * html5 players (tested with hls or mpeg-dash):   
     + videojs,   
     + bitmovin,      
@@ -97,19 +97,19 @@ Note however that server-side recordings only keep the first two channels althou
   
 NB: Flash player accepts rtmp surround sound in Dolby; it might work ==> untested. 
 
-# **Streaming music**
+# **Streaming Music**
 
 For music bands, Djing, ... , bring your production with surround sound to the World !   
 Up to 7.1 surround sound is available. (For more channels (up to 16.0) check [this fork](https://github.com/pkviet/obs-studio/releases)).    
 
-## **Filters and VST**
+## **Filters And VST**
 OBS-Studio has built-in audio filters as well as VST 2 support. The filters are compatible with surround sound; the VST also **if** they originally support multichannel. Check the [Filters Guide here](https://github.com/jp9000/obs-studio/wiki/Filters-Guide).
 
-## **High quality recording**
+## **High Quality Recording**
 Select Custom FFmpeg recording and a PCM format (e.g. pcm_s24le for 24 bit samples) for uncompressed audio.
 For compressed formats, you can select also libopus and aac which will work very well (target at least 64 kbs per channel).  
 
-## **Interfacing with a DAW**
+## **Interfacing With A DAW**
 For that you will need some application ensuring the routing.
 ### windows
  **Reaper** :
@@ -139,14 +139,14 @@ In order for this feature to work, obviously you will need an ambisonics capture
 If you have an aac or uncompressed audio recording with 4 ambisonics, you can also play it by adding a Media Source.   
 (If it doesn't work, check with ffmpeg that it is decoded correctly.)   
  
-## **Higher order ambisonics**    
+## **Higher Order Ambisonics**    
 No live streaming service supports beyond first-order ambisonics.
 For recording, though for order 2 or 3, you can use this [fork](https://github.com/pkviet/obs-studio).   
 If you record with libopus (Output > Advanced > Custom FFmpeg recording ) up to 255 channels are available with mkv.   
 You will have to add the mapping_family=255 option though to FFmpeg audio encoder options in OBS-Studio.   
 
 
-# **Multilingual streaming** 
+# **Multilingual Streaming** 
 
 Multichannel support in OBS allows to stream several languages simultaneously.    
 This is useful for live translation (public talks ... ).
