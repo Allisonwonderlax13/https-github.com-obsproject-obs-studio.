@@ -5,7 +5,7 @@ _These features require OBS-Studio 21.0 or newer._
 ### Table of Contents:
 
 * [Overview](#overview)    
-  * [Case uses](#case-uses)
+  * [Use cases](#use-cases)
 * [Setup](#setup)
 * [Gaming and Streaming Services Support](#gaming-and-streaming-services-support)
   * [Compatible Streaming Services](#compatible-streaming-services)
@@ -30,7 +30,7 @@ Traditionally this is a feature reserved to professional broadcast appliances.
 OBS-Studio can stream and record up to 8 audio channels.  
 The audio channels can be surround sound channels or more general multichannel ones. 
 
-## **Case uses:**
+## **Use cases:**
 * **gaming**
 * **music**
 * **ambisonics**
