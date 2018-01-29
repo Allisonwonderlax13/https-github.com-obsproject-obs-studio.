@@ -4,6 +4,9 @@ It is the re-write of the widely used [Open Broadcaster Software](https://obspro
 * Official OBS Studio Builds: https://github.com/jp9000/obs-studio/releases
 * Building OBS Studio Manually: [[Install Instructions]]
 
+If you're looking for any kind of assistance with OBS Studio, the site has a help portal with links to resources and our support channels.
+* [OBS Studio Help Portal](https://obsproject.com/help)
+
 The community has created a few guides on how to use OBS Studio:
 * Overview Guide: [[OBS Studio Overview]]
 * Guide to Sources in Studio: [[Sources Guide]]
