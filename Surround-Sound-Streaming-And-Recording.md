@@ -113,7 +113,7 @@ For compressed formats, you can select also libopus and aac which will work very
 For that you will need some application ensuring the routing.
 ### windows
  **Reaper** :
-* [SAR](http://sar.audio/) (requires having an ASIO driver, for isntance ASIO4ALL if you don't own an ASIO card).
+* [SAR](http://sar.audio/) (requires having an ASIO driver, for instance ASIO4ALL if you don't own an ASIO card).
 * rearoute (from Reaper, with up to 256 channels) if using [ASIO plugin](https://github.com/pkviet/obs-asio)
 * [Voicemeeter](https://www.vb-audio.com/Voicemeeter/index.htm)
 * **not working with surround sound** (as of v. 4.15) : [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm)
