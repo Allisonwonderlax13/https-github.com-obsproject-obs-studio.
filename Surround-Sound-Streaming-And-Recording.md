@@ -115,10 +115,10 @@ For that you will need some application ensuring the routing.
  **Reaper** :
 * [SAR](http://sar.audio/) (requires having an ASIO driver, for instance ASIO4ALL if you don't own an ASIO card).
 * rearoute (from Reaper, with up to 256 channels) if using [ASIO plugin](https://github.com/pkviet/obs-asio)
-* [Voicemeeter](https://www.vb-audio.com/Voicemeeter/index.htm)
+* [Voicemeeter](https://www.vb-audio.com/Voicemeeter/index.htm) (Excellent [guide here](https://obsproject.com/forum/resources/voicemeeter-banana-audio-management-for-1-and-2-pc-streaming-setups.397/) by Jack0r for Voicemeeter Banana)
 * [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm) (requires v.4.50 or later).
 ![Imgur](https://i.imgur.com/9brmItb.jpg)
-* For routing in Windows, check this excellent [guide](https://obsproject.com/forum/resources/how-to-split-exclude-seperate-audio-sources-off-your-stream-or-recording.8/). This other [guide](https://obsproject.com/forum/resources/exclude-multiple-applications-audio-from-obs.524/) may be interesting too.
+* For routing in Windows, check this excellent [guide](https://obsproject.com/forum/resources/how-to-split-exclude-seperate-audio-sources-off-your-stream-or-recording.8/) again by Jack0r. This other [guide](https://obsproject.com/forum/resources/exclude-multiple-applications-audio-from-obs.524/) may be of interest too.
 
 ### MacOS
 Tested with **Reaper** and the following apps ensuring the routing
