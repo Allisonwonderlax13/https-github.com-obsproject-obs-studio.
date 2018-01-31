@@ -113,17 +113,20 @@ For compressed formats, you can select also libopus and aac which will work very
 For that you will need some application ensuring the routing.
 ### windows
  **Reaper** :
-* [SAR](http://sar.audio/)
+* [SAR](http://sar.audio/) (requires having an ASIO driver, for isntance ASIO4ALL if you don't own an ASIO card).
 * rearoute (from Reaper, with up to 256 channels) if using [ASIO plugin](https://github.com/pkviet/obs-asio)
 * [Voicemeeter](https://www.vb-audio.com/Voicemeeter/index.htm)
 * **not working with surround sound** (as of v. 4.15) : [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm)
 ![Imgur](https://i.imgur.com/9brmItb.jpg)
+* For routing in Windows, check this excellent [guide](https://obsproject.com/forum/resources/how-to-split-exclude-seperate-audio-sources-off-your-stream-or-recording.8/). This other [guide](https://obsproject.com/forum/resources/exclude-multiple-applications-audio-from-obs.524/) may be interesting too.
 
 ### MacOS
 Tested with **Reaper** and the following apps ensuring the routing
 * Soundflower
-* Jack server
+* Jack server : check this excellent [guide](https://obsproject.com/forum/threads/advanced-audio-capture-mac-os-x.22420/).
 * Loopback
+* untested: iShow U (guide [here](https://obsproject.com/forum/threads/os-x-capture-audio-with-ishowu-audio-capture.65447/)).
+* untested: WavTap (guide [here](https://obsproject.com/forum/threads/setting-up-mac-desktop-sound-capture-with-wavtap.16524/)).
 
 ### Linux
 No DAW tested. Update the Wiki if you tested.
