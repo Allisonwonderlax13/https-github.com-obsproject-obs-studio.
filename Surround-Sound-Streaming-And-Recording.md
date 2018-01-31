@@ -116,7 +116,7 @@ For that you will need some application ensuring the routing.
 * [SAR](http://sar.audio/) (requires having an ASIO driver, for instance ASIO4ALL if you don't own an ASIO card).
 * rearoute (from Reaper, with up to 256 channels) if using [ASIO plugin](https://github.com/pkviet/obs-asio)
 * [Voicemeeter](https://www.vb-audio.com/Voicemeeter/index.htm)
-* **not working with surround sound** (as of v. 4.15) : [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm)
+* [Virtual Audio Cable](http://software.muzychenko.net/eng/vac.htm) (requires v.4.50 or later).
 ![Imgur](https://i.imgur.com/9brmItb.jpg)
 * For routing in Windows, check this excellent [guide](https://obsproject.com/forum/resources/how-to-split-exclude-seperate-audio-sources-off-your-stream-or-recording.8/). This other [guide](https://obsproject.com/forum/resources/exclude-multiple-applications-audio-from-obs.524/) may be interesting too.
 
