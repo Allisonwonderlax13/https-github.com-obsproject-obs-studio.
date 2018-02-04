@@ -8,17 +8,18 @@ To make it easier for new users, here's an updated quickstart guide.
 
 1. When you load OBS Studio for the first time you should see the Auto-Configuration Wizard. If you're new to OBS or just want to get started as quickly as possible, follow the steps to get the best settings for your setup.
     * If you only see the main OBS Studio window, you can access the Auto-Config Wizard in the Tools menu at the top.
+    * This wizard will automatically select your best settings - streaming or recording, resolution, bitrate, encoder, streaming provider and more. You can always modify the settings manually later.
 
 2. By default, OBS Studio should capture your Desktop Audio and your default Microphone. If it doesn't, click on File -> Settings -> Audio and select them manually.
     * If you're on macOS, [you'll need this app](https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/) to capture desktop audio
 
 3. Next, you'll see that the preview is a black screen. To get started capturing any kind of video, you need to add a Source. At the bottom of the window is a box called 'Sources'. Click on the + and pick the source you want. For most people, this is most likely 'Game Capture'.
-    * Sources and Scenes are the bread and butter of OBS Studio, and can be super powerful. [Click here to read more about them.](https://obsproject.com/wiki/OBS-Studio-Overview#scenes-and-sources).
+    * Sources and Scenes are the bread and butter of OBS Studio, and can be super powerful. [Click here to read more about them](https://obsproject.com/wiki/OBS-Studio-Overview#scenes-and-sources).
     * OBS Studio isn't just designed to capture your screen, which is why you're provided with so many options and why there isn't a default.
 
 4. Now just hit Start Recording or Start Streaming. That's all there is to it!
 
-5. If you want to read more about the power of OBS Studio, jump into the Overview wiki.
+5. If you want to read more about the power of OBS Studio, jump into the [Overview wiki](OBS-Studio-Overview).
 
 ## FAQ
 
