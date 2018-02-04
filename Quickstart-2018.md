@@ -1,4 +1,4 @@
-To make it easier for new users, here's an updated quickstart guide. I'll paste in the existing one below and we can tweak from there.
+To make it easier for new users, here's an updated quickstart guide.
 
 * New users struggle most with the fact that a source needs to be added first
 * The old guide doesn't mention the auto-config wizard
@@ -6,12 +6,31 @@ To make it easier for new users, here's an updated quickstart guide. I'll paste 
 
 ## Quickstart
 
-Getting started with OBS Studio is relatively simple, with only a few steps needed before you're on your way to creating content.
+1. When you load OBS Studio for the first time you should see the Auto-Configuration Wizard. If you're new to OBS or just want to get started as quickly as possible, follow the steps to get the best settings for your setup.
+    * If you only see the main OBS Studio window, you can access the Auto-Config Wizard in the Tools menu at the top.
 
-1. Select your Streaming Service in Settings -> Stream, and enter your stream key information. If you are only going to be recording, you can ignore this step.
-2. Select your Base (Canvas) and Output (Scaled) resolutions and FPS in Settings -> Video. The Base (Canvas) should be set to your primary monitor's resolution by default, and this is usually safe to leave alone. Output (Scaled) is the resolution that the stream or recording will be output as. For most cases, we recommend starting with 720p (1280x720) at 30 FPS as the starting point. 
-3. Set your streaming bitrate or recording quality in Settings -> Output:
-  - For Streaming, set the bitrate you wish to stream at. Recommended for 720p 30 FPS is 2500. If your internet cannot support this much bitrate, you may need to downscale resolution further to accommodate a lower bitrate.
-  - For Recording, select a Recording Quality from the dropdown menu. Indistinguishable Quality is our recommended starting point. If you have an available hardware encoder (NVENC, QSV, or AMF), you can select that here as well.
-4. Add your [Scenes and Sources](#scenes-and-sources) (use the + symbol under the Sources list, or right click and select **Add**) for the content you wish to stream or record.
-5. Click on Start Stream or Start Recording, and enjoy!
+2. By default, OBS Studio should capture your Desktop Audio and your default Microphone. If it doesn't, click on File -> Settings -> Audio and select them manually.
+    * If you're on macOS, [you'll need this app](https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/) to capture desktop audio
+
+3. Next, you'll see that the preview is a black screen. To get started capturing any kind of video, you need to add a Source. At the bottom of the window is a box called 'Sources'. Click on the + and pick the source you want. For most people, this is most likely 'Game Capture'.
+    * Sources and Scenes are the bread and butter of OBS Studio, and can be super powerful. [Click here to read more about them.](https://obsproject.com/wiki/OBS-Studio-Overview#scenes-and-sources).
+    * OBS Studio isn't just designed to capture your screen, which is why you're provided with so many options and why there isn't a default.
+
+4. Now just hit Start Recording or Start Streaming. That's all there is to it!
+
+5. If you want to read more about the power of OBS Studio, jump into the Overview wiki.
+
+## FAQ
+
+Where are my recordings saved?
+* Once your recording is done, you can find it using File -> Show Recordings. You can change this in File -> Settings -> Output -> Recording.
+
+I need my recordings in MP4!
+* File -> Remux Recordings will quickly and easily convert your video files into MP4.
+
+Help, my video is laggy!
+* Depending on the kind of lag, this could be related to a slow internet connection, your game using too many resources, or incorrect settings. Read the troubleshooting guides linked below.
+
+I need help with other issues!
+* [Troubleshooting Guides](Troubleshooting-Guides)
+* [Community Chat & more](http://obsproject.com/help)
