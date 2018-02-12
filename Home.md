@@ -8,12 +8,13 @@ If you're looking for any kind of assistance with OBS Studio, the site has a hel
 * [OBS Studio Help Portal](https://obsproject.com/help)
 
 The community has created a few guides on how to use OBS Studio:
+* Quickstart Guide: [[OBS Studio Quickstart]]
 * Overview Guide: [[OBS Studio Overview]]
 * Guide to Sources in Studio: [[Sources Guide]]
 * Guide to Filters in Studio: [[Filters Guide]]
 * General Troubleshooting Guides: [[Troubleshooting Guides]]
-* [Understanding the Mixer](Understanding-The-Mixer)
-* [Surround Sound Streaming and Recording](Surround-Sound-Streaming-And-Recording)
+* Volume meters guide (v21+): [[Understanding the Mixer]]
+* Surround sound features: [[Surround Sound Streaming and Recording]]
 
 For Support Questions, the forum and chat are available:  
 * [OBS Studio Forum](https://obsproject.com/forum/categories/obs-multiplatform-support.30/)  
