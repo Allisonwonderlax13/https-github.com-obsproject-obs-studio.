@@ -1,7 +1,8 @@
 # [Home](https://github.com/jp9000/obs-studio/wiki)
 # Guides
   * [System Requirements](System-Requirements)
-  * [Overview/Quickstart Guide](OBS-Studio-Overview)
+  * [Quickstart Guide](OBS-Studio-Quickstart)
+  * [Overview Guide](OBS-Studio-Overview)
   * [Sources Guide](Sources-Guide)
   * [Filters Guide](Filters-Guide)
   * [Keyboard Shortcuts](Keyboard-Shortcuts)
