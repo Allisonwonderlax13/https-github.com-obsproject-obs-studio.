@@ -18,7 +18,7 @@ Sources and Scenes are the bread and butter of OBS Studio, and can be super powe
 
 ### 4. Test your stream and record settings
 
-Double check that all your settings are how you want them in Settings -> Output. Then, just hit Start Recording or Start Streaming. We strongly encourage running a test for a few minutes to make sure that there are no issues, rather than just jumping in to your first stream or recording. If you run into any issues, or need further help, take a peak at our [help portal](https://obsproject.com/help)
+Double check that all your settings are how you want them in Settings -> Output. Then, just hit Start Recording or Start Streaming. We strongly encourage running a test for a few minutes to make sure that there are no issues, rather than just jumping in to your first stream or recording. If you run into any issues, or need further help, take a peak at our [help portal](https://obsproject.com/help).
 
 Once you're satisfied, you can go on to creating great content. That's all there is to it!
 
