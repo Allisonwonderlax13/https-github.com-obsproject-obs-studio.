@@ -2,7 +2,7 @@
 
 ### 1. Run the auto-configutation wizard
 
-When you load OBS Studio for the first time you should see the Auto-Configuration Wizard. If you're new to OBS or just want to get started as quickly as possible, follow the steps to get good starting settings for your setup. If you only see the main OBS Studio window, you can access the Auto-Config Wizard in the Tools menu at the top. This wizard will automatically select your best settings - streaming or recording, resolution, bitrate, encoder, streaming provider and more. You can always modify the settings manually later.
+When you load OBS Studio for the first time you should see the Auto-Configuration Wizard. If you're new to OBS or just want to get started as quickly as possible, follow the steps to get good starting settings for your setup. If you only see the main OBS Studio window, you can access the Auto-Config Wizard in the Tools menu at the top. This wizard will automatically test your system and attempt to find settings that your PC can handle. This includes streaming or recording, resolution, bitrate, encoder, streaming provider and more. You can always modify the settings manually later.
 
 ### 2. Set up your audio devices
 
