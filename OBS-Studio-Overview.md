@@ -1,7 +1,7 @@
 This guide assumes you already have a basic knowledge of streaming services and streaming terminology, and aims to give you a quick overview of the most important options and features in OBS Studio. However, even if you don't have any previous experience, don't be discouraged! This guide can still be very useful. It may seem like a lot to take in all at once; just take your time and read carefully.
 
 This guide is broken into these main sections:
-- [Quickstart](#quickstart)
+- [[OBS Studio Quickstart]]
 - [Settings](#settings)
 - [Scenes and Sources](#scenes-and-sources)
 - [Filters](#filters)
@@ -13,15 +13,7 @@ This guide is broken into these main sections:
 
 ## Quickstart
 
-Getting started with OBS Studio is relatively simple, with only a few steps needed before you're on your way to creating content.
-
-1. Select your Streaming Service in Settings -> Stream, and enter your stream key information. If you are only going to be recording, you can ignore this step.
-2. Select your Base (Canvas) and Output (Scaled) resolutions and FPS in Settings -> Video. The Base (Canvas) should be set to your primary monitor's resolution by default, and this is usually safe to leave alone. Output (Scaled) is the resolution that the stream or recording will be output as. For most cases, we recommend starting with 720p (1280x720) at 30 FPS as the starting point. 
-3. Set your streaming bitrate or recording quality in Settings -> Output:
-  - For Streaming, set the bitrate you wish to stream at. Recommended for 720p 30 FPS is 2500. If your internet cannot support this much bitrate, you may need to downscale resolution further to accommodate a lower bitrate.
-  - For Recording, select a Recording Quality from the dropdown menu. Indistinguishable Quality is our recommended starting point. If you have an available hardware encoder (NVENC, QSV, or AMF), you can select that here as well.
-4. Add your [Scenes and Sources](#scenes-and-sources) (use the + symbol under the Sources list, or right click and select **Add**) for the content you wish to stream or record.
-5. Click on Start Stream or Start Recording, and enjoy!
+The 4 step Quickstart guide has been moved to [[OBS Studio Quickstart]]. Use it if you're brand new to OBS Studio and just want to get started as soon as possible!
 
 ***
 
