@@ -69,10 +69,10 @@ NOTE: If using the .zip method for either the full or small install and installi
           * `c:\obs-deps\win32\include`
           * `c:\obs-deps\win64\include`
         * If you wish to specify both 32 and 64 bit dependencies (for multi-arch building), you can use `DepsPath32` and `DepsPath64` to their respective include folders.
-      * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required.)
+      * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch)
         * Example Qt directories you would use here if you installed Qt5 to D:\Qt would usually look something like this:
-          * `(32bit) D:\Qt\5.8\msvc2013`
-          * `(64bit) D:\Qt\5.8\msvc2013_64`
+          * `(32bit) QTDIR=D:\Qt\5.8\msvc2013`
+          * `(64bit) QTDIR64=D:\Qt\5.8\msvc2013_64`
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)  
       * `x264Path` (Path to just x264 include directory.)  
