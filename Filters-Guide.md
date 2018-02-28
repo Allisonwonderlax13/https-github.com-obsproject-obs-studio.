@@ -88,6 +88,8 @@ The Noise Gate allows you to cut off all background noise while you are not talk
 ### Noise Suppression
 The Noise Suppression filter can be used to remove mild background noise or white noise that may be in any of your audio sources. While this is generally not effective at large amounts of background noise (i.e. in a loud room) it can be quite effective at reducing things like PC fan noise or other environmental noises.
 
+0 is off. The further you move the slider to the left, the 'stronger' the filter will be, and the more sounds it will filter out. Keep in mind that this can distort other sounds (like your voice).
+
 ***
 
 ### Compressor
