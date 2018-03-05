@@ -140,7 +140,7 @@ Official macOS builds are available again as of 18.0.1.
 
     on OSX 10.9 or newer:
 
-        cmake . && make
+        cmake .. && make
 
     on OSX 10.8:
 
