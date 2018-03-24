@@ -21,6 +21,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
   	* [openSUSE (Unofficial)](#opensuse-installation-unofficial)
   	* [Gentoo (Unofficial)](#gentoo-installation-unofficial)
   	* [NixOS (Unofficial)](#nixos-installation-unofficial)
+  	* [Deepin (15.4+)](#deepin-instalation)
   * [Build Directions](#linux-build-directions)
     * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
     * [Debian-based](#debian-based-build-directions)
@@ -275,6 +276,22 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
     nix-env -i obs-studio
 
 See https://nixos.org/wiki/OBS for further instructions
+
+***
+
+### Deepin Instalation
+
+* First make sure you have everything up-to-date.
+
+        sudo apt-get update
+
+* FFmpeg is required, so make sure you have it installed first.
+
+        sudo apt-get install ffmpeg
+
+* Finally install OBS Studio.
+
+        sudo apt-get install obs-studio
 
 ***
 
