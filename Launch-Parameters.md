@@ -7,9 +7,9 @@ OBS Studio supports the following launch parameters for automation and portable 
 | `--startstreaming`      | Automatically start streaming. |
 | `--startrecording`      | Automatically start recording. |
 | `--startreplaybuffer`   | Automatically start Replay Buffer. |
-| `--collection "<name>"` | Start with given scene collection. |
-| `--profile "<name>"`    | Start with given profile. |
-| `--scene "<name>"`      | Start with given scene. |
+| `--collection "name"` | Start with given scene collection. |
+| `--profile "name"`    | Start with given profile. |
+| `--scene "name"`      | Start with given scene. |
 | `--studio-mode`         | Start with Studio Mode active. |
 | `--minimize-to-tray`    | Start minimized to system tray. |
 | `--portable`, `-p`      | Use portable mode. |
