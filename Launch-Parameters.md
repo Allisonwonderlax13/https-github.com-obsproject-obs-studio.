@@ -1,6 +1,6 @@
 OBS Studio supports the following launch parameters for automation and portable use
 
-| Paramter                | Description |
+| Parameter                | Description |
 | ----------------------- | ----------- |
 | `--help`, `-h`          | Get list of available parameters.* |
 | `--version`, `-v`       | Get OBS version.* |
