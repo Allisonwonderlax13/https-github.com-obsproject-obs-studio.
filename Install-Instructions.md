@@ -22,6 +22,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
   	* [Gentoo (Unofficial)](#gentoo-installation-unofficial)
   	* [NixOS (Unofficial)](#nixos-installation-unofficial)
   	* [Deepin (Unofficial)](#deepin-installation-unofficial)
+  	* [snappy (Unofficial)](#snappy-installation-unofficial)
   * [Build Directions](#linux-build-directions)
     * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
     * [Debian-based](#debian-based-build-directions)
@@ -294,6 +295,16 @@ Deepin 15.4 or newer is required.
 * Finally, install OBS Studio.
 
         sudo apt-get install obs-studio
+
+***
+
+## snappy Installation (Unofficial)
+
+* If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is likely outdated).
+
+* Install OBS Studio.
+
+        sudo snap install obs-studio
 
 ***
 
