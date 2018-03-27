@@ -298,7 +298,7 @@ Deepin 15.4 or newer is required.
 
 ***
 
-## snappy Installation (Unofficial)
+### snappy Installation (Unofficial)
 
 * If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is likely outdated).
 
