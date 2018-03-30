@@ -23,7 +23,8 @@ For Support Questions, the forum and chat are available:
 More info about OBS Studio can be found in the Readme:
 * [ReadMe](https://github.com/jp9000/obs-studio/blob/master/README.rst)
 
-Developers see the contributing guidelines and copying info:
+Developers see the getting started tutorial, contributing guidelines, and copying info:
+* [[Getting Started with OBS Studio Development]]
 * [Contributing](https://github.com/jp9000/obs-studio/blob/master/CONTRIBUTING.rst)
 * [Copying](https://github.com/jp9000/obs-studio/blob/master/COPYING)
 
