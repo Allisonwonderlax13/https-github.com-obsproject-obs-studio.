@@ -1,0 +1,47 @@
+So you want to contribute programming for OBS Studio? Great! Whether you're making a new plugin or tinkering with OBS's core, we appreciate all contributions to the project. Follow this guide to get up and running.
+
+## A few things to know
+If you're interested in doing OBS Studio development, you should be experienced in both the C and C++ programming languages, and Objective-C for Apple systems (optionally). It is highly recommended that you read [OBS Studio's Contributing guide](https://github.com/jp9000/obs-studio/blob/master/CONTRIBUTING.rst) so that you know code guidelines as well as what is required when you want to submit a change.
+
+## Developer Chat
+Our developer community is always helpful to new developers wanting to get their feet wet with OBS programming. If you ever need help you can join the developer chat on Discord here: **[https://discord.gg/obsproject](https://discord.gg/7hSSeQB)**
+
+## Starting OBS Development
+
+### 1. Get the code
+Check out the source code for OBS Studio from Github: [https://github.com/jp9000/obs-studio](https://github.com/jp9000/obs-studio)
+
+```
+git clone --recursive https://github.com/jp9000/obs-studio.git
+```
+
+Don't forget make the checkout recursive to get all submodules.
+
+### 2. Build the code
+The next step is to get the program building so that you can start making your modifications or plugins.
+
+A guide for building OBS Studio for your platform can be found here: [https://github.com/jp9000/obs-studio/wiki/Install-Instructions](https://github.com/jp9000/obs-studio/wiki/Install-Instructions)
+
+### 3. Read the documentation
+OBS's reference documentation can be found here: [https://obsproject.com/docs/](https://obsproject.com/docs/)
+
+It's also recommended to examine some of the default plugins to see how they interact with the API in OBS Studio. Note that the OBS core (/libobs) is separate from the OBS UI (/ui), which is also separate from OBS core plugins (/plugins), so you can begin to see how the different modules of code fit together.
+
+### 4. Check out issues on the Bug Tracker
+You can find the OBS Studio Bug Tracker here: [https://obsproject.com/mantis/](https://obsproject.com/mantis/)
+
+The bug tracker uses your [forum](https://obsproject.com/forum/) login credentials, so you don't have to log in twice.
+
+Feel free to explore issues, suggestions, and bugs, and if you feel so inclined, try your hand at fixing/implementing an issue!
+
+## Plugin Development
+
+Many people want to get into OBS Studio development in order to make a plugin, rather than alter core functionality. It turns out that OBS code is already pretty module, and many features that are considered "core" features are actually plugins that just come bundled with OBS, so learning about OBS development really means learning about plugin development as well.
+
+For more details on plugin development, check this page of the documentation: [https://obsproject.com/docs/plugins.html](https://obsproject.com/docs/plugins.html)
+
+## A quick note about licensing
+
+OBS Studio is an open source program licensed under the [GPLv2](https://github.com/jp9000/obs-studio/blob/master/COPYING). That means that if you create a plugin for OBS Studio or a modified version of OBS Studio and distribute it in binary form, you must give users a way to access the source code of your binary. Otherwise, you will be in violation of the license. The easiest way to do this is to have a public Github repository of your fork or plugin, and include a text file in your download for the binary containing a link to the repo. The relevant part of the license is under section 3 of the GPLv2.
+
+Thanks for being willing to help out, and good luck!
