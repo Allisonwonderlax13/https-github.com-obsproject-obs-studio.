@@ -14,6 +14,7 @@
     * [Buffering](Stream-Buffering-Issues)
     * [Laptop performance/black screen](Laptop-Performance-Issues)
     * [Performance and Encoding Issues](General-Performance-and-Encoding-Issues)
+  * [Getting Started with OBS Studio Development](Getting-Started-with-OBS-Studio-Development)
 
 # [Install Instructions](install-instructions)
   * [Windows](install-instructions#windows)
