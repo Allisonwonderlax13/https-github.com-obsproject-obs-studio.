@@ -15,7 +15,7 @@ Check out the source code for OBS Studio from Github: [https://github.com/jp9000
 git clone --recursive https://github.com/jp9000/obs-studio.git
 ```
 
-Don't forget make the checkout recursive to get all submodules.
+Don't forget the `--recursive` argument to get all submodules.
 
 ### 2. Build the code
 The next step is to get the program building so that you can start making your modifications or plugins.
