@@ -19,3 +19,7 @@ An upcoming Windows 10 feature update contains changes to configuring sound. Thi
 * What are the alternatives if I'm not on the latest build of Windows 10?
 * How do I reach the old audio settings?
 * What are the oddities in this new system? (Duplicate entries)
+
+![Sound Properties - App preferences link](https://i.imgur.com/Yf2CYKC.png)
+
+![App volume and device preferences window](https://i.imgur.com/ew1zIA9.png)
