@@ -36,7 +36,7 @@ Feel free to explore issues, suggestions, and bugs, and if you feel so inclined,
 
 ## Plugin Development
 
-Many people want to get into OBS Studio development in order to make a plugin, rather than alter core functionality. It turns out that OBS code is already pretty module, and many features that are considered "core" features are actually plugins that just come bundled with OBS, so learning about OBS development really means learning about plugin development as well.
+Many people want to get into OBS Studio development in order to make a plugin, rather than alter core functionality. It turns out that OBS code is already pretty modular, and many features that are considered "core" features are actually plugins that just come bundled with OBS, so learning about OBS development really means learning about plugin development as well.
 
 For more details on plugin development, check this page of the documentation: [https://obsproject.com/docs/plugins.html](https://obsproject.com/docs/plugins.html)
 
