@@ -47,6 +47,12 @@ For more details on plugin development, check this page of the documentation: [h
 * Example encoder plugin: [x264 Encoder](https://github.com/obsproject/obs-studio/blob/master/plugins/obs-x264/obs-x264.c)
 * Example output plugin: [FLV Output](https://github.com/obsproject/obs-studio/blob/master/plugins/obs-outputs/flv-output.c)
 
+## Scripting
+
+Many people want to write modules for OBS, but are not familiar with C/C++, or don't want to go through the trouble of setting up a build environment. Fortunately, OBS is capable of running Lua and Python scripts via the bundled LuaJIT or your system's Python environment. These scripts are capable of accessing the OBS API and doing many of the same things you could do by writing OBS C/C++ code directly. In fact, you can even make new plugins with Lua (though not with Python).
+
+For more details on scripting, check this page of the documentation: https://obsproject.com/docs/scripting.html
+
 ## A quick note about licensing
 
 OBS Studio is an open source program licensed under the [GPLv2](https://github.com/jp9000/obs-studio/blob/master/COPYING). That means that if you create a plugin for OBS Studio or a modified version of OBS Studio and distribute it in binary form, you must give users a way to access the source code of your binary. Otherwise, you will be in violation of the license. The easiest way to do this is to have a public Github repository of your fork or plugin, and include a text file in your download for the binary containing a link to the repo. The relevant part of the license is under section 3 of the GPLv2.
