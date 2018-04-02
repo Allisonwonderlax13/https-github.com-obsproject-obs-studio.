@@ -40,6 +40,13 @@ Many people want to get into OBS Studio development in order to make a plugin, r
 
 For more details on plugin development, check this page of the documentation: [https://obsproject.com/docs/plugins.html](https://obsproject.com/docs/plugins.html)
 
+### Example plugins
+
+* Example source plugin: [Color Source](https://github.com/obsproject/obs-studio/blob/master/plugins/image-source/color-source.c)
+* Example service plugin: [Custom RTMP Service](https://github.com/obsproject/obs-studio/blob/master/plugins/rtmp-services/rtmp-custom.c)
+* Example encoder plugin: [x264 Encoder](https://github.com/obsproject/obs-studio/blob/master/plugins/obs-x264/obs-x264.c)
+* Example output plugin: [FLV Output](https://github.com/obsproject/obs-studio/blob/master/plugins/obs-outputs/flv-output.c)
+
 ## A quick note about licensing
 
 OBS Studio is an open source program licensed under the [GPLv2](https://github.com/jp9000/obs-studio/blob/master/COPYING). That means that if you create a plugin for OBS Studio or a modified version of OBS Studio and distribute it in binary form, you must give users a way to access the source code of your binary. Otherwise, you will be in violation of the license. The easiest way to do this is to have a public Github repository of your fork or plugin, and include a text file in your download for the binary containing a link to the repo. The relevant part of the license is under section 3 of the GPLv2.
