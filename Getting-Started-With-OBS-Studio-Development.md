@@ -27,12 +27,15 @@ OBS's reference documentation can be found here: [https://obsproject.com/docs/](
 
 It's also recommended to examine some of the default plugins to see how they interact with the API in OBS Studio. Note that the OBS core (/libobs) is separate from the OBS UI (/ui), which is also separate from OBS core plugins (/plugins), so you can begin to see how the different modules of code fit together.
 
-### 4. Check out issues on the Bug Tracker
-You can find the OBS Studio Bug Tracker here: [https://obsproject.com/mantis/](https://obsproject.com/mantis/)
+### 4. Check out issues on the Ideas page and the Bug Tracker
+
+Many user post ideas and suggestions for improvements to OBS on the OBS Ideas page. You can find the Ideas page (Fider) here: [https://ideas.obsproject.com/](https://ideas.obsproject.com/)
+
+Also, you can find the OBS Studio Bug Tracker here: [https://obsproject.com/mantis/](https://obsproject.com/mantis/)
 
 The bug tracker uses your [forum](https://obsproject.com/forum/) login credentials, so you don't have to log in twice.
 
-Feel free to explore issues, suggestions, and bugs, and if you feel so inclined, try your hand at fixing/implementing an issue!
+Feel free to explore ideas, issues, suggestions, and bugs, and if you feel so inclined, try your hand at implementing one!
 
 ## Plugin Development
 
