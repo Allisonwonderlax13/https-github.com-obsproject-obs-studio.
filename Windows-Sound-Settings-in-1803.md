@@ -15,15 +15,25 @@ An upcoming Windows 10 feature update contains changes to configuring sound. Thi
 
 Windows 10 1803 allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like AudioRouter.
 
+## How to use them
+
+* To Do
+
 ## Why this is useful
 
-The most common use case for routing application audio to different devices is in combination with virtual cables, allowing you to individually control volumes for your voice, your game audio, and music (for example) directly within OBS Studio. This can also be used to play certain audio just to your headset or speakers while everything else is sent to OBS.
+The most common use case for routing application audio to different devices is in combination with virtual cables, allowing you to individually control volumes for Discord, your game audio, and music (for example) directly within OBS Studio. This can also be used to play certain audio just to your headset or speakers while everything else is sent to OBS.
+
+## Do I still need virtual cables or Voicemeeter Banana?
+
+Yes. Unfortunately, at this time Windows does not include ways to natively create virtual outputs or to route audio to **applications **specifically. The most commonly recommended (and free!) application for this is [Voicemeeter Banana](https://www.vb-audio.com/Voicemeeter/banana.htm), which provides 2 virtual inputs and an easy-to-use control panel. Alternatively, [https://www.vb-audio.com/Cable/](VB-CABLE) allows you to get one virtual outputs for free, and [two more if you donate](https://www.vb-audio.com/Cable/#DownloadCable) - but without the control panel.
+
+Providing virtual cables like this natively via OBS Studio is often requested because some alternative streaming applications do this, however it would require a lot of work and is very low on the list of priorities compared to other features & fixes.
 
 # Things to mention
 
-* Why this is useful for me as an OBS user?
-* What does it allow me to do?
-* Why do I still need VAC or VoiceMeeter Banana? ("Why can't OBS just do that?")
+* ~~Why this is useful for me as an OBS user?~~
+* ~~What does it allow me to do?~~
+* ~~Why do I still need VAC or Voicemeeter Banana? ("Why can't OBS just do that?")~~
 * What are the alternatives if I'm not on the latest build of Windows 10?
 * How do I reach the old audio settings?
 * What are the oddities in this new system? (Duplicate entries)
