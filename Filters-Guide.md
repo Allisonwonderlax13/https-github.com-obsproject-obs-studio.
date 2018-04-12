@@ -21,29 +21,29 @@ You can add them by right-click your desired Scene, Source or Device and selecti
 ## Scene and Source Filters
 
 ### Image Mask/Blend
-![Image Mask](http://www.helping-squad.com/wp-content/uploads/2015/07/image_mask.png)
+![Image Mask](https://helping-squad.com/wp-content/uploads/2015/07/image_mask.png)
 
 The Image Mask/Blend filter gives us the option to use the Color or Alpha Channel of an Image as a Mask or to Blend an Image (multiply, addition, subtraction) over your Scene or Source. This can be used to give your webcam a round border for example:
-![Image Mask Example](http://www.helping-squad.com/wp-content/uploads/2015/07/image_mask_example.png)
+![Image Mask Example](https://helping-squad.com/wp-content/uploads/2015/07/image_mask_example.png)
 
 ***
 
 ### Crop
-![Crop Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/crop_filter.png)
+![Crop Filter](https://helping-squad.com/wp-content/uploads/2015/07/crop_filter.png)
 
 The crop filter should explain itself but in short it lets you cut off the top/left/right/bottom of your source/scene to only show the parts you want.
 
 ***
 
 ### Color Correction
-![Color Correction Filter](http://i.imgur.com/MJwx4Ep.png)
+![Color Correction Filter](https://i.imgur.com/MJwx4Ep.png)
 
 Again, the name says it all. You can change the contrast, brightness and gamma of your source and even provide a color overlay.
 
 ***
 
 ### Scroll
-![Scroll Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/scroll_filter.png)
+![Scroll Filter](https://helping-squad.com/wp-content/uploads/2015/07/scroll_filter.png)
 
 The scroll filter gives us the ability to give our text for example a scrolling effect, left-to-right and top-to-bottom. Negative and positive values will change the direction in which your source will scroll and you can limit the height and width if necessary.
 
@@ -53,11 +53,11 @@ The scroll filter gives us the ability to give our text for example a scrolling 
 
 Color Key:
 
-![Color Key Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/color_key.png)
+![Color Key Filter](https://helping-squad.com/wp-content/uploads/2015/07/color_key.png)
 
 Chroma Key:
 
-![Chroma Key Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/chroma_key.png)
+![Chroma Key Filter](https://helping-squad.com/wp-content/uploads/2015/07/chroma_key.png)
 
 Both the Color Key and Chroma Key filter can be used to remove a certain color of your source and make it transparent. This can be used for green screens and similar stuff. They behave slightly differently, so you will need to experiment and see which works best for your personal use case.
 
@@ -69,7 +69,7 @@ This filter allows you to apply a LUT to your video sources.
 ***
 
 ### Sharpen
-![Sharpen Filter](http://www.helping-squad.com/wp-content/uploads/2015/07/sharpen_filter.png)
+![Sharpen Filter](https://helping-squad.com/wp-content/uploads/2015/07/sharpen_filter.png)
 
 The sharpen filter should explain itself as well, if you feel your webcam input for example is a bit blurred and you want to improve the overall sharpness a bit, add the filter and test with different values.
 
@@ -142,7 +142,7 @@ OBS Studio will search for plugins in the following locations:
 A short list of free plugins that were used to develop and test the VST support in OBS Studio can be found below. Your experiences may differ, but these are the ones we know have been tested to work in our environments:
 
 
-- http://www.reaper.fm/reaplugs/
+- https://www.reaper.fm/reaplugs/
 - https://www.meldaproduction.com/download/plugins
 
 Untested, but highly reviewed:
