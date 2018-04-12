@@ -93,13 +93,13 @@ Right click in the box under Scenes (or use the plus at the bottom) to add a sce
 
 Once you have created a Scene, right click in the Sources box (or use the plus at the bottom) to add what ever you want to capture. Whether it's a specific window, a capture card or game, image, text or your entire display that you want to capture, there are several different sources available in OBS Studio for you to choose from. Try them out!
 
-![Sources List](http://i.imgur.com/KfxiZIw.png)
+![Sources List](https://i.imgur.com/KfxiZIw.png)
 
 You can re-align sources in the preview and change their order by using drag and drop in the list, or using the up and down arrow buttons. A Source that is listed above another Source in the list will be on top and might hide what's beneath it. This can also be useful for situations where you want something on top of another source, like a webcam to show over your game play. Any time you see an eye icon, you can click it to show or hide the associated item with it (this applies to filters as well)
 
-Visible: ![Visible](http://i.imgur.com/cNmEq1a.png)
+Visible: ![Visible](https://i.imgur.com/cNmEq1a.png)
 
-Hidden: ![Hidden](http://i.imgur.com/OfEFWOk.png)
+Hidden: ![Hidden](https://i.imgur.com/OfEFWOk.png)
 
 When a Source is selected in the Sources list, you will see a red box that shows up around it. This is the bounding box, and can be used to position sources within the preview as well as make the source larger or smaller. 
 
@@ -125,13 +125,13 @@ You can also right-click each source in the list to access further options. This
 
 Edit Transform menu: 
 
-![Transform Menu](http://i.imgur.com/ESWUP10.png)
+![Transform Menu](https://i.imgur.com/ESWUP10.png)
 
 ***
 
 ## Filters
 
-![Filters Window](http://i.imgur.com/T49neou.png)
+![Filters Window](https://i.imgur.com/T49neou.png)
 
 Filters can be added to each Source/Audio Device, and even to a Scene. You add a filter by right-clicking onto the desired Source or Scene in the list, and then selecting Filters. For Audio devices, click the little cogwheel next to the volume bar in the Audio Mixer and select Filters. Clicking the eye icon next to an added filter will enable/disable that filter, similar to showing/hiding a source. See the [Filters Guide](https://github.com/jp9000/obs-studio/wiki/Filters-Guide) link for a more in-depth guide on Filters and their specific function. 
 
