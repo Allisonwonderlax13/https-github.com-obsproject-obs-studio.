@@ -25,7 +25,7 @@ The most common use case for routing application audio to different devices is i
 
 ## Do I still need virtual cables or Voicemeeter Banana?
 
-Yes. Unfortunately, at this time Windows does not include ways to natively create virtual outputs or to route audio to **applications **specifically. The most commonly recommended (and free!) application for this is [Voicemeeter Banana](https://www.vb-audio.com/Voicemeeter/banana.htm), which provides 2 virtual inputs and an easy-to-use control panel. Alternatively, [https://www.vb-audio.com/Cable/](VB-CABLE) allows you to get one virtual outputs for free, and [two more if you donate](https://www.vb-audio.com/Cable/#DownloadCable) - but without the control panel.
+Yes. Unfortunately, at this time Windows does not include ways to natively create virtual outputs or to route audio to **applications **specifically. The most commonly recommended (and free!) application for this is [Voicemeeter Banana](https://www.vb-audio.com/Voicemeeter/banana.htm), which provides 2 virtual inputs and an easy-to-use control panel. Alternatively, [VB-CABLE](https://www.vb-audio.com/Cable/) allows you to get one virtual outputs for free, and [two more if you donate](https://www.vb-audio.com/Cable/#DownloadCable) - but without the control panel.
 
 Providing virtual cables like this natively via OBS Studio is often requested because some alternative streaming applications do this, however it would require a lot of work and is very low on the list of priorities compared to other features & fixes.
 
