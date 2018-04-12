@@ -15,9 +15,13 @@ An upcoming Windows 10 feature update contains changes to configuring sound. Thi
 
 Windows 10 1803 allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like AudioRouter.
 
-## How to use them
+## Usage
 
+* Open your Start menu and click on Settings. If you're not sure which button that is, you can click the button on the top left with the 3 horizontal lines (the "hamburger button") and it'll show labels.
+* Click on System, then in the left sidebar select Sound.
 * To Do
+
+![App volume and device preferences window](https://i.imgur.com/ew1zIA9.png)
 
 ## Why this is useful
 
@@ -39,5 +43,3 @@ Providing virtual cables like this natively via OBS Studio is often requested be
 * What are the oddities in this new system? (Duplicate entries)
 
 ![Sound Properties - App preferences link](https://i.imgur.com/Yf2CYKC.png)
-
-![App volume and device preferences window](https://i.imgur.com/ew1zIA9.png)
