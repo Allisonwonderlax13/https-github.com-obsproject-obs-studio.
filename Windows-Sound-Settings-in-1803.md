@@ -11,6 +11,14 @@ An upcoming Windows 10 feature update contains changes to configuring sound. Thi
 * The Volume Mixer hasn't moved and it hasn't changed - it works exactly as it has since Windows Vista, allowing you to set volumes per-application for each audio device in a small, resizable window
 * Everything related to the new options are available in the Windows 10 **Settings** app, found in the Start menu - Settings -> System -> Sound.
 
+## The new capabilities
+
+Windows 10 1803 allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like AudioRouter.
+
+## Why this is useful
+
+The most common use case for routing application audio to different devices is in combination with virtual cables, allowing you to individually control volumes for your voice, your game audio, and music (for example) directly within OBS Studio. This can also be used to play certain audio just to your headset or speakers while everything else is sent to OBS.
+
 # Things to mention
 
 * Why this is useful for me as an OBS user?
