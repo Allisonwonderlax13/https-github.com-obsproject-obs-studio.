@@ -2,7 +2,7 @@ Stream buffering can be caused by a number of things, but first and foremost we 
 
 ![Dropped Frame Counter](https://i.imgur.com/ckL3wKb.png)
 
-If this counter is showing dropped frames, the issue is likely with your own connection and you should try our [general connection issue troublehsooting](https://github.com/jp9000/obs-studio/wiki/dropped-frames-and-general-connection-issues) steps.
+If this counter is showing dropped frames, the issue is likely with your own connection and you should try our [general connection issue troubleshooting](Dropped-Frames-and-General-Connection-Issues) steps.
 
 Often, you will not drop frames and still have viewers complaining about lag, buffering, or the stream constantly loading. Why is that and what can we do against it? First of all let us take a look at the **why**.
 
