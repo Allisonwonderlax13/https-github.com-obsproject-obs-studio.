@@ -1,4 +1,4 @@
-# [Home](https://github.com/jp9000/obs-studio/wiki)
+# [Home](Home)
 # Guides
   * [System Requirements](System-Requirements)
   * [Launch Parameters](Launch-Parameters) 
