@@ -16,8 +16,9 @@ The community has created a few guides on how to use OBS Studio:
 * Volume meters guide (v21+): [[Understanding the Mixer]]
 * Surround sound features: [[Surround Sound Streaming and Recording]]
 
-For Support Questions, the forum and chat are available:  
-* [OBS Studio Forum](https://obsproject.com/forum/categories/obs-multiplatform-support.30/)  
+For Support Questions, Discord, the forum and IRC are available:  
+* [OBS Studio Discord](http://discord.gg/obsproject)
+* [OBS Studio Forum](https://obsproject.com/forum/#obs-studio-support.3)  
 * [OBS Community Chat](https://obsproject.com/chat)
 
 More info about OBS Studio can be found in the Readme:
