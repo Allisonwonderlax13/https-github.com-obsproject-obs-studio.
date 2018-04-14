@@ -34,7 +34,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
 # Windows
 
 ### Windows Install Directions:
-Pre-built windows versions can be found here: https://github.com/jp9000/obs-studio/releases/
+Pre-built windows versions can be found here: https://github.com/obsproject/obs-studio/releases/
 
 The full .exe installer and .zip contains OBS Studio 32bit, 64bit, Browser Source, and Intel® RealSense™ plugin. You will be prompted during install for the Browser Source and RealSense plugin to be installed if using the .exe installer, otherwise the components are included in the .zip.
 
@@ -58,7 +58,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 * **Installation Procedure**
   * Clone the repository and **submodules**:
 
-             git clone --recursive https://github.com/jp9000/obs-studio.git
+             git clone --recursive https://github.com/obsproject/obs-studio.git
 
   * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
@@ -116,7 +116,7 @@ Visual Studio 12 2013, Visual Studio 14 2015, **or their 64bit equivalents** if 
 
 ### macOS Install Directions
 
-Pre-built macOS versions can be found here: https://github.com/jp9000/obs-studio/releases
+Pre-built macOS versions can be found here: https://github.com/obsproject/obs-studio/releases
 
 Simply run the installer and follow the on-screen directions to install OBS Studio.
 
@@ -127,7 +127,7 @@ Official macOS builds are available again as of 18.0.1.
 ### macOS Build Directions
 * Clone the repository and **submodules**:
 
-         git clone --recursive https://github.com/jp9000/obs-studio.git
+         git clone --recursive https://github.com/obsproject/obs-studio.git
 
 * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
@@ -328,7 +328,7 @@ Deepin 15.4 or newer is required.
 
 * Building and installing OBS:
 
-        git clone --recursive https://github.com/jp9000/obs-studio.git
+        git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 ..
@@ -377,7 +377,7 @@ Deepin 15.4 or newer is required.
 
 * Building and installing OBS:
 
-        git clone --recursive https://github.com/jp9000/obs-studio.git
+        git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
@@ -411,7 +411,7 @@ Deepin 15.4 or newer is required.
 
   - Building and installing OBS:
 
-        git clone --recursive https://github.com/jp9000/obs-studio.git
+        git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
