@@ -103,7 +103,7 @@ For music bands, Djing, ... , bring your production with surround sound to the W
 Up to 7.1 surround sound is available. (For more channels (up to 16.0) check [this fork](https://github.com/pkviet/obs-studio/releases)).    
 
 ## **Filters and VST**
-OBS-Studio has built-in audio filters as well as VST 2 support. The filters are compatible with surround sound; the VST also **if** they originally support multichannel. Check the [Filters Guide here](https://github.com/jp9000/obs-studio/wiki/Filters-Guide).
+OBS-Studio has built-in audio filters as well as VST 2 support. The filters are compatible with surround sound; the VST also **if** they originally support multichannel. Check the [[Filters-Guide]].
 
 ## **High Quality Recording**
 Select Custom FFmpeg recording and a PCM format (e.g. pcm_s24le for 24 bit samples) for uncompressed audio.
