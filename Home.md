@@ -1,7 +1,7 @@
 **OBS Studio** is free and open source software for video recording and live streaming. 
 It is the re-write of the widely used [Open Broadcaster Software](https://obsproject.com/), to allow even more features and multi-platform support. Currently Linux, Mac and Windows Builds are available.
 
-* Official OBS Studio Builds: https://github.com/jp9000/obs-studio/releases
+* Official OBS Studio Builds: https://github.com/obsproject/obs-studio/releases
 * Building OBS Studio Manually: [[Install Instructions]]
 
 If you're looking for any kind of assistance with OBS Studio, the site has a help portal with links to resources and our support channels.
@@ -22,12 +22,12 @@ For Support Questions, Discord, the forum and IRC are available:
 * [OBS Community Chat](https://obsproject.com/chat)
 
 More info about OBS Studio can be found in the Readme:
-* [ReadMe](https://github.com/jp9000/obs-studio/blob/master/README.rst)
+* [ReadMe](https://github.com/obsproject/obs-studio/blob/master/README.rst)
 
 Developers see the getting started tutorial, contributing guidelines, and copying info:
 * [[Getting Started with OBS Studio Development]]
-* [Contributing](https://github.com/jp9000/obs-studio/blob/master/CONTRIBUTING.rst)
-* [Copying](https://github.com/jp9000/obs-studio/blob/master/COPYING)
+* [Contributing](https://github.com/obsproject/obs-studio/blob/master/CONTRIBUTING.rst)
+* [Copying](https://github.com/obsproject/obs-studio/blob/master/COPYING)
 
 For Development related Questions there is also a forum available:  
 * [OBS General Development Forum](https://obsproject.com/forum/list/general-development.21/)
