@@ -42,12 +42,12 @@ If you are using an AMD-based laptop, check the guides here:
 ***
 
 #### How to Use Display Capture
-If Display Capture is not working, chances are you need to follow the Game/Window Capture directions but instead set OBS to run on the "Integrated graphics" option. Be aware that when you make this change, Window and Game Capture will no longer function unless you enable multi-adapter compatibility in their properties. See the below note on what this means.
+If Display Capture is not working, chances are you need to follow the Game/Window Capture directions but instead set OBS to run on the "Integrated graphics" option. Be aware that when you make this change, Window and Game Capture will no longer function unless you enable "SLi/Crossfire Capture Mode (Slow)" in their properties. See the below note on what this means.
 
 ***
 
-#### Window and Game Capture and "multi-adapter compatibility" mode
-If you cannot set the preferred GPU (AMD laptops typically), or wish to cross-capture an image from the other GPU after that (for example, the League of Legends lobby window), use Window or Game Capture with the "multi-adapter compatibility mode" option enabled to force a capture. "Multi-adapter compatibility mode" requires a bit more CPU usage, however. Compatibility mode is not recommended for capturing games, but it basically guarantees a capture.
+#### Window and Game Capture and "SLi/Crossfire Capture Mode (Slow)" mode
+If you cannot set the preferred GPU (AMD laptops typically), or wish to cross-capture an image from the other GPU after that (for example, the League of Legends lobby window), use Window or Game Capture with the "SLi/Crossfire Capture Mode (Slow)" option enabled to force a capture. "SLi/Crossfire Capture Mode (Slow)" requires a bit more CPU usage, however. Compatibility mode is not recommended for capturing games, but it basically guarantees a capture.
 
 ***
 
