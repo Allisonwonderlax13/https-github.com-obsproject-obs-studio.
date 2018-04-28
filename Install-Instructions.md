@@ -299,6 +299,24 @@ Deepin 15.4 or newer is required.
 
 ***
 
+### Debian Installation (Unofficial)
+
+Debian 9.0 or newer is required.
+
+* First make sure you have everything up-to-date.
+
+        sudo apt update
+
+* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
+
+        sudo apt install ffmpeg
+
+* Finally, install OBS Studio.
+
+        sudo apt install obs-studio
+
+***
+
 ### snappy Installation (Unofficial)
 
 * If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is likely outdated).
