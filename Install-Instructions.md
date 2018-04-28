@@ -22,6 +22,7 @@ Also, if there is something in this guide you want to change/improve on, it is r
   	* [Gentoo (Unofficial)](#gentoo-installation-unofficial)
   	* [NixOS (Unofficial)](#nixos-installation-unofficial)
   	* [Deepin (Unofficial)](#deepin-installation-unofficial)
+        * [Debian Installation (Unofficial)](#debian-installation-unofficial)
   	* [snappy (Unofficial)](#snappy-installation-unofficial)
   * [Build Directions](#linux-build-directions)
     * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
