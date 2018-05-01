@@ -1,4 +1,4 @@
-An upcoming Windows 10 feature update contains changes to configuring sound. This is a WIP guide to help users use the full extent of its power.
+The Windows 10 April 2018 Update contains changes to configuring sound. This is a WIP guide to help users use the full extent of its power.
 
 > Sound Settings are moving to Settings: You can now change some of your common sound settings, such as switching devices and troubleshooting, in Settings > System > Sound. Head on over for a preview of how sound settings are moving out of the legacy Control Panel and into the Settings app. We still have some things to add and fix on this page, so stay tuned! [Source](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc/#fAGsyK2Z5rg88zRD.97).
 
