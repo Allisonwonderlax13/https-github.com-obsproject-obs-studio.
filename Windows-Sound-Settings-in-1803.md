@@ -6,6 +6,15 @@ The Windows 10 April 2018 Update contains changes to configuring sound. This is 
 
 ***
 
+ - [The basics](#the-basics)
+ - [The new capabilities](#the-new-capabilities)
+ - [Usage](#usage)
+ - [Why this is useful](#why-this-is-useful)
+ - [Do I still need virtual cables or Voicemeeter Banana?](#do-i-still-need-virtual-cables-or-voicemeeter-banana)
+ - [Alternatives (for those not on 1803) / How to update](#alternatives-for-those-not-on-1803--how-to-update)
+
+***
+
 # The Basics
 
 * The Volume Mixer hasn't moved and it hasn't changed - it works exactly as it has since Windows Vista, allowing you to set volumes per-application for each audio device in a small, resizable window
@@ -13,7 +22,7 @@ The Windows 10 April 2018 Update contains changes to configuring sound. This is 
 
 ## The new capabilities
 
-Windows 10 1803 allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like AudioRouter.
+Windows 10 1803 allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like Audio Router.
 
 ## Usage
 
@@ -29,17 +38,25 @@ The most common use case for routing application audio to different devices is i
 
 ## Do I still need virtual cables or Voicemeeter Banana?
 
-Yes. Unfortunately, at this time Windows does not include ways to natively create virtual outputs or to route audio to **applications **specifically. The most commonly recommended (and free!) application for this is [Voicemeeter Banana](https://www.vb-audio.com/Voicemeeter/banana.htm), which provides 2 virtual inputs and an easy-to-use control panel. Alternatively, [VB-CABLE](https://www.vb-audio.com/Cable/) allows you to get one virtual outputs for free, and [two more if you donate](https://www.vb-audio.com/Cable/#DownloadCable) - but without the control panel.
+Yes. Unfortunately, at this time Windows does not include ways to natively create virtual outputs or to route audio to **applications** specifically. The most commonly recommended (and free!) application for this is [Voicemeeter Banana](https://www.vb-audio.com/Voicemeeter/banana.htm), which provides 2 virtual inputs and an easy-to-use control panel. Alternatively, [VB-CABLE](https://www.vb-audio.com/Cable/) allows you to get one virtual outputs for free, and [two more if you donate](https://www.vb-audio.com/Cable/#DownloadCable) - but without the control panel.
 
 Providing virtual cables like this natively via OBS Studio is often requested because some alternative streaming applications do this, however it would require a lot of work and is very low on the list of priorities compared to other features & fixes.
+
+## Alternatives (for those not on 1803) / How to update
+
+If you're running Windows 10, it may just be easier to update to the April 2018 Update. To do that, open Windows Update and it'll start downloading (Start -> Settings -> Update & Security -> Windows Update -> Check for updates). Keep in mind it's a pretty large update - it'll take time to download, and the installation itself can take around half an hour for most setups.
+
+If you'd rather not upgrade, or you're running another operating system, Audio Router is the most commonly recommended application for this purpose. Unfortunately, [the original hasn't been touched](https://github.com/audiorouterdev/audio-router/releases) since 2016 (but should still work). After a bit of digging, [here's a version](https://github.com/a-sync/audio-router/releases) that was updated in early 2018.
+
+Other alternatives are commercial (not free). You can browse [them here](https://alternativeto.net/software/audio-router/).
 
 # Things to mention
 
 * ~~Why this is useful for me as an OBS user?~~
 * ~~What does it allow me to do?~~
 * ~~Why do I still need VAC or Voicemeeter Banana? ("Why can't OBS just do that?")~~
-* What are the alternatives if I'm not on the latest build of Windows 10?
+* ~~What are the alternatives if I'm not on the latest build of Windows 10?~~
 * How do I reach the old audio settings?
-* What are the oddities in this new system? (Duplicate entries)
+* What are the oddities in this new system? (Duplicate entries - process vs app)
 
 ![Sound Properties - App preferences link](https://i.imgur.com/Yf2CYKC.png)
