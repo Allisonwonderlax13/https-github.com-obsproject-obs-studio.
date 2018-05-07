@@ -12,13 +12,14 @@ The Windows 10 April 2018 Update contains changes to configuring sound. This is 
  - [Why this is useful](#why-this-is-useful)
  - [Do I still need virtual cables or Voicemeeter Banana?](#do-i-still-need-virtual-cables-or-voicemeeter-banana)
  - [Alternatives (for those not on 1803) / How to update](#alternatives-for-those-not-on-1803--how-to-update)
+ - [Accessing the old settings](#accessing-the-old-settings)
 
 ***
 
 # The Basics
 
 * The Volume Mixer hasn't moved and it hasn't changed - it works exactly as it has since Windows Vista, allowing you to set volumes per-application for each audio device in a small, resizable window
-* Everything related to the new options are available in the Windows 10 **Settings** app, found in the Start menu - Settings -> System -> Sound.
+* Everything related to the new options are available in the Windows 10 **Settings** app, found in the Start menu - Settings -> System -> Sound or by right clicking on the speaker icon in the taskbar and selecting "Open Sound settings".
 
 ## The new capabilities
 
@@ -50,13 +51,17 @@ If you'd rather not upgrade, or you're running another operating system, Audio R
 
 Other alternatives are commercial (not free). You can browse [them here](https://alternativeto.net/software/audio-router/).
 
+## Accessing the old settings
+
+You can no longer directly access Playback/Recording devices by right clicking the speaker icon in the taskbar. There is a new option "Open Sound settings" instead - this will take you to the new Settings screen as mentioned earlier. From this screen, you need to click "Sound control panel." Depending on the size of the window this will either be in the right sidebar or near the bottom, under the heading "Related Settings".
+
 # Things to mention
 
 * ~~Why this is useful for me as an OBS user?~~
 * ~~What does it allow me to do?~~
 * ~~Why do I still need VAC or Voicemeeter Banana? ("Why can't OBS just do that?")~~
 * ~~What are the alternatives if I'm not on the latest build of Windows 10?~~
-* How do I reach the old audio settings?
+* ~~How do I reach the old audio settings?~~
 * What are the oddities in this new system? (Duplicate entries - process vs app)
 
 ![Sound Properties - App preferences link](https://i.imgur.com/Yf2CYKC.png)
