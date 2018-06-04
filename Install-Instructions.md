@@ -220,7 +220,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
         sudo dnf install xorg-x11-drv-nvidia-cuda
 
 ***
-### OpenMandriva Installation (Official)
+### OpenMandriva Installation (Unofficial)
 * OBS Studio is included in OpenMandriva Lx3 non-free repository and in restricted repository for upcoming Lx4 release - available now as Cooker.
 
     **For OpenMandriva Lx3:**
