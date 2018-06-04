@@ -226,7 +226,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
     **For OpenMandriva Lx3:**
 
 * Graphical: search and install "obs-studio" on "OpenMandriva Install and Remove Software" (Rpmdrake)
-* Command-line: install it ass root (su or sudo) via terminal/konsole with the following command: `"urpmi obs-studio"`
+* Command-line: install it as root (su or sudo) via terminal/konsole with the following command: `"urpmi obs-studio"`
 
     **For OpenMandriva Lx4:**
 
