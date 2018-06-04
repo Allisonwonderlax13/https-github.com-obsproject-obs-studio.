@@ -14,16 +14,17 @@ Also, if there is something in this guide you want to change/improve on, it is r
   * [Build from source](#macos-build-directions)
 * [Linux](#linux)
   * [Install Directions](#linux-install-directions)
-  	* [Ubuntu (14.04+)](#ubuntu-installation)
-  	* [Arch Linux (Unofficial)](#arch-linux-installation-unofficial)
-  	* [Manjaro (Unofficial)](#manjaro-installation-unofficial)
-  	* [Fedora (Unofficial)](#fedora-installation-unofficial)
-  	* [openSUSE (Unofficial)](#opensuse-installation-unofficial)
-  	* [Gentoo (Unofficial)](#gentoo-installation-unofficial)
-  	* [NixOS (Unofficial)](#nixos-installation-unofficial)
-  	* [Deepin (Unofficial)](#deepin-installation-unofficial)
-        * [Debian Installation (Unofficial)](#debian-installation-unofficial)
-  	* [snappy (Unofficial)](#snappy-installation-unofficial)
+    * [Ubuntu (14.04+)](#ubuntu-installation)
+    * [Arch Linux (Unofficial)](#arch-linux-installation-unofficial)
+    * [Manjaro (Unofficial)](#manjaro-installation-unofficial)
+    * [Fedora (Unofficial)](#fedora-installation-unofficial)
+    * [OpenMandriva Installation (Unofficial)](#openmandriva-installation-unofficial)
+    * [openSUSE (Unofficial)](#opensuse-installation-unofficial)
+    * [Gentoo (Unofficial)](#gentoo-installation-unofficial)
+    * [NixOS (Unofficial)](#nixos-installation-unofficial)
+    * [Deepin (Unofficial)](#deepin-installation-unofficial)
+    * [Debian Installation (Unofficial)](#debian-installation-unofficial)
+    * [snappy (Unofficial)](#snappy-installation-unofficial)
   * [Build Directions](#linux-build-directions)
     * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
     * [Debian-based](#debian-based-build-directions)
@@ -220,6 +221,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
         sudo dnf install xorg-x11-drv-nvidia-cuda
 
 ***
+
 ### OpenMandriva Installation (Unofficial)
 * OBS Studio is included in OpenMandriva Lx3 non-free repository and in restricted repository for upcoming Lx4 release - available now as Cooker.
 
