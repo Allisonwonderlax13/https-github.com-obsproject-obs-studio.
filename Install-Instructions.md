@@ -220,7 +220,19 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
         sudo dnf install xorg-x11-drv-nvidia-cuda
 
 ***
+### OpenMandriva Installation (Unofficial)
+* OBS Studio is included in OpenMandriva Lx3 non-free repository and in restricted repository for upcoming Lx4 release - available now as Cooker.
 
+    **For OpenMandriva Lx3:**
+
+* Graphical: search and install "obs-studio" on "OpenMandriva Install and Remove Software" (Rpmdrake)
+* Command-line: install it via terminal/konsole with the following command: "urpmi obs-studio"
+
+    **For OpenMandriva Lx4:
+
+* Coming soon...
+
+***
 ### openSUSE Installation (Unofficial)
   - The Packman repository contains the obs-studio package since it requires
     the fuller version of FFmpeg which is in Packman for legal reasons. If you
