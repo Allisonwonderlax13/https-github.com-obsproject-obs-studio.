@@ -2,6 +2,8 @@ If you want to develop for OBS, please visit #obs-dev on Quakenet and get to kno
 
 Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in IRC first.
 
+Please note that any install directions/packages for Linux distributions listed as *Unofficial* means that they are community provided, and any support for those packages should be directed at the appropriate distro/package maintainers.
+
 ***
 
 ### Table of Contents:
