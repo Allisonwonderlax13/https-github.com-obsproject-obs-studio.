@@ -421,6 +421,11 @@ Debian 9.0 or newer is required.
         sudo checkinstall --pkgname=obs-studio --fstrans=no --backup=no \
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
+* Enabling `obs-scripting` support is determined at build time, and the following packages are required prior to executing `cmake.`  If you've already ran `cmake`, without these packages, just install and re-run `cmake`
+        
+        sudo apt-get install libluajit-5.1-dev swig python3-dev
+
+
 ***
 
 ### openSUSE Build Directions
