@@ -1,4 +1,4 @@
-# GPU Overload Issues - Causes and Solutions Guide
+# Causes and Solutions Guide
 
 This guide contains an explanation for the common issues that will cause OBS, or a game you may be playing, to suffer performance issues while trying to stream or record.
 
