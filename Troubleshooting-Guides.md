@@ -7,6 +7,7 @@ Completed Sections:
 * [Stream Buffering/Lag](Stream-Buffering-Issues)
 * [Laptop Performance/Black Screen](Laptop-Performance-Issues)
 * [General Performance and Encoding Issues](General-Performance-And-Encoding-Issues)
+* [GPU Overload Issues](GPU-overload-issues)
 
 Work in Progress:
 * [Source Capture Issues/black screen](#source-capture-issues)
