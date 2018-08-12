@@ -1,37 +1,38 @@
-The Windows 10 April 2018 Update contains changes to configuring sound. This is a WIP guide to help users use the full extent of its power.
-
-> Sound Settings are moving to Settings: You can now change some of your common sound settings, such as switching devices and troubleshooting, in Settings > System > Sound. Head on over for a preview of how sound settings are moving out of the legacy Control Panel and into the Settings app. We still have some things to add and fix on this page, so stay tuned! [Source](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc/#fAGsyK2Z5rg88zRD.97).
-
-> Continuing our work to make the new Sound Settings page a one stop shop for your audio needs, we’ve made some more design tweaks and have added some more helpful links. We’ve also added a brand new “App volume and device preferences” page to help you customize your audio experience to best fit your needs and preferences! Please explore these pages and share your feedback as we continuously work on improving them. [Source](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/#775SUx07GWhZqywu.97).
-
 ***
-
- - [The basics](#the-basics)
+ - **[The basics](#the-basics)**
  - [The new capabilities](#the-new-capabilities)
  - [Usage](#usage)
+ - **[FAQ](#faq)**
  - [Why this is useful](#why-this-is-useful)
  - [Do I still need virtual cables or Voicemeeter Banana?](#do-i-still-need-virtual-cables-or-voicemeeter-banana)
  - [Alternatives (for those not on 1803) / How to update](#alternatives-for-those-not-on-1803--how-to-update)
  - [Accessing the old settings](#accessing-the-old-settings)
+ - [Downsides and flaws](#downsides-and-flaws)
 
 ***
 
 # The Basics
 
-* The Volume Mixer hasn't moved and it hasn't changed - it works exactly as it has since Windows Vista, allowing you to set volumes per-application for each audio device in a small, resizable window
 * Everything related to the new options are available in the Windows 10 **Settings** app, found in the Start menu - Settings -> System -> Sound or by right clicking on the speaker icon in the taskbar and selecting "Open Sound settings".
+* The Volume Mixer hasn't moved and it hasn't changed - it works exactly as it has since Windows Vista, allowing you to set volumes per-application for each audio device in a small, resizable window
 
 ## The new capabilities
 
-Windows 10 1803 allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like Audio Router.
+The Windows 10 April 2018 Update (1803) allows you to set audio Input and Output devices for each running application directly via the system, even if the application's settings don't support it. It is a native, official way to route audio to individual devices. This replaces tools like Audio Router.
 
 ## Usage
 
-* Open your Start menu and click on Settings. If you're not sure which button that is, you can click the button on the top left with the 3 horizontal lines (the "hamburger button") and it'll show labels.
-* Click on System, then in the left sidebar select Sound.
-* To Do
+![System -> Sound](https://i.imgur.com/A7VQZY4.png)
 
-![App volume and device preferences window](https://i.imgur.com/ew1zIA9.png)
+* Open your Start menu and click on Settings. If you're not sure which button that is, you can click the button on the top left with the 3 horizontal lines (the "hamburger button") and it'll show labels.
+* Click on System, then in the left sidebar select Sound. This is the screen where you can do the basics - set your default input/output device.
+* Scroll down to "Advanced sound options" and select "App volume device preferences"
+* Here you'll see every application that has recently played sounds, with the ability to control volumes, and most importantly, allows you to choose an Output device and an Input device.
+* If something breaks and you need to start from the beginning, scroll to the bottom and select "Reset"
+
+![App volume and device preferences window](https://i.imgur.com/0Sd6Mfm.png)
+
+# FAQ
 
 ## Why this is useful
 
@@ -53,15 +54,12 @@ Other alternatives are commercial (not free). You can browse [them here](https:/
 
 ## Accessing the old settings
 
-You can no longer directly access Playback/Recording devices by right clicking the speaker icon in the taskbar. There is a new option "Open Sound settings" instead - this will take you to the new Settings screen as mentioned earlier. From this screen, you need to click "Sound control panel." Depending on the size of the window this will either be in the right sidebar or near the bottom, under the heading "Related Settings".
+You can no longer directly access Playback/Recording devices by right clicking the speaker icon in the taskbar. There is a new option "Open Sound settings" instead - this will take you to the new Settings screen as mentioned earlier. From this screen, you need to click "Sound Control Panel." Depending on the size of the window this will either be in the right sidebar or near the bottom, under the heading "Related Settings".
 
-# Things to mention
+## Downsides and flaws
 
-* ~~Why this is useful for me as an OBS user?~~
-* ~~What does it allow me to do?~~
-* ~~Why do I still need VAC or Voicemeeter Banana? ("Why can't OBS just do that?")~~
-* ~~What are the alternatives if I'm not on the latest build of Windows 10?~~
-* ~~How do I reach the old audio settings?~~
-* What are the oddities in this new system? (Duplicate entries - process vs app)
+As with any new system, you'll occasionally find quirks. 
 
-![Sound Properties - App preferences link](https://i.imgur.com/Yf2CYKC.png)
+* The most obvious is that certain applications like web browsers will show multiple entries. This is because each tab and extension runs on a separate process, so Windows assumes you'd want to control them independently. Unfortunately, the name of each tab is not shown, so it can sometimes be hard to set the devices correctly.
+* The volume sliders in the "App volume device preferences" screen do not visually change when there's audio playing, like a mixer would. This would be incredibly helpful in situations like the one mentioned previously.
+* If you make the window for "App volume device preferences" too small, it can be hard to determine which sliders and menus are associated with each device. It's recommended to resize the window until all 4 elements show up aligned in the same row.
