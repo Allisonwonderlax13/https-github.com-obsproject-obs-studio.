@@ -4,12 +4,12 @@ OBS Studio requires the following hardware and operating systems to function. Ha
 
 Windows:
 - DirectX 10.1 compatible GPU
-- Windows 7 or newer
+- Windows 7 SP1 or newer
 
 macOS:
 - Intel CPU (PPC is not supported)
 - OpenGL 3.2 compatible GPU
-- macOS 10.10 or newer
+- macOS 10.11 or newer
 
 Linux/Unix
 - OpenGL 3.2 compatible GPU
