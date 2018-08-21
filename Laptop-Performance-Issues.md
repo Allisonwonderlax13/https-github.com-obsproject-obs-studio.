@@ -1,7 +1,7 @@
 ### If you are getting a black screen with your Capture Sources or are otherwise having performance issues with OBS on your laptop, read the following as it applies to you:
+- [I want to use Display Capture](#how-to-use-display-capture)
 - [Game/Window Capture for NVIDIA-based laptop](#nvidia-based-laptops)
 - [Game/Window Capture for AMD-based laptop](#amd-based-laptops)
-- [I want to use Display Capture](#how-to-use-display-capture)
 
 ***
 
@@ -11,6 +11,11 @@ When using OBS on a laptop, you may run into performance issues or issues using 
 - A discrete graphics chip (either NVIDIA or AMD) for 3D apps and games.
 
 OBS can only run on one of these GPUs, but your open applications and games could be running on either. For example, if OBS is running on the Intel GPU, you will not be able to use Game Capture for your games running on the discrete (NVIDIA or AMD) GPU. Additionally, if OBS is not running on the discrete GPU, you might run into performance issues. In rare cases, trying to capture a game running on a different GPU than OBS can cause the game to crash. This is not really an issue with OBS, but rather a design choice by laptop manufacturers in order to save power and there's little that can be done on our side. However, we do have several troubleshooting suggestions to try and assist with any issues. If you tried everything in this guide and are still having issues, please make a post on the [forums](https://obsproject.com/forum) or stop by the [support chat](https://obsproject.com/chat).
+
+***
+
+#### How to Use Display Capture
+If Display Capture is not working, chances are you need to follow the Game/Window Capture directions, but instead set OBS to run on the "Integrated graphics" option. Be aware that when you make this change, Window and Game Capture will no longer function unless you enable "SLi/Crossfire Capture Mode (Slow)" in their properties. [Please read this note for more details](#window-and-game-capture-and-slicrossfire-capture-mode-slow-mode).
 
 ***
 
@@ -36,11 +41,6 @@ Alternative directions - this sets the global default so all applications will r
 
 #### AMD-based Laptops
 If you are using an AMD-based laptop, check the [Official AMD support documentation](http://support.amd.com/en-us/kb-articles/Pages/DH-017.aspx).
-
-***
-
-#### How to Use Display Capture
-If Display Capture is not working, chances are you need to follow the Game/Window Capture directions but instead set OBS to run on the "Integrated graphics" option. Be aware that when you make this change, Window and Game Capture will no longer function unless you enable "SLi/Crossfire Capture Mode (Slow)" in their properties. See the below note on what this means.
 
 ***
 
