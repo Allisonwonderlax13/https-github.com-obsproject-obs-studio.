@@ -1,10 +1,10 @@
 OBS Studio has the ability to load different themes based on your needs. The option is available in Settings -> General.
 
 Default themes includes:
-* Acri - designed by @Warchamp7
+* Acri - designed by [Warchamp7](https://obsproject.com/forum/members/warchamp7.1/)
 * Dark - the default theme since OBS 21.0
 * Default - the System-based theme
-* Rachni - designed by @Fenrir
+* Rachni - designed by [Fenrir](https://obsproject.com/forum/members/fenrir.6800/)
 
 The files for the default themes can be found in the OBS Studio installation directory, specifically /data/obs-studio/themes/
 
