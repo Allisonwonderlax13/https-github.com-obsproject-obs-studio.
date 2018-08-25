@@ -16,7 +16,7 @@ The best place to install custom themes is in your user directory - the same pla
 * **macOS:** Cmd+Shift+G > ~/Library/Application Support/obs-studio/themes/
 * **Linux:** ~/.config/obs-studio/themes/
 
-You may have to create the themes directory yourself.
+You may have to create the themes directory yourself. You can find themes created by members of the community [at this link](https://obsproject.com/forum/resources/categories/themes.10/).
 
 # Designing your own theme
 
