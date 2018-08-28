@@ -30,10 +30,8 @@ If Display Capture is not working, chances are you need to follow the Game/Windo
 - Navigate to the .exe path for OBS and add it to the list
   - Default paths are: `C:\Program Files (x86)\obs-studio\bin\32bit\obs32.exe` and `C:\Program Files (x86)\obs-studio\bin\64bit\obs64.exe`)
 - Make sure it is selected in the drop down list
-- Then, under where it says "Select the preferred graphics processor for this program" open the drop down.
-  - If you want to use Game Capture or Window Capture, select "High-performance NVIDIA processor"
-  - If you want to use Display Capture, set this to the Integrated GPU. 
-    - **NOTE:** This will mean that Window Capture and Game Capture will not work, and the performance of OBS Studio may be degraded.
+- Then, under where it says "Select the preferred graphics processor for this program" open the drop down and select "High-performance NVIDIA processor"
+  - **NOTE:** If you want to use Display Capture on a Laptop, set this to the Integrated Graphics Processor. This will mean that Window Capture and Game Capture will not work, and the performance of OBS Studio may be degraded.
 - Re-open OBS and test again
 
 Alternative directions - this sets the global default so all applications will run on the NVIDIA GPU (higher power consumption):
