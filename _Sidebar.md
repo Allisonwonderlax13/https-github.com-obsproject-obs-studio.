@@ -12,7 +12,7 @@
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
     * [Buffering](Stream-Buffering-Issues)
-    * [Laptop performance/black screen](Laptop-Performance-Issues)
+    * [Laptop performance/black screen](Laptop-Troubleshooting)
     * [Performance and Encoding Issues](General-Performance-and-Encoding-Issues)
     * [GPU Overload Issues](GPU-overload-issues)
   * [Getting Started with OBS Studio Development](Getting-Started-with-OBS-Studio-Development)
