@@ -16,6 +16,14 @@ Solutions:
 * Disable Nahimic drivers
 * Uninstall Nahimic drivers
 
+### On-screen Displays / Overlays
+
+Programs which draw on top of games and other software to show additional details such as FPS monitors, temperature / GPU monitors, etc often cause issues due to hook conflicts. These applications include MSI Afterburner, RivaTuner, EVGA Precision, Dolby Axon, TeamSpeak / Mumble, Raptr, Overwolf and others. Please close these applications or disable their OSD functionality when using OBS.
+
+### Other Capture / Recording Software
+
+Running multiple capture / recording applications at once is likely to cause trouble due to the conflicting hooks. If you run other programs which have the ability to record games such as RivaTuner, EVGA Precision, Action!, DXTory, etc, please close them before using OBS.
+
 ### D3DGear
 
 This application installs global DirectX hooks which causes major compatibility issues with OBS. The software must be uninstalled, closing it will not prevent it from continuing to install hooks.
