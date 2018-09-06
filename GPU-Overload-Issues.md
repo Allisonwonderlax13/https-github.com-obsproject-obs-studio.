@@ -39,9 +39,9 @@ This may seem pretty obvious. If you turn down the game's graphics settings, the
 
 #### Disable OBS game capture multi-adapter compatibility
 
-Maybe you saw a guide that said to enable this, maybe you were trying different things to fix your problem, maybe your PC became sentient and enabled it for you. There aren't many situations where you actually _want_ to have this option enabled. If you're running graphics cards in SLI/CrossFire, or if you have a [laptop with multiple graphics cards](https://github.com/jp9000/obs-studio/wiki/Laptop-Performance-Issues#window-and-game-capture-and-multi-adapter-compatibility-mode), you may need to have this enabled. In pretty much all other cases, you should disable this option.
+Maybe you saw a guide that said to enable this, maybe you were trying different things to fix your problem, maybe your PC became sentient and enabled it for you. There aren't many situations where you actually _want_ to have this option enabled. If you're running graphics cards in SLI/CrossFire, or if you have a [laptop with multiple graphics cards](https://obsproject.com/wiki/Laptop-Troubleshooting), you may need to have this enabled. In pretty much all other cases, you should disable this option.
 
-To disable this option, open up the properties of your game capture source in OBS, and uncheck "Multi-adapter Compatibility".
+To disable this option, open up the properties of your game capture source in OBS, and un-check "Multi-adapter Compatibility".
 
 #### Windows 10 Game Mode/DVR
 
