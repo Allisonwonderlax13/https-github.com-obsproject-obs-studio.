@@ -1,5 +1,5 @@
 # [Home](Home)
-# Guides
+# Guides/Info
   * [System Requirements](System-Requirements)
   * [Launch Parameters](Launch-Parameters) 
   * [Quickstart Guide](OBS-Studio-Quickstart)
@@ -10,6 +10,7 @@
   * [Surround Sound Streaming and Recording](Surround-Sound-Streaming-And-Recording)
   * [Understanding the Mixer](Understanding-The-Mixer)
   * [Troubleshooting Guides](Troubleshooting-Guides)
+    * [Known Conflicts](Known-Conflicts)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
     * [Buffering](Stream-Buffering-Issues)
     * [Laptop performance/black screen](Laptop-Troubleshooting)
