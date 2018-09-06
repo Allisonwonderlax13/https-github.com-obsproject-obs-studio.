@@ -359,7 +359,7 @@ Debian 9.0 or newer is required.
                 pulseaudio-libs-devel x264-devel freetype-devel \
                 fontconfig-devel libXcomposite-devel libXinerama-devel \
                 qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
-                systemd-devel ffmpeg
+                systemd-devel ffmpeg luajit-devel
   (Note: you might also need to install `ffmpeg-devel`)
 
 * Building and installing OBS:
@@ -391,7 +391,8 @@ Debian 9.0 or newer is required.
         sudo apt-get install libx11-dev libgl1-mesa-dev libvlc-dev libpulse-dev libxcomposite-dev \
                 libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev \
                 libfontconfig-dev qtbase5-dev libqt5x11extras5-dev libx264-dev \
-                libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev
+                libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev \
+                luajit-5.1-dev
 
 * FFmpeg is required, and not commonly available on debian-based distros. If you want a custom compilation with FDK AAC encoder and such, see:
 
@@ -448,7 +449,8 @@ Debian 9.0 or newer is required.
           libv4l-devel \
           libXcomposite-devel \
           libXinerama-devel \
-          libXrandr-devel
+          libXrandr-devel \
+          luajit-devel
 
   - Building and installing OBS:
 
