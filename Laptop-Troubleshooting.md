@@ -75,7 +75,7 @@ If you cannot set the preferred GPU (AMD laptops typically), or wish to cross-ca
 
 In OBS Studio v22 and upwards, there is an updated version of the browser source that comes with hardware accelleration on by default. This means that browser sources will be rendered on the GPU. However, on laptops or multi-GPU systems, it may not always run on the same GPU that OBS is running on, and tends to favor the high performance GPU.
 
-You can manually select the GPU that the browser source is run on by following the appropriate instructions for [AMD](#amd-based-laptops) or [NVIDIA](#nvidia-based-laptops), and adjusting the settings for `cef-bootstrap.exe`. By default, OBS Studio's installation of cef-bootstrap will be at either `C:\Program Files\obs-studio\obs-plugins\64bit\cef-bootstrap.exe` or `C:\Program Files (x86)\obs-studio\obs-plugins\64bit\cef-bootstrap.exe`.
+You can manually select the GPU that the browser source is run on by following the appropriate instructions for [AMD](#for-amd-based-laptops) or [NVIDIA](#for-nvidia-based-laptops), and adjusting the settings for `cef-bootstrap.exe`. By default, OBS Studio's installation of cef-bootstrap will be at either `C:\Program Files\obs-studio\obs-plugins\64bit\cef-bootstrap.exe` or `C:\Program Files (x86)\obs-studio\obs-plugins\64bit\cef-bootstrap.exe`.
 
 If you're still having difficulty getting browser sources to render on a laptop or multi-GPU system, you can disable the new hardware acceleration feature. In OBS Studio, go to **File > Settings > Advanced**, and uncheck the "Enable Browser Source Hardware Acceleration" option.
 
