@@ -246,21 +246,13 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
         sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Tumbleweed packman
 
+    For openSUSE Leap 15.0:
+
+        sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Leap_15.0 packman
+
     For openSUSE Leap 42.3:
 
         sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.3 packman
-
-    For openSUSE Leap 42.2:
-
-        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.2 packman
-
-    For openSUSE Leap 42.1:
-
-        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.1 packman
-
-    For openSUSE 13.2:
-
-        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_13.2 packman
 
     It is recommended to set the priority for Packman lower so it takes
     precedence over base repositories (skip on Tumbleweed as included in initial command).
