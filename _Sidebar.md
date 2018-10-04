@@ -16,6 +16,7 @@
     * [Laptop performance/black screen](Laptop-Troubleshooting)
     * [Performance and Encoding Issues](General-Performance-and-Encoding-Issues)
     * [GPU Overload Issues](GPU-overload-issues)
+  * [Windows 10 App audio to devices](Windows-10-App-volume-device-preferences)
   * [Getting Started with OBS Studio Development](Getting-Started-with-OBS-Studio-Development)
 
 # [Install Instructions](install-instructions)
