@@ -472,7 +472,7 @@ Debian 9.0 or newer is required.
 
 # FreeBSD
 
-### FreeBSD Install Directions
+### FreeBSD Installation (Unofficial)
 
 * Install OBS Studio:
 
