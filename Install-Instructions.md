@@ -476,7 +476,7 @@ Debian 9.0 or newer is required.
 
 * Install OBS Studio:
 
-        pkg install obs-studio
+      pkg install obs-studio
 
 ***
 
