@@ -1,8 +1,8 @@
-If you want to develop for OBS, please visit #obs-dev on Quakenet and get to know the devs or have questions answered!
+If you want to develop for OBS, please visit our [Discord](https://obsproject.com/discord) or #obs-dev on Quakenet and get to know the devs or have questions answered!
 
-Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in IRC first.
+Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in Discord or IRC first.
 
-Please note that any install directions/packages for Linux distributions listed as *Unofficial* means that they are community provided, and any support for those packages should be directed at the appropriate distro/package maintainers.
+Please note that any install directions/packages for Linux/FreeBSD distributions listed as *Unofficial* means that they are community provided, and any support for those packages should be directed at the appropriate distro/package maintainers.
 
 ***
 
