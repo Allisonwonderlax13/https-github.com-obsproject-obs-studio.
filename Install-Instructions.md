@@ -32,6 +32,9 @@ Please note that any install directions/packages for Linux distributions listed 
     * [Debian-based](#debian-based-build-directions)
     * [openSUSE](#opensuse-build-directions)
     * [Linux portable mode (all distros)](#linux-portable-mode-all-distros)
+* [FreeBSD](#freebsd)
+  * [Install](#freebsd-install-directions)
+  * [Build from source](#freebsd-build-directions)
 
 ***
 
@@ -466,3 +469,23 @@ Debian 9.0 or newer is required.
         make -j4 && make install
 
   After that you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
+
+# FreeBSD
+
+### FreeBSD Install Directions
+
+* Install OBS Studio:
+
+        pkg install obs-studio
+
+***
+
+### FreeBSD Build Directions
+* The easiest way to build OBS Studio from source is to use the [FreeBSD Ports](https://www.freebsd.org/doc/handbook/ports-using.html) and modify the `multimedia/obs-studio` port to suite your needs.
+
+* First you have to set up the ports infrastructure on your system. See the related chapter in the [FreeBSD Handbook](https://www.freebsd.org/doc/handbook/ports-using.html).
+
+* Once you've got your ports tree at `/usr/ports` you may edit the `multimedia/obs-studio` port to your liking. Then, you may build and install the port with:
+
+      cd /usr/ports/multimedia/obs-studio
+      make install clean
