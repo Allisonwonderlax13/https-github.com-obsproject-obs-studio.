@@ -25,7 +25,7 @@ You can find themes created by members of the community [at this link](https://o
 Themes use a combination of something called QSS and a folder of custom images.
 
 QSS is based on a subset of CSS2, and its documentation is all over the place. 
-It's recommended to open one of the default themes (Rachni has great documentation) and use it as a reference.
+It's recommended to open one of the default themes ([Rachni has great documentation](https://github.com/obsproject/obs-studio/blob/master/UI/data/themes/Rachni.qss)) and use it as a reference.
 
 Documentation for QSS is split up quite heavily, but here are the links you will need:
 
