@@ -10,4 +10,4 @@ Windows Aero is a design setting that enables enhanced graphical effects and all
 
 ### Change Aero setting using its Windows service
 
-For advanced users another way is to start or stop the Desktop Window Manager Session Manager service. To do this, use the Services manager snap-in console (`services.msc`) or an administrative command promt. For the command promt, use `net stop uxsms` to disable and `net start uxsms` to enable Aero again.
+For advanced users, another way is to start or stop the Desktop Window Manager Session Manager service. To do this, use the Services manager snap-in console (`services.msc`) or an administrative command prompt. For the command prompt, use `net stop uxsms` to disable and `net start uxsms` to enable Aero again.
