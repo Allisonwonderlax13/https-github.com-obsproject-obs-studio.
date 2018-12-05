@@ -5,7 +5,7 @@ Disabling Game Mode is done differently, depending on your Windows 10 version.
 ### Windows 10 "Redstone 5" 1809 (October 2018)
 Settings App > Gaming > Game Mode > set Game Mode to "Off"
 
-![Windows Gaming Settings](https://i.imgur.com/RQ4D2qK.png)
+![Windows Gaming Settings](https://obsproject.com/images/wiki/2018-12-02_17-22-45_002xY.png)
 
 ### Windows 10 "Fall Creators Update" 1709 and "Redstone 4" 1803 (April 2018)
 
@@ -16,7 +16,7 @@ Game Mode is enabled automatically by Windows if supported by your hardware and 
 This requires a change in your Registry.
 Run `regedit.exe` or search for `Registry Editor` in the start menu and launch it. This requires administrator access.
 
-![Registry Editor icon](https://i.imgur.com/IdguyRn.png)
+![Registry Editor icon](https://obsproject.com/images/wiki/2018-12-02_17-39-45_N5lKy.png)
 
 In the editor, navigate to `HKEY_CURRENT_USER\Software\Microsoft\GameBar`. You can paste this directly into the address bar at the top to go there quickly.
 
@@ -24,10 +24,10 @@ At the folder, look for a key called `AllowAutoGameMode` in the right panel. If 
 
 To disable Game Mode, set this value to 0. To enable Game Mode, set it to 1.
 
-![Registry Editor value highlights](https://i.imgur.com/AQTf72x.png)
+![Registry Editor value highlights](https://obsproject.com/images/wiki/2018-12-02_17-42-46_4NMtR.png)
 
 #### Disable Game Mode per-game
 
 To disable it per-game, open the properties of the game shortcut or executable, go to Compatibility and check "Disable full-screen optimisations"
 
-![Windows application properties](https://i.imgur.com/sM7Gww6.png)
+![Windows application properties](https://obsproject.com/images/wiki/2018-12-02_17-36-26_ZtKdV.png)
