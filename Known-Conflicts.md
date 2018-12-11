@@ -18,7 +18,17 @@ Solutions:
 
 ### On-screen Displays / Overlays
 
-Programs which draw on top of games and other software to show additional details such as FPS monitors, temperature / GPU monitors, etc often cause issues due to hook conflicts. These applications include MSI Afterburner, RivaTuner, EVGA Precision, Dolby Axon, TeamSpeak / Mumble, Raptr, Overwolf and others. Please close these applications or disable their OSD functionality when using OBS.
+Programs which draw on top of games and other software to show additional details such as FPS monitors, temperature / GPU monitors, etc often cause issues due to hook conflicts. These applications include, but are not limited to: 
+
+- MSI Afterburner
+- RivaTuner
+- EVGA Precision
+- Dolby Axon
+- TeamSpeak / Mumble / Discord overlays
+- Raptr
+- Overwolf
+
+Please close these applications or disable their OSD functionality when using OBS.
 
 ### Other Capture / Recording Software
 
