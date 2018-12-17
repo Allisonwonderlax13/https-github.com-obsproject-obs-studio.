@@ -54,13 +54,12 @@ NOTE: If using the .zip method for either the full or small install and installi
 ### Windows Build Directions:
 * **Requirements for building OBS on windows**
   * Development packages of `FFmpeg`, `x264`, and `cURL`.  
-    * Pre-built windows dependencies for VS2013 and VS2015 can be found here:
-      * VS2013: https://obsproject.com/downloads/dependencies2013.zip
+    * Pre-built windows dependencies for VS2015 and VS2017 can be found here:
       * VS2015: https://obsproject.com/downloads/dependencies2015.zip
       * VS2017: https://obsproject.com/downloads/dependencies2017.zip
   * [Qt5](http://www.qt.io/) (minimum version of 5.9 if you're using VS2017)
   * Windows version of [cmake](http://www.cmake.org/)
-  * [Visual Studio 2013 (Latest update) or Visual Studio 2015 or Visual Studio 2017](https://www.visualstudio.com/free-developer-offers/)
+  * [Visual Studio 2015 or Visual Studio 2017 (latest updates recommended)](https://www.visualstudio.com/free-developer-offers/)
 
 * **Installation Procedure**
   * Clone the repository and **submodules**:
@@ -81,8 +80,8 @@ NOTE: If using the .zip method for either the full or small install and installi
       * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch).
         * **NOTE**: Make sure to download Qt 5.X.X prebuilt components for your version of MSVC (64 or 32 bit).
         * Example Qt directories you would use here if you installed Qt5 to D:\Qt would usually look something like this:
-          * `(32bit) QTDIR=D:\Qt\5.8\msvc2013`
-          * `(64bit) QTDIR64=D:\Qt\5.8\msvc2013_64`
+          * `(32bit) QTDIR=D:\Qt\5.8\msvc2017`
+          * `(64bit) QTDIR64=D:\Qt\5.8\msvc2017_64`
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)  
       * `x264Path` (Path to just x264 include directory.)  
@@ -111,7 +110,7 @@ NOTE: If using the .zip method for either the full or small install and installi
     * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
   * Press 'Configure' and select the generator that fits to your installed VS Version:  
-Visual Studio 12 2013, Visual Studio 14 2015, **or their 64bit equivalents** if you want to build the 64bit version of OBS
+Visual Studio 14 2015, Visual Studio 15 2017, **or their 64bit equivalents** if you want to build the 64bit version of OBS
       * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
   
   * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
