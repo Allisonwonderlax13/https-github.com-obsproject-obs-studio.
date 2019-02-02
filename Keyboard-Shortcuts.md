@@ -1,4 +1,5 @@
-## Sources List Shortcuts (only active when a source is selected):
+## Sources List Shortcuts
+### Only active when a source is selected
 #### General
 * Copy Source: Ctrl+C
 * Paste Source: Ctrl+V
