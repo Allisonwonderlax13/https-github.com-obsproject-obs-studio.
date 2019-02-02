@@ -23,9 +23,10 @@
 * Nudge source down: Down arrow
 * Nudge source left: Left arrow
 * Nudge source right: Right arrow
-* Crop a source: Hold alt and drag the bounding box (edges turn green to indicate they are cropped)
+* Crop a source: Hold alt and drag the bounding box (edges should turn green)
+* Stretch a source: Hold shift and drag the bounding box
 * Temporarily disable source snapping (if enabled): Hold ctrl while moving/adjusting bounding box
 
-#### Only active when the preview is set to fixed scaling (canvas or output)
-* Move preview: Hold space+drag
-* Zoom preview: Hold space+mouse scroll wheel
+#### Only active when the Preview is set to Fixed Scaling (canvas or output)
+* Move preview: Hold space and drag it with your mouse
+* Zoom preview: Hold space + mouse scroll wheel
