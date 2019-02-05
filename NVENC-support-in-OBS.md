@@ -6,3 +6,4 @@ Devices that do not support NVENC:
 - NVIDIA GeForce 940M
 - NVIDIA GeForce 940MX
 - NVIDIA GeForce GT 1030
+- NVIDIA GeForce GT 730
