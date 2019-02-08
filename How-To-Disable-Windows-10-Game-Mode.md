@@ -1,6 +1,6 @@
 The Windows 10 Creators Update (version 1703) added a new Game Mode which tries to allocate more resources to the current game in focus. This features can cause performance issues with OBS and it is recommended to disable it.
 
-Disabling Game Mode is done differently, depending on your Windows 10 version.
+Disabling Game Mode is done differently, depending on your Windows 10 version. Not sure which you have? Press Windows+R and type in "winver" to show the Windows version.
 
 ### Windows 10 "Redstone 5" 1809 (October 2018)
 Settings App > Gaming > Game Mode > set Game Mode to "Off"
