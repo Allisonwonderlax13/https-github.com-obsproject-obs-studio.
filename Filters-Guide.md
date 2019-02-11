@@ -1,4 +1,4 @@
-In OBS Studio we have the ability to add filters to our Sources, Scenes and even our Audio Devices. The following filters are available in OBS Studio 18.0.1:
+In OBS Studio we have the ability to add filters to our Sources, Scenes and even our Audio Devices. The following filters are available in OBS Studio 23.0.0:
 
 * [Scene and Source Filters](#scene-and-source-filters)
   * [Image Mask/Blend](#image-maskblend)
@@ -11,10 +11,11 @@ In OBS Studio we have the ability to add filters to our Sources, Scenes and even
   * [Chroma Key](#color-key-and-chroma-key)
 * [Audio Device Filters](#audio-device-filters)
   * [Compressor](#compressor)
-  * [Expander](#Expander)
+    * [Sidechain Compression/Ducking](#sidechain-compressionducking)
+  * [Expander](#expander)
   * [Gain](#gain)
   * [Invert Polarity](#invert-polarity)
-  * [Limiter](#Limiter)
+  * [Limiter](#limiter)
   * [Noise Gate](#noise-gate)
   * [Noise Suppression](#noise-suppression)
   * [VST Plugin](#vst-plugin)
@@ -87,29 +88,30 @@ In short, a compressor makes loud sounds quieter and typically would be placed a
 - **Threshold**: Once the signal reaches this level the compressor will begin to apply compression at the set ratio. When levels are below the threshold the ratio is 1:1 which translates to no gain reduction.
 - **Attack**: How quickly, in milliseconds, you want the compressor to reach full gain reduction when levels exceed the threshold.
 - **Release**: How quickly, in milliseconds, you want the compressor to return to zero gain reduction after levels drop below the threshold.
-- **Output gain**: This acts similarly to the standalone [Gain Filter](#gain). When you compress a signal it typically ends up quieter, reducing your average level. Applying Output or make-up gain brings the average level of the source back up, which can help improve its clarity and presence over-top of other audio sources. 
-- **Sidechain/Ducking Source**: When a compressor is placed on an output audio source such as your Desktop, Sidechain can use the input from a microphone/aux source to reduce the volume of the output source.
-Sidechain compression, also known as *Ducking*, can be used to make room for your voice when speaking over-top of music and games by lowering your desktop audio when you speak.
+- **Output Gain**: When you compress a signal it typically ends up quieter which reduces your average level. Applying Output gain brings the average level of the source back up which can help improve its presence over-top of other audio sources. 
+- **Sidechain/Ducking Source**: When a compressor is placed on an output audio source such as your Desktop, Sidechain can use the input from a microphone/aux source to reduce the volume of the output source. See [Sidechain Compression/Ducking](#sidechain-compressionducking).
 
-*Note. A source can still exceed 0dB with a compressor if your input level is too loud, your ratio/threshold are not set correctly or you apply too much output gain. To ensure you do not exceed 0dB you can use a [Limiter](#limiter) at the end of your filter chain.*
+*Note. A source can still exceed 0dB with a compressor if your input level is too loud, your ratio/threshold are set incorrectly or you apply too much output gain. To ensure you do not exceed 0dB you can use a [Limiter](#limiter) at the end of your filter chain.*
 		
 ### Sidechain Compression/Ducking
+
+Sidechain compression, also known as *Ducking*, can be used to make room for your voice when speaking over-top of music and games by lowering your desktop audio when you speak.
 
 The following sidechain compression settings are recommended as a place to start. Adjust the threshold to control the strength of the ducking, attack/release control how quickly the volume changes.
 	
 - **Ratio**: 32:1
-- **Threshold**: -32dB
-- **Attack**: 50-100ms (How fast the audio will duck out)
-- **Release**: 500ms (How fast the audio will return to full volume)
+- **Threshold**: -36dB
+- **Attack**: 100ms (How fast the audio will duck out)
+- **Release**: 600ms (How fast the audio will return to full volume)
 - **Output Gain**: 0dB (You do not apply output gain when using Sidechain compression)
 - **Sidechain/Ducking Source**: Microphone
 
 ***
 
 ### Expander
-An expander can be used to reduce background noise such as computer fans, mouse/keyboard clicks, even breathing in front of the microphone. Like a compressor, an expander reduces the level of an audio signal but it applies the gain reduction below the threshold instead of above it. 
+An expander can be used to reduce background noise such as computer fans, mouse/keyboard clicks, breathing and unwanted mouth noises. An expander reduces the level of an audio signal by applying gain reduction, similar to a compressor but below the threshold instead of above it. 
 
-An expander can be used in place of a gate for noise reduction, they are smoother to open and close due to using an adjustable ratio whereas a gate is a fixed ratio.
+An expander can be used in place of a gate for noise reduction, they can produce a smoother open and close due to having an adjustable ratio whereas a gate is a fixed.
 
 In short, an expander makes quiet sounds quieter and typically would be placed near the end of your filter chain, after any compression/other effects but before a [Limiter](#limiter).
 
@@ -120,7 +122,7 @@ In short, an expander makes quiet sounds quieter and typically would be placed n
 - **Threshold**: Once the input reaches this level the expander will stop gain reducing the signal. Adjust the threshold until the noise you are trying to reduce is gone, but don't go too far or your voice will begin to get cut off.
 - **Attack**: How quickly, in milliseconds, you want the expander to stop gain reducing or *open* once the threshold is exceeded. **An attack between 5-10ms is recommended.**
 - **Release**: How quickly, in milliseconds, you want the expander to reach full gain reduction or *close* once the input drops below the threshold. **A release between 50-120ms is recommended.**
-- **Output gain**: This acts similarly to the standalone [Gain Filter](#gain). Increases the output level of the expander by appling gain, generally not needed but can be used to increase your mic level before outputting it to a limiter.
+- **Output Gain**: Increases the output level of the expander by applying gain, generally not needed but can be used to increase your microphone level before outputting it.
 - **Detection**: Changes how the input level is measured, affecting the sensitivity of the threshold detection. **RMS is recommended.**
 	- **RMS**: Averages the input level measurement over the last 10ms to reduce the sensitivity of the threshold detection, helps smooth out and prevent the expander from opening due to quick little peaks of noise.
 	- **Peak**: Input level measurement is not averaged over time, expander is quicker to react to peak level changes.
