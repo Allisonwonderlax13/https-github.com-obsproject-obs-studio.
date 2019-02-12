@@ -15,7 +15,14 @@ It is best to disable all gaming related features in Windows 10 to ensure OBS pe
 ***
 
 ## Game DVR/Captures
-Depending on your version of Windows 10 the name of this feature changes.
+
+Game DVR can cause conflicts with OBS when using hardware encoding such as NVENC. 
+
+Consumer NVIDIA GPUs for example are limited to two(2) encoding sessions. Game DVR and Geforce Experience(ShadowPlay) will often consume both of these sessions if enabled, preventing you from recording or streaming(or both simultaneously) when using NVENC.
+
+**Game DVR can also cause performance issues, it is still recommended to disable Game DVR even if you don't plan on using hardware encoding.**
+
+Depending on your version of Windows 10 the name of this feature changes. 
 
 * Settings App > Gaming > Game DVR> set **"Record in the background while I'm playing a game"** to **"Off"**
 
