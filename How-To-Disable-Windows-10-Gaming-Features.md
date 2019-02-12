@@ -8,6 +8,7 @@ It is best to disable all gaming related features in Windows 10 to ensure OBS pe
 * [Game Mode](#game-mode)
 
 ##  Game Bar
+
 * Settings App > Gaming > Game bar> set **"Record game clips, screenshots and broadcast using Game bar"** to **"Off"**
 
 ## Game DVR/Captures
