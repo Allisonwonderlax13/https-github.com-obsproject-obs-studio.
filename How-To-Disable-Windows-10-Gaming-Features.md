@@ -3,6 +3,7 @@ The various Windows 10 gaming features can cause rendering and encoding issues a
 It is best to disable all gaming related features in Windows 10 to ensure OBS performs at its best.
 
 ### Windows 10 Gaming Features
+
 * [Game Bar](#game-bar)
 * [Game DVR/Captures](#game-dvrcaptures)
 * [Game Mode](#game-mode)
