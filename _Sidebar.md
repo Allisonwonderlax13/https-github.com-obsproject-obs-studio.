@@ -17,7 +17,7 @@
     * [Performance and Encoding Issues](General-Performance-and-Encoding-Issues)
     * [GPU Overload Issues](GPU-overload-issues)
     * [How to enable or disable Aero in Windows 7](How-to-enable-or-disable-Aero-in-Windows-7)
-    * [How to disable Windows 10 Game Mode](How-to-disable-Windows-10-Game-Mode)
+    * [How to disable Windows 10 Gaming Features](How-to-disable-Windows-10-Gaming-Features)
   * [Windows 10 App Audio To Devices](Windows-10-App-Volume-Device-Preferences)
   * [Getting Started with OBS Studio Development](Getting-Started-with-OBS-Studio-Development)
 
