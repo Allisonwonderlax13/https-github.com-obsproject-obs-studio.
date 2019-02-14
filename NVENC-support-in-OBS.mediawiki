@@ -56,7 +56,6 @@
 
 : NVIDIA GeForce GT 1030
 : NVIDIA GeForce MX150
-: NVIDIA GeForce MX150
 : NVIDIA GeForce MX230
 : NVIDIA GeForce MX250
 : NVIDIA Quadro P500 Mobile
