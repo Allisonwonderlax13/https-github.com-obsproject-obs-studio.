@@ -1,35 +1,5 @@
 == NVIDIA GPUs that do not support NVENC ==
 
-; GK208 (Kepler):
-
-: NVIDIA GeForce 710A
-: NVIDIA GeForce 710M
-: NVIDIA GeForce 805A
-: NVIDIA GeForce 810A
-: NVIDIA GeForce 825M
-: NVIDIA GeForce GT 630 Rev. 2
-: NVIDIA GeForce GT 635
-: NVIDIA GeForce GT 640 Rev. 2
-: NVIDIA GeForce GT 710
-: NVIDIA GeForce GT 720
-: NVIDIA GeForce GT 720M
-: NVIDIA GeForce GT 730A
-: NVIDIA GeForce GT 730M
-: NVIDIA GeForce GT 735M
-: NVIDIA GeForce GT 740A
-: NVIDIA GeForce GT 740M
-: NVIDIA Quadro K510M
-: NVIDIA Quadro K610M
-
-; GK208B (Kepler):
-
-: NVIDIA GeForce 910M
-: NVIDIA GeForce 920A
-: NVIDIA GeForce 920M
-: NVIDIA GeForce GT 710
-: NVIDIA GeForce GT 720
-: NVIDIA GeForce GT 730
-
 ; GM108 (Maxwell):
 
 : NVIDIA GeForce 830A
