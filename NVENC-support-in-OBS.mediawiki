@@ -38,8 +38,6 @@
 
 ==== TechPowerUp GPU Database ====
 
-https://www.techpowerup.com/gpu-specs/nvidia-gk208.g572<br />
-https://www.techpowerup.com/gpu-specs/nvidia-gk208b.g815<br />
 https://www.techpowerup.com/gpu-specs/nvidia-gm108.g761<br />
 https://www.techpowerup.com/gpu-specs/nvidia-gp108.g808<br />
 https://www.techpowerup.com/gpu-specs/nvidia-gp108b.g887<br />
