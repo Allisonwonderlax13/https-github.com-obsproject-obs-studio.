@@ -1,6 +1,7 @@
-The various Windows 10 gaming features can cause rendering and encoding issues as well as other unwanted effects when using OBS.
 
-It is best to disable all gaming related features in Windows 10 to ensure OBS performs at its best.
+The various Windows 10 gaming features can cause rendering and encoding issues when using OBS. It is recommended you disable all gaming related features in Windows 10 to ensure OBS performs at its best.
+
+All features can be found in the **Windows Setting App** under **Gaming**, the keyboard shortcut to open settings is **Windows + i**.
 
 ### Windows 10 Gaming Features
 
@@ -29,42 +30,52 @@ or
 * Settings App > Gaming > Captures> set **"Record in the background while I'm playing a game"** to **"Off"**
 
 ## Game Mode
+
 **This feature can cause major performance issues with OBS and games, it is strongly recommended to disable it.**
 
-The Windows 10 Creators Update (version 1703) added Game Mode which tries to allocate more resources to the current game in focus. 
+The Windows 10 Creators Update (version 1703) added Game Mode. Game Mode tries to allocate all GPU resources to the current game in focus, starving OBS of the GPU resources it needs to render.
 
-Disabling Game Mode is done differently depending on your Windows 10 version. Not sure which you have? 
+Game Mode is enabled automatically by Windows and disabling it is performed differently depending on your version of Windows 10. Not sure which you have? 
 
-* Press Windows + R and type in "winver" to show your current Windows 10 version.
+* Press Windows + R and type in `winver` to show your current version of Windows 10.
 
-### Windows 10 "Redstone 5" 1809 (October 2018)
-* Settings App > Gaming > Game Mode > set Game Mode to "Off"
+### Windows 10 "Redstone 5" 1809 (October 2018) or later
+
+To disable Game Mode in Windows 10 1809 or later. 
+* Settings App > Gaming > Game Mode > set Game Mode to **"Off"**, reboot your PC.
 
 ![Windows Gaming Settings](https://obsproject.com/images/wiki/2018-12-02_17-22-45_002xY.png)
 
 
 ### Windows 10 "Fall Creators Update" 1709 and "Redstone 4" 1803 (April 2018)
-Game Mode is enabled automatically by Windows if supported by your hardware and needs to be disabled individually per-application or globally using the Registry. 
+
+For Windows 10 1803 or earlier, Game Mode must be disabled individually per-game or globally using the Registry. 
 
 **It's recommended to disable it globally.**
 
 ### Disable Game Mode globally using the Registry
 
-This requires a change in your Registry.
-Run `regedit.exe` or search for `Registry Editor` in the start menu and launch it. This requires administrator access.
+**The following steps require Administrator access to perform.**
+
+* Press Windows + R> type `regedit`> hit OK/Enter. You can also open the Start Menu and type `regedit` or `Registry Editor`and launch the application.
 
 ![Registry Editor icon](https://obsproject.com/images/wiki/2018-12-02_17-39-45_N5lKy.png)
 
-In the editor, navigate to `HKEY_CURRENT_USER\Software\Microsoft\GameBar`. You can paste this directly into the address bar at the top to go there quickly.
+In the Registry Editor: 
 
-At the folder, look for a key called `AllowAutoGameMode` in the right panel. If the key is not there, create it. Right-click inside the right panel and select New > "DWORD (32-bit) Value". Rename the new value to `AllowAutoGameMode`.
+1. Navigate to `HKEY_CURRENT_USER\Software\Microsoft\GameBar`. You can paste this directly into the address bar at the top to go there quickly.
 
-To disable Game Mode, set this value to 0. To enable Game Mode, set it to 1.
+2. In the GameBar folder look for an key called `AllowAutoGameMode` in the right panel, if the key is not there you can create it. 
+   * To create the key, right-click inside the panel and select New > "DWORD (32-bit) Value". Rename the new key to `AllowAutoGameMode`.
+
+3. To disable Game Mode, set the value for `AllowAutoGameMode` to `0`, close the Registry Editor, reboot your PC.
 
 ![Registry Editor value highlights](https://obsproject.com/images/wiki/2018-12-02_17-42-46_4NMtR.png)
 
 ### Disable Game Mode per-game
 
-To disable it per-game, open the properties of the game shortcut or executable, go to Compatibility and check "Disable full-screen optimisations"
+To disable Game Mode per-game:
+
+* Open the properties for the game shortcut or executable, go to **Compatibility** and turn on **"Disable full-screen optimizations"**
 
 ![Windows application properties](https://obsproject.com/images/wiki/2018-12-02_17-36-26_ZtKdV.png)
