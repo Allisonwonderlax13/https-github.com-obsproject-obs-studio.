@@ -1,0 +1,76 @@
+== NVIDIA GPUs that do not support NVENC ==
+
+; GK208 (Kepler):
+
+: NVIDIA GeForce 710A
+: NVIDIA GeForce 710M
+: NVIDIA GeForce 805A
+: NVIDIA GeForce 810A
+: NVIDIA GeForce 825M
+: NVIDIA GeForce GT 630 Rev. 2
+: NVIDIA GeForce GT 635
+: NVIDIA GeForce GT 640 Rev. 2
+: NVIDIA GeForce GT 710
+: NVIDIA GeForce GT 720
+: NVIDIA GeForce GT 720M
+: NVIDIA GeForce GT 730A
+: NVIDIA GeForce GT 730M
+: NVIDIA GeForce GT 735M
+: NVIDIA GeForce GT 740A
+: NVIDIA GeForce GT 740M
+: NVIDIA Quadro K510M
+: NVIDIA Quadro K610M
+
+; GK208B (Kepler):
+
+: NVIDIA GeForce 910M
+: NVIDIA GeForce 920A
+: NVIDIA GeForce 920M
+: NVIDIA GeForce GT 710
+: NVIDIA GeForce GT 720
+: NVIDIA GeForce GT 730
+
+; GM108 (Maxwell):
+
+: NVIDIA GeForce 830A
+: NVIDIA GeForce 830M
+: NVIDIA GeForce 840A
+: NVIDIA GeForce 840M
+: NVIDIA GeForce 845M
+: NVIDIA GeForce 920MX
+: NVIDIA GeForce 930A
+: NVIDIA GeForce 930M
+: NVIDIA GeForce 930MX
+: NVIDIA GeForce 940A
+: NVIDIA GeForce 940M
+: NVIDIA GeForce 940MX
+: NVIDIA GeForce 945A
+: NVIDIA GeForce 945M
+: NVIDIA GeForce MX110
+: NVIDIA GeForce MX130
+: NVIDIA Quadro K620M
+: NVIDIA Quadro M500M
+: NVIDIA Quadro M520 Mobile
+
+; GP108 (Pascal):
+
+: NVIDIA GeForce GT 1030
+: NVIDIA GeForce MX150
+: NVIDIA GeForce MX150
+: NVIDIA GeForce MX230
+: NVIDIA GeForce MX250
+: NVIDIA Quadro P500 Mobile
+
+; GP108B (Pascal):
+
+: NVIDIA GeForce MX250
+
+----
+
+==== TechPowerUp GPU Database ====
+
+https://www.techpowerup.com/gpu-specs/nvidia-gk208.g572<br />
+https://www.techpowerup.com/gpu-specs/nvidia-gk208b.g815<br />
+https://www.techpowerup.com/gpu-specs/nvidia-gm108.g761<br />
+https://www.techpowerup.com/gpu-specs/nvidia-gp108.g808<br />
+https://www.techpowerup.com/gpu-specs/nvidia-gp108b.g887<br />
