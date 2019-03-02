@@ -24,6 +24,7 @@ Programs which draw on top of games and other software to show additional detail
 - RivaTuner
 - EVGA Precision
 - Dolby Axon
+- ASUS GPU Tweak II
 - TeamSpeak / Mumble / Discord overlays
 - Raptr
 - Overwolf
