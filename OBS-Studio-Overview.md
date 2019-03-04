@@ -78,6 +78,7 @@ Keyboard keys are supported. To use joysticks as hotkeys on Linux and Windows, y
 Most of these settings should not be changed unless you understand exactly why you need to change them. However, some settings can be useful for new streamers, such as:
 - Change the Filename Formatting (or use folders: %CCYY\%MM\%DD\%hh-%mm-%ss = 2016 \ 07 \ 10 \ 12:35:25.flv)
   - Hover over the field for a popup that explains each available variable for naming
+  - Hovering does not work in MacOS Mojave
 - Activate Stream Delay
 - Configure Automatic Reconnect
 - Do not touch anything else in Advanced unless you absolutely know what you're doing. Really, we mean it. If you have questions, search around or hop in the support chat and ask!
