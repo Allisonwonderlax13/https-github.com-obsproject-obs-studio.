@@ -36,6 +36,7 @@
 
 #### Other (Older generation)
 
+- NVIDIA GeForce GT 710
 - NVIDIA GeForce GT 730
 
 ----
