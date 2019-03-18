@@ -73,7 +73,7 @@ If you cannot set the preferred GPU (AMD laptops typically), or wish to cross-ca
 
 ## Browser Sources
 
-In OBS Studio v22 and upwards, there is an updated version of the browser source that comes with hardware accelleration on by default. This means that browser sources will be rendered on the GPU. However, on laptops or multi-GPU systems, it may not always run on the same GPU that OBS is running on, and tends to favor the high performance GPU.
+In OBS Studio v22 and upwards, there is an updated version of the browser source that comes with hardware acceleration on by default. This means that browser sources will be rendered on the GPU. However, on laptops or multi-GPU systems, it may not always run on the same GPU that OBS is running on, and tends to favor the high performance GPU.
 
 You can manually select the GPU that the browser source is run on by following the appropriate instructions for [AMD](#for-amd-based-laptops) or [NVIDIA](#for-nvidia-based-laptops), and adjusting the settings for `obs-browser-page.exe`. By default, OBS Studio's installation of obs-browser-page will be at either `C:\Program Files\obs-studio\obs-plugins\64bit\obs-browser-page.exe` or `C:\Program Files (x86)\obs-studio\obs-plugins\64bit\obs-browser-page.exe`.
 
