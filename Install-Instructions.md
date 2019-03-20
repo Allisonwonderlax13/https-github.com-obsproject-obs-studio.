@@ -362,7 +362,7 @@ Debian 9.0 or newer is required.
                 pulseaudio-libs-devel x264-devel freetype-devel \
                 fontconfig-devel libXcomposite-devel libXinerama-devel \
                 qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
-                systemd-devel ffmpeg luajit-devel swig python36-devel
+                systemd-devel ffmpeg luajit-devel swig python3-devel
   (Note: you might also need to install `ffmpeg-devel`)
 
 * Building and installing OBS:
@@ -420,11 +420,6 @@ Debian 9.0 or newer is required.
         make -j4
         sudo checkinstall --pkgname=obs-studio --fstrans=no --backup=no \
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
-
-* Enabling `obs-scripting` support is determined at build time, and the following packages are required prior to executing `cmake.`  If you've already ran `cmake`, without these packages, just install and re-run `cmake`
-        
-        sudo apt-get install libluajit-5.1-dev swig python3-dev
-
 
 ***
 
