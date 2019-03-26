@@ -16,7 +16,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
   * [Build from source](#macos-build-directions)
 * [Linux](#linux)
   * [Install Directions](#linux-install-directions)
-    * [Ubuntu (14.04+)](#ubuntu-installation)
+    * [Ubuntu](#ubuntu-installation)
     * [Arch Linux (Unofficial)](#arch-linux-installation-unofficial)
     * [Manjaro (Unofficial)](#manjaro-installation-unofficial)
     * [Fedora (Unofficial)](#fedora-installation-unofficial)
