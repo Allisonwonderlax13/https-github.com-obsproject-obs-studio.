@@ -339,7 +339,7 @@ Debian 9.0 or newer is required.
 
 ### snappy Installation (Unofficial)
 
-* If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is likely outdated).
+* If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is outdated).
 
 * Install OBS Studio.
 
@@ -352,18 +352,33 @@ Debian 9.0 or newer is required.
 ### Red Hat/Fedora-based Build Directions
 * Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7 and newer Fedora)
 
-* Set up a build environment:
-
-        sudo dnf install gcc gcc-c++ gcc-objc cmake git
-
 * Get the required packages:
 
-        sudo yum install libX11-devel mesa-libGL-devel libv4l-devel \
-                pulseaudio-libs-devel libspeexdsp-devel x264-devel freetype-devel \
-                fontconfig-devel libXcomposite-devel libXinerama-devel \
-                qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
-                systemd-devel ffmpeg luajit-devel swig python3-devel
-  (Note: you might also need to install `ffmpeg-devel`)
+        sudo yum install \
+                 gcc \
+                 gcc-c++ \
+                 gcc-objc \
+                 cmake \
+                 git \
+                 libX11-devel \
+                 mesa-libGL-devel \
+                 libv4l-devel \
+                 pulseaudio-libs-devel \
+                 libspeexdsp-devel \
+                 x264-devel \
+                 freetype-devel \
+                 fontconfig-devel \
+                 libXcomposite-devel \
+                 libXinerama-devel \
+                 qt5-qtbase-devel \
+                 qt5-qtx11extras-devel \
+                 libcurl-devel \
+                 systemd-devel \
+                 ffmpeg \
+                 ffmpeg-devel \
+                 luajit-devel \
+                 python3-devel \
+                 swig
 
 * Building and installing OBS:
 
@@ -385,31 +400,46 @@ Debian 9.0 or newer is required.
 ***
 
 ### Debian-based Build Directions
-* Set up a build environment:
-
-        sudo apt-get install build-essential pkg-config cmake git-core checkinstall
 
 * Get the required packages:
 
-        sudo apt-get install libx11-dev libgl1-mesa-dev libvlc-dev libpulse-dev libspeexdsp-dev libxcomposite-dev libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev libfontconfig1-dev qtbase5-dev libqt5x11extras5-dev libqt5svg5-dev libx264-dev libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev libluajit-5.1-dev swig python3-dev
-
-* FFmpeg is required, and not commonly available on debian-based distros. If you want a custom compilation with FDK AAC encoder and such, see:
-
-        https://trac.ffmpeg.org/wiki/CompilationGuide
-
-* Otherwise, I will only give easy and brief instructions for a very minimal FFmpeg installation (note that it does not require the inclusion of packages such as x264/etc, but you can include them if you wish):
-
-        sudo apt-get install zlib1g-dev yasm
-        git clone --depth 1 git://source.ffmpeg.org/ffmpeg.git
-        cd ffmpeg
-        ./configure --enable-shared --prefix=/usr
-        make -j4
-        sudo checkinstall --pkgname=FFmpeg --fstrans=no --backup=no \
-                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
-
-* Alternatively, Debian Jessie non-free, and Ubuntu 14.04 LTS multiverse have packages for FDK AAC.  Add non-free (Debian) or multiverse (Ubuntu) to your /etc/apt/sources.list.  Tested on Debian Stretch:
-
-        sudo apt-get install libavcodec-dev libavfilter-dev libavdevice-dev libfdk-aac-dev
+        sudo apt-get install \
+                build-essential \
+                checkinstall \
+                cmake \
+                libasound2-dev \
+                libavcodec-dev \
+                libavdevice-dev \
+                libavfilter-dev \
+                libavformat-dev \
+                libavutil-dev \
+                libcurl4-openssl-dev \
+                libfdk-aac-dev \
+                libfontconfig-dev \
+                libfreetype6-dev \
+                libgl1-mesa-dev \
+                libjack-jackd2-dev \
+                libjansson-dev \
+                libluajit-5.1-dev \
+                libpulse-dev \
+                libqt5x11extras5-dev \
+                libspeexdsp-dev \
+                libswresample-dev \
+                libswscale-dev \
+                libudev-dev \
+                libv4l-dev \
+                libvlc-dev \
+                libx11-dev \
+                libx264-dev \
+                libxcb-shm0-dev \
+                libxcb-xinerama0-dev \
+                libxcomposite-dev \
+                libxinerama-dev \
+                pkg-config \
+                python3-dev \
+                qtbase5-dev \
+                libqt5svg5-dev \
+                swig
 
 * Building and installing OBS:
 
@@ -418,7 +448,7 @@ Debian 9.0 or newer is required.
         mkdir build && cd build
         cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
         make -j4
-        sudo checkinstall --pkgname=obs-studio --fstrans=no --backup=no \
+        sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no \
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
 ***
@@ -429,25 +459,25 @@ Debian 9.0 or newer is required.
   - Install build dependencies:
 
         sudo zypper in cmake \
-          fontconfig-devel \
-          freetype2-devel \
-          gcc \
-          gcc-c++ \
-          libcurl-devel \
-          ffmpeg2-devel \
-          libjansson-devel \
-          libpulse-devel \
-          libspeexdsp-devel \
-          libqt5-qtbase-devel \
-          libqt5-qtx11extras-devel \
-          libudev-devel \
-          libv4l-devel \
-          libXcomposite-devel \
-          libXinerama-devel \
-          libXrandr-devel \
-          luajit-devel \
-          swig \
-          python3-devel
+                fontconfig-devel \
+                freetype2-devel \
+                gcc \
+                gcc-c++ \
+                libcurl-devel \
+                ffmpeg2-devel \
+                libjansson-devel \
+                libpulse-devel \
+                libspeexdsp-devel \
+                libqt5-qtbase-devel \
+                libqt5-qtx11extras-devel \
+                libudev-devel \
+                libv4l-devel \
+                libXcomposite-devel \
+                libXinerama-devel \
+                libXrandr-devel \
+                luajit-devel \
+                swig \
+                python3-devel
 
   - Building and installing OBS:
 
