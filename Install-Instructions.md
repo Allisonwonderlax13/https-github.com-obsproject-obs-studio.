@@ -1,4 +1,4 @@
-If you want to develop for OBS, please visit our [Discord](https://obsproject.com/discord) or #obs-dev on Quakenet and get to know the devs or have questions answered!
+If you want to develop for OBS, please visit our [Discord](https://obsproject.com/discord) and get to know the devs or have questions answered!
 
 Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in Discord or IRC first.
 
