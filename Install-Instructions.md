@@ -359,7 +359,7 @@ Debian 9.0 or newer is required.
 * Get the required packages:
 
         sudo yum install libX11-devel mesa-libGL-devel libv4l-devel \
-                pulseaudio-libs-devel x264-devel freetype-devel \
+                pulseaudio-libs-devel libspeexdsp-devel x264-devel freetype-devel \
                 fontconfig-devel libXcomposite-devel libXinerama-devel \
                 qt5-qtbase-devel qt5-qtx11extras-devel libcurl-devel \
                 systemd-devel ffmpeg luajit-devel swig python3-devel
@@ -391,7 +391,7 @@ Debian 9.0 or newer is required.
 
 * Get the required packages:
 
-        sudo apt-get install libx11-dev libgl1-mesa-dev libvlc-dev libpulse-dev libxcomposite-dev libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev libfontconfig1-dev qtbase5-dev libqt5x11extras5-dev libqt5svg5-dev libx264-dev libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev libluajit-5.1-dev swig python3-dev
+        sudo apt-get install libx11-dev libgl1-mesa-dev libvlc-dev libpulse-dev libspeexdsp-dev libxcomposite-dev libxinerama-dev libv4l-dev libudev-dev libfreetype6-dev libfontconfig1-dev qtbase5-dev libqt5x11extras5-dev libqt5svg5-dev libx264-dev libxcb-xinerama0-dev libxcb-shm0-dev libjack-jackd2-dev libcurl4-openssl-dev libluajit-5.1-dev swig python3-dev
 
 * FFmpeg is required, and not commonly available on debian-based distros. If you want a custom compilation with FDK AAC encoder and such, see:
 
@@ -437,6 +437,7 @@ Debian 9.0 or newer is required.
           ffmpeg2-devel \
           libjansson-devel \
           libpulse-devel \
+          libspeexdsp-devel \
           libqt5-qtbase-devel \
           libqt5-qtx11extras-devel \
           libudev-devel \
