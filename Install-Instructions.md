@@ -350,7 +350,7 @@ Debian 9.0 or newer is required.
 ## Linux Build Directions
 
 ### Red Hat/Fedora-based Build Directions
-* Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7 and newer Fedora)
+* Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
 
 * Get the required packages:
 
