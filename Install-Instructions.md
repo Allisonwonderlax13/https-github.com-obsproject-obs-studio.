@@ -289,7 +289,9 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 ***
 
 ### Gentoo Installation (Unofficial)
-* Link:  https://github.com/saintdev/obs-studio-overlay
+* Command-line: can be installed using portage by the following command:
+
+        sudo emerge media-video/obs-studio
 
 ***
 
