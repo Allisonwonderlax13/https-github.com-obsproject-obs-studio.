@@ -293,6 +293,8 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
         sudo emerge media-video/obs-studio
 
+See https://packages.gentoo.org/packages/media-video/obs-studio for available versions and more information
+
 ***
 
 ### NixOS Installation (Unofficial)
