@@ -2,19 +2,14 @@
 
 #### GM108 (Maxwell):
 
-- NVIDIA GeForce 830A
 - NVIDIA GeForce 830M
-- NVIDIA GeForce 840A
 - NVIDIA GeForce 840M
-- NVIDIA GeForce 845M
+- NVIDIA GeForce 845M (NVENC depends on hardware revision - GM107 vs GM108)
 - NVIDIA GeForce 920MX
-- NVIDIA GeForce 930A
 - NVIDIA GeForce 930M
 - NVIDIA GeForce 930MX
-- NVIDIA GeForce 940A
 - NVIDIA GeForce 940M
 - NVIDIA GeForce 940MX
-- NVIDIA GeForce 945A
 - NVIDIA GeForce 945M
 - NVIDIA GeForce MX110
 - NVIDIA GeForce MX130
@@ -36,8 +31,8 @@
 
 #### Other (Older generation)
 
-- NVIDIA GeForce GT 710
-- NVIDIA GeForce GT 730
+- NVIDIA GeForce GT 705 (Fermi)
+- NVIDIA GeForce GT 730 (NVENC depends on hardware revision - Fermi GF108 vs Kepler GK208)
 
 ----
 
