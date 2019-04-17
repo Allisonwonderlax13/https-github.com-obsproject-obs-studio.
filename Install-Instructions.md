@@ -70,7 +70,11 @@ NOTE: If using the .zip method for either the full or small install and installi
 
   * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
-  * You can set the following Variables in cmake-gui or set them as Windows Environment Variables:
+  * Run cmake-gui, and set the following fields:
+    * In "where is the source code", enter in the repo directory (example: D:/obs).  
+    * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
+
+  * Set the following variables in cmake-gui (alternatively, you can set them as Windows Environment Variables):
     * **Required**
       * `DepsPath` (Path to the include for all dependencies, not including Qt.).
         * An example path if you extracted the dependancies .zip to c:\obs-deps would be:
@@ -87,7 +91,7 @@ NOTE: If using the .zip method for either the full or small install and installi
       * `x264Path` (Path to just x264 include directory.)  
       * `curlPath` (Path to just cURL include directory.)
 
-    * **NOTE**: Search paths and search order for base dependency library/binary files, relative to their include directories:
+    * **INFORMATIONAL NOTE**: Search paths and search order for base dependency library/binary files, relative to their include directories:
 
       Library files  
       * ../lib  
@@ -99,25 +103,23 @@ NOTE: If using the .zip method for either the full or small install and installi
 
       Binary files: 
       * ../bin  
-      *  ../bin32 (if 32bit)  
+      * ../bin32 (if 32bit)  
       * ../bin64 (if 64bit)  
       * ./bin  
       * ./bin32 (if 32bit)  
       * ./bin64 (if 64bit)
 
-  * Run cmake-gui.  
-    * In "where is the source code", enter in the repo directory (example: D:/obs).  
-    * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
-
-  * Press 'Configure' and select the generator that fits to your installed VS Version:  
+  * In cmake-gui, press 'Configure' and select the generator that fits to your installed VS Version:  
 Visual Studio 14 2015, Visual Studio 15 2017, **or their 64bit equivalents** if you want to build the 64bit version of OBS
       * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
   
   * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
   
-  * Press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
+  * In cmake-gui, press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
 
-  * Open obs-studio.sln from the 'build' subdirectory in Visual Studio (or click the Open Project button from the cmake-gui in 3.7+), and it should run and be good to go.  All required dependencies should be copied on compile and it should be a fully functional build environment.  The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
+  * Open obs-studio.sln from the subdirectory you specified under "where to build the binaries" (e.g. D:/obs/build) in Visual Studio (or click the Open Project button from the cmake-gui in 3.7+).
+
+  * The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
 # macOS
 
