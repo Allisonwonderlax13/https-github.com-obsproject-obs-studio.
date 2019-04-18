@@ -177,13 +177,6 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
-    **For Ubuntu 14.04 LTS**, FFmpeg is not officially included so you will need a specific PPA:
-
-        sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
-        sudo apt-get update && sudo apt-get install ffmpeg
-
-    **For Ubuntu 15.04 and following versions**, FFmpeg is officially included:
-
         sudo apt-get install ffmpeg
 
 * Then you can install OBS with the following commands, make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of ubuntu adding a repository automatically apt updates.):
