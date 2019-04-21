@@ -14,7 +14,7 @@ By default, OBS Studio is set to capture your system default desktop audio devic
 
 Next, you'll see that the preview is a black screen. OBS does not capture any video by default. To get started capturing, **you need to add a Source**. At the bottom of the window is a box called 'Sources'. Click on the + (or right click inside the box) and pick the source you want. As a few examples, select Game Capture if you're capturing a game, Window for non-game applications, or Video Capture Device for a webcam or capture card.
 
-**Laptop users**: [Here's](Laptop-Performance-Issues) our troubleshooting guide if your game/window/display capture sources still show a black screen.
+**Laptop users**: [Here's](Laptop-Troubleshooting) our troubleshooting guide if your game/window/display capture sources still show a black screen.
 
 Sources and Scenes are the bread and butter of OBS Studio, and can be super powerful. [Click here to read more about them](https://obsproject.com/wiki/OBS-Studio-Overview#scenes-and-sources). 
 
