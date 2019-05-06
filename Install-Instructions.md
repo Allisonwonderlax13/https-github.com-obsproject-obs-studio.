@@ -371,6 +371,7 @@ Debian 9.0 or newer is required.
                  libXinerama-devel \
                  qt5-qtbase-devel \
                  qt5-qtx11extras-devel \
+                 qt5-qtsvg-devel \
                  libcurl-devel \
                  systemd-devel \
                  ffmpeg \
@@ -378,6 +379,8 @@ Debian 9.0 or newer is required.
                  luajit-devel \
                  python3-devel \
                  swig
+
+If `libspeexdsp-devel` is not available, it can be built from source (https://git.xiph.org/?p=speexdsp.git;a=summary)
 
 * Building and installing OBS:
 
