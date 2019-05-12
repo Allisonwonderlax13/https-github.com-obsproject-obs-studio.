@@ -27,7 +27,11 @@ Depending on your version of Windows 10 the name of this feature changes.
 
 or
 
-* Settings App > Gaming > Captures> set **"Record in the background while I'm playing a game"** to **"Off"**
+* Settings App > Gaming > Captures > set **"Record in the background while I'm playing a game"** to **"Off"**
+
+or (pre-1703)
+
+* XBOX App > Settings > Game DVR > set **"Record game clips and screenshots using Game DVR"** to **"Off"**
 
 ## Game Mode
 
