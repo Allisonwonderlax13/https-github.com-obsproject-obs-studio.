@@ -348,6 +348,8 @@ Debian 9.0 or newer is required.
 
 ## Linux Build Directions
 
+Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://developers.facebook.com/docs/graph-api/changelog/breaking-changes/#live-api-4-24) (which is RTMP over a TLS/SSL connection).  That functionality is provided by [mbed TLS](https://tls.mbed.org/) library, which [obs-studio/cmake/Modules/FindMbedTLS.cmake script](https://github.com/obsproject/obs-studio/blob/master/cmake/Modules/FindMbedTLS.cmake) searches for at compile time. So in order to build obs with support for facebook live streaming, please install your distro's revevant mbedtls package prior to compiling.  TODO: please update the below distro-specific compile instructions to install mbedtls package, and please inform any distro managers of this additional dependency.  (Note: [bug report submitted to arch linux](https://bugs.archlinux.org/task/62686).)
+
 ### Red Hat/Fedora-based Build Directions
 * Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
 
