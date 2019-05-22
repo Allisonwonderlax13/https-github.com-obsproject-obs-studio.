@@ -1,7 +1,7 @@
 
-The various Windows 10 gaming features can cause rendering and encoding issues when using OBS. It is recommended you disable all gaming related features in Windows 10 to ensure OBS performs at its best.
+Certain Windows 10 gaming features can cause rendering and encoding issues when using OBS. It is recommended you disable them to ensure OBS performs at its best. As of March 2019, as long as you're running 1809 or higher and have the latest Windows updates installed, it is now recommended to leave Game Mode enabled.
 
-All features can be found in the **Windows Setting App** under **Gaming**, the keyboard shortcut to open settings is **Windows + i**.
+All features can be found in the **Windows Settings App** under **Gaming**. The keyboard shortcut to open Settings is **Windows + i**.
 
 ### Windows 10 Gaming Features
 
@@ -31,7 +31,7 @@ or
 
 ## Game Mode
 
-**This feature can cause major performance issues with OBS and games, it is strongly recommended to disable it.**
+**This feature used to cause major performance issues with OBS and games. On older versions of Windows 10, it is recommended you disable it.**
 
 The Windows 10 Creators Update (version 1703) added Game Mode. Game Mode tries to allocate all GPU resources to the current game in focus, starving OBS of the GPU resources it needs to render.
 
@@ -39,9 +39,10 @@ Game Mode is enabled automatically by Windows and disabling it is performed diff
 
 * Press Windows + R and type in `winver` to show your current version of Windows 10.
 
-### Windows 10 "Redstone 5" 1809 (October 2018) or later
+### Windows 10 "Redstone 5" 1809 (October 2018) or newer
 
-To disable Game Mode in Windows 10 1809 or later. 
+Thanks to optimizations Microsoft made in March 2019, you should leave it on. You can check whether it's currently on using the settings below.
+
 * Settings App > Gaming > Game Mode > set Game Mode to **"Off"**, reboot your PC.
 
 ![Windows Gaming Settings](https://obsproject.com/images/wiki/2018-12-02_17-22-45_002xY.png)
