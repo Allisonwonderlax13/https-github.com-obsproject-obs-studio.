@@ -1,5 +1,4 @@
-**OBS Studio** is free and open source software for video recording and live streaming. 
-It is the re-write of the widely used [Open Broadcaster Software](https://obsproject.com/), to allow even more features and multi-platform support. Currently Linux, Mac and Windows Builds are available.
+**OBS Studio** is free and open source software for video recording and live streaming.  Currently Linux, Mac and Windows Builds are available.
 
 * Official OBS Studio Builds: https://github.com/obsproject/obs-studio/releases
 * Building OBS Studio Manually: [[Install Instructions]]
