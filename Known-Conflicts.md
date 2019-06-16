@@ -28,6 +28,7 @@ Programs which draw on top of games and other software to show additional detail
 - TeamSpeak / Mumble / Discord overlays
 - Raptr
 - Overwolf
+- FRAPS
 
 Please close these applications or disable their OSD functionality when using OBS.
 
