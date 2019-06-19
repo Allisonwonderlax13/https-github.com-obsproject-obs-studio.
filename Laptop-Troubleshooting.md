@@ -2,6 +2,10 @@
 
 ***
 
+**Windows 10:** latest Windows 10 builds overwrite the selection you make in the NVIDIA Control Panel. The setting is now accessible in the main Settings app (cog icon in the start menu) > System > Display > Graphics settings (small link at the bottom) > Browse.
+
+***
+
 When using OBS on a laptop or multi-GPU system, you may run into performance issues or issues using a specific capture type (i.e. Game or Window capture). This can be very frustrating. The reason this happens is because most modern laptops will come with two GPUs:
 
 - An Intel GPU for 2D applications/your desktop
