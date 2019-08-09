@@ -24,7 +24,7 @@ And here is a list of them just for you:
 
     6. **_Linux, MacOS and Windows_ - KDEnlive**: https://kdenlive.org/ . I haven't used this editor, but people say good things about it. On Linux check your repos for it (for everyone else grab the installer from their website), install it and give it a whirl.
 
-    7. **_Windows/Mac/Linux_ - Shortcut**: https://www.shotcutapp.com/ . EBrito recommends checking this one out. Make sure to follow the tutorials on their website.
+    7. **_Windows/Mac/Linux_ - Shotcut**: https://www.shotcutapp.com/ . EBrito recommends checking this one out. Make sure to follow the tutorials on their website.
 
     8. **_Windows/Mac_ - Avid Media Composer First**: http://www.avid.com If you want to go pro, then this is it. What Hollywood, the big studios and a lot of independents use. Even though it's free (as in beer) it still has more than enough features to satisfy 99%+ of video editor needs. Loads of video tutorials are available on Youtube as well.
 
