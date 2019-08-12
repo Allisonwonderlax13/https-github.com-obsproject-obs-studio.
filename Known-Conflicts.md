@@ -7,15 +7,6 @@ This backup and recovery software is often bundled with Dell and Alienware syste
 * Download https://obsproject.com/downloads/UnregisterDellBackup.cmd
 * Right click the .cmd file and run as administrator.
 
-### Nahimic Audio (MSI Audio Software):
-
-The Nahimic audio driver injects a DLL in other processes: NahimicMSIDevProps.dll and NahimicMSIOSD.dll
-
-Both might cause dead locks freezing the user interface. 
-Solutions:
-* Disable Nahimic drivers
-* Uninstall Nahimic drivers
-
 ### On-screen Displays / Overlays
 
 Programs which draw on top of games and other software to show additional details such as FPS monitors, temperature / GPU monitors, etc often cause issues due to hook conflicts. These applications include, but are not limited to: 
