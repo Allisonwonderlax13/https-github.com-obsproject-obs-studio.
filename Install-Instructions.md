@@ -54,12 +54,11 @@ NOTE: If using the .zip method for either the full or small install and installi
 ### Windows Build Directions:
 * **Requirements for building OBS on windows**
   * Development packages of `FFmpeg`, `x264`, and `cURL`.  
-    * Pre-built windows dependencies for VS2015 and VS2017 can be found here:
-      * VS2015: https://obsproject.com/downloads/dependencies2015.zip
+    * Pre-built windows dependencies for VS2017 can be found here:
       * VS2017: https://obsproject.com/downloads/dependencies2017.zip
   * [Qt5](http://www.qt.io/) (minimum version of 5.9 if you're using VS2017)
   * Windows version of [cmake](http://www.cmake.org/)
-  * [Visual Studio 2015 or Visual Studio 2017 (latest updates recommended)](https://www.visualstudio.com/free-developer-offers/)
+  * [Visual Studio 2017 (latest updates recommended)](https://visualstudio.microsoft.com/vs/older-downloads/)
 
 * **Installation Procedure**
   * Clone the repository and **submodules**:
@@ -110,7 +109,7 @@ NOTE: If using the .zip method for either the full or small install and installi
       * ./bin64 (if 64bit)
 
   * In cmake-gui, press 'Configure' and select the generator that fits to your installed VS Version:  
-Visual Studio 14 2015, Visual Studio 15 2017, **or their 64bit equivalents** if you want to build the 64bit version of OBS
+Visual Studio 15 2017, **or their 64bit equivalents** if you want to build the 64bit version of OBS
       * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
   
   * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
