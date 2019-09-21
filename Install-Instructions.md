@@ -59,6 +59,7 @@ NOTE: If using the .zip method for either the full or small install and installi
   * [Qt5](http://www.qt.io/) (minimum version of 5.9 if you're using VS2017)
   * Windows version of [cmake](http://www.cmake.org/)
   * [Visual Studio 2017 (latest updates recommended)](https://visualstudio.microsoft.com/vs/older-downloads/)
+    * Windows 10 SDK (minimum version of 10.0.14393.0)
 
 * **Installation Procedure**
   * Clone the repository and **submodules**:
