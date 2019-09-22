@@ -5,6 +5,12 @@ This guide contains ***every*** piece of dropped frames / disconnect / network r
 This guide covers the most common solutions to these issues.
 
 
+### Try enabling Dynamic Bitrate (OBS Studio 24+, RTMP only)
+
+OBS Studio 24 introduced a new feature called Dynamic Bitrate. This feature detects when your internet connection is limited, and will automatically reduce your bitrate to compensate rather than dropping frames. Once any congestion disappears, it will automatically raise your bitrate back to its original value.
+
+To enable Dynamic Bitrate, first ensure you are using OBS Studio 24 or higher by looking at your version number in the title bar of the program. Then, go to **Settings > Advanced > Network** and check the box next to the option that says "Dynamically change bitrate to manage congestion".
+
 ### Try changing servers
 
 If you think the issue is not with your connection speed, the first thing you should do when trying to diagnose a dropped frames/disconnection issue is to try other ingest servers to see if you can get a stable connection. Sometimes the server you are trying to stream to is having an off day or is overloaded when you are trying to stream. Switching another server will resolve many dropped frames/connection issues. Just because the server you have selected is the "closest" to you, or pings the best to you, does not mean it will give you the best connection. In fact, there have been times where Europeans have found US servers most reliable to stream though. So give a wide variety of servers a try, and make sure you try several servers, not just one or two before you give up.
