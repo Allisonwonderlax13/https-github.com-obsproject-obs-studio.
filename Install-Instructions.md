@@ -56,7 +56,7 @@ NOTE: If using the .zip method for either the full or small install and installi
   * Development packages of `FFmpeg`, `x264`, and `cURL`.  
     * Pre-built windows dependencies for VS2017 can be found here:
       * VS2017: https://obsproject.com/downloads/dependencies2017.zip
-  * [Qt5](http://www.qt.io/) (minimum version of 5.9)
+  * [Qt5](http://www.qt.io/) (minimum version of 5.9, release currently uses 5.10.1)
   * Windows version of [cmake](http://www.cmake.org/)
   * [Visual Studio 2017 (latest updates recommended)](https://visualstudio.microsoft.com/vs/older-downloads/)
     * Windows 10 SDK (minimum version of 10.0.14393.0)
