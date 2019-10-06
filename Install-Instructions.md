@@ -365,6 +365,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
 * Get the required packages:
 
         sudo yum install \
+                 make \
                  gcc \
                  gcc-c++ \
                  gcc-objc \
