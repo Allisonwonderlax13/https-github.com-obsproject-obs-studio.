@@ -8,12 +8,21 @@ That said, it is recommended that when building on Windows yourself to use our p
 
 | lib | git commit | version |
 | :--- | :---: | :---: |
+| curl | | |
 | FFmpeg | 9d06c1f95e | n4.1.4 |
+| freetype2 | | |
 | libogg | df53eebf72 | [no version] |
 | libpng | a40189cf88 | v1.6.37
 | libvorbis | 9eadeccdc4 | [no version] |
 | libvpx | e11f218af1 | v1.8.1 |
+| libwebsockets | | |
+| luajit | | |
+| mbedtls | | |
+| ogg | | |
 | opus | e85ed7726d | v1.3.1 |
+| python | | |
 | Qt | [no git] | 5.10.1 |
+| speex | | |
+| vpx | | |
 | x264 | 72db437770 | 0.157.2945 r2945 |
 | zlib | [no git] | 1.2.11 |
