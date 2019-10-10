@@ -28,6 +28,8 @@ And here is a list of them just for you:
 
     8. **[Avid Media Composer First](http://www.avid.com) _(Windows/Mac)_**:  If you want to go pro, then this is it. What Hollywood, the big studios and a lot of independents use. Even though it's free (as in beer) it still has more than enough features to satisfy 99%+ of video editor needs. Loads of video tutorials are available on Youtube as well.
 
+    9. **[XSplit Express Video Editor](https://www.xsplit.com/video-editor) _(Windows)_**: Simple editor for quick cutting/combining recorded clips. Does not require rendering/encoding the entire video when exporting so very useful to create videos for YouTube and other social media where only cutting down or adding a short intro is required. The editor is free but requires signing in via a XSplit or one of various social media networks.
+
 2. **Audio Editors/Digital Audio Workstations (DAW)** are very helpful in getting your audio to a good quality level, so that people won't turn you off the moment they hear you speak. Remember that most people will watch video that sucks in quality, but most people won't listen to bad/too quiet/distorted audio for very long. So help get your audio in shape with these programs:
 
     1. **[Pro Tools First (from Avid Technologies)](http://apps.avid.com/ProToolsFirst/) _(Mac/Windows)_**: If you like Pro(fessional) Tools with an interface that takes some time to learn (but can take you places), then this is it. Biggest and baddest of the pro-audio software world, for free.
