@@ -8,10 +8,11 @@ That said, it is recommended that when building on Windows yourself to use our p
 
 | lib | git commit | version |
 | :--- | :---: | :---: |
-| curl | | |
+| curl | | 7.58.0 |
+| cef |  | 75.0.3770 |
 | FFmpeg | 9d06c1f95e | n4.1.4 |
 | freetype2 | | |
-| libogg | df53eebf72 | [no version] |
+| libogg | df53eebf72 | 1.3.4 |
 | libpng | a40189cf88 | v1.6.37
 | libvorbis | 9eadeccdc4 | [no version] |
 | libvpx | e11f218af1 | v1.8.1 |
