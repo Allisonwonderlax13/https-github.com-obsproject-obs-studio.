@@ -30,3 +30,15 @@ Running multiple capture / recording applications at once is likely to cause tro
 ### D3DGear
 
 This application installs global DirectX hooks which causes major compatibility issues with OBS. The software must be uninstalled, closing it will not prevent it from continuing to install hooks.
+
+### Other Apps
+
+If you have any of these apps installed, be sure to close them before using OBS. If they still cause issues, you may need to uninstall them.
+
+* Intel GPA
+* Sendori
+* Astrill VPN Proxy
+* Nahimic Audio (MSI Audio Software)
+* Personify
+* Adobe Dynamic Link (Adobe CC)
+* Warsaw (bank software)
