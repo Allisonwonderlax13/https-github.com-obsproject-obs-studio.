@@ -423,6 +423,7 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
                 build-essential \
                 checkinstall \
                 cmake \
+                git \
                 libmbedtls-dev \
                 libasound2-dev \
                 libavcodec-dev \
