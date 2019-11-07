@@ -166,7 +166,7 @@ Official macOS builds are available again as of 18.0.1.
 
         MACOSX_DEPLOYMENT_TARGET=10.8 cmake -DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/ .. && make
 
-* It builds in a modular structure by default.  To run it via terminal, go to build/rundir/RelWithDebInfo/bin, then type ./obs to run.
+* It builds in a modular structure by default.  To run it via terminal, go to `build/rundir/RelWithDebInfo/bin`, then run using command `./obs`
 
 * NOTE: If you are running via command prompt, you *must* be in the 'bin' directory specified above, otherwise it will not be able to find its files relative to the binary.
 
