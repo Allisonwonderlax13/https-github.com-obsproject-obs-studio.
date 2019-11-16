@@ -149,7 +149,7 @@ Official macOS builds are available again as of 18.0.1.
 
 * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
-* Use macports or homebrew and install FFmpeg, x264, Qt5, cmake, and mbedtls.
+* Use macports or homebrew and install FFmpeg, x264, Qt5, cmake, mbedtls and swig (if you want scripting).
 
   * NOTE: Qt5 can also be downloaded/installed via the Qt website, though keep in mind that you will have to set the QTDIR environment variable to the Qt5 build base directory.
   * For example: `export QTDIR=/usr/local/opt/qt`
