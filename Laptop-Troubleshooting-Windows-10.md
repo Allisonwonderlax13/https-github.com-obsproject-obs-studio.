@@ -16,16 +16,16 @@ OBS can only run on one of these GPUs, but your open applications and games coul
 * Open the Windows 10 Settings App
 * Navigate to System -> Display and select "Graphics settings" near the bottom
 
-![Graphics settings](images/laptop-troubleshooting/win10/01-graphics-settings.png)
+![Graphics settings](https://github.com/obsproject/obs-studio/wiki/images/laptop-troubleshooting/win10/01-graphics-settings.png)
 
 * Select "Classic app" and click "Browse" under Graphics performance preference
 
-![Adding application](images/laptop-troubleshooting/win10/02-add-application.png)
+![Adding application](https://github.com/obsproject/obs-studio/wiki/images/laptop-troubleshooting/win10/02-add-application.png)
 
 * Navigate and find your OBS Studio executable. By default this is `C:\Program Files\obs-studio\bin\64bit\obs64.exe`
 * Once selected, click "Options" under the OBS Studio entry
 
-![GPU preference options](images/laptop-troubleshooting/win10/03-open-options.png)
+![GPU preference options](https://github.com/obsproject/obs-studio/wiki/images/laptop-troubleshooting/win10/03-open-options.png)
 
 Then follow the steps below, depending on which mode you need.
 
@@ -33,12 +33,12 @@ Then follow the steps below, depending on which mode you need.
 
 * Choose "Power saving" and click Save
 
-![Display Capture setting](images/laptop-troubleshooting/win10/04-power-saving.png)
+![Display Capture setting](https://github.com/obsproject/obs-studio/wiki/images/laptop-troubleshooting/win10/04-power-saving.png)
 
 ## For Window Capture / Game Capture
 
 * Choose "High performance" and click Save
 
-![Game capture setting](images/laptop-troubleshooting/win10/05-high-perf.png)
+![Game capture setting](https://github.com/obsproject/obs-studio/wiki/images/laptop-troubleshooting/win10/05-high-perf.png)
 
 
