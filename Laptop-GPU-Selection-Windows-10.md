@@ -6,7 +6,7 @@
 
 * This guide will show you how to select the graphics card OBS is running on using built-in Windows settings
 * It is applicable if you are running Windows 10 version 1903 or newer
-* If you run Windows 7 or 8, use our separate guides for [NVIDIA](Laptop-GPU-Laptop-GPU-Selection-Nvidia) or [AMD](Laptop-GPU-Laptop-GPU-Selection-Amd) laptops.
+* If you run Windows 7 or 8, use our separate guides for [NVIDIA](Laptop-GPU-Selection-Nvidia) or [AMD](Laptop-GPU-Selection-Amd) laptops.
 
 ***
 
