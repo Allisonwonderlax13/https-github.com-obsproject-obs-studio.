@@ -10,11 +10,23 @@
 
 ***
 
+### We recommend to run Windows 10 1903 or newer on AMD switchable GPU laptops. The [Windows 10 method](Laptop-GPU-Selection-Windows-10) is more reliable and easier to setup then using the AMD control panel.
+
 ## Setup
 
 * Close OBS if it is currently open
 
+Follow the [Official AMD support documentation](https://www.amd.com/en/support/kb/faq/dh-017) on how to add OBS to run on a specific GPU.
 
-If you are using an AMD-based laptop, check the [Official AMD support documentation](http://support.amd.com/en-us/kb-articles/Pages/DH-017.aspx).
+* The default paths for the executable of OBS are:
+  - 64-bit OBS (default): `C:\Program Files\obs-studio\bin\64bit\obs64.exe`
+  - 32-bit OBS: `C:\Program Files (x86)\obs-studio\bin\32bit\obs32.exe`
 
-~~ actual content to be created ~~
+## For Display Capture
+
+* Choose "Power Saving" option
+
+## For Window Capture and Game Capture
+
+* Choose "High Performance" option
+
