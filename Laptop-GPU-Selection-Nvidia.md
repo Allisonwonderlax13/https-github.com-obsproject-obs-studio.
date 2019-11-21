@@ -5,7 +5,7 @@
 ## GPU selection for NVIDIA based laptops
 
 * This guide will show you how to select the graphics card OBS is running on using the native control panel from NVIDIA.
-* It is valid if you are running Windows 7, Windows 8 or Windows 10 up to version 1903.
+* It is valid if you are running Windows 7, Windows 8 or Windows 10 prior to version 1903.
 * If you run Windows 10 1903 or newer, use [this guide](Laptop-GPU-Selection-Windows-10) instead.
 
 ***
