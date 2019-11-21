@@ -13,7 +13,7 @@
 ## Check Windows 10 Version
 
 * This guide works only on Windows 10 1903 or newer.
-* To check your version, open the Windows 10 Settings App (Start button > Cogwheel icon) and go to System → About and scroll down to "Windows specification".
+* To check your version, open the Windows 10 Settings App (Start button → Cogwheel icon) and go to System → About and scroll down to "Windows specification".
 
 ![Windows 10 About](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/06-find-version.png)
 
@@ -21,7 +21,7 @@
 ## Setup
 
 * Close OBS if it is currently open
-* Open the Windows 10 Settings App (Start button > Cogwheel icon)
+* Open the Windows 10 Settings App (Start button → Cogwheel icon)
 * Navigate to System → Display and select "Graphics settings" near the bottom
 
 ![Graphics settings](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
