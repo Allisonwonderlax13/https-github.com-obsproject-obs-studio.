@@ -31,6 +31,10 @@ Running multiple capture / recording applications at once is likely to cause tro
 
 This application installs global DirectX hooks which causes major compatibility issues with OBS. The software must be uninstalled, closing it will not prevent it from continuing to install hooks.
 
+### Outdated Drawing Tablet Drivers
+
+Some drawing tablets, most commonly Wacom, have drivers that conflict with OBS and cause it to fail to launch properly. The driver must either be updated, or uninstalled. If you are experiencing an issue where OBS sits as an open process, but never fully opens, this is a likely cause.
+
 ### Other Apps
 
 If you have any of these apps installed, be sure to close them before using OBS. If they still cause issues, you may need to uninstall them.
