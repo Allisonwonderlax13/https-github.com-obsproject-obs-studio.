@@ -26,6 +26,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
       * [NixOS (Unofficial)](#nixos-installation-unofficial)
       * [Deepin (Unofficial)](#deepin-installation-unofficial)
       * [Debian Installation (Unofficial)](#debian-installation-unofficial)
+      * [Void Installation (Unofficial)](#void-installation-unofficial)
       * [snappy (Unofficial)](#snappy-installation-unofficial)
     * [Build from source](#linux-build-directions)
       * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
@@ -342,6 +343,21 @@ Debian 9.0 or newer is required.
 * Finally, install OBS Studio.
 
         sudo apt install obs-studio
+
+***
+
+### Void Installation (Unofficial)
+
+* First make sure your repositories are up-to-date. OBS is available on the `multilib` if you need the 32-bit build.
+
+        sudo xbps-install -S
+
+* Then just install OBS Studio. Any missing dependencies will be installed automatically
+  + If it refuses to install, try running `sudo xbps-install -Su` to update everything first
+
+        sudo xbps-install obs
+
+Though unofficial, the package is actively maintained and functional
 
 ***
 
