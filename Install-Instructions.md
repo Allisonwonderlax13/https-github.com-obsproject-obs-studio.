@@ -348,16 +348,16 @@ Debian 9.0 or newer is required.
 
 ### Void Installation (Unofficial)
 
-* First make sure your repositories are up-to-date. OBS is available on the `multilib` if you need the 32-bit build.
+* First make sure your repositories are up-to-date. OBS is available on the `multilib` repos if you need the 32-bit build.
 
         sudo xbps-install -S
 
-* Then just install OBS Studio. Any missing dependencies will be installed automatically
-  + If it refuses to install, try running `sudo xbps-install -Su` to update everything first
+* Then just install OBS Studio. Any missing dependencies will be installed automatically.
+  + If it refuses to install, try running `sudo xbps-install -Su` to update everything first.
 
         sudo xbps-install obs
 
-Though unofficial, the package is actively maintained and functional
+Though unofficial, the package is actively maintained and functional!
 
 ***
 
