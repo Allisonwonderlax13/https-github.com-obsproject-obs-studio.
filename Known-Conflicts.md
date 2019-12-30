@@ -23,6 +23,10 @@ Programs which draw on top of games and other software to show additional detail
 
 Please close these applications or disable their OSD functionality when using OBS.
 
+### Antivirus / Firewall Software
+
+Anti-virus and firewall programs are known to sometime cause issues with OBS, preventing window / game capture from working correctly and possibly affecting connectivity. Make sure OBS is whitelisted in any anti-virus and firewall software, and has unrestricted local system and internet access. Note that whitelisting OBS may sometimes not be enough, as many anti-virus software products continue to run unless completely disabled or uninstalled.
+
 ### Other Capture / Recording Software
 
 Running multiple capture / recording applications at once is likely to cause trouble due to the conflicting hooks. If you run other programs which have the ability to record games such as RivaTuner, EVGA Precision, Action!, DXTory, etc, please close them before using OBS.
