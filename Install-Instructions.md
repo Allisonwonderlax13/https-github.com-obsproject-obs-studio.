@@ -373,6 +373,11 @@ Though unofficial, the package is actively maintained and functional!
 
 ## Linux Build Directions
 
+* If building with browser source:
+
+       wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
+       tar -xjf ./cef_binary_3770_linux64.tar.bz2
+
 Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://developers.facebook.com/docs/graph-api/changelog/breaking-changes/#live-api-4-24). That functionality requires your distro's [mbed TLS](https://tls.mbed.org/) package, which [obs-studio/cmake/Modules/FindMbedTLS.cmake script](https://github.com/obsproject/obs-studio/blob/master/cmake/Modules/FindMbedTLS.cmake) searches for at compile time.
 
 ### Red Hat/Fedora-based Build Directions
@@ -417,7 +422,12 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 ..
+
+        Without browser source:
+                  cmake -DUNIX_STRUCTURE=1 ..
+        With browser source:
+                  cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="path to cef_binary_3770_linux64"
+
         make -j4
         sudo make install
 
@@ -480,7 +490,12 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+
+        Without browser source:
+                  cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+        With browser source:
+                  cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="path to cef_binary_3770_linux64"
+
         make -j4
         sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no \
                --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
@@ -519,7 +534,12 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+
+        Without browser source:
+                  cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+        With browser source:
+                  cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="path to cef_binary_3770_linux64"
+
         make -j4
         sudo make install
 
@@ -529,8 +549,12 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
 * You can build in portable mode on Linux, which installs all the files to an isolated directory:
 
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=0 \
-                -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+
+        Without browser source:
+                  cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+        With browser source:
+                  cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="path to cef_binary_3770_linux64"
+
         make -j4 && make install
 
   After that you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
