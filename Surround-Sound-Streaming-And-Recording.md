@@ -144,7 +144,7 @@ If you have an aac or uncompressed audio recording with 4 ambisonics, you can al
  
 ## **Higher Order Ambisonics**    
 No live streaming service supports beyond first-order ambisonics.
-For recording, though for order 2 or 3, you can use this [fork](https://github.com/pkviet/obs-studio).   
+For recording, though for order 2 or 3, you can use pkviet's [fork](https://github.com/pkviet/obs-studio/branches).   
 If you record with libopus (Output > Advanced > Custom FFmpeg recording ) up to 255 channels are available with mkv.   
 You will have to add the mapping_family=255 option though to FFmpeg audio encoder options in OBS-Studio.   
 
@@ -213,7 +213,7 @@ wait
 
 For more languages pick a corresponding channel layout and add relevant streams in FFmpeg script.   
 Note that for 5.1 and 7.1 one channel (the fourth) will be encoded as LFE and so is not useable.   
-For up to 16 channels support, check the pkviet's [fork](https://github.com/pkviet/obs-studio).
+For up to 16 channels support, check the pkviet's [fork](https://github.com/pkviet/obs-studio/branches).
 
 # **Detailed list of surround sound features** 
 * Recording and Streaming multichannel audio sources (surround sound).
