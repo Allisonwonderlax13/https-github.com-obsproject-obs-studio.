@@ -159,54 +159,57 @@ In the broadcast industry, one usually uses mpeg-ts multi-track streams instead 
 
 There are workarounds though allowing one to use a single track multichannel audio.   
 Here is one requiring :
-* **nginx** with rtmp module ;
+* **nginx** with [rtmp module](https://github.com/arut/nginx-rtmp-module);
 * **ffmpeg** scripts which will be exec'd by nginx: ffmpeg will split the audio channels and create mono rtmp streams (as many as there are languages).     
 * each of these mono rtmp streams can then be pushed by nginx to a service like FB or YouTube Live.    
 
-For nginx setup with rtmp module, check elsewhere.   
-(make sure to set it up with a single worker.)
+For nginx setup with rtmp module, check elsewhere. (Make sure to set it up with a single worker.)
 
-The setup is the following:    
-surround sound capture with each mono channel carrying a language  
-(capture tested: sdi/hdmi decklink cards, reaper, Behringer X32, ASIO sound cards).      
-==> obs with surround sound enabled       
-==> rtmp stream to nginx which is setup with an exec script :        
-` rtmp {       `
-`     server {    `    
-`       listen 1935;    `    
-       `ping 30s;    `    
-       `notify_method get; `       
+The setup is the following for surround sound capture with each mono channel carrying a language:
+(capture tested: sdi/hdmi decklink cards, reaper, Behringer X32, ASIO sound cards).
+* obs with surround sound enabled       
+* rtmp stream to nginx which is setup with an exec script
+  ```nginx
+  rtmp {       
+    server {    
+      listen 1935;
+      ping 30s; 
+      notify_method get;  
 
-       application splitter {
-            live on;
-            allow play all;
-            exec /home/me/splitter.sh $name;
-            exec_kill_signal term;
-            record off;
-        }
-
-==> nginx : exec a ffmpeg script which will split the channels and redirect rtmp mono streams to nginx 
+      application splitter {
+        live on;
+        allow play all;
+        exec /home/me/splitter.sh $name;
+        exec_kill_signal term;
+        record off;
+     }
+  }
+  ```
+  * here nginx executes a ffmpeg script which will split the channels and redirect rtmp mono streams to nginx.
+  
 
 **FFmpeg example script** (for two languages and a stereo source): 
   
-`#!/bin/bash`     
-`echo "$(date +"%Y/%m/%d %H:%M:%S"): starting"`    
-`on_die ()`    
-`{`    
-    `# kill all children`    
-    `pkill -KILL -P $$`    
-`}`    
-`trap 'on_die' TERM`    
-`ffmpeg -i rtmp://IP:port/splitter/ \`    
-`-filter_complex "[0:a]pan=mono|c0=c0,aresample=async=1000[a0];[0:a]pan=mono|c0=c1,aresample=async=1000[a1[0:a]pan=mono|c0=c0,aresample=async=1000[a2]" \`    
-`-map 0:v -copyts -start_at_zero -vcodec copy \`    
-`-map [a0] -bsf:a aac_adtstoasc -copyts -start_at_zero -c:a libfdk_aac -ab 64k -ac 1 \`    
-`-f flv rtmp://IP:PORT/app/stream_language1 \`    
-`-map 0:v -copyts -start_at_zero -vcodec copy \`    
-`-map [a1] -bsf:a aac_adtstoasc -copyts -start_at_zero -c:a libfdk_aac -ab 64k -ac 1 \`    
-`-f flv rtmp://IP:PORT/app/stream_language2 &`    
-`wait `
+```bash
+#!/bin/bash
+echo "$(date +"%Y/%m/%d %H:%M:%S"): starting"
+on_die() {
+  # kill all children
+  pkill -KILL -P $$
+}
+trap 'on_die' TERM
 
+ffmpeg -i rtmp://IP:port/splitter/ \
+       -filter_complex "[0:a]pan=mono|c0=c0,aresample=async=1000[a0]; 
+       [0:a]pan=mono|c0=c1,aresample=async=1000[a1[0:a]pan=mono|c0=c0,aresample=async=1000[a2]" \
+       -map 0:v -copyts -start_at_zero -vcodec copy \
+         -map [a0] -bsf:a aac_adtstoasc -copyts -start_at_zero -c:a libfdk_aac -ab 64k -ac 1 \
+         -f flv rtmp://IP:PORT/app/stream_language1 \
+       -map 0:v -copyts -start_at_zero -vcodec copy \
+         -map [a1] -bsf:a aac_adtstoasc -copyts -start_at_zero -c:a libfdk_aac -ab 64k -ac 1 \
+         -f flv rtmp://IP:PORT/app/stream_language2 &
+wait
+```
 
 For more languages pick a corresponding channel layout and add relevant streams in FFmpeg script.   
 Note that for 5.1 and 7.1 one channel (the fourth) will be encoded as LFE and so is not useable.   
