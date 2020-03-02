@@ -213,7 +213,7 @@ wait
 
 For more languages pick a corresponding channel layout and add relevant streams in FFmpeg script.   
 Note that for 5.1 and 7.1 one channel (the fourth) will be encoded as LFE and so is not useable.   
-For up to 16 channels support, check the following [fork]([ASIO plugin](https://github.com/pkviet/obs-studio).
+For up to 16 channels support, check the pkviet's [fork](https://github.com/pkviet/obs-studio).
 
 # **Detailed list of surround sound features** 
 * Recording and Streaming multichannel audio sources (surround sound).
