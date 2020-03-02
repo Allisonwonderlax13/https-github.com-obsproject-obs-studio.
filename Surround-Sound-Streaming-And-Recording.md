@@ -214,7 +214,8 @@ wait
 
 For more languages pick a corresponding channel layout and add relevant streams in FFmpeg script. You should also read the [ffmpeg filtering guide](https://trac.ffmpeg.org/wiki/FilteringGuide). Note that for 5.1 and 7.1 one channel (the fourth) will be encoded as LFE and so is not useable. For up to 16 channels support, check the pkviet's [fork](https://github.com/pkviet/obs-studio/branches).
 
-# **Detailed list of surround sound features** 
+# **Detailed list of surround sound features**
+
 * Recording and Streaming multichannel audio sources (surround sound).
 * Compatible streaming services: Twitch, Mixer rtmp (not ftl), smashcast, FB 360 live
 * Compatible protocols:   
@@ -231,13 +232,11 @@ For more languages pick a corresponding channel layout and add relevant streams 
     + mediaelement,    
     * viblast (hls & dash),   
     * hls.js   
-
 * Compatible containers (for recordings):   
     * mkv   
     * mp4  
     * ts   
     * flv (others untested). 
- 
 * Compatible codecs:   
     * ffmpeg aac (native encoder, up to 16 channels),  
     * libfdk_aac (up to 7.1),  
@@ -245,9 +244,7 @@ For more languages pick a corresponding channel layout and add relevant streams 
     * opus (libopus encoder, up to 255 channels),  
     * vorbis (up to 7.1),  
     * pcm (others untested). 
- 
 * OS: compatible with win, macOS, linux (alsa, pulse-audio).  
-
 * Misc: 
     * Higher audio bitrates (up to 1024 kbs) unlocked to accomodate higher number of channels.  
     * audio monitoring, audio filters, VST are all working OOB. 
