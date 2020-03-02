@@ -200,8 +200,9 @@ on_die() {
 trap 'on_die' TERM
 
 ffmpeg -i rtmp://IP:port/splitter/ \
-       -filter_complex "[0:a]pan=mono|c0=c0,aresample=async=1000[a0]; 
-       [0:a]pan=mono|c0=c1,aresample=async=1000[a1[0:a]pan=mono|c0=c0,aresample=async=1000[a2]" \
+       -filter_complex \
+          "[0:a]pan=mono|c0=c0,aresample=async=1000[a0]; 
+           [0:a]pan=mono|c0=c1,aresample=async=1000[a1]" \
        -map 0:v -copyts -start_at_zero -vcodec copy \
          -map [a0] -bsf:a aac_adtstoasc -copyts -start_at_zero -c:a libfdk_aac -ab 64k -ac 1 \
          -f flv rtmp://IP:PORT/app/stream_language1 \
@@ -211,9 +212,7 @@ ffmpeg -i rtmp://IP:port/splitter/ \
 wait
 ```
 
-For more languages pick a corresponding channel layout and add relevant streams in FFmpeg script.   
-Note that for 5.1 and 7.1 one channel (the fourth) will be encoded as LFE and so is not useable.   
-For up to 16 channels support, check the pkviet's [fork](https://github.com/pkviet/obs-studio/branches).
+For more languages pick a corresponding channel layout and add relevant streams in FFmpeg script. You should also read the [ffmpeg filtering guide](https://trac.ffmpeg.org/wiki/FilteringGuide). Note that for 5.1 and 7.1 one channel (the fourth) will be encoded as LFE and so is not useable. For up to 16 channels support, check the pkviet's [fork](https://github.com/pkviet/obs-studio/branches).
 
 # **Detailed list of surround sound features** 
 * Recording and Streaming multichannel audio sources (surround sound).
