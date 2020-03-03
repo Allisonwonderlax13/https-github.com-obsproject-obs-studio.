@@ -553,13 +553,15 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
 ***
 
 ### Linux portable mode (all distros)
-Please note that you need to install the dependencies for your distribution and clone the repo including the submodules if you want to use the browser source. Please check the instructions for your distribution.
+Please note that you need to install the build dependencies for your repo before following this steps. See above.
 * You can build in portable mode on Linux, which installs all the files to an isolated directory:
 
         If building with browser source:
                  wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
                  tar -xjf ./cef_binary_3770_linux64.tar.bz2
 
+        git clone --recursive https://github.com/obsproject/obs-studio.git
+        cd obs-studio
         mkdir build && cd build
 
         Without browser source:
