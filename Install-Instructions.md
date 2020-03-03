@@ -553,6 +553,7 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
 ***
 
 ### Linux portable mode (all distros)
+Please note that you need to install the dependencies for your distribution and clone the repo including the submodules if you want to use the browser source. Please check the instructions for your distribution.
 * You can build in portable mode on Linux, which installs all the files to an isolated directory:
 
         If building with browser source:
