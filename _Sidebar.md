@@ -9,6 +9,7 @@
   * [Keyboard Shortcuts](Keyboard-Shortcuts)
   * [Surround Sound Streaming and Recording](Surround-Sound-Streaming-And-Recording)
   * [Understanding the Mixer](Understanding-The-Mixer)
+  * [Streaming with SRT protocol](Streaming-with-srt-protocol)
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Known Conflicts](Known-Conflicts)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
