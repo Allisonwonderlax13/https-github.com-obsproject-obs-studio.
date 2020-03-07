@@ -26,7 +26,7 @@ For a video demo, see for instance :
 * It's mostly used in the broadcast and corporate world for now, see for instance NAB 2018 srt panel with ESPN, NFL, Microsoft speakers talking about their use of srt :   
 <p align="center"> <a href="https://www.youtube.com/watch?v=PuGn2cjIt04"><img src="https://img.youtube.com/vi/PuGn2cjIt04/0.jpg"></img></a></p>    
 
- The NAB 2019 NAB srt panel can be watched there: [http://bit.ly/2VYwSOJ](http://bit.ly/2VYwSOJ). (Hey Haivision, friendly suggestion: it'd be nice to have this vid posted on YouTube instead of having to enter personal infos ! :P )    
+ The NAB 2019 NAB srt panel can be watched there: [https://www.haivision.com/resources/webinars/broadcast-panel](https://www.haivision.com/resources/webinars/broadcast-panel). (Hey Haivision, friendly suggestion: it'd be nice to have this vid posted on YouTube instead of having to enter personal infos ! :P )    
 
 * Unlike rtmp it is an open source protocol: the source code can be found on [github](https://github.com/Haivision/srt). While rtmp development has been abandoned since 2012, srt development is still very much active.
 
