@@ -78,6 +78,10 @@ Nimble server is nominally free; it is used along with a non free dashboard whic
 
 Both wowza and nimble server ingest in srt but can distribute in the main protocols/formats (rtmp/hls/dash ...).
 
+Though technically not a server, FFmpeg can be used in listener mode to ingest an srt stream. It won't be able to serve the stream as a real genuine server would do.    
+But it could be used to transmux to rtmp and route to nginx-rtmp for instance, which can then handle the ingest to Twitch / You Tube / FB etc ...    
+ex: `ffmpeg -i srt//IP:port?mode=listener -c copy -f flv rtmp://IP:1935/app/streamName`
+
 ## Players
 The following players can be used to watch an srt stream :
 * vlc 4,
