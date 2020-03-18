@@ -10,7 +10,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | :--- | :---: | :---: |
 | curl | | 7.58.0 |
 | cef |  | 75.0.3770 |
-| FFmpeg | 9d06c1f95e | n4.1.4 |
+| FFmpeg | 192d1d34eb | n4.2.2 |
 | freetype2 | | |
 | libogg | df53eebf72 | 1.3.4 |
 | libpng | a40189cf88 | v1.6.37
