@@ -27,3 +27,9 @@ That said, it is recommended that when building on Windows yourself to use our p
 | vpx | | |
 | x264 | 72db437770 | 0.157.2945 r2945 |
 | zlib | [no git] | 1.2.11 |
+
+## Linux (Ubuntu PPA)
+
+| lib | git commit | version |
+| :--- | :---: | :---: |
+| cef | gf19c584 | CEF 76.1.13 & chromium-76.0.3809.13 |
