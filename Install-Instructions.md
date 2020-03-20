@@ -171,7 +171,8 @@ Official macOS builds are available again as of 18.0.1.
 
 * NOTE: If you are running via command prompt, you *must* be in the 'bin' directory specified above, otherwise it will not be able to find its files relative to the binary.
 
-* To create an app bundle instead, use the command: `make package`. This will create a .dmg file with an app bundle inside.
+* Currently app bundles are created on CI with the before deploy script, may require tweaking to work locally. https://github.com/obsproject/obs-studio/blob/master/CI/before-deploy-osx.sh#L20
+  * We are currently working to improve this process
 
 # Linux
 
