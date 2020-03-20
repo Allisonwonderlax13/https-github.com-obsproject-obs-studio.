@@ -153,7 +153,12 @@ Official macOS builds are available again as of 18.0.1.
 * Use macports or homebrew and install FFmpeg, x264, Qt5, cmake, mbedtls and swig (if you want scripting).
 
   * NOTE: Qt5 can also be downloaded/installed via the Qt website, though keep in mind that you will have to set the QTDIR environment variable to the Qt5 build base directory.
-  * For example: `export QTDIR=/usr/local/opt/qt`
+    * For example: `export QTDIR=/usr/local/opt/qt`
+  * NOTE: If you need SRT support, you might need to install FFmpeg from a custom tap instead of the default homebrew FFmpeg, like so:
+
+        brew tap homebrew-ffmpeg/ffmpeg
+        brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
+
 
 * Make sure to have the OSX 10.9 or newer SDK installed (comes with recent versions of Xcode)
 
