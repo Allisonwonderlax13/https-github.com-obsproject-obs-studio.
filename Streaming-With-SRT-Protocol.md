@@ -149,7 +149,7 @@ Note that several audio tracks can be selected. They can be identified on the in
 ![](https://i.imgur.com/QwQ8vzR.png)
 
 **Known issues:**
-None.
+There can be issues with Makito X Decoder. (under investigation)
 
 **Pros/Cons in comparison with Option 1:**
 
