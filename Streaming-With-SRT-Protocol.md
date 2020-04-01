@@ -38,6 +38,7 @@ For a video demo, see here:
      <p align="center"> <a href="https://youtu.be/m1FABQtAjgU"><img src="https://img.youtube.com/vi/m1FABQtAjgU/0.jpg"></img></a></p>  
 There is also a white paper which can be found [here](https://www.haivision.com/resources/white-paper/srt-protocol-technical-overview/)
 or [there](https://github.com/Haivision/srt/issues/479). The API is fully documented on [GitHub](https://github.com/Haivision/srt).  
+A very good source of info is the [SRT Cookbook](https://srtlab.github.io/srt-cookbook/).
 
 
 ***
@@ -72,7 +73,9 @@ The following servers support SRT ingest:
   * This option only *serves* SRT streams and does **not** transmux to HLS/RTMP/DASH. It is much more rudimentary than the other servers at this stage but it is FOSS and works fine with OBS Studio in our tests.
 
 Additionally, though it is technically not a server, FFmpeg can be used in listener mode to ingest an SRT stream. It won't be able to serve the stream as a real genuine server would do. But it could be used to transmux to RTMP and route to nginx-rtmp for instance, which can then handle the ingest to Twitch/YouTube/Facebook/etc.  
-ex: `ffmpeg -i srt//IP:port?mode=listener -c copy -f flv rtmp://IP:1935/app/streamName`
+ex: `ffmpeg -i srt://IP:port?mode=listener -c copy -f flv rtmp://IP:1935/app/streamName`.    
+In the same way srt-live-transmit can be used to listen to an srt (or udp) stream and relay to a final srt URL.    
+ex: `srt-live-transmit srt://IPsrc:port srt://IPdest:port`.    
 
 ## Players
 The following players can be used to watch an SRT stream :
@@ -126,7 +129,8 @@ A case where it's useful to set the mode to `listener` is when sending a stream 
 ![](https://i.imgur.com/PhH7why.png)
 
 **Known issues:**
-* At this time (v25 RC2), a bug with MPEGTS muxer makes the stream not completely compliant with MPEGTS spec. In this case, SRT decoding fails when transmuxing SRT to another protocol/container than the combination SRT/MPEGTS. This is the case for instance with Nimble Streamer and Makito X Decoder. A dump of the MPEGTS stream therefore creates a non-conformant file (this can probably be fixed though by a remuxing with FFmpeg). This bug is under investigation.
+* At this time (v25 RC2 and later), a bug with MPEGTS muxer makes the stream not completely compliant with MPEGTS spec. In this case, SRT decoding fails when transmuxing SRT to another protocol/container than the combination SRT/MPEGTS. This is the case for instance with Nimble Streamer and Makito X Decoder. A dump of the MPEGTS stream therefore creates a non-conformant file (this can probably be fixed though by a remuxing with FFmpeg). This bug is under investigation.    
+    * workaround: Use x264 encoder with bfames = 0 option.    
 * However, transmuxing to RTMP works with Wowza, and more generally to UDP or TCP /MPEGTS. In particular, VLC, Wowza, SRT Live Server, and ffplay work well when selecting this simpler option to stream with SRT.
 
 ## Option 2: Stream SRT with the Custom FFmpeg Record output
