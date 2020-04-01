@@ -488,7 +488,11 @@ If `libspeexdsp-devel` is not available, it can be built from source (https://gi
                 python3-dev \
                 qtbase5-dev \
                 libqt5svg5-dev \
-                swig
+                swig \
+                libxcb-randr0-dev \
+                libxcb-xfixes0-dev \
+                libx11-xcb-dev \
+                libxcb1-dev
 
 * Building and installing OBS:
 
