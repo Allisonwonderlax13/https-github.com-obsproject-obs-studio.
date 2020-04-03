@@ -121,7 +121,8 @@ _Credit_: Aaron Boxer, Collabora (SRT Alliance) author of the new SRT output
 
 OBS Studio will accept options in the syntax: `srt://IP:port?option1=value1&option2=value2`. The full list of options is those supported by FFmpeg: [http://ffmpeg.org/ffmpeg-protocols.html#srt](http://ffmpeg.org/ffmpeg-protocols.html#srt).
 
-The most important option is **latency** in milliseconds (ms). It has a default value of 120 ms and should be at least 2.5 * (the round-trip time between encoder and ingest server, in ms).
+The most important option is **latency** in microseconds (μs). It has a default value of 120 ms = 120 000 μs and should be at least 2.5 * (the round-trip time between encoder and ingest server, in ms).    
+Ex: for a latency of 1 sec, set latency=1000000 .    
 
 Another sometimes required option is the **mode**, which can be `caller`, `listener` or `rendez-vous`. `caller` opens client connection. `listener` starts server to listen for incoming connections. `rendezvous` use Rendez-Vous connection mode which is a bi-directional link where the first to initiate handshake is considered caller. The default value is caller and usually need not be set for OBS Studio since it'll be in caller mode normally.
 
