@@ -9,7 +9,7 @@ _**This feature requires OBS Studio 25.0 or newer.**_
   * [Encoders](#encoders)
   * [Servers](#servers)
   * [Players](#players)
-* [How to set up OBS-Studio](#how-to-set-up-obs-studio)
+* [How to set up OBS Studio](#how-to-set-up-obs-studio)
   * [Option 1: Stream SRT using the Streaming output](#option-1-stream-srt-using-the-streaming-output)
   * [Option 2: Stream SRT using the Custom FFmpeg Record output](#option-2-stream-srt-with-the-custom-ffmpeg-record-output)
 
@@ -79,9 +79,10 @@ ex: `srt-live-transmit srt://IPsrc:port srt://IPdest:port`.
 
 ## Players
 The following players can be used to watch an SRT stream :
-* VLC (version 3.0+ on Mac/Linux, version 4.0+ on Windows)
-* ffplay (part of ffmpeg tools)
-* OBS Studio Media Source (an obvious case-use is to broadcast from any SRT source to an OBS instance).    
+* [VLC](https://www.videolan.org/vlc/index.html) (version 3.0+ on Mac/Linux, version 4.0+ on Windows)
+* ffplay (part of [ffmpeg tools](http://ffmpeg.org/download.html))
+* OBS Studio Media Source (an obvious case-use is to broadcast from any SRT source to an OBS instance).
+* [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) (iPhone only)    
 
 ### VLC usage
 
