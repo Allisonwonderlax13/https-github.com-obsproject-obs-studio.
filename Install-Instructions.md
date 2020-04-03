@@ -183,7 +183,7 @@ Official macOS builds are available again as of 18.0.1.
 
 Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable.
 
-**NOTE:** OpenGL 3.2 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
+**NOTE:** OpenGL 3.3 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing the following into the terminal:
 * glxinfo | grep "OpenGL"
 
 ## Linux Install Directions
