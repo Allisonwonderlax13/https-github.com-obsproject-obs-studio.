@@ -8,21 +8,21 @@ That said, it is recommended that when building on Windows yourself to use our p
 
 | lib | git commit | version |
 | :--- | :---: | :---: |
-| curl | | 7.58.0 |
-| cef |  | 75.0.3770 |
+| cURL | | 7.58.0 |
+| CEF |  | 75.0.3770 |
 | FFmpeg | [192d1d34eb](https://github.com/FFmpeg/FFmpeg/commit/192d1d34eb3668fa27f433e96036340e1e5077a0) | n4.2.2 |
-| freetype2 | | |
+| FreeType2 | | |
 | libogg | [df53eebf72](https://github.com/xiph/ogg/commit/df53eebf72e86eb179465f53dd77297ae72ae233) | [no version] |
 | libopus | [e85ed7726d](https://github.com/xiph/opus/commit/e85ed7726db5d677c9c0677298ea0cb9c65bdd23) | v1.3.1 |
 | libpng | a40189cf88 | v1.6.37
 | libvorbis | [9eadeccdc4](https://github.com/xiph/vorbis/commit/9eadeccdc4247127d91ac70555074239f5ce3529) | [no version] |
 | libvpx | e11f218af1 | v1.8.1 |
 | libwebsockets | | |
-| luajit | | |
-| mbedtls | | |
-| python | | |
+| LuaJIT | | |
+| mbed TLS | | |
+| Python | | |
 | Qt | [no git] | 5.10.1 |
-| speex | | |
+| Speex | | |
 | x264 | [72db437770](https://github.com/mirror/x264/commit/72db437770fd1ce3961f624dd57a8e75ff65ae0b) | 0.157.2945 r2945 |
 | zlib | [no git] | 1.2.11 |
 
@@ -30,4 +30,4 @@ That said, it is recommended that when building on Windows yourself to use our p
 
 | lib | git commit | version |
 | :--- | :---: | :---: |
-| cef | gf19c584 | CEF 76.1.13 & chromium-76.0.3809.13 |
+| CEF | gf19c584 | CEF 76.1.13 & chromium-76.0.3809.13 |
