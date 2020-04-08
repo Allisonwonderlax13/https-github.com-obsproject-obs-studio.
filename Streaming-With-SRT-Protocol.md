@@ -151,7 +151,7 @@ This option is a bit more complicated. It relies on the `Advanced: Custom FFmpeg
 6. In the `File Path or URL` box, type the SRT URL: `srt://IP:port` (options like latency are entered with the syntax `srt://IP:port?option1=value1&option2=value2`).  
 For a list of some of these options and a discussion, see the previous section or refer to FFmpeg documentation : [http://ffmpeg.org/ffmpeg-protocols.html#srt](http://ffmpeg.org/ffmpeg-protocols.html#srt).   
 7. In `Container Format` dropdown, select `mpegts`.
-8. `Muxer Settings` can be left blank, or you can use the (MPEGTS FFmpeg muxer options)[http://ffmpeg.org/ffmpeg-formats.html#mpegts-1] with the following syntax `option1=value1 option2=value2` (the `option=value` pairs must be separated by a space).
+8. `Muxer Settings` can be left blank, or you can use the [MPEGTS FFmpeg muxer options](http://ffmpeg.org/ffmpeg-formats.html#mpegts-1) with the following syntax `option1=value1 option2=value2` (the `option=value` pairs must be separated by a space).
 9. The other settings are self-explanatory. Check the box `show all codecs` to display all codecs available to FFmpeg.  
  
 Note that several audio tracks can be selected. They can be identified on the ingest server side by what is called a PID. On default value, the video track has `pid 0x100` (=256), and the other audio tracks have `pid 0x101` etc. If you need to change the pid of your tracks, use the muxer option MPEGTS_start_pid in 7.    
