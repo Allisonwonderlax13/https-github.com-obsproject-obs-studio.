@@ -183,10 +183,10 @@ For example the following command can be used on the server:
 
 In this command you can change:
 - `1234`: This is the listening port used by the SRT server. You will need to send your stream to this port. It can be anything, provided the ffmpeg can bind to it.
-- `latency=3000000`: The latency in microseconds. Here we use 3 seconds. This is a simple calculus: the higher it is, the more reliable it will be if you drop packets or your latency increases and your viewer will have to wait more to receive your frames. The lower it is, the more sensible it will be to connection problems, but your viewers will also receive your content faster.
-- `streamKey`: This is your Twitch.tv stream key. You will need it to replace this with yours so they know who is streaming to where. Do not leak it, anyone with this key can stream to your account.
+- `latency=3000000`: The latency in microseconds. Here we use 3000 milliseconds (3 seconds). This is a simple calculus: the higher it is, the more reliable it will be if you drop packets or your latency increases and your viewer will have to wait more to receive your frames. The lower it is, the more sensible it will be to connection problems, but your viewers will also receive your content faster.
+- `ffs` and `rcvbuf` are complicated numbers that indicates the sizes of the differents buffers. They are already set for a latency of 3000ms. Basically, when you increase the latency, you'll need to increase these values (because SRT needs to store more content in memory to recompose the puzzle afterwards). You can have informations on how to calculate these here: https://github.com/Haivision/srt/issues/703#issuecomment-495570496
 - `live-cdg.twitch.tv`: Nearest Twitch's ingest server. Change to your nearest one found here: [Twitch Ingest Informations](https://stream.twitch.tv/ingests/)
-- `ffs` and `rcvbuf` are complicated numbers that indicates the sizes of the differents buffers. Basically, when you increase the latency, you'll need to increase these values (because SRT needs to store more content in memory to recompose the puzzle afterwards). You can have informations on how to calculate these here: https://github.com/Haivision/srt/issues/703#issuecomment-495570496
+- `streamKey`: This is your Twitch.tv stream key. You will need it to replace this with yours so they know who is streaming to where. Do not leak it, anyone with this key can stream to your account.
 
 On OBS, you just need to configure your stream settings to "Custom", and specify your server with this template:
 ```srt://ipofyourserver:4444```  
