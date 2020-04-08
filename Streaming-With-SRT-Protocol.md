@@ -60,7 +60,9 @@ Live software encoders :
 * **OBS Studio** which relies on the FFmpeg libraries,
 * vMix,
 * srt-live-transmit (which is a demo app from libsrt developpers; needs to be compiled from source)  
+* Larix Broadcaster/Screencaster which can broadcast on Android or iOS.   
 Hardware encoders are also available at various vendors.
+
   
 ## Servers
 The following servers support SRT ingest:
