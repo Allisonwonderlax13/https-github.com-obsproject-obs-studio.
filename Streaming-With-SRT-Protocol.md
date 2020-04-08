@@ -174,3 +174,23 @@ _Cons:_
 
 # Examples of setups
 ## Relay server to Twitch
+
+One can use ffmpeg to easily relay an input SRT stream to a standard RTMP compatible with Twitch (or even other streaming services provider like YouTube ou Facebook). This is especially interesting if you have a bad and unstable connection between OBS and the service. Note that the server you use should have a fast and reliable connection to benefit from this (but this is usually the case). Also note that using a server to proxy stream consumes a lot of bandwidth (consider twice as much as the bandwidth of your video stream) and this can be expensive on some providers like Amazon, GCS or Digital Ocean (it doesn't need a fast CPU though, it's only receiving, rewraping for RTMP and sending).
+This approach has the advantage of being really easy to setup on OBS's side if you prepare a server for someone else.
+For example the following command can be used on the server:  
+
+```ffmpeg -i srt://:1234?mode=listener&transtype=live&latency=3000000&ffs=128000&rcvbuf=100058624 -c copy -f flv rtmp://live-cdg.twitch.tv/app/streamKey```  
+
+In this command you can change:
+- `1234`: This is the listening port used by the SRT server. You will need to send your stream to this port. It can be anything, provided the ffmpeg can bind to it.
+- `latency=3000000`: The latency in microseconds. Here we use 3 seconds. This is a simple calculus: the higher it is, the more reliable it will be if you drop packets or your latency increases and your viewer will have to wait more to receive your frames. The lower it is, the more sensible it will be to connection problems, but your viewers will also receive your content faster.
+- `streamKey`: This is your Twitch.tv stream key. You will need it to replace this with yours so they know who is streaming to where. Do not leak it, anyone with this key can stream to your account.
+- `live-cdg.twitch.tv`: Nearest Twitch's ingest server. Change to your nearest one found here: [Twitch Ingest Informations](https://stream.twitch.tv/ingests/)
+- `ffs` and `rcvbuf` are complicated numbers that indicates the sizes of the differents buffers. Basically, when you increase the latency, you'll need to increase these values (because SRT needs to store more content in memory to recompose the puzzle afterwards). You can have informations on how to calculate these here: https://github.com/Haivision/srt/issues/703#issuecomment-495570496
+
+On OBS, you just need to configure your stream settings to "Custom", and specify your server with this template:
+```srt://ipofyourserver:4444```  
+You can leave the stream key empty, you don't need it.
+
+
+Run the ffmpeg command you saw above, it will wait indefinitely for an input stream, and automatically stop at the end of the stream. I leave you the choice of managing the restart with systemd or in a Docker container!
