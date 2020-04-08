@@ -11,7 +11,9 @@ _**This feature requires OBS Studio 25.0 or newer.**_
   * [Players](#players)
 * [How to set up OBS Studio](#how-to-set-up-obs-studio)
   * [Option 1: Stream SRT using the Streaming output](#option-1-stream-srt-using-the-streaming-output)
-  * [Option 2: Stream SRT using the Custom FFmpeg Record output](#option-2-stream-srt-with-the-custom-ffmpeg-record-output)
+  * [Option 2: Stream SRT using the Custom FFmpeg Record output](#option-2-stream-srt-with-the-custom-ffmpeg-record-output)    
+* [Examples of setups](#examples-of-setups)
+  * [Relay server to Twitch](#relay-server-to-twitch)
 
 ***
 
@@ -168,4 +170,7 @@ _Pros:_
 
 _Cons:_
 * More complex to set up.
-* One can not record the stream since one leverages the Record Output to stream.
+* One can not record the stream since one leverages the Record Output to stream.    
+
+# Examples of setups
+## Relay server to Twitch
