@@ -136,7 +136,7 @@ A case where it's useful to set the mode to `listener` is when sending a stream 
 
 **Known issues:**
 * At this time (v25 RC2 and later), a bug with MPEGTS muxer makes the stream not completely compliant with MPEGTS spec. In this case, SRT decoding fails when transmuxing SRT to another protocol/container than the combination SRT/MPEGTS. This is the case for instance with Nimble Streamer and Makito X Decoder. A dump of the MPEGTS stream therefore creates a non-conformant file (this can probably be fixed though by a remuxing with FFmpeg). This bug is under investigation.    
-    * workaround: Use x264 encoder with bfames = 0 option.    
+    * bug fixed in this PR: [PR 2665](https://github.com/obsproject/obs-studio/pull/2665)  
 * However, transmuxing to RTMP works with Wowza, and more generally to UDP or TCP /MPEGTS. In particular, VLC, Wowza, SRT Live Server, and ffplay work well when selecting this simpler option to stream with SRT.
 
 ## Option 2: Stream SRT with the Custom FFmpeg Record output
