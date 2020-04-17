@@ -57,7 +57,8 @@ NOTE: If using the .zip method for either the full or small install and installi
   * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`.  
     * Pre-built windows dependencies for VS2017 can be found here:
       * VS2017: https://obsproject.com/downloads/dependencies2017.zip
-  * [Qt5](http://www.qt.io/) (minimum version of 5.10, release currently uses 5.10.1)
+  * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
+    * We currently deploy with 5.10.1, which is no longer available from Qt. A download is provided [here](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z).
   * Windows version of [cmake](http://www.cmake.org/)
   * [Visual Studio 2017 (latest updates recommended)](https://visualstudio.microsoft.com/vs/older-downloads/)
     * Windows 10 SDK (minimum version of 10.0.18362.0)
@@ -85,8 +86,8 @@ NOTE: If using the .zip method for either the full or small install and installi
       * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch).
         * **NOTE**: Make sure to download Qt 5.X.X prebuilt components for your version of MSVC (64 or 32 bit).
         * Example Qt directories you would use here if you installed Qt5 to D:\Qt would usually look something like this:
-          * `(32bit) QTDIR=D:\Qt\5.8\msvc2017`
-          * `(64bit) QTDIR64=D:\Qt\5.8\msvc2017_64`
+          * `(32bit) QTDIR=D:\Qt\5.10.1\msvc2017`
+          * `(64bit) QTDIR64=D:\Qt\5.10.1\msvc2017_64`
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)  
       * `x264Path` (Path to just x264 include directory.)  
