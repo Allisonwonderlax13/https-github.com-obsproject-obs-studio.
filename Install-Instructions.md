@@ -194,13 +194,13 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
-        sudo apt-get install ffmpeg
+        sudo apt install ffmpeg
 
 * Then you can install OBS with the following commands, make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of ubuntu adding a repository automatically apt updates.):
 
         sudo add-apt-repository ppa:obsproject/obs-studio
-        sudo apt-get update
-        sudo apt-get install obs-studio
+        sudo apt update
+        sudo apt install obs-studio
 
 ***
 
