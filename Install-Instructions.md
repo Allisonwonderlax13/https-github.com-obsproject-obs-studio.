@@ -147,7 +147,7 @@ Official macOS builds are available again as of 18.0.1.
 ### macOS Build Directions
 * Clone the repository and **submodules**:
 
-         git clone --recursive https://github.com/obsproject/obs-studio.git
+        git clone --recursive https://github.com/obsproject/obs-studio.git
 
 * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
@@ -157,8 +157,8 @@ Official macOS builds are available again as of 18.0.1.
     * For example: `export QTDIR=/usr/local/opt/qt`
   * NOTE: If you need SRT support, you might need to install FFmpeg from a custom tap instead of the default homebrew FFmpeg, like so:
 
-        brew tap homebrew-ffmpeg/ffmpeg
-        brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
+            brew tap homebrew-ffmpeg/ffmpeg
+            brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
 
 
 * Make sure to have the OSX 10.9 or newer SDK installed (comes with recent versions of Xcode)
