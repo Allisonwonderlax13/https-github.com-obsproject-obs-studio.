@@ -193,20 +193,20 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 * xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
-      sudo apt install ffmpeg
+        sudo apt install ffmpeg
 
 * Then you can install OBS with the following commands, make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of ubuntu adding a repository automatically apt updates.):
 
-      sudo add-apt-repository ppa:obsproject/obs-studio
-      sudo apt update
-      sudo apt install obs-studio
+        sudo add-apt-repository ppa:obsproject/obs-studio
+        sudo apt update
+        sudo apt install obs-studio
 
 ***
 
 ### Arch Linux Installation (Unofficial)
 * "Release" version is available on community repository:
 
-      sudo pacman -S obs-studio
+        sudo pacman -S obs-studio
 
 * "Git" version is available on AUR: https://aur.archlinux.org/packages/obs-studio-git
 
@@ -216,22 +216,22 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 * Graphical: search "obs-studio" on Pamac Manager or Octopi
 * Command-line: install it via pacman with the following command:
 
-      sudo pacman -S obs-studio
+        sudo pacman -S obs-studio
 
 ***
 
 ### Fedora Installation (Unofficial)
 * OBS Studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
-      sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+        sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 * Then you can install OBS with the following command (this pulls all dependencies, including NVENC-enabled ffmpeg):
 
-      sudo dnf install obs-studio
+        sudo dnf install obs-studio
 
 * For NVIDIA Hardware accelerated encoding make sure you have CUDA installed (in case of an older card, install xorg-x11-drv-nvidia-340xx-cuda instead):
 
-      sudo dnf install xorg-x11-drv-nvidia-cuda
+        sudo dnf install xorg-x11-drv-nvidia-cuda
 
 ***
 
@@ -242,13 +242,13 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 * Graphical: search and install "obs-studio" on "OpenMandriva Install and Remove Software" (Rpmdrake)
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
 
-      urpmi obs-studio
+        urpmi obs-studio
 
 #### For OpenMandriva Lx4
 * Graphical: search and install "obs-studio" on "OpenMandriva Software Management" (dnfdragora)
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
 
-      dnf install obs-studio
+        dnf install obs-studio
 
 ***
 
@@ -271,17 +271,17 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 * It is recommended to set the priority for Packman lower so it takes
   precedence over base repositories (skip on Tumbleweed as included in initial command).
 
-      sudo zypper mr --priority 90 packman
+        sudo zypper mr --priority 90 packman
 
 * The Packman version of FFmpeg should be used for full codec support. To
   ensure any existing FFmpeg packages are switched to Packman versions
   execute the following before installing obs-studio.
 
-      sudo zypper dup --repo packman
+        sudo zypper dup --repo packman
 
 * Install the obs-studio package.
 
-      sudo zypper in obs-studio
+        sudo zypper in obs-studio
 
 Links:
 * 1 click install, direct rpm links, and download counts:
@@ -294,7 +294,7 @@ Links:
 ### Gentoo Installation (Unofficial)
 Command-line: can be installed using portage by the following command:
 
-    sudo emerge media-video/obs-studio
+        sudo emerge media-video/obs-studio
 
 See https://packages.gentoo.org/packages/media-video/obs-studio for available versions and more information.
 
@@ -303,7 +303,7 @@ See https://packages.gentoo.org/packages/media-video/obs-studio for available ve
 ### NixOS Installation (Unofficial)
 Command-line: can be installed by the following command:
 
-    nix-env -i obs-studio
+        nix-env -i obs-studio
 
 See https://nixos.org/wiki/OBS for further instructions
 
@@ -314,15 +314,15 @@ Deepin 15.4 or newer is required.
 
 * First make sure you have everything up-to-date.
 
-      sudo apt-get update
+        sudo apt-get update
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
 
-      sudo apt-get install ffmpeg
+        sudo apt-get install ffmpeg
 
 * Finally, install OBS Studio.
 
-      sudo apt-get install obs-studio
+        sudo apt-get install obs-studio
 
 ***
 
@@ -331,22 +331,22 @@ Debian 9.0 or newer is required.
 
 * First make sure you have everything up-to-date.
 
-      sudo apt update
+        sudo apt update
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
 
-      sudo apt install ffmpeg
+        sudo apt install ffmpeg
 
 * Finally, install OBS Studio.
 
-      sudo apt install obs-studio
+        sudo apt install obs-studio
 
 ***
 
 ### Void Installation (Unofficial)
 * First make sure your repositories are up-to-date. OBS is available on the `multilib` repos if you need the 32-bit build.
 
-      sudo xbps-install -S
+        sudo xbps-install -S
 
 * Then just install OBS Studio. Any missing dependencies will be installed automatically.
   * If it refuses to install, try running `sudo xbps-install -Su` to update everything first.
@@ -362,7 +362,7 @@ Though unofficial, the package is actively maintained and functional!
 
 * Install OBS Studio.
 
-      sudo snap install obs-studio
+        sudo snap install obs-studio
 
 ***
 
@@ -374,7 +374,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
 * Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
 * Get the required packages:
 
-      sudo yum install \
+        sudo yum install \
                make \
                gcc \
                gcc-c++ \
@@ -432,14 +432,14 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
 
   and then run
 
-       sudo ldconfig
+        sudo ldconfig
 
 ***
 
 ### Debian-based Build Directions
 * Get the required packages:
 
-      sudo apt-get install \
+        sudo apt-get install \
                    build-essential \
                    checkinstall \
                    cmake \
@@ -510,7 +510,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
 * See openSUSE installation instructions (above) for details on adding Packman repository.
 * Install build dependencies:
 
-      sudo zypper in cmake \
+        sudo zypper in cmake \
                      fontconfig-devel \
                      freetype2-devel \
                      gcc \
@@ -584,7 +584,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
 
 * Install OBS Studio:
 
-      pkg install obs-studio
+        pkg install obs-studio
 
 ***
 
