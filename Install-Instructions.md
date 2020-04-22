@@ -66,7 +66,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 * **Installation Procedure**
   * Clone the repository and **submodules**:
 
-             git clone --recursive https://github.com/obsproject/obs-studio.git
+      git clone --recursive https://github.com/obsproject/obs-studio.git
 
   * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
