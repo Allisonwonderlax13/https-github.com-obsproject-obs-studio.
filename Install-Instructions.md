@@ -413,7 +413,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 ..
+        cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
         make -j4
         sudo make install
 
@@ -422,7 +422,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+        cmake -DUNIX_STRUCTURE=1 ..
         make -j4
         sudo make install
 
@@ -491,7 +491,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
         make -j4
         sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
@@ -500,7 +500,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
         make -j4
         sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
@@ -540,7 +540,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
         make -j4
         sudo make install
 
@@ -549,7 +549,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
         mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
         make -j4
         sudo make install
 
