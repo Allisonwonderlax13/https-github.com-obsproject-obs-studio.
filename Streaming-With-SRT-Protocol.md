@@ -88,6 +88,14 @@ The following players can be used to watch an SRT stream :
 * OBS Studio Media Source (an obvious case-use is to broadcast from any SRT source to an OBS instance).
 * [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) (iPhone only)    
 
+### Receive srt stream within OBS
+This could be useful to two pc setups (although NDI is probably a more common solution).    
+In a Media Source, uncheck 'Local File'.    
+For 'Input', enter the srt URL. If the stream is received from a server (in listemer mode), the srt connexion will be in mode=caller (which is the default one so the option can be omitted). If however the stream is received straight from an encoder in caller mode, add the mode=listener to the URL (see screenshot).    
+For 'Input Format', enter mpegts.
+
+![](https://i.imgur.com/CMS57Jx.png)
+
 ### VLC usage
 
 Download VLC 3.0 [here](https://www.videolan.org/vlc/index.html) or VLC 4.0 [here](https://nightlies.videolan.org/) (warning: this is the development version of VLC).  
