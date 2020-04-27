@@ -5,7 +5,7 @@ This guide contains an explanation for the common issues that will cause OBS, or
 ---
 ### Quick Fix: Run OBS as Administrator [Windows Only]
 
-In OBS Studio version 24.0.2 and newer, OBS Studio can ask the OS to reserve some GPU capacity for OBS' use. In many cases, GPU overload issues can be resolved simply by running OBS as administrator; try that before continuing with this guide. To run OBS as administrator, close OBS Studio, then simply right click the OBS Studio shortcut and select `Run as administrator`.
+In OBS Studio version 24.0.2 and newer, OBS Studio can ask the OS to reserve some GPU capacity for OBS' use. In many cases, GPU overload issues can be resolved simply by running OBS as administrator; try that before continuing with this guide. To run OBS as administrator, close OBS Studio, then simply right click the OBS Studio shortcut and select `Run as administrator`
 
 ---
 ### "My game framerate is fine, but OBS can't keep up!"
