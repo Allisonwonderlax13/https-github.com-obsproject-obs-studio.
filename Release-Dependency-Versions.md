@@ -9,9 +9,9 @@ That said, it is recommended that when building on Windows yourself to use our p
 | lib | git commit | version |
 | :--- | :---: | :---: |
 | cURL | | 7.58.0 |
-| CEF |  | 75.0.3770 |
+| CEF |  | 75.0.3770 [x86](https://obsbot.rodney.io/files/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip) [x64](https://obsbot.rodney.io/files/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip) |
 | FFmpeg | [192d1d34eb](https://github.com/FFmpeg/FFmpeg/commit/192d1d34eb3668fa27f433e96036340e1e5077a0) | n4.2.2 |
-| VLC | | 3.0.0-git |
+| VLC | | [3.0.0-git](https://cdn-fastly.obsproject.com/downloads/vlc.zip) |
 | FreeType2 | | |
 | libogg | [df53eebf72](https://github.com/xiph/ogg/commit/df53eebf72e86eb179465f53dd77297ae72ae233) | [no version] |
 | libopus | [e85ed7726d](https://github.com/xiph/opus/commit/e85ed7726db5d677c9c0677298ea0cb9c65bdd23) | v1.3.1 |
@@ -22,7 +22,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | LuaJIT | | |
 | mbed TLS | | |
 | Python | | |
-| Qt | [no git] | 5.10.1 |
+| Qt | [no git] | [5.10.1](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z) |
 | Speex | | |
 | x264 | [72db437770](https://github.com/mirror/x264/commit/72db437770fd1ce3961f624dd57a8e75ff65ae0b) | 0.157.2945 r2945 |
 | zlib | [no git] | 1.2.11 |
