@@ -9,7 +9,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | lib | git commit | version |
 | :--- | :---: | :---: |
 | cURL | | 7.58.0 |
-| CEF |  | 75.0.3770 [x86](https://obsbot.rodney.io/files/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip) [x64](https://obsbot.rodney.io/files/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip) |
+| CEF |  | 75.0.3770 [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip) [x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip) |
 | FFmpeg | [192d1d34eb](https://github.com/FFmpeg/FFmpeg/commit/192d1d34eb3668fa27f433e96036340e1e5077a0) | n4.2.2 |
 | VLC | | [3.0.0-git](https://cdn-fastly.obsproject.com/downloads/vlc.zip) |
 | FreeType2 | | |
