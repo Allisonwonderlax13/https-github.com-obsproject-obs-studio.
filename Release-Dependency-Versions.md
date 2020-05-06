@@ -11,6 +11,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | cURL | | 7.58.0 |
 | CEF |  | 75.0.3770 |
 | FFmpeg | [192d1d34eb](https://github.com/FFmpeg/FFmpeg/commit/192d1d34eb3668fa27f433e96036340e1e5077a0) | n4.2.2 |
+| VLC | | 3.0.0-git |
 | FreeType2 | | |
 | libogg | [df53eebf72](https://github.com/xiph/ogg/commit/df53eebf72e86eb179465f53dd77297ae72ae233) | [no version] |
 | libopus | [e85ed7726d](https://github.com/xiph/opus/commit/e85ed7726db5d677c9c0677298ea0cb9c65bdd23) | v1.3.1 |
