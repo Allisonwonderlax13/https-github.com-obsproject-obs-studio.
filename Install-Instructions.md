@@ -409,7 +409,7 @@ Note: Do not use the github source tar as it does not include all the required s
   * If `libspeexdsp-devel` is not available, it can be built from source (https://git.xiph.org/?p=speexdsp.git;a=summary)
 * Building and installing OBS:
 
-* If building with browser source:
+  * If building with browser source:
 
         wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
         tar -xjf ./cef_binary_3770_linux64.tar.bz2
@@ -420,7 +420,7 @@ Note: Do not use the github source tar as it does not include all the required s
         make -j4
         sudo make install
 
-* If building without browser source
+  * If building without browser source
 
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
@@ -488,7 +488,7 @@ Note: Do not use the github source tar as it does not include all the required s
 
 * Building and installing OBS:
 
-* If building with browser source:
+  * If building with browser source:
 
         wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
         tar -xjf ./cef_binary_3770_linux64.tar.bz2
@@ -499,7 +499,7 @@ Note: Do not use the github source tar as it does not include all the required s
         make -j4
         sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
-* If building without browser source
+  * If building without browser source
 
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
