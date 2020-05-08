@@ -1,4 +1,4 @@
-Minecraft does not default to the high performance GPU. In order to get it working with game capture you will need to do the following.
+Minecraft does not default to the high performance GPU. In order to get it working with game capture you will need to do the following:
 
 **This is mainly for laptops and all-in-one systems.**
 
