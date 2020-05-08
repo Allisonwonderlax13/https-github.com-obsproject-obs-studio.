@@ -2,6 +2,8 @@ Minecraft does not default to the high performance GPU. In order to get it worki
 
 **This is mainly for laptops and all-in-one systems.**
 
+* Close OBS and Minecraft
+
 * Open the Windows 10 Settings App (Start button → Cogwheel icon)
 
 ![StartMenuCogwheelIcon](https://i.imgur.com/6dUeodW.png)
@@ -16,5 +18,3 @@ Minecraft does not default to the high performance GPU. In order to get it worki
 * Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
 
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/05-high-perf.png)
-
-**You MUST restart Minecraft once this change is made.**
