@@ -13,7 +13,7 @@ Minecraft does not default to the high performance GPU. In order to get it worki
 
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/02-add-application.png)
 
-Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
+* Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
 
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/05-high-perf.png)
 
