@@ -25,7 +25,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | Qt | [no git] | [5.10.1](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z) |
 | Speex | | |
 | x264 | [72db437770](https://github.com/mirror/x264/commit/72db437770fd1ce3961f624dd57a8e75ff65ae0b) | 0.157.2945 r2945 |
-| zlib | [no git] | 1.2.11 |
+| zlib | [cacf7f1d4e](https://github.com/madler/zlib/commit/cacf7f1d4e3d44d871b605da3b647f07d718623f) | 1.2.11 |
 
 ## Linux (Ubuntu PPA)
 
