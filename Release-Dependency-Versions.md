@@ -19,7 +19,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | libvorbis | [9eadeccdc4](https://github.com/xiph/vorbis/commit/9eadeccdc4247127d91ac70555074239f5ce3529) | [no version] |
 | libvpx | | [v1.8.1](https://chromium.googlesource.com/webm/libvpx/+/refs/tags/v1.8.1) |
 | libwebsockets | | |
-| LuaJIT | | |
+| LuaJIT | | 2.0.5 |
 | mbed TLS | [04a049bda1](https://github.com/ARMmbed/mbedtls/commit/04a049bda1ceca48060b57bc4bcf5203ce591421) | [2.16.3](https://github.com/ARMmbed/mbedtls/releases/tag/mbedtls-2.16.3) |
 | Python | | |
 | Qt | [no git] | [5.10.1](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z) |
