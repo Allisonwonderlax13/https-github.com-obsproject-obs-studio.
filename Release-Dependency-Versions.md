@@ -20,7 +20,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | libvpx | | [v1.8.1](https://chromium.googlesource.com/webm/libvpx/+/refs/tags/v1.8.1) |
 | libwebsockets | | |
 | LuaJIT | | |
-| mbed TLS | | |
+| mbed TLS | [04a049bda1](https://github.com/ARMmbed/mbedtls/commit/04a049bda1ceca48060b57bc4bcf5203ce591421) | [2.16.3](https://github.com/ARMmbed/mbedtls/releases/tag/mbedtls-2.16.3) |
 | Python | | |
 | Qt | [no git] | [5.10.1](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z) |
 | Speex | | |
