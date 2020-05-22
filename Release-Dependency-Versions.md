@@ -18,7 +18,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | libpng | [a40189cf88](https://github.com/glennrp/libpng/commit/a40189cf881e9f0db80511c382292a5604c3c3d1) | v1.6.37
 | libvorbis | [9eadeccdc4](https://github.com/xiph/vorbis/commit/9eadeccdc4247127d91ac70555074239f5ce3529) | [no version] |
 | libvpx | | [v1.8.1](https://chromium.googlesource.com/webm/libvpx/+/refs/tags/v1.8.1) |
-| libwebsockets | | |
+| libwebsockets | | 3.1.99 |
 | LuaJIT | | 2.0.5 |
 | mbed TLS | [04a049bda1](https://github.com/ARMmbed/mbedtls/commit/04a049bda1ceca48060b57bc4bcf5203ce591421) | [2.16.3](https://github.com/ARMmbed/mbedtls/releases/tag/mbedtls-2.16.3) |
 | Python | [5fd33b5926](https://github.com/python/cpython/commit/5fd33b5926eb8c9352bf5718369b4a8d72c4bb44) | [3.6.2](https://github.com/python/cpython/releases/tag/v3.6.2) |
