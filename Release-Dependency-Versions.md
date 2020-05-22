@@ -21,7 +21,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | libwebsockets | | |
 | LuaJIT | | 2.0.5 |
 | mbed TLS | [04a049bda1](https://github.com/ARMmbed/mbedtls/commit/04a049bda1ceca48060b57bc4bcf5203ce591421) | [2.16.3](https://github.com/ARMmbed/mbedtls/releases/tag/mbedtls-2.16.3) |
-| Python | | |
+| Python | [5fd33b5926](https://github.com/python/cpython/commit/5fd33b5926eb8c9352bf5718369b4a8d72c4bb44) | [3.6.2](https://github.com/python/cpython/releases/tag/v3.6.2) |
 | Qt | [no git] | [5.10.1](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z) |
 | Speex | | |
 | x264 | [72db437770](https://github.com/mirror/x264/commit/72db437770fd1ce3961f624dd57a8e75ff65ae0b) | 0.157.2945 r2945 |
