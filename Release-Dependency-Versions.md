@@ -15,7 +15,8 @@ That said, it is recommended that when building on Windows yourself to use our p
 | FreeType2 | | 2.9.0 |
 | libogg | [df53eebf72](https://github.com/xiph/ogg/commit/df53eebf72e86eb179465f53dd77297ae72ae233) | [no version] |
 | libopus | [e85ed7726d](https://github.com/xiph/opus/commit/e85ed7726db5d677c9c0677298ea0cb9c65bdd23) | v1.3.1 |
-| libpng | [a40189cf88](https://github.com/glennrp/libpng/commit/a40189cf881e9f0db80511c382292a5604c3c3d1) | v1.6.37
+| libpng | [a40189cf88](https://github.com/glennrp/libpng/commit/a40189cf881e9f0db80511c382292a5604c3c3d1) | v1.6.37 |
+| libsrt | | [v1.4.1](https://github.com/Haivision/srt/releases/tag/v1.4.1) |
 | libvorbis | [9eadeccdc4](https://github.com/xiph/vorbis/commit/9eadeccdc4247127d91ac70555074239f5ce3529) | [no version] |
 | libvpx | | [v1.8.1](https://chromium.googlesource.com/webm/libvpx/+/refs/tags/v1.8.1) |
 | libwebsockets | | 3.1.99 |
