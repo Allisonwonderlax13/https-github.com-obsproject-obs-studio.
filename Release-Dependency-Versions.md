@@ -8,6 +8,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 
 | lib | git commit | version |
 | :--- | :---: | :---: |
+| AMF | [689c09e6c7](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/commit/689c09e6c790de499013bee657946349f8de0aef) | 1.4.14 |
 | cURL | | 7.58.0 |
 | CEF |  | 75.0.3770 [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip) [x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip) |
 | FFmpeg | [192d1d34eb](https://github.com/FFmpeg/FFmpeg/commit/192d1d34eb3668fa27f433e96036340e1e5077a0) | n4.2.2 |
