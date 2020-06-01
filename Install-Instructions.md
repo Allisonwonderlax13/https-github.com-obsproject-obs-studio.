@@ -61,7 +61,7 @@ NOTE: If using the .zip method for either the full or small install and installi
     * We currently deploy with 5.10.1, which is no longer available from Qt. A download is provided [here](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z).
   * Windows version of [cmake](http://www.cmake.org/)
   * [Visual Studio 2017 (latest updates recommended)](https://visualstudio.microsoft.com/vs/older-downloads/)
-    * Windows 10 SDK (minimum version of 10.0.18362.0)
+    * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 
 * **Installation Procedure**
   * Clone the repository and **submodules**:
