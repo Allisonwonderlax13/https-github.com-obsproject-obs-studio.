@@ -33,8 +33,6 @@ Many user post ideas and suggestions for improvements to OBS on the OBS Ideas pa
 
 OBS Studio currently tracks bugs on [GitHub Issues](https://github.com/obsproject/obs-studio/issues).
 
-The bug tracker uses your [forum](https://obsproject.com/forum/) login credentials, so you don't have to log in twice.
-
 Feel free to explore ideas, issues, suggestions, and bugs, and if you feel so inclined, try your hand at implementing one!
 
 ## Plugin Development
