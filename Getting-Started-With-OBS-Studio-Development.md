@@ -31,7 +31,7 @@ It's also recommended to examine some of the default plugins to see how they int
 
 Many user post ideas and suggestions for improvements to OBS on the OBS Ideas page. You can find the Ideas page (Fider) here: [https://ideas.obsproject.com/](https://ideas.obsproject.com/)
 
-Also, you can find the OBS Studio Bug Tracker here: [https://obsproject.com/mantis/](https://obsproject.com/mantis/)
+OBS Studio currently tracks bugs on [GitHub Issues](https://github.com/obsproject/obs-studio/issues).
 
 The bug tracker uses your [forum](https://obsproject.com/forum/) login credentials, so you don't have to log in twice.
 
