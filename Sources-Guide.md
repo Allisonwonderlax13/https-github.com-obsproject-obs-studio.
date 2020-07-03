@@ -77,8 +77,8 @@ This source allows you to add an audio input or output device (i.e. microphone o
 
 The Blackmagic Device source allows you to add a variety of Blackmagic Design capture cards, using their provided developer SDK to ensure the best possible compatibility. 
 
-Blackmage Device source has the following options:
-* Device: Dropdown list that allows you to select the Blackmage Design device you wish to use.
+Blackmagic Device source has the following options:
+* Device: Dropdown list that allows you to select the Blackmagic Design device you wish to use.
 * Mode: Sets the video mode of the device. This should match your media (i.e. camera or game console) output resolution and framerate.
 * Format: Selects the video format the device runs in. This should also match your media output you wish to capture.
 * Use Buffering (Checkbox): Enables or disables the use of buffering on the video/audio for the device. This can help with issues on systems with low resources available or a device with bad drivers/other hardware issues.
