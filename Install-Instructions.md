@@ -161,17 +161,11 @@ Official macOS builds are available again as of 18.0.1.
             brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
 
 
-* Make sure to have the OSX 10.9 or newer SDK installed (comes with recent versions of Xcode)
+* Make sure to have the macOS 10.13 or newer SDK installed (comes with recent versions of Xcode)
 
 * In a terminal, go to the obs-studio directory create a 'build' sub directory and change to it, then to build, type:
 
-    on OSX 10.9 or newer:
-
-        cmake .. && make
-
-    on OSX 10.8:
-
-        MACOSX_DEPLOYMENT_TARGET=10.8 cmake -DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/ .. && make
+    cmake -DDISABLE_PYTHON=ON .. && make
 
 * It builds in a modular structure by default.  To run it via terminal, go to `build/rundir/RelWithDebInfo/bin`, then run using command `./obs`
 
