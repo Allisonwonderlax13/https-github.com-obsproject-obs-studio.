@@ -165,7 +165,7 @@ Official macOS builds are available again as of 18.0.1.
 
 * In a terminal, go to the obs-studio directory create a 'build' sub directory and change to it, then to build, type:
 
-    cmake -DDISABLE_PYTHON=ON .. && make
+        cmake -DDISABLE_PYTHON=ON .. && make
 
 * It builds in a modular structure by default.  To run it via terminal, go to `build/rundir/RelWithDebInfo/bin`, then run using command `./obs`
 
