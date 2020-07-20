@@ -30,7 +30,7 @@
   * [macOS](install-instructions#macos)
     * [Install](install-instructions#macos-install-directions)
     * [Build from source](install-instructions#macos-build-directions)
-    * [Xcode Projects](install-instructions#macos-xcode-project)
+    * [Xcode Project](install-instructions#macos-xcode-project)
   * [Linux](install-instructions#linux)
     * [Install Directions](install-instructions#linux-install-directions)
       * [Ubuntu (14.04+)](install-instructions#ubuntu-installation)
