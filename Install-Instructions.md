@@ -14,6 +14,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
   * [macOS](#macos)
     * [Install](#macos-install-directions)
     * [Build from source](#macos-build-directions)
+    * [Xcode Project](#macos-xcode-project)
   * [Linux](#linux)
     * [Install](#linux-install-directions)
       * [Ubuntu](#ubuntu-installation)
@@ -151,29 +152,75 @@ Official macOS builds are available again as of 18.0.1.
 
 * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
 
-* Use macports or homebrew and install FFmpeg, x264, Qt5, cmake, mbedtls and swig (if you want scripting).
+#### macOS Full Build Script
 
-  * NOTE: Qt5 can also be downloaded/installed via the Qt website, though keep in mind that you will have to set the QTDIR environment variable to the Qt5 build base directory.
-    * For example: `export QTDIR=/usr/local/opt/qt`
-  * NOTE: If you need SRT support, you might need to install FFmpeg from a custom tap instead of the default homebrew FFmpeg, like so:
+To get a self-built OBS up and running, a default build and packaging script is provided. This script only requires Homebrew (https://brew.sh) to be installed on the build system already:
+
+* To build OBS as-is with full browser-source support, simply run `./CI/full-build-macos.sh` from the checkout directory (The script will take care of downloading all necessary dependencies).
+* To *create an app-bundle* after building OBS, run the script with the `-b` flag: `./CI/full-build-macos.sh -b`
+* To *create a disk image* after building OBS, run the script with the `-p` flag: `./CI/full-build-macos.sh -b -p`
+* To *notarize* an app bundle after building and bundling OBS, run the script with the `-n` flag: `./CI/full-build-macos.sh -b -n`
+* To create an app-bundle *without building OBS again*, run the script with the `-s` flag: `./CI/full-build-macos.sh -s -b`
+
+The last option is helpful if custom `cmake` flags have been used, but a proper app bundle is desired.
+
+#### macOS Custom Builds
+
+Custom build configurations require a set of dependencies to be installed on the build system. Some dependencies need to be installed via Homebrew (https://brew.sh):
+
+* FFmpeg
+* x264
+* cmake
+* freetype
+* mbedtls
+* swig
+* Qt5
+
+If you need SRT support, either use FFmpeg provided by `obs-deps` or install FFmpeg from a custom tap instead of the default homebrew FFmpeg:
 
             brew tap homebrew-ffmpeg/ffmpeg
             brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
 
+#### Pre-Built Dependencies
 
-* Make sure to have the macOS 10.13 or newer SDK installed (comes with recent versions of Xcode)
+These dependencies are also available via `obs-deps` (https://github.com/obsproject/obs-deps) as pre-compiled binaries, which are assured to be compatible with current OBS code (as OBS is built against specific versions of some packages while Homebrew delivers most recent stable builds).
 
-* In a terminal, go to the obs-studio directory create a 'build' sub directory and change to it, then to build, type:
+* **When using obs-deps**, extract both archives from the macOS release to `/tmp/obsdeps` to assure compatibility with app bundling later (due to the way `dylib`s are identified and linked).
+* Create a build directory inside the `obs-studio` directory, change to it, then configure the project via `cmake`:
 
-        cmake -DDISABLE_PYTHON=ON .. && make
+                cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DQTDIR="/tmp/obsdeps" -DSWIGDIR="/tmp/obsdeps" -DDepsPath="/tmp/obsdeps" -DDISABLE_PYTHON=ON ..
 
-* It builds in a modular structure by default.  To run it via terminal, go to `build/rundir/RelWithDebInfo/bin`, then run using command `./obs`
+* Build OBS by running `make`
 
-* NOTE: If you are running via command prompt, you *must* be in the 'bin' directory specified above, otherwise it will not be able to find its files relative to the binary.
+#### Configuring and Building
 
-* Currently app bundles are created on CI with the before deploy script, may require tweaking to work locally. https://github.com/obsproject/obs-studio/blob/master/CI/before-deploy-osx.sh#L20
-  * We are currently working to improve this process
+* If not already handled by the Homebrew installation, install a current macOS platform SDK (only macOS 10.13 or newer is supported): `xcode-select --install`
+* Create a build directory inside the `obs-studio` directory, change to it, then configure the project via `cmake`:
 
+                cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON ..
+
+* *NOTE*: `cmake` might require additional parameters to find `Qt5` libraries present on this system, this can either be provided via `-DQTDIR="/usr/local/opt/qt"` or setting an environment variable, e.g.: `export QTDIR=/usr/local/opt/qt`
+* Build OBS by running `make`
+* Run OBS from the `/rundir/RelWithDebInfo/bin` directory in your build directory, by running `./obs` from a Terminal
+* *NOTE*: If you are running via command prompt, you *must* be in the 'bin' directory specified above, otherwise it will not be able to find its files relative to the binary.
+
+*** 
+
+### macOS Xcode Project
+
+To create an Xcode project for OBS, `cmake` must be run with additional flags. Follow the build instructions above to create a working configuration setup, then add `-G Xcode` to the `cmake` command, e.g.:
+
+                cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON -G Xcode ..
+
+This will create an `obs-studio.xcodeproj` project file in the build directory as well as Xcode project files for all build dependencies. To build a full macOS build, the build target `ALL_BUILD`can be used, but must be configured first:
+
+* Select `ALL_BUILD` from available build schemes in Xcode, then press `CMD+B` to build the project at least once
+* Then select `Edit Scheme...` from the same menu.
+* Under the `Info` tab, click on the dropdown for `Executable`, then click on `other`
+* Navigate to the `/rundir/debug/bin` bin folder that the previous Xcode build process should have created and select the `obs` binary found there
+* Next switch to the `Options` tab and check the box to `Use custom working directory` and select the same `/rundir/debug/bin` directory in your Xcode build directory
+
+With these options set, OBS can be compiled, run and debugged via Xcode. Note that _some_ features (e.g. prompt for access to video devices) will lead to a crash as macOS requires applications to run as a bundle for this to work.
 # Linux
 
 Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable.
