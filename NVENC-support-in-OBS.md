@@ -29,6 +29,9 @@
 
 - NVIDIA GeForce MX250
 
+#### GF116 (Fermi 2.0):
+- GeForce GTX 550 Ti
+
 #### Other (Older generation)
 
 - NVIDIA GeForce GT 705 (Fermi)
