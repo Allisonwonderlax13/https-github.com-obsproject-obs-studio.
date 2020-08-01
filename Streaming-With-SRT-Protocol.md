@@ -118,7 +118,7 @@ Just launch the command-line:
 
 # How to set up OBS Studio
 
-There are two ways of setting up OBS Studio to connect to a server. The first is simpler but gives less options at the moment. The second is a bit more difficult to setup but gives more fine tuning capabilities (and at the moment of this writing is more stable). Note: ffmpeg may not come with SRT support in older distributions of Linux, so check the repository sources to ensure ffmpeg comes with libsrt support, as there is no easy way of getting OBS Studio to reference a custom build of ffmpeg.
+There are two ways of setting up OBS Studio to connect to a server. The first is simpler but gives less options at the moment. The second is a bit more difficult to setup but gives more fine tuning capabilities (and at the moment of this writing is more stable). Note: ffmpeg may not come with SRT support in older distributions of Linux, so check the repository sources to ensure that ffmpeg comes with libsrt support, as there is no easy way of getting OBS Studio to reference a custom build of ffmpeg.
 
 **Note that while the discussion focuses on SRT protocol, UDP or TCP can also be used instead.**
 
