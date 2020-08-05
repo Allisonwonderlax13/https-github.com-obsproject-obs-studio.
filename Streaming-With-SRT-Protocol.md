@@ -60,9 +60,9 @@ The configuration of OBS itself ranges from easy to medium in terms of difficult
 Live software encoders : 
 * **FFmpeg**,
 * **OBS Studio** which relies on the FFmpeg libraries,
-* vMix,
+* [vMix](https://www.vmix.com/),
 * srt-live-transmit (which is a demo app from libsrt developpers; needs to be compiled from source)  
-* Larix Broadcaster/Screencaster which can broadcast on Android or iOS.   
+* [Larix Broadcaster](https://softvelum.com/larix/)/Screencaster which can broadcast on Android or iOS.   
 Hardware encoders are also available at various vendors.
 
   
@@ -71,7 +71,7 @@ The following servers support SRT ingest:
 * [Wowza](https://www.wowza.com/) (paid service)
   * Supports SRT ingest and transmuxing/distributing in RTMP/HLS/DASH
 * [Nimble Streamer](https://wmspanel.com/nimble) (free, closed source)
-  * While Nimble Streamer is nominally free, it is used along with a non free dashboard which is, in all fairness, quite convenient. But it can also be used without the dashboard and just requires modifying an xml config file.
+  * While Nimble Streamer is nominally free, it is used along with a non free dashboard which is, in all fairness, quite convenient. But it can also be used without the dashboard and just requires modifying a JSON config file.
   * Supports SRT ingest and transmuxing/distributing in RTMP/HLS/DASH
 * [SRT Live Server](https://github.com/Edward-Wu/srt-live-server) (free, open source)
   * This option only *serves* SRT streams and does **not** transmux to HLS/RTMP/DASH. It is much more rudimentary than the other servers at this stage but it is FOSS and works fine with OBS Studio in our tests.
@@ -86,7 +86,8 @@ The following players can be used to watch an SRT stream :
 * [VLC](https://www.videolan.org/vlc/index.html) (version 3.0+ on Mac/Linux, version 4.0+ on Windows)
 * ffplay (part of [ffmpeg tools](http://ffmpeg.org/download.html))
 * OBS Studio Media Source (an obvious case-use is to broadcast from any SRT source to an OBS instance).
-* [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) (iPhone only)    
+* [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) (iPhone only)
+* [Larix Player](https://softvelum.com/player/) for Android, Android TV and iOS.
 
 ### Receive srt stream within OBS
 This could be useful to two pc setups (although NDI is probably a more common solution).    
