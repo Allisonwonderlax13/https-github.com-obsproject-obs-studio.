@@ -22,7 +22,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | libvpx | | [v1.8.1](https://chromium.googlesource.com/webm/libvpx/+/refs/tags/v1.8.1) |
 | libwebsockets | | 3.1.99 |
 | LuaJIT | | 2.0.5 |
-| mbed TLS | [3ede1737dc](https://github.com/ARMmbed/mbedtls/commit/3ede1737dc471199bf8d5d3824ee2545c11a497e) | [2.23.0](https://github.com/ARMmbed/mbedtls/releases/tag/mbedtls-2.23.0) |
+| mbed TLS | [3ede1737dc](https://github.com/ARMmbed/mbedtls/commit/3ede1737dc471199bf8d5d3824ee2545c11a497e) | [2.23.0](https://github.com/ARMmbed/mbedtls/releases/tag/v2.23.0) |
 | pthread-win32| [19fd5054b2](https://github.com/GerHobbelt/pthread-win32/commit/19fd5054b29af1b4e3b3278bfffbb6274c6c89f5) | 2.10.0.0 |
 | Python | [5fd33b5926](https://github.com/python/cpython/commit/5fd33b5926eb8c9352bf5718369b4a8d72c4bb44) | [3.6.2](https://github.com/python/cpython/releases/tag/v3.6.2) |
 | Qt | [no git] | [5.10.1](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z) |
