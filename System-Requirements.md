@@ -4,7 +4,7 @@ OBS Studio requires the following hardware and operating systems to function. Ha
 
 Windows:
 - DirectX 10.1 compatible GPU
-- Windows 7 SP1 or newer
+- Windows 8 / 8.1 / 10
 
 macOS:
 - Intel CPU (PPC is not supported)
@@ -20,8 +20,8 @@ Linux/Unix
 Hardware encoders are generally recommended for local recordings, but not streaming. They can be a last resort if software encoding is not possible. They offer minimal performance impact in exchange for a reduction in quality at the same bitrates as software (x264) encoding using the default preset of veryfast. Currently, all consumer-level hardware encoders are provided by certain GPUs, as listed below.
 
 Please make sure to use the latest drivers for your GPU:
-- [NVIDIA](https://www.geforce.com/drivers)
-- [AMD](http://support.amd.com)
+- [NVIDIA](https://www.nvidia.com/en-us/geforce/drivers/)
+- [AMD](https://www.amd.com/en/support)
 - Intel GPU drivers are usually available from your mainboard manufacturer, but can also be [found here](https://downloadcenter.intel.com/)
 
 ### NVIDIA NVENC
@@ -35,4 +35,4 @@ Due to low quality of early iterations of QSV, Intel Core-i-CPU 4xxx (Haswell) o
 QSV can be unstable on Windows 7 and may require [workarounds to enable it](https://obsproject.com/forum/resources/how-to-use-quicksync.82/).
 
 ### AMD Advanced Media Framework (AMF)
-Please read the [AMF plugin documentation for compatible GPUs](https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Hardware-Support) as well as the [troubleshooting guide](https://github.com/Xaymar/obs-studio_amf-encoder-plugin/wiki/Guide%3A-Troubleshooting) for issues.
+Please read the [AMF plugin documentation for compatible GPUs](https://github.com/obsproject/obs-amd-encoder/wiki/Hardware-Support) as well as the [troubleshooting guide](https://github.com/obsproject/obs-amd-encoder/wiki/Guide%3A-Troubleshooting) for issues.
