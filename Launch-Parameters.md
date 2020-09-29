@@ -6,6 +6,7 @@ OBS Studio supports the following launch parameters for automation and portable 
 | `--version`, `-v`       | Get OBS version.* |
 | `--startstreaming`      | Automatically start streaming. |
 | `--startrecording`      | Automatically start recording. |
+| `--startvirtualcam`      | Automatically start virtual camera. |
 | `--startreplaybuffer`   | Automatically start Replay Buffer. |
 | `--collection "name"` | Start with given scene collection. |
 | `--profile "name"`    | Start with given profile. |
