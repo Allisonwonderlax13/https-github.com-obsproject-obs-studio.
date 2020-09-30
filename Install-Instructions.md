@@ -80,7 +80,7 @@ NOTE: If using the .zip method for either the full or small install and installi
   * Set the following variables in cmake-gui (alternatively, you can set them as Windows Environment Variables):
     * **Required**
       * `DepsPath` (Path to the include for all dependencies, not including Qt.).
-        * An example path if you extracted the dependancies .zip to c:\obs-deps would be:
+        * An example path if you extracted the dependencies .zip to c:\obs-deps would be:
           * `c:\obs-deps\win32`
           * `c:\obs-deps\win64`
         * If you wish to specify both 32 and 64 bit dependencies (for multi-arch building), you can use `DepsPath32` and `DepsPath64` to their respective include folders.
