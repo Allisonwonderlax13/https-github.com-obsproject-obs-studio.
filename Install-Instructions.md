@@ -113,7 +113,7 @@ NOTE: If using the .zip method for either the full or small install and installi
       * ./bin64 (if 64bit)
 
   * In cmake-gui, press 'Configure' and select the generator that fits to your installed VS Version:
-Visual Studio 15 2017, **or their 64bit equivalents** if you want to build the 64bit version of OBS
+Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 64bit version of OBS
       * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
 
   * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
