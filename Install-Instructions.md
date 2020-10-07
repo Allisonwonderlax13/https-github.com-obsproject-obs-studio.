@@ -25,7 +25,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
       * [openSUSE (Unofficial)](#opensuse-installation-unofficial)
       * [Gentoo (Unofficial)](#gentoo-installation-unofficial)
       * [NixOS (Unofficial)](#nixos-installation-unofficial)
-      * [UOS/Deepin (Unofficial)](#uos-deepin-installation-unofficial)
+      * [UOS/Deepin (Unofficial)](#uosdeepin-installation-unofficial)
       * [Debian Installation (Unofficial)](#debian-installation-unofficial)
       * [Void Installation (Unofficial)](#void-installation-unofficial)
       * [snappy (Unofficial)](#snappy-installation-unofficial)
