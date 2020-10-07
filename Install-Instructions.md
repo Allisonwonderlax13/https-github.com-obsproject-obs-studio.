@@ -25,7 +25,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
       * [openSUSE (Unofficial)](#opensuse-installation-unofficial)
       * [Gentoo (Unofficial)](#gentoo-installation-unofficial)
       * [NixOS (Unofficial)](#nixos-installation-unofficial)
-      * [Deepin (Unofficial)](#deepin-installation-unofficial)
+      * [UOS/Deepin (Unofficial)](#uos-deepin-installation-unofficial)
       * [Debian Installation (Unofficial)](#debian-installation-unofficial)
       * [Void Installation (Unofficial)](#void-installation-unofficial)
       * [snappy (Unofficial)](#snappy-installation-unofficial)
@@ -351,8 +351,8 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-### Deepin Installation (Unofficial)
-Deepin 15.4 or newer is required.
+### UOS/Deepin Installation (Unofficial)
+UOS/Deepin 20 or newer is required.
 
 * First make sure you have everything up-to-date.
 
@@ -365,6 +365,10 @@ Deepin 15.4 or newer is required.
 * Finally, install OBS Studio.
 
         sudo apt-get install obs-studio
+
+* or(but need install [Spark Store](https://www.spark-app.store/download.html))
+
+        sudo apt install com.obsproject.studio
 
 ***
 
