@@ -86,7 +86,7 @@ NOTE: If using the .zip method for either the full or small install and installi
         * If you wish to specify both 32 and 64 bit dependencies (for multi-arch building), you can use `DepsPath32` and `DepsPath64` to their respective include folders.
       * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch).
         * **NOTE**: Make sure to download Qt prebuilt components for your version of MSVC (32 or 64 bit).
-        * Example Qt directories you would use here if you installed Qt5 to D:\Qt would usually look something like this:
+        * Example Qt directories you would use here if you installed Qt to D:\Qt would usually look something like this:
           * `(32bit) QTDIR=D:\Qt\5.10.1\msvc2017`
           * `(64bit) QTDIR64=D:\Qt\5.10.1\msvc2017_64`
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
