@@ -531,7 +531,8 @@ Note: Do not use the github source tar as it does not include all the required s
                    libxcb-randr0-dev \
                    libxcb-xfixes0-dev \
                    libx11-xcb-dev \
-                   libxcb1-dev
+                   libxcb1-dev \
+                   libxss-dev
 
 * Building and installing OBS:
 
@@ -581,7 +582,8 @@ Note: Do not use the github source tar as it does not include all the required s
                      luajit-devel \
                      mbedtls \
                      swig \
-                     python3-devel
+                     python3-devel \
+                     libxss-dev
 
 * Building and installing OBS:
   * If building with browser source:
