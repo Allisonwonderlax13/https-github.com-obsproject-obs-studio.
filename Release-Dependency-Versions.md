@@ -30,6 +30,27 @@ That said, it is recommended that when building on Windows yourself to use our p
 | x264 | [72db437770](https://github.com/mirror/x264/commit/72db437770fd1ce3961f624dd57a8e75ff65ae0b) | 0.157.2945 r2945 |
 | zlib | [cacf7f1d4e](https://github.com/madler/zlib/commit/cacf7f1d4e3d44d871b605da3b647f07d718623f) | [1.2.11](https://github.com/madler/zlib/releases/tag/v1.2.11) |
 
+## macOS
+
+| lib | git commit | version |
+| :--- | :---: | :---: |
+|libpng||1.6.37|
+|libopus||1.31|
+|libogg||68ca3841567247ac1f7850801a164f58738d8df9|
+|librnnoise|[90ec41e](https://github.com/xiph/rnnoise/commit/90ec41ef659fd82cfec2103e9bb7fc235e9ea66c)||
+|libvorbis||1.3.6|
+|libvpx||1.8.12|
+|libjansson||2.12|
+|libx264|[d198931](https://github.com/mirror/x264/commit/d198931a63049db1f2c92d96c34904c69fde8117)||
+|libmbedtls||2.16.5|
+|libsrt||1.4.1|
+|ffmpeg||4.2.2|
+|libluajit||2.1.0-beta3|
+|libfreetype||2.10.1|
+|libpcre||8.44|
+|swig||3.0.12|
+|Qt||5.14.1|
+
 ## Linux (Ubuntu PPA)
 
 | lib | git commit | version |
