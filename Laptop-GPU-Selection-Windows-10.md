@@ -26,7 +26,7 @@
 
 ![Graphics settings](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
 
-* Select "Classic app" and click "Browse" under Graphics performance preference
+* Select "Classic app" or "Desktop app" and click "Browse" under Graphics performance preference
 
 ![Adding application](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/02-add-application.png)
 
