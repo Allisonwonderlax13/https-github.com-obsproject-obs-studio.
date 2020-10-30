@@ -1,0 +1,1 @@
+This is a test of site propagation for pages formatted with hyphens and brackets for the wiki. 
