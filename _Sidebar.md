@@ -41,7 +41,7 @@
       * [openSUSE](install-instructions#opensuse-installation-unofficial)
       * [Gentoo](install-instructions#gentoo-installation-unofficial)
       * [NixOS](install-instructions#nixos-installation-unofficial)
-      * [Deepin](install-instructions#deepin-installation-unofficial)
+      * [UOS/Deepin](install-instructions#uosdeepin-installation-unofficial)
       * [Debian Installation](install-instructions#debian-installation-unofficial)
       * [snappy](install-instructions#snappy-installation-unofficial)
     * [Build Directions](install-instructions#linux-build-directions)
