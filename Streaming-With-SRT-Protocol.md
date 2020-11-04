@@ -64,7 +64,7 @@ Live software encoders :
 * srt-live-transmit (which is a demo app from libsrt developpers; needs to be compiled from source)  
 * [Larix Broadcaster](https://softvelum.com/larix/)/Screencaster which can broadcast on Android or iOS.   
 Hardware encoders are also available at various vendors.
-* [CameraFi Live](https://play.google.com/store/apps/details?id=com.vaultmicro.camerafi.live/) for Android.
+* [CameraFi Live](https://play.google.com/store/apps/details?id=com.vaultmicro.camerafi.live) for Android.
 
   
 ## Servers
