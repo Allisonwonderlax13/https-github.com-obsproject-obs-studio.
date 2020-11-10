@@ -61,7 +61,7 @@ NOTE: If using the .zip method for either the full or small install and installi
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
     * We currently deploy with 5.10.1, which is no longer available from Qt. A download is provided [here](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z).
   * Windows version of [cmake](http://www.cmake.org/) (3.16 or higher, latest preferred)
-  * Windows version of [GIT](https://git-scm.com/download/win) (git binaries must exist in path)
+  * Windows version of [git](https://git-scm.com/download/win) (git binaries must exist in path)
   * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
     * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 
