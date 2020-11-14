@@ -1,0 +1,1 @@
+[https://github.com/obsproject/obs-studio/wiki/Filters-Guide](https://github.com/obsproject/obs-studio/wiki/Filters-Guide)
