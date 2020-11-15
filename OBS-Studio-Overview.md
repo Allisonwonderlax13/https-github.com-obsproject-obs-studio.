@@ -13,7 +13,7 @@ This guide is broken into these main sections:
 
 ## Quickstart
 
-The 4 step Quickstart guide has been moved to [[OBS Studio Quickstart]]. Use it if you're brand new to OBS Studio and just want to get started as soon as possible!
+The 4-step Quickstart guide has been moved to [[OBS Studio Quickstart]]. Use it if you're brand new to OBS Studio and just want to get started as soon as possible!
 
 ***
 
@@ -51,17 +51,17 @@ Note: This section covers Simple output mode. Advanced output mode gives you fur
 
 ### Audio
 - Change the Sampling Rate
-- Select up to two Desktop Audio Device's
-- Select up to three Microphone/Auxiliary Device's
+- Select up to two Desktop Audio Devices
+- Select up to three Microphone/Auxiliary Devices
 - Enable Push-to-mute or Push-to-talk for each device (keys configured in the Hotkeys section)
 
 ### Video
 - Base (Canvas) Resolution
   - This is the amount of space you have to fit your sources. You usually want this to match your monitor display resolution, or if you are playing games, the game resolution. Default is your primary monitor.
-- Output (Scaled) Resolution should be the Stream Output Resolution (720p,480p,etc)
+- Output (Scaled) Resolution should be the Stream Output Resolution (720p, 480p, etc)
   - This is the resolution that the stream/recording will output at, using the selected downscale filter. If you have 1080p sources, but want to stream at 720p, this is where you would set that.
 - Common FPS Value should match your desired output FPS (30/60 for example)
-  - Note that 60fps streaming can be very taxing on your system compared to 30fps. Test ahead of time and ensure your system has enough resources available.
+  - Note that 60-fps streaming can be very taxing on your system compared to 30-fps. Test ahead of time and ensure your system has enough resources available.
 
 ### Hotkeys
 Here you can set hotkeys that do a variety of things. Some examples:
@@ -76,7 +76,7 @@ Keyboard keys are supported. To use joysticks as hotkeys on Linux and Windows, y
 
 ### Advanced
 Most of these settings should not be changed unless you understand exactly why you need to change them. However, some settings can be useful for new streamers, such as:
-- Change the Filename Formatting (or use folders: %CCYY\%MM\%DD\%hh-%mm-%ss = 2016 \ 07 \ 10 \ 12:35:25.flv)
+- Change the Filename Formatting (or use folders: %CCYY\%MM\%DD\%hh-%mm-%ss = 2016\07\10\12-35-25.flv)
   - Hover over the field for a popup that explains each available variable for naming
 - Activate Stream Delay
 - Configure Automatic Reconnect
@@ -168,7 +168,7 @@ Some Transitions in OBS Studio are available from the first launch: Fade and Cut
 
 You can switch the currently active Transition with the drop-down menu and change its duration.
 
-After you have configured a Transition, you can also add it as a Quick Transition in Studio Mode. For Quick Transitions, you can configure the duration(length) of the transition as well. For example, you can add the same Fade to your Quick Transitions Menu with 500ms and 1000ms if you wanted. Also, you could configure a Swipe left and a Swipe right transition, then add them both as Quick Transitions and use them to first swipe left in your Scene A to change Scene B, and then swipe right back to your newly configured Scene B when you are done.
+After you have configured a Transition, you can also add it as a Quick Transition in Studio Mode. For Quick Transitions, you can configure the duration (length) of the transition as well. For example, you can add the same Fade to your Quick Transitions Menu with 500ms and 1000ms if you wanted. Also, you could configure a Swipe left and a Swipe right transition, then add them both as Quick Transitions and use them to first swipe left in your Scene A to change Scene B, and then swipe right back to your newly configured Scene B when you are done.
 
 ***
 
