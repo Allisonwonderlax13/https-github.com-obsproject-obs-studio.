@@ -221,7 +221,22 @@ This will create an `obs-studio.xcodeproj` project file in the build directory a
 * Navigate to the `/rundir/debug/bin` bin folder that the previous Xcode build process should have created and select the `obs` binary found there
 * Next switch to the `Options` tab and check the box to `Use custom working directory` and select the same `/rundir/debug/bin` directory in your Xcode build directory
 
-With these options set, OBS can be compiled, run and debugged via Xcode. Note that _some_ features (e.g. prompt for access to video devices) will lead to a crash as macOS requires applications to run as a bundle for this to work.
+**NOTE:** When running OBS directly from Xcode be aware that browser sources will not be available (as CEF requires to be run as part of an application bundle in macOS) and accessing the webcam will lead to a crash (as macOS requires a permission prompt text set in an application bundle's `Info.plist` which is of course not available).
+
+To debug OBS on macOS with all plugins and modules loaded follow these steps:
+
+* Build (but do not run) OBS with Xcode
+* Run `BUILD_DIR="YOUR_XCODE_BUILD_DIR" BUILD_CONFIG="Debug" ../CI/full-build-macos.sh -d -s -b` to bundle OBS build by Xcode, replace `YOUR_XCODE_BUILD_DIR` with the directory where you ran `cmake` to create the Xcode project
+* Next create a new Xcode project, select `macOS` as platform and `Framework` as type.
+* Give your project any arbitrary name and place it in any folder you like
+* With the new project open, click on your current build scheme in Xcode and select `Edit Scheme...`
+* For the `Run` step, go to the `Info` tab and select `Other...` in the dropdown for `Executable`
+* Browse to your OBS Xcode build directory and select the `OBS.app` application bundle created by the script
+
+You can now run OBS with Xcode directly attached as debugger. You can debug the visual stack as well as trace crashes and set breakpoints.
+
+**NOTE:** Breakpoints set in the actual Xcode project do not carry over to this "helper" project and vice versa.
+
 # Linux
 
 Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable.
