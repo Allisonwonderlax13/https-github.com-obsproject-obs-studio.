@@ -9,7 +9,7 @@ Windows:
 macOS:
 - Intel CPU (PPC is not supported)
 - OpenGL 3.3 compatible GPU
-- macOS 10.13 or newer
+- macOS High Sierra (10.13) or later
 
 Linux/Unix
 - OpenGL 3.3 compatible GPU
