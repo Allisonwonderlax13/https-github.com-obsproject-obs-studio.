@@ -245,7 +245,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
 ## Linux Install Directions
 
-### Ubuntu Installation
+### Ubuntu/Mint Installation
 **Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**  
 * xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
@@ -387,7 +387,7 @@ UOS/Deepin 20 or newer is required.
 
 ***
 
-### Debian Installation (Unofficial)
+### Debian/LMDE Installation (Unofficial)
 Debian 9.0 or newer is required.  
 **Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**
 
