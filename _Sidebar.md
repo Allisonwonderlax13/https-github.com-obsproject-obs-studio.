@@ -33,7 +33,7 @@
     * [Xcode Project](install-instructions#macos-xcode-project)
   * [Linux](install-instructions#linux)
     * [Install Directions](install-instructions#linux-install-directions)
-      * [Ubuntu (14.04+)](install-instructions#ubuntu-installation)
+      * [Ubuntu/Mint](install-instructions#ubuntu-installation)
       * [Arch Linux](install-instructions#arch-linux-installation-unofficial)
       * [Manjaro](install-instructions#manjaro-installation-unofficial)
       * [Fedora](install-instructions#fedora-installation-unofficial)
