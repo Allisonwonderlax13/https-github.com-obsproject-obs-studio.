@@ -42,7 +42,7 @@
       * [Gentoo](install-instructions#gentoo-installation-unofficial)
       * [NixOS](install-instructions#nixos-installation-unofficial)
       * [UOS/Deepin](install-instructions#uosdeepin-installation-unofficial)
-      * [Debian/LMDE](install-instructions#debian-installation-unofficial)
+      * [Debian/LMDE](install-instructions#debianlmde-installation-unofficial)
       * [snappy](install-instructions#snappy-installation-unofficial)
     * [Build Directions](install-instructions#linux-build-directions)
       * [Red Hat/Fedora-based](install-instructions#red-hatfedora-based-build-directions)
