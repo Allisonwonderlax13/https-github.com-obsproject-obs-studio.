@@ -43,7 +43,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
 # Windows
 
 ### Windows Install Directions:
-Pre-built windows versions can be found here: https://github.com/obsproject/obs-studio/releases/
+Pre-built Windows versions can be found here: https://github.com/obsproject/obs-studio/releases/
 
 The full .exe installer and .zip contains OBS Studio 32bit, 64bit, Browser Source, and Intel® RealSense™ plugin. You will be prompted during install for the Browser Source and RealSense plugin to be installed if using the .exe installer, otherwise the components are included in the .zip.
 
@@ -54,14 +54,14 @@ NOTE: If using the .zip method for either the full or small install and installi
 ***
 
 ### Windows Build Directions:
-* **Requirements for building OBS on windows**
+* **Requirements for building OBS on Windows**
   * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`.
-    * Pre-built windows dependencies for VS2017/VS2019 can be found here:
+    * Pre-built Windows dependencies for VS2017/VS2019 can be found here:
       * VS2017: https://obsproject.com/downloads/dependencies2017.zip
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
     * We currently deploy with 5.10.1, which is no longer available from Qt. A download is provided [here](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z).
-  * Windows version of [cmake](http://www.cmake.org/) (3.16 or higher, latest preferred)
-  * Windows version of [git](https://git-scm.com/download/win) (git binaries must exist in path)
+  * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
+  * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
   * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
     * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 
@@ -70,7 +70,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 
       git clone --recursive https://github.com/obsproject/obs-studio.git
 
-  * If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
+  * If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**.
 
   * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
 
@@ -85,7 +85,7 @@ NOTE: If using the .zip method for either the full or small install and installi
           * `c:\obs-deps\win32`
           * `c:\obs-deps\win64`
         * If you wish to specify both 32 and 64 bit dependencies (for multi-arch building), you can use `DepsPath32` and `DepsPath64` to their respective include folders.
-      * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the cmake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch).
+      * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the CMake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch.)
         * **NOTE**: Make sure to download Qt prebuilt components for your version of MSVC (32 or 64 bit).
         * Example Qt directories you would use here if you installed Qt to D:\Qt would usually look something like this:
           * `(32bit) QTDIR=D:\Qt\5.10.1\msvc2017`
@@ -117,7 +117,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 64bit version of OBS
       * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
 
-  * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, ffmpeg and curl path in the cmake-gui.
+  * If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, FFmpeg and cUrl path in the cmake-gui.
 
   * In cmake-gui, press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
 
@@ -151,7 +151,7 @@ Official macOS builds are available again as of 18.0.1.
 
         git clone --recursive https://github.com/obsproject/obs-studio.git
 
-* If you do not know what submodules are, or you are not using git from the command line, **PLEASE make sure to fetch the submodules too**.
+* If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**.
 
 #### macOS Full Build Script
 
@@ -160,7 +160,7 @@ To get a self-built OBS up and running, a default build and packaging script is 
 * To build OBS as-is with full browser-source support, simply run `./CI/full-build-macos.sh` from the checkout directory (The script will take care of downloading all necessary dependencies).
 * To *create an app-bundle* after building OBS, run the script with the `-b` flag: `./CI/full-build-macos.sh -b`
 * To *create a disk image* after building OBS, run the script with the `-p` flag: `./CI/full-build-macos.sh -b -p`
-* To *notarize* an app bundle after building and bundling OBS, run the script with the `-n` flag: `./CI/full-build-macos.sh -b -n`
+* To *notarize* an app-bundle after building and bundling OBS, run the script with the `-n` flag: `./CI/full-build-macos.sh -b -n`
 * To create an app-bundle *without building OBS again*, run the script with the `-s` flag: `./CI/full-build-macos.sh -s -b`
 
 The last option is helpful if custom `cmake` flags have been used, but a proper app bundle is desired.
@@ -191,7 +191,7 @@ These dependencies are also available via `obs-deps` (https://github.com/obsproj
 
                 cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DQTDIR="/tmp/obsdeps" -DSWIGDIR="/tmp/obsdeps" -DDepsPath="/tmp/obsdeps" -DDISABLE_PYTHON=ON ..
 
-* Build OBS by running `make`
+* Build OBS by running `make`.
 
 #### Configuring and Building
 
@@ -213,25 +213,25 @@ To create an Xcode project for OBS, `cmake` must be run with additional flags. F
 
                 cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON -G Xcode ..
 
-This will create an `obs-studio.xcodeproj` project file in the build directory as well as Xcode project files for all build dependencies. To build a full macOS build, the build target `ALL_BUILD`can be used, but must be configured first:
+This will create an `obs-studio.xcodeproj` project file in the build directory as well as Xcode project files for all build dependencies. To build a full macOS build, the build target `ALL_BUILD` can be used, but must be configured first:
 
 * Select `ALL_BUILD` from available build schemes in Xcode, then press `CMD+B` to build the project at least once
 * Then select `Edit Scheme...` from the same menu.
-* Under the `Info` tab, click on the dropdown for `Executable`, then click on `other`
-* Navigate to the `/rundir/debug/bin` bin folder that the previous Xcode build process should have created and select the `obs` binary found there
-* Next switch to the `Options` tab and check the box to `Use custom working directory` and select the same `/rundir/debug/bin` directory in your Xcode build directory
+* Under the `Info` tab, click on the dropdown for `Executable`, then click on `other`.
+* Navigate to the `/rundir/debug/bin` bin folder that the previous Xcode build process should have created and select the `obs` binary found there.
+* Next, switch to the `Options` tab and check the box to `Use custom working directory` and select the same `/rundir/debug/bin` directory in your Xcode build directory.
 
-**NOTE:** When running OBS directly from Xcode be aware that browser sources will not be available (as CEF requires to be run as part of an application bundle in macOS) and accessing the webcam will lead to a crash (as macOS requires a permission prompt text set in an application bundle's `Info.plist` which is of course not available).
+**NOTE:** When running OBS directly from Xcode be aware that browser sources will not be available (as CEF requires to be run as part of an application bundle in macOS) and accessing the webcam will lead to a crash (as macOS requires a permission prompt text set in an application bundle's `Info.plist` which is, of course, not available).
 
-To debug OBS on macOS with all plugins and modules loaded follow these steps:
+To debug OBS on macOS with all plugins and modules loaded, follow these steps:
 
-* Build (but do not run) OBS with Xcode
-* Run `BUILD_DIR="YOUR_XCODE_BUILD_DIR" BUILD_CONFIG="Debug" ../CI/full-build-macos.sh -d -s -b` to bundle OBS build by Xcode, replace `YOUR_XCODE_BUILD_DIR` with the directory where you ran `cmake` to create the Xcode project
-* Next create a new Xcode project, select `macOS` as platform and `Framework` as type.
-* Give your project any arbitrary name and place it in any folder you like
-* With the new project open, click on your current build scheme in Xcode and select `Edit Scheme...`
-* For the `Run` step, go to the `Info` tab and select `Other...` in the dropdown for `Executable`
-* Browse to your OBS Xcode build directory and select the `OBS.app` application bundle created by the script
+* Build (but do not run) OBS with Xcode.
+* Run `BUILD_DIR="YOUR_XCODE_BUILD_DIR" BUILD_CONFIG="Debug" ../CI/full-build-macos.sh -d -s -b` to bundle OBS build by Xcode, replace `YOUR_XCODE_BUILD_DIR` with the directory where you ran `cmake` to create the Xcode project.
+* Next, create a new Xcode project, select `macOS` as platform and `Framework` as type.
+* Give your project any arbitrary name and place it in any folder you like.
+* With the new project open, click on your current build scheme in Xcode and select `Edit Scheme...`.
+* For the `Run` step, go to the `Info` tab and select `Other...` in the dropdown for `Executable`.
+* Browse to your OBS Xcode build directory and select the `OBS.app` application bundle created by the script.
 
 You can now run OBS with Xcode directly attached as debugger. You can debug the visual stack as well as trace crashes and set breakpoints.
 
@@ -252,7 +252,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
         sudo apt install ffmpeg
 
-* Then you can install OBS with the following commands, make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of ubuntu adding a repository automatically apt updates.):
+* Make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of Ubuntu, adding a repository automatically apt updates.) Then you can install OBS with the following commands:
 
         sudo add-apt-repository ppa:obsproject/obs-studio
         sudo apt update
@@ -261,7 +261,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 ***
 
 ### Arch Linux Installation (Unofficial)
-* "Release" version is available on community repository:
+* "Release" version is available on the community repository:
 
         sudo pacman -S obs-studio
 
@@ -282,13 +282,17 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
         sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-* Then you can install OBS with the following command (this pulls all dependencies, including NVENC-enabled ffmpeg):
+* Then you can install OBS with the following command (this pulls all dependencies, including NVENC-enabled FFmpeg):
 
         sudo dnf install obs-studio
 
-* For NVIDIA Hardware accelerated encoding make sure you have CUDA installed (in case of an older card, install xorg-x11-drv-nvidia-340xx-cuda instead):
+* For NVIDIA Hardware accelerated encoding, make sure you have CUDA installed:
 
         sudo dnf install xorg-x11-drv-nvidia-cuda
+
+* If you have an older card, use this command instead:
+
+        sudo dnf install xorg-x11-drv-nvidia-340xx-cuda
 
 ***
 
@@ -369,7 +373,7 @@ See https://nixos.org/wiki/OBS for further instructions
 ### UOS/Deepin Installation (Unofficial)
 UOS/Deepin 20 or newer is required.
 
-* First make sure you have everything up-to-date.
+* First, make sure you have everything up-to-date.
 
         sudo apt-get update
 
@@ -381,7 +385,7 @@ UOS/Deepin 20 or newer is required.
 
         sudo apt-get install obs-studio
 
-* or(but need install [Spark Store](https://www.spark-app.store/download.html))
+* or with [Spark Store](https://www.spark-app.store/download.html):
 
         sudo apt install com.obsproject.studio
 
@@ -391,7 +395,7 @@ UOS/Deepin 20 or newer is required.
 Debian 9.0 or newer is required.  
 **Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**
 
-* First make sure you have everything up-to-date.
+* First, make sure you have everything up-to-date.
 
         sudo apt update
 
@@ -410,12 +414,11 @@ Debian 9.0 or newer is required.
 
         sudo xbps-install -S
 
-* Then just install OBS Studio. Any missing dependencies will be installed automatically.
+* Then install OBS Studio. Any missing dependencies will be installed automatically.
   * If it refuses to install, try running `sudo xbps-install -Su` to update everything first.
 
         sudo xbps-install obs
 
-Though unofficial, the package is actively maintained and functional!
 
 ***
 
@@ -432,10 +435,11 @@ Though unofficial, the package is actively maintained and functional!
 
 Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://developers.facebook.com/docs/graph-api/changelog/breaking-changes/#live-api-4-24). That functionality requires your distro's [mbed TLS](https://tls.mbed.org/) package, which [obs-studio/cmake/Modules/FindMbedTLS.cmake script](https://github.com/obsproject/obs-studio/blob/master/cmake/Modules/FindMbedTLS.cmake) searches for at compile time.
 
-Note: Do not use the github source tar as it does not include all the required source files. Always use the appropriate git tag with the associated submodules.
+Note: Do not use the GitHub source .tar as it does not include all the required source files. Always use the appropriate Git tag with the associated submodules.
 
 ### Red Hat/Fedora-based Build Directions
-* Get RPM fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
+* Get RPM Fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
+
 * Get the required packages:
 
         sudo yum install \
@@ -469,6 +473,7 @@ Note: Do not use the github source tar as it does not include all the required s
                swig
 
   * If `libspeexdsp-devel` is not available, it can be built from source (https://git.xiph.org/?p=speexdsp.git;a=summary)
+
 * Building and installing OBS:
 
   * If building with browser source:
@@ -482,7 +487,7 @@ Note: Do not use the github source tar as it does not include all the required s
         make -j4
         sudo make install
 
-  * If building without browser source
+  * If building without browser source:
 
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
@@ -491,7 +496,7 @@ Note: Do not use the github source tar as it does not include all the required s
         make -j4
         sudo make install
 
-* By default obs installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line
+* By default OBS installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line
 
         /usr/local/lib
 
@@ -562,7 +567,7 @@ Note: Do not use the github source tar as it does not include all the required s
         make -j4
         sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
 
-  * If building without browser source
+  * If building without browser source:
 
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
@@ -575,6 +580,7 @@ Note: Do not use the github source tar as it does not include all the required s
 
 ### openSUSE Build Directions
 * See openSUSE installation instructions (above) for details on adding Packman repository.
+
 * Install build dependencies:
 
         sudo zypper in cmake \
@@ -601,6 +607,7 @@ Note: Do not use the github source tar as it does not include all the required s
                      libxss-dev
 
 * Building and installing OBS:
+
   * If building with browser source:
 
         wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
@@ -612,7 +619,7 @@ Note: Do not use the github source tar as it does not include all the required s
         make -j4
         sudo make install
 
-  * If building without browser source
+  * If building without browser source:
 
         git clone --recursive https://github.com/obsproject/obs-studio.git
         cd obs-studio
@@ -625,7 +632,9 @@ Note: Do not use the github source tar as it does not include all the required s
 
 ### Linux portable mode (all distros)
 * Please note that you need to install the build dependencies for your repo before following this steps. See above.
+
 * You can build in portable mode on Linux, which installs all the files to an isolated directory.
+
   * If building with browser source:
 
          wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
@@ -644,7 +653,7 @@ Note: Do not use the github source tar as it does not include all the required s
         cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
         make -j4 && make install
 
-* After that you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
+* After that, you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
 
 # FreeBSD
 
@@ -658,7 +667,9 @@ Note: Do not use the github source tar as it does not include all the required s
 
 ### FreeBSD Build Directions
 * The easiest way to build OBS Studio from source is to use the [FreeBSD Ports](https://www.freebsd.org/doc/handbook/ports-using.html) and modify the `multimedia/obs-studio` port to suite your needs.
+
 * First you have to set up the ports infrastructure on your system. See the related chapter in the [FreeBSD Handbook](https://www.freebsd.org/doc/handbook/ports-using.html).
+
 * Once you've got your ports tree at `/usr/ports` you may edit the `multimedia/obs-studio` port to your liking. Then, you may build and install the port with:
 
       cd /usr/ports/multimedia/obs-studio
