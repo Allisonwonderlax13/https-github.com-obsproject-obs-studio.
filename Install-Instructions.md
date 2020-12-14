@@ -56,10 +56,10 @@ NOTE: If using the .zip method for either the full or small install and installi
 ### Windows Build Directions:
 * **Requirements for building OBS on Windows**
   * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`.
-    * Pre-built Windows dependencies for VS2017/VS2019 can be found here:
-      * VS2017: https://obsproject.com/downloads/dependencies2017.zip
+    * Pre-built Windows dependencies for VS2019 can be found here:
+      * VS2017: https://obsproject.com/downloads/dependencies2019.zip
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
-    * We currently deploy with 5.10.1, which is no longer available from Qt. A download is provided [here](https://cdn-fastly.obsproject.com/downloads/Qt_5.10.1.7z).
+    * We currently deploy with 5.15.2
   * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
   * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
   * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
