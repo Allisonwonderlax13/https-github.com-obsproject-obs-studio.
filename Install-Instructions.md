@@ -121,12 +121,12 @@ Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 6
 
   * In cmake-gui, press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
 
-  * Open obs-studio.sln from the subdirectory you specified under "where to build the binaries" (e.g. D:/obs/build) in Visual Studio (or click the Open Project button from the cmake-gui in 3.7+).
+  * Open obs-studio.sln from the subdirectory you specified under "where to build the binaries" (e.g. D:/obs/build) in Visual Studio (or click the "Open Project" button from within cmake-gui).
 
   * The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
 * **Integrating clang-format into Visual Studio**
-  * clang-format is required for pull requests, and OBS uses a newer version than the one VS2017 ships with.
+  * clang-format is required for pull requests, and OBS uses a newer version than the one VS2019 ships with.
   * Download and install [LLVM 8.0.0](http://releases.llvm.org/)
   * Run VS, and go to Tools -> Options...
     * Text Editor -> C/C++ -> Code Style -> Formatting -> General
