@@ -59,7 +59,7 @@ NOTE: If using the .zip method for either the full or small install and installi
     * Pre-built Windows dependencies for VS2019 can be found here:
       * VS2019: https://obsproject.com/downloads/dependencies2019.zip
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
-    * We currently deploy with 5.15.2
+    * We currently deploy with Qt 5.15.2
   * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
   * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
   * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
