@@ -78,7 +78,7 @@ NOTE: If using the .zip method for either the full or small install and installi
     * In "where is the source code", enter in the repo directory (example: D:/obs).
     * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
-  * Set the following variables in cmake-gui (alternatively, you can set them as Windows Environment Variables):
+  * Set the following variables. You can set them in cmake-gui, or you can set them as Windows Environment Variables to persist across configurations.
     * **Required**
       * `DepsPath`
 
