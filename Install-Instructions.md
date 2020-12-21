@@ -153,8 +153,6 @@ Pre-built macOS versions can be found here: https://github.com/obsproject/obs-st
 
 Simply run the installer and follow the on-screen directions to install OBS Studio.
 
-Official macOS builds are available again as of 18.0.1.
-
 ***
 
 ### macOS Build Directions
