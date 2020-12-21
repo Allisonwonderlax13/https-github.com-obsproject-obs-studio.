@@ -91,11 +91,15 @@ NOTE: If using the .zip method for either the full or small install and installi
         * `DepsPath32`: `C:\obs-deps\win32\include`
         * `DepsPath64`: `C:\obs-deps\win64\include`
 
-      * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the CMake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch.)
-        * **NOTE**: Make sure to download Qt prebuilt components for your version of MSVC (32 or 64 bit).
-        * Example Qt directories you would use here if you installed Qt to D:\Qt would usually look something like this:
-          * `(32bit) QTDIR32=D:\Qt\5.15.2\msvc2019`
-          * `(64bit) QTDIR64=D:\Qt\5.15.2\msvc2019_64`
+      * `QTDIR`
+
+        `QTDIR` is the path to the Qt install directory.  The OBS UI is built by default, which requires Qt.  Set the CMake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch.
+
+        **NOTE**: Make sure to download Qt prebuilt components for your version of MSVC (32 or 64 bit).
+
+        Example Qt directories you would use if you installed Qt to D:\Qt would usually look something like this:
+          * `QTDIR32=D:\Qt\5.15.2\msvc2019` (32-bit)
+          * `QTDIR64=D:\Qt\5.15.2\msvc2019_64` (64-bit)
 
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)
