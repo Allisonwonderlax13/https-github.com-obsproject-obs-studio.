@@ -82,12 +82,12 @@ NOTE: If using the .zip method for either the full or small install and installi
     * **Required**
       * `DepsPath`
 
-        This is the path to the `include` folder for the dependencies, not including Qt. Set this to the win32 or win64 directory from the Pre-built dependencies package that you downloaded earlier.
+        `DepsPath` is the path to the `include` folder for the dependencies, not including Qt. Set this to the win32 or win64 directory from the Pre-built dependencies package that you downloaded earlier.
         For example, if you extracted the dependencies .zip to C:\obs-deps, `DepsPath` should be one of these:
         * `C:\obs-deps\win32\include`
         * `C:\obs-deps\win64\include`
 
-        If you want to specify both 32 and 64 bit dependencies (for multi-arch building), you can instead set `DepsPath32` and `DepsPath64` like so:
+        If you want to specify both 32 and 64 bit dependencies to avoid changing the variable between builds, you can instead set `DepsPath32` and `DepsPath64` like so:
         * `DepsPath32`: `C:\obs-deps\win32\include`
         * `DepsPath64`: `C:\obs-deps\win64\include`
 
