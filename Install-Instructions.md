@@ -80,16 +80,23 @@ NOTE: If using the .zip method for either the full or small install and installi
 
   * Set the following variables in cmake-gui (alternatively, you can set them as Windows Environment Variables):
     * **Required**
-      * `DepsPath` (Path to the include for all dependencies, not including Qt.).
-        * An example path if you extracted the dependencies .zip to c:\obs-deps would be:
-          * `c:\obs-deps\win32`
-          * `c:\obs-deps\win64`
-        * If you wish to specify both 32 and 64 bit dependencies (for multi-arch building), you can instead set `DepsPath32` and `DepsPath64` to their respective include folders.
+      * `DepsPath`
+
+        This is the path to the `include` folder for the dependencies, not including Qt. Set this to the win32 or win64 directory from the Pre-built dependencies package that you downloaded earlier.
+        For example, if you extracted the dependencies .zip to C:\obs-deps, `DepsPath` should be one of these:
+        * `C:\obs-deps\win32\include`
+        * `C:\obs-deps\win64\include`
+
+        If you want to specify both 32 and 64 bit dependencies (for multi-arch building), you can instead set `DepsPath32` and `DepsPath64` like so:
+        * `DepsPath32`: `C:\obs-deps\win32\include`
+        * `DepsPath64`: `C:\obs-deps\win64\include`
+
       * `QTDIR` (Path to Qt build base directory. GUI is built by default. Set the CMake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch.)
         * **NOTE**: Make sure to download Qt prebuilt components for your version of MSVC (32 or 64 bit).
         * Example Qt directories you would use here if you installed Qt to D:\Qt would usually look something like this:
           * `(32bit) QTDIR32=D:\Qt\5.15.2\msvc2019`
           * `(64bit) QTDIR64=D:\Qt\5.15.2\msvc2019_64`
+
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)
       * `x264Path` (Path to just x264 include directory.)
