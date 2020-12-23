@@ -1,1 +1,0 @@
-https://github.com/obsproject/obs-studio.wiki.git
