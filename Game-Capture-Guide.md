@@ -2,8 +2,8 @@ This guide is specifically for configuring the [Game Capture Source](https://obs
 
 Sections of this guide:
 
-* [How to Set up Game Capture](https://github.com/obsproject/obs-studio/wiki/_new#how-to-set-up-game-capture)
-* [Common Issue Troubleshooting/Resolution](https://github.com/obsproject/obs-studio/wiki/_new#common-resolutions-for-game-capture-issues)
+* [How to Set up Game Capture](https://github.com/obsproject/obs-studio/wiki/#how-to-set-up-game-capture)
+* [Common Issue Troubleshooting/Resolution](https://github.com/obsproject/obs-studio/wiki/#common-resolutions-for-game-capture-issues)
 
 ***
 # How To Set Up Game Capture
