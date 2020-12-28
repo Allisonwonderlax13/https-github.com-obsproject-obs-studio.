@@ -11,7 +11,7 @@
   * [Understanding the Mixer](Understanding-The-Mixer)
   * [Streaming with SRT protocol](Streaming-With-SRT-Protocol)
   * [Troubleshooting Guides](Troubleshooting-Guides)
-    * [Game Capture Troubleshooting](https://github.com/obsproject/obs-studio/wiki/Game-Capture-Guide)
+    * [Game Capture Troubleshooting](https://github.com/obsproject/obs-studio/wiki/_Sidebar/Game-Capture-Guide)
     * [Known Conflicts](Known-Conflicts)
     * [Dropped Frames](Dropped-Frames-and-General-Connection-Issues)
     * [Buffering](Stream-Buffering-Issues)
