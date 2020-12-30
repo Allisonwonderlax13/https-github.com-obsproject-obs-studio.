@@ -49,9 +49,11 @@ To disable this option, open up the properties of your game capture source in OB
 
 #### Windows 10 Game Mode/DVR
 
-Kind of. Even Microsoft has admitted that it's not a holy grail that just makes all games run great. It _can_ make some games run more smoothly, but it does this by prioritizing system resources, like the CPU and GPU, to favor the game. This means that it can negatively impact other processes, like OBS. To ensure that Windows isn't pulling resources away from OBS behind the scenes, you should disable Game Mode. This can be done in the Windows Settings app in the Gaming section. Please note that Windows 10 Game Mode is only available on Windows 10 releases starting from the Anniversary Update (Build 14393).
+Kind of. When Game Mode was released, even Microsoft has admitted that it's not a holy grail that just makes all games run great. It _can_ make some games run more smoothly, but it does this by prioritizing system resources, like the CPU and GPU, to favor the game. This means that it can negatively impact other processes, like OBS. On recent versions of Windows 10, Game Mode can be left on. On Windows 10 versions older than 1809, to ensure that Windows isn't pulling resources away from OBS behind the scenes, you should disable Game Mode. This can be done in the Windows Settings app in the Gaming section. Please note that Windows 10 Game Mode is only available on Windows 10 releases starting from the Anniversary Update (Build 14393).
 
 Game DVR is a related feature that allows Windows to record game footage in the background, pretty much like OBS' Replay Buffer feature. However, since this uses additional system resources, you should disable this Windows feature if you are using OBS. This feature can be disabled in the Windows Settings app in the Gaming section in the "Game DVR" tab. Turn off the "Record in the background while I'm playing a game" option. Please note that Windows 10 Game DVR is only available on Windows 10 releases starting from the Anniversary Update (Build 14393).
+
+For more information about enabling or disabling Game Mode or Game DVR, see our article on [How To Disable Windows 10 Gaming Features](https://github.com/obsproject/obs-studio/wiki/How-to-disable-Windows-10-Gaming-Features).
 
 
 
