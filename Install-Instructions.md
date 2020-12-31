@@ -68,7 +68,9 @@ NOTE: If using the .zip method for either the full or small install and installi
 * **Installation Procedure**
   * Clone the repository and **submodules**:
 
-      git clone --recursive https://github.com/obsproject/obs-studio.git
+    ```
+    git clone --recursive https://github.com/obsproject/obs-studio.git
+    ```
 
   * If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**.
 
@@ -158,7 +160,9 @@ Simply run the installer and follow the on-screen directions to install OBS Stud
 ### macOS Build Directions
 * Clone the repository and **submodules**:
 
-        git clone --recursive https://github.com/obsproject/obs-studio.git
+  ```
+  git clone --recursive https://github.com/obsproject/obs-studio.git
+  ```
 
 * If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**.
 
@@ -188,8 +192,10 @@ Custom build configurations require a set of dependencies to be installed on the
 
 If you need SRT support, either use FFmpeg provided by `obs-deps` or install FFmpeg from a custom tap instead of the default homebrew FFmpeg:
 
-            brew tap homebrew-ffmpeg/ffmpeg
-            brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
+```
+brew tap homebrew-ffmpeg/ffmpeg
+brew install homebrew-ffmpeg/ffmpeg/ffmpeg --with-srt
+```
 
 #### Pre-Built Dependencies
 
@@ -198,16 +204,20 @@ These dependencies are also available via `obs-deps` (https://github.com/obsproj
 * **When using obs-deps**, extract both archives from the macOS release to `/tmp/obsdeps` to assure compatibility with app bundling later (due to the way `dylib`s are identified and linked).
 * Create a build directory inside the `obs-studio` directory, change to it, then configure the project via `cmake`:
 
-                cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DQTDIR="/tmp/obsdeps" -DSWIGDIR="/tmp/obsdeps" -DDepsPath="/tmp/obsdeps" -DDISABLE_PYTHON=ON ..
+   ```
+   cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DQTDIR="/tmp/obsdeps" -DSWIGDIR="/tmp/obsdeps" -DDepsPath="/tmp/obsdeps" -DDISABLE_PYTHON=ON ..
+   ```
 
 * Build OBS by running `make`.
 
 #### Configuring and Building
 
-* If not already handled by the Homebrew installation, install a current macOS platform SDK (only macOS 10.13 or newer is supported): `xcode-select --install`
+* If not already handled by the Homebrew installation, install a current macOS platform SDK (only macOS High Sierra 10.13.4 or later is supported): `xcode-select --install`
 * Create a build directory inside the `obs-studio` directory, change to it, then configure the project via `cmake`:
 
-                cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON ..
+   ```
+   cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON ..
+   ```
 
 * *NOTE*: `cmake` might require additional parameters to find `Qt5` libraries present on this system, this can either be provided via `-DQTDIR="/usr/local/opt/qt"` or setting an environment variable, e.g.: `export QTDIR=/usr/local/opt/qt`
 * Build OBS by running `make`
@@ -220,7 +230,9 @@ These dependencies are also available via `obs-deps` (https://github.com/obsproj
 
 To create an Xcode project for OBS, `cmake` must be run with additional flags. Follow the build instructions above to create a working configuration setup, then add `-G Xcode` to the `cmake` command, e.g.:
 
-                cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON -G Xcode ..
+   ```
+   cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON -G Xcode ..
+   ```
 
 This will create an `obs-studio.xcodeproj` project file in the build directory as well as Xcode project files for all build dependencies. To build a full macOS build, the build target `ALL_BUILD` can be used, but must be configured first:
 
@@ -259,21 +271,25 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 * xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
-        sudo apt install ffmpeg
+   ```
+   sudo apt install ffmpeg
+   ```
 
 * Make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of Ubuntu, adding a repository automatically apt updates.) Then you can install OBS with the following commands:
 
-        sudo add-apt-repository ppa:obsproject/obs-studio
-        sudo apt update
-        sudo apt install obs-studio
+   ```
+   sudo add-apt-repository ppa:obsproject/obs-studio
+   sudo apt update
+   sudo apt install obs-studio
+   ```
 
 ***
 
 ### Arch Linux Installation (Unofficial)
 * "Release" version is available on the community repository:
-
-        sudo pacman -S obs-studio
-
+   ```
+   sudo pacman -S obs-studio
+   ```
 * "Git" version is available on [AUR](https://aur.archlinux.org/packages/obs-studio-git)
 
 ***
@@ -281,28 +297,34 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 ### Manjaro Installation (Unofficial)
 * Graphical: search "obs-studio" on Pamac Manager or Octopi
 * Command-line: install it via pacman with the following command:
-
-        sudo pacman -S obs-studio
-
+   ```
+   sudo pacman -S obs-studio
+   ```
 ***
 
 ### Fedora Installation (Unofficial)
 * OBS Studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
-        sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+   ```
+   sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+   ```
 
 * Then you can install OBS with the following command (this pulls all dependencies, including NVENC-enabled FFmpeg):
 
-        sudo dnf install obs-studio
+   ```
+   sudo dnf install obs-studio
+   ```
 
 * For NVIDIA Hardware accelerated encoding, make sure you have CUDA installed:
 
-        sudo dnf install xorg-x11-drv-nvidia-cuda
+   ```
+   sudo dnf install xorg-x11-drv-nvidia-cuda
+   ```
 
 * If you have an older card, use this command instead:
-
-        sudo dnf install xorg-x11-drv-nvidia-340xx-cuda
-
+   ```
+   sudo dnf install xorg-x11-drv-nvidia-340xx-cuda
+   ```
 ***
 
 ### OpenMandriva Installation (Unofficial)
@@ -312,13 +334,17 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 * Graphical: search and install "obs-studio" on "OpenMandriva Install and Remove Software" (Rpmdrake)
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
 
-        urpmi obs-studio
+   ```
+   urpmi obs-studio
+   ```
 
 #### For OpenMandriva Lx4
 * Graphical: search and install "obs-studio" on "OpenMandriva Software Management" (dnfdragora)
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
 
-        dnf install obs-studio
+   ```
+   dnf install obs-studio
+   ```
 
 ***
 
@@ -328,30 +354,42 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
   do not already have the Packman repository add it as shown below.
   * For openSUSE Tumbleweed:
 
-        sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Tumbleweed packman
+   ```
+   sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Tumbleweed packman
+   ```
 
   * For openSUSE Leap 15.0:
 
-        sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Leap_15.0 packman
+   ```
+   sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Leap_15.0 packman
+   ```
 
   * For openSUSE Leap 42.3:
 
-        sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.3 packman
+   ```
+   sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.3 packman
+   ```
 
 * It is recommended to set the priority for Packman lower so it takes
   precedence over base repositories (skip on Tumbleweed as included in initial command).
 
-        sudo zypper mr --priority 90 packman
+   ```
+   sudo zypper mr --priority 90 packman
+   ```
 
 * The Packman version of FFmpeg should be used for full codec support. To
   ensure any existing FFmpeg packages are switched to Packman versions
   execute the following before installing obs-studio.
 
-        sudo zypper dup --repo packman
+   ```
+   sudo zypper dup --repo packman
+   ```
 
 * Install the obs-studio package.
 
-        sudo zypper in obs-studio
+   ```
+   sudo zypper in obs-studio
+   ```
 
 Links:
 * 1 click install, direct rpm links, and download counts:
@@ -364,7 +402,9 @@ Links:
 ### Gentoo Installation (Unofficial)
 Command-line: can be installed using portage by the following command:
 
-        sudo emerge media-video/obs-studio
+```
+sudo emerge media-video/obs-studio
+```
 
 See https://packages.gentoo.org/packages/media-video/obs-studio for available versions and more information.
 
@@ -373,7 +413,9 @@ See https://packages.gentoo.org/packages/media-video/obs-studio for available ve
 ### NixOS Installation (Unofficial)
 Command-line: can be installed by the following command:
 
-        nix-env -i obs-studio
+```
+nix-env -i obs-studio
+```
 
 See https://nixos.org/wiki/OBS for further instructions
 
@@ -384,19 +426,27 @@ UOS/Deepin 20 or newer is required.
 
 * First, make sure you have everything up-to-date.
 
-        sudo apt-get update
+   ```
+   sudo apt-get update
+   ```
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
 
-        sudo apt-get install ffmpeg
+   ```
+   sudo apt-get install ffmpeg
+   ```
 
 * Finally, install OBS Studio.
 
-        sudo apt-get install obs-studio
+   ```
+   sudo apt-get install obs-studio
+   ```
 
 * or with [Spark Store](https://www.spark-app.store/download.html):
 
-        sudo apt install com.obsproject.studio
+   ```
+   sudo apt install com.obsproject.studio
+   ```
 
 ***
 
@@ -406,28 +456,37 @@ Debian 9.0 or newer is required.
 
 * First, make sure you have everything up-to-date.
 
-        sudo apt update
+   ```
+   sudo apt update
+   ```
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
 
-        sudo apt install ffmpeg
+   ```
+   sudo apt install ffmpeg
+   ```
 
 * Finally, install OBS Studio.
 
-        sudo apt install obs-studio
+   ```
+   sudo apt install obs-studio
+   ```
 
 ***
 
 ### Void Installation (Unofficial)
 * First make sure your repositories are up-to-date. OBS is available on the `multilib` repos if you need the 32-bit build.
 
-        sudo xbps-install -S
+   ```
+   sudo xbps-install -S
+   ```
 
 * Then install OBS Studio. Any missing dependencies will be installed automatically.
   * If it refuses to install, try running `sudo xbps-install -Su` to update everything first.
 
-        sudo xbps-install obs
-
+   ```
+   sudo xbps-install obs
+   ```
 
 ***
 
@@ -436,7 +495,9 @@ Debian 9.0 or newer is required.
 
 * Install OBS Studio.
 
-        sudo snap install obs-studio
+   ```
+   sudo snap install obs-studio
+   ```
 
 ***
 
@@ -450,140 +511,153 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 * Get RPM Fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
 
 * Get the required packages:
-
-        sudo yum install \
-               make \
-               gcc \
-               gcc-c++ \
-               gcc-objc \
-               cmake \
-               git \
-               libX11-devel \
-               mesa-libGL-devel \
-               libv4l-devel \
-               pulseaudio-libs-devel \
-               libspeexdsp-devel \
-               x264-devel \
-               freetype-devel \
-               fontconfig-devel \
-               libXcomposite-devel \
-               libXinerama-devel \
-               qt5-qtbase-devel \
-               qt5-qtx11extras-devel \
-               qt5-qtsvg-devel \
-               libcurl-devel \
-               systemd-devel \
-               ffmpeg \
-               ffmpeg-devel \
-               luajit-devel \
-               python3-devel \
-               mbedtls \
-               mbedtls-devel \
-               swig
-
+   ```
+   sudo yum install \
+          make \
+          gcc \
+          gcc-c++ \
+          gcc-objc \
+          cmake \
+          git \
+          libX11-devel \
+          mesa-libGL-devel \
+          libv4l-devel \
+          pulseaudio-libs-devel \
+          libspeexdsp-devel \
+          x264-devel \
+          freetype-devel \
+          fontconfig-devel \
+          libXcomposite-devel \
+          libXinerama-devel \
+          qt5-qtbase-devel \
+          qt5-qtx11extras-devel \
+          qt5-qtsvg-devel \
+          libcurl-devel \
+          systemd-devel \
+          ffmpeg \
+          ffmpeg-devel \
+          luajit-devel \
+          python3-devel \
+          mbedtls \
+          mbedtls-devel \
+          swig
+   ```
   * If `libspeexdsp-devel` is not available, it can be built from source (https://git.xiph.org/?p=speexdsp.git;a=summary)
 
 * Building and installing OBS:
 
   * If building with browser source:
 
-        wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
-        tar -xjf ./cef_binary_3770_linux64.tar.bz2
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
-        make -j4
-        sudo make install
+      ```
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
+      tar -xjf ./cef_binary_3770_linux64.tar.bz2
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+      make -j4
+      sudo make install
+      ```
 
   * If building without browser source:
 
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 ..
-        make -j4
-        sudo make install
+      ```
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=1 ..
+      make -j4
+      sudo make install
+      ```
 
 * By default OBS installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line
 
-        /usr/local/lib
+   ```
+   /usr/local/lib
+   ```
 
   and then run
 
-        sudo ldconfig
+   ```
+   sudo ldconfig
+   ```
 
 ***
 
 ### Debian-based Build Directions
 * Get the required packages:
 
-        sudo apt-get install \
-                   build-essential \
-                   checkinstall \
-                   cmake \
-                   git \
-                   libmbedtls-dev \
-                   libasound2-dev \
-                   libavcodec-dev \
-                   libavdevice-dev \
-                   libavfilter-dev \
-                   libavformat-dev \
-                   libavutil-dev \
-                   libcurl4-openssl-dev \
-                   libfdk-aac-dev \
-                   libfontconfig-dev \
-                   libfreetype6-dev \
-                   libgl1-mesa-dev \
-                   libjack-jackd2-dev \
-                   libjansson-dev \
-                   libluajit-5.1-dev \
-                   libpulse-dev \
-                   libqt5x11extras5-dev \
-                   libspeexdsp-dev \
-                   libswresample-dev \
-                   libswscale-dev \
-                   libudev-dev \
-                   libv4l-dev \
-                   libvlc-dev \
-                   libx11-dev \
-                   libx264-dev \
-                   libxcb-shm0-dev \
-                   libxcb-xinerama0-dev \
-                   libxcomposite-dev \
-                   libxinerama-dev \
-                   pkg-config \
-                   python3-dev \
-                   qtbase5-dev \
-                   libqt5svg5-dev \
-                   swig \
-                   libxcb-randr0-dev \
-                   libxcb-xfixes0-dev \
-                   libx11-xcb-dev \
-                   libxcb1-dev \
-                   libxss-dev
+   ```
+   sudo apt-get install \
+              build-essential \
+              checkinstall \
+              cmake \
+              git \
+              libmbedtls-dev \
+              libasound2-dev \
+              libavcodec-dev \
+              libavdevice-dev \
+              libavfilter-dev \
+              libavformat-dev \
+              libavutil-dev \
+              libcurl4-openssl-dev \
+              libfdk-aac-dev \
+              libfontconfig-dev \
+              libfreetype6-dev \
+              libgl1-mesa-dev \
+              libjack-jackd2-dev \
+              libjansson-dev \
+              libluajit-5.1-dev \
+              libpulse-dev \
+              libqt5x11extras5-dev \
+              libspeexdsp-dev \
+              libswresample-dev \
+              libswscale-dev \
+              libudev-dev \
+              libv4l-dev \
+              libvlc-dev \
+              libx11-dev \
+              libx264-dev \
+              libxcb-shm0-dev \
+              libxcb-xinerama0-dev \
+              libxcomposite-dev \
+              libxinerama-dev \
+              pkg-config \
+              python3-dev \
+              qtbase5-dev \
+              libqt5svg5-dev \
+              swig \
+              libxcb-randr0-dev \
+              libxcb-xfixes0-dev \
+              libx11-xcb-dev \
+              libxcb1-dev \
+              libxss-dev
+   ```
 
 * Building and installing OBS:
 
   * If building with browser source:
-
-        wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
-        tar -xjf ./cef_binary_3770_linux64.tar.bz2
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
-        make -j4
-        sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+   ```
+   wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
+   tar -xjf ./cef_binary_3770_linux64.tar.bz2
+   git clone --recursive https://github.com/obsproject/obs-studio.git
+   cd obs-studio
+   mkdir build && cd build
+   cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+   make -j4
+   sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+   ```
 
   * If building without browser source:
 
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
-        make -j4
-        sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+   ```
+   git clone --recursive https://github.com/obsproject/obs-studio.git
+   cd obs-studio
+   mkdir build && cd build
+   cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+   make -j4
+   sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
+   ```
 
 ***
 
@@ -592,50 +666,56 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
 * Install build dependencies:
 
-        sudo zypper in cmake \
-                     fontconfig-devel \
-                     freetype2-devel \
-                     gcc \
-                     gcc-c++ \
-                     libcurl-devel \
-                     ffmpeg2-devel \
-                     libjansson-devel \
-                     libpulse-devel \
-                     libspeexdsp-devel \
-                     libqt5-qtbase-devel \
-                     libqt5-qtx11extras-devel \
-                     libudev-devel \
-                     libv4l-devel \
-                     libXcomposite-devel \
-                     libXinerama-devel \
-                     libXrandr-devel \
-                     luajit-devel \
-                     mbedtls \
-                     swig \
-                     python3-devel \
-                     libxss-dev
+   ```
+   sudo zypper in cmake \
+                fontconfig-devel \
+                freetype2-devel \
+                gcc \
+                gcc-c++ \
+                libcurl-devel \
+                ffmpeg2-devel \
+                libjansson-devel \
+                libpulse-devel \
+                libspeexdsp-devel \
+                libqt5-qtbase-devel \
+                libqt5-qtx11extras-devel \
+                libudev-devel \
+                libv4l-devel \
+                libXcomposite-devel \
+                libXinerama-devel \
+                libXrandr-devel \
+                luajit-devel \
+                mbedtls \
+                swig \
+                python3-devel \
+                libxss-dev
+   ```
 
 * Building and installing OBS:
 
   * If building with browser source:
 
-        wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
-        tar -xjf ./cef_binary_3770_linux64.tar.bz2
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
-        make -j4
-        sudo make install
+      ```
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
+      tar -xjf ./cef_binary_3770_linux64.tar.bz2
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+      make -j4
+      sudo make install
+      ```
 
   * If building without browser source:
 
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
-        make -j4
-        sudo make install
+      ```
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+      make -j4
+      sudo make install
+      ```
 
 ***
 
@@ -646,23 +726,27 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
   * If building with browser source:
 
-         wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
-         tar -xjf ./cef_binary_3770_linux64.tar.bz2
-         git clone --recursive https://github.com/obsproject/obs-studio.git
-         cd obs-studio
-         mkdir build && cd build
-         cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
-         make -j4 && make install
+      ```
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_linux64.tar.bz2
+      tar -xjf ./cef_binary_3770_linux64.tar.bz2
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_3770_linux64" ..
+      make -j4 && make install
+      ```
 
   * If building without browser source:
 
-        git clone --recursive https://github.com/obsproject/obs-studio.git
-        cd obs-studio
-        mkdir build && cd build
-        cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
-        make -j4 && make install
+      ```
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+      make -j4 && make install
+      ```
 
-* After that, you should have a portable install in ~/obs-studio-portable. Change to bin/64bit or bin/32bit and then simply run: ./obs
+* After that, you should have a portable install in `~/obs-studio-portable`. Change to `bin/64bit` or `bin/32bit` and then simply run: `./obs`
 
 # FreeBSD
 
@@ -670,7 +754,9 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
 * Install OBS Studio:
 
-        pkg install obs-studio
+   ```
+   pkg install obs-studio
+   ```
 
 ***
 
@@ -681,5 +767,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
 * Once you've got your ports tree at `/usr/ports` you may edit the `multimedia/obs-studio` port to your liking. Then, you may build and install the port with:
 
-      cd /usr/ports/multimedia/obs-studio
-      make install clean
+   ```
+   cd /usr/ports/multimedia/obs-studio
+   make install clean
+   ```
