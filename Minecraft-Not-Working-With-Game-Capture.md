@@ -30,3 +30,5 @@ Minecraft does not default to the high performance GPU. In order to get it worki
 * Right click Java(TM) Platform SE binary and select "Open file location"
 * The folder that opens is the location of your javaw.exe. Scroll up and use that path to find the correct javaw.exe to set to High Performance Graphics.
 ![](https://i.imgur.com/hF0in2S.png)
+
+Once this is completed, restart both OBS and your game (remember that they should have been closed at the beginning of this guide).
