@@ -523,7 +523,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           mesa-libGL-devel \
           libv4l-devel \
           pulseaudio-libs-devel \
-          libspeexdsp-devel \
+          speexdsp-devel \
           x264-devel \
           freetype-devel \
           fontconfig-devel \
@@ -542,7 +542,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           mbedtls-devel \
           swig
    ```
-  * If `libspeexdsp-devel` is not available, it can be built from source (https://git.xiph.org/?p=speexdsp.git;a=summary)
+
+  * If `libspeexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
 
 * Building and installing OBS:
 
