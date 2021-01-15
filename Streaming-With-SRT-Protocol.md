@@ -57,15 +57,15 @@ The other category of users who could potentially be interested belong obviously
 The configuration of OBS itself ranges from easy to medium in terms of difficulty. The server setup is more challenging since it requires system/network admin knowledge.
 
 ## Encoders
-Live software encoders : 
+Live software encoders:
 * **FFmpeg**,
 * **OBS Studio** which relies on the FFmpeg libraries,
 * [vMix](https://www.vmix.com/),
 * srt-live-transmit (which is a demo app from libsrt developpers; needs to be compiled from source)  
-* [Larix Broadcaster](https://softvelum.com/larix/)/Screencaster which can broadcast on Android or iOS.   
-Hardware encoders are also available at various vendors.
+* [Larix Broadcaster](https://softvelum.com/larix/) and Larix Screencaster can broadcast SRT from [Android](https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster) and [iOS](https://apps.apple.com/us/app/larix-broadcaster/id1042474385). [Larix Talkback](https://softvelum.com/larix/talkback/) feature allows receiving SRT audio return feed back to mobile devices.
 * [CameraFi Live](https://play.google.com/store/apps/details?id=com.vaultmicro.camerafi.live) (Android only).
 
+Hardware encoders are also available at various vendors.
   
 ## Servers
 The following servers support SRT ingest:
@@ -73,7 +73,7 @@ The following servers support SRT ingest:
   * Supports SRT ingest and transmuxing/distributing in RTMP/HLS/DASH
 * [Nimble Streamer](https://wmspanel.com/nimble) (free, closed source)
   * While Nimble Streamer is nominally free, it is used along with a non free dashboard which is, in all fairness, quite convenient. But it can also be used without the dashboard and just requires modifying a JSON config file.
-  * Supports SRT ingest and transmuxing/distributing in RTMP/HLS/DASH
+  * Supports SRT ingest and transmuxing/distributing to RTMP, SRT, NDI, MPEG-DASH, HLS, Low Latency HLS and more.
 * [SRT Live Server](https://github.com/Edward-Wu/srt-live-server) (free, open source)
   * This option only *serves* SRT streams and does **not** transmux to HLS/RTMP/DASH. It is much more rudimentary than the other servers at this stage but it is FOSS and works fine with OBS Studio in our tests.
 
@@ -87,8 +87,8 @@ The following players can be used to watch an SRT stream :
 * [VLC](https://www.videolan.org/vlc/index.html) (version 3.0+ on Mac/Linux, version 4.0+ on Windows)
 * ffplay (part of [ffmpeg tools](http://ffmpeg.org/download.html))
 * OBS Studio Media Source (an obvious case-use is to broadcast from any SRT source to an OBS instance).
-* [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) (iPhone only)
-* [Larix Player](https://softvelum.com/player/) for Android, Android TV and iOS.
+* [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) - iPhone and Android.
+* [Larix Player](https://softvelum.com/player/) for Android, iOS, Android TV and tvOS.
 
 ### Receive srt stream within OBS
 This could be useful to two pc setups (although NDI is probably a more common solution).    
