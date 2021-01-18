@@ -47,8 +47,8 @@ A bare text editor is the only thing you need to get started, but prefer the IDE
 
 Two tutorials are proposed in this Wiki:
 
-- Start with the [**Source Shake tutorial**](Scripting-Tutorial-Source-Shake.md) that shows how to animate a source displayed in a scene with a hotkey and customizable properties, in Python and Lua
-- The [**Halftone Filter tutorial**](Scripting-Tutorial-Halftone-Filter.md) is an example of shader-based video filter in Lua
+- Start with the [**Source Shake tutorial**](Scripting-Tutorial-Source-Shake) that shows how to animate a source displayed in a scene with a hotkey and customizable properties, in Python and Lua
+- The [**Halftone Filter tutorial**](Scripting-Tutorial-Halftone-Filter) is an example of shader-based video filter in Lua
 
 Other tutorial resources (feel free to add something):
 
