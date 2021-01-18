@@ -22,6 +22,8 @@
     * [How to disable Windows 10 Gaming Features](How-to-disable-Windows-10-Gaming-Features)
   * [Windows 10 App Audio To Devices](Windows-10-App-Volume-Device-Preferences)
   * [Getting Started with OBS Studio Development](Getting-Started-with-OBS-Studio-Development)
+  * [Getting Started With OBS Scripting](Getting-Started-With-OBS-Scripting)
+    * [Scripting Tutorial: Source Shake](Scripting-Tutorial-Source-Shake)
   * [Post Production Tools you can use](Post-Production-Tools-you-can-use)
 
 # [Install Instructions](install-instructions)
