@@ -1,8 +1,8 @@
-This page proposes a tutorial for Python and Lua scripting. As an educational example, we want to make a script that can "shake a source" when the user clicks on a hotkey. In other words, for a given source already present in OBS and displayed on the current scene, we want to continuously rotate it back and forth according to a given frequency and angular amplitude, such that the source jiggles, when the user presses a key continuously.
+This page proposes a tutorial for Python and Lua scripting. As an educational example, we want to make a script that can "shake a source" when the user hits a hotkey. In other words, for a given source already present in OBS and displayed on the current scene, we want to continuously rotate it back and forth according to a given frequency and angular amplitude, such that the source jiggles, when the user presses a key continuously.
 
 Depending how you came to this page, it is advisable now to take a look at the [OBS scripting documentation](https://obsproject.com/docs/scripting.html) and the [scripting introduction on the Wiki](Getting-Started-With-OBS-Scripting) if not already done.
 
-If you cannot wait and want to see how the Source Shake effect behaves, the complete scripts are available, [source-shake.py](images/scripting/source-shake.py) in Python and [source-shake.lua](images/scripting/source-shake.lua) in Lua.
+If you cannot wait and want to see how the Source Shake effect behaves, the [complete scripts](Scripting-Tutorial-Source-Shake-Listing) are available in Python and Lua.
 
 Let's go for a ride!
 
