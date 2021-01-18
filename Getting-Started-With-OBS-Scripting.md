@@ -6,7 +6,7 @@ Scripts are managed by the user through the _Scripts_ dialog window, displayed v
 
 ![Main scripts window](images/scripting/main-scripts-window.png)
 
-A list of scripts currently added to OBS is displayed on the left hand side (here two scripts distributed with OBS). On the right hand side, if any, the description and editable properties of the script are shown. A script can be added by clicking on <kbd>:heavy_plus_sign:</kbd> and selecting the related Python or Lua file, removed with <kbd>:heavy_minus_sign:</kbd>. Use the <kbd>&#128472;</kbd> button to _Reload Scripts_ and the <kbd>Defaults</kbd> button to reset the values of the editable properties to their default values.
+A list of scripts currently added to OBS is displayed on the left hand side (here two scripts distributed with OBS). On the right hand side, if any, the description and editable properties of the script are shown. A script can be added by clicking on <kbd>+</kbd> and selecting the related Python or Lua file, removed with <kbd>-</kbd>. Use the <kbd>&#128472;</kbd> button to _Reload Scripts_ and the <kbd>Defaults</kbd> button to reset the values of the editable properties to their default values.
 
 For Python scripts, a decent distribution of Python must be installed by the user, and the _Python Install Path_ must be set in the tab _Python Settings_. Please refer to the [OBS scripting documentation](https://obsproject.com/docs/scripting.html) for the supported version of Python (currently Python 3.6). Depending on the Python installation, locating the installation path can be difficult, e.g. on Windows 10 with Python installed from the Microsoft Store, the installation path is located at `[UserFolder]\AppData\Local\Programs\Python\Python36`.
 
