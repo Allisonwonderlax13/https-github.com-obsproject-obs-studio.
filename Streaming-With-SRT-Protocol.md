@@ -19,7 +19,7 @@ _**This feature requires OBS Studio 25.0 or newer.**_
 
 # General Overview
 * Secure Reliable Transport (or SRT in short) is a relatively recent open source streaming protocol, originally developped by Haivision (first demo in 2013) and promoted by the [SRT Alliance](https://www.srtalliance.org/) which includes many big players in the streaming/video/telco industry. It promises:  
-(1) better resilience to network issues (jitter, lost packets, delay, bandwidth fluctuations) with mechanisms for packet recovery (retransmission) and  
+(1) better resilience to network issues (jitter, lost packets, delay, bandwidth fluctuations) with mechanisms for packet recovery (retransmission or ARQ automatic repeat request;  and also FEC forward error correction) + internet bonding and  
 (2) low latency (as low as twice the round-trip between encoder and ingest server, with sub-second latency usually).  
   
 For a video demo, see here:  
