@@ -125,7 +125,9 @@ There are two ways of setting up OBS Studio to connect to a server. The first is
 **Note that while the discussion focuses on SRT protocol, UDP or TCP can also be used instead.**
 
 ## Option 1: Stream SRT using the Streaming output
-_Credit_: Aaron Boxer, Collabora (SRT Alliance) author of the new SRT output. Output rewritten by pkv (pkv@obsproject.com) to solve some bugs.
+_Credit_: Aaron Boxer, Collabora (SRT Alliance) author of the new SRT output. Output rewritten from scratch by pkv (pkv@obsproject.com) to solve some bugs.
+
+Works fine with: Wowza, Nimble server, vlc, ffmpeg, srt live server, Makito X decoder. (those are only the platforms we tested at obsproject; most should work fine.)   
 
 1. Go to `Settings > Stream`
 2. In the `Service` drowdown, select `Custom`.
@@ -152,6 +154,7 @@ A case where it's useful to set the mode to `listener` is when sending a stream 
 ## Option 2: Stream SRT with the Custom FFmpeg Record output
 
 This option is a bit more complicated. It relies on the `Advanced: Custom FFmpeg Recording` output.
+Works fine with: Wowza, Nimble server, vlc, ffmpeg, srt live server (those are only the platforms we tested at obsproject; most should work fine). Doesn't work well with Makito X decoder from Haivision.      
 
 1. Go to `Settings > Output`
 2. In the `Output mode` dropdown, select `Advanced`.
