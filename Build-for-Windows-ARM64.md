@@ -22,6 +22,7 @@
 		```
 		We won't use the linker built-in with MSYS2.
 
+> Sources in this repo are already patched. In another word, if you grab the sources from elsewhere you need to redo the patches.
 
 # Dependencies
 
@@ -29,14 +30,16 @@
 https://download.qt.io/archive/qt/
 Download Qt here
 
+> Only the following folders is needed in the source folder: `gnuwin32`, `qtbase`, `qtsvg` and `qtwinextras`.
+> Use `jom` instead of `nmake`. `nmake` is single-threaded only, and it will take days to compile qt.
+
 ``` batch
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
 
 cd qt\
 
-configure.bat -opensource -platform win32-msvc -xplatform win32-arm64-msvc2017 -nomake examples -nomake tests -release -prefix "C:\qt"
+configure.bat -opensource -platform win32-msvc -xplatform win32-arm64-msvc2017 -prefix "C:\qt"  -confirm-license  -schannel -nomake examples -nomake tests -no-compile-examples -no-dbus -no-freetype -no-harfbuzz -no-icu -no-feature-concurrent -no-feature-itemmodeltester -no-feature-printdialog -no-feature-printer -no-feature-printpreviewdialog -no-feature-printpreviewwidget -no-feature-sql -no-feature-sqlmodel -no-feature-testlib -no-sql-db2 -no-sql-ibase -no-sql-mysql -no-sql-oci -no-sql-odbc -no-sql-psql -no-sql-sqlite2 -no-sql-sqlite -no-sql-tds -DQT_NO_PDF -DQT_NO_PRINTER -mp
 
-REM just use jom, nmake is single-threaded and it will take days to compile qt
 jom -j12
 jom install -j12
 ```
@@ -135,9 +138,9 @@ Use CMake.
 
 |Cache|Value|
 |---:|:---|
-|USE_ENCLIB|mbedtls|
-|USE_OPENSSL_PC|OFF|
-|ENABLE_STDCXX_SYNC|ON|
+|`USE_ENCLIB`|`mbedtls`|
+|`USE_OPENSSL_PC`|`OFF`|
+|`ENABLE_STDCXX_SYNC`|`ON`|
 
 Set mbedTLS library path accordingly.
 CMake may failed to find mbedTLS include path, add the include path in Visual Studio instead.
@@ -723,6 +726,13 @@ DepsARM64
 ```
 </details>
 
+## Prepare CEF
+
+Download CEF at https://cef-builds.spotifycdn.com/index.html#windowsarm64
+
+unzip, create a folder `build` inside.
+Run CMake and point the build directory to the `build` folder created last step, build the wrapper.
+
 
 # Compile OBS
 ## Generate `.sln`
@@ -730,8 +740,11 @@ Use CMake.
 
 |Cache|Value|
 |---:|:---|
-|BUILD_AMD_DECODER|OFF|
-|COMPILE_D3D12_HOOK|ON|
+|`BUILD_AMD_DECODER`|`OFF`|
+|`COMPILE_D3D12_HOOK`|`ON`|
+
+Also make sure `QTDIR`, `DepsPath` and `CEF_ROOT_DIR` are set.
+
 
 ## Prepare for compile  
 1. Unload following project:  
