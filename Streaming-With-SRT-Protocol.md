@@ -120,18 +120,19 @@ Just launch the command-line:
 
 # How to set up OBS Studio
 
-There are two ways of setting up OBS Studio to connect to a server. The first is simpler but gives less options at the moment. The second is a bit more difficult to setup but gives more fine tuning capabilities (and at the moment of this writing is more stable). Note: ffmpeg may not come with SRT support in older distributions of Linux, so check the repository sources to ensure that ffmpeg comes with libsrt support, as there is no easy way of getting OBS Studio to reference a custom build of ffmpeg.
+There are two ways of setting up OBS Studio to connect to a server. The first is simpler but gives less options at the moment. The second is a bit more difficult to setup but gives more fine tuning capabilities (muxer options for instance are available). Note: ffmpeg may not come with SRT support in older distributions of Linux, so check the repository sources to ensure that ffmpeg comes with libsrt support, as there is no easy way of getting OBS Studio to reference a custom build of ffmpeg.
 
 **Note that while the discussion focuses on SRT protocol, UDP or TCP can also be used instead.**
 
 ## Option 1: Stream SRT using the Streaming output
-_Credit_: Aaron Boxer, Collabora (SRT Alliance) author of the new SRT output
+_Credit_: Aaron Boxer, Collabora (SRT Alliance) author of the new SRT output. Output rewritten by pkv (pkv@obsproject.com) to solve some bugs.
 
 1. Go to `Settings > Stream`
 2. In the `Service` drowdown, select `Custom`.
 3. Enter the SRT URL in the form: `srt://IP:port` (OBS Studio will also accept any protocol relying on MPEGTS container and supported by FFmpeg, therefore UDP, TCP, RTP, etc.)
+4. Don't enter anything for the key. It's not used.
 
-![](https://i.imgur.com/ZPT2PXm.png)
+![](https://i.imgur.com/lXsRulF.png)
 
 OBS Studio will accept options in the syntax: `srt://IP:port?option1=value1&option2=value2`. The full list of options is those supported by FFmpeg: [http://ffmpeg.org/ffmpeg-protocols.html#srt](http://ffmpeg.org/ffmpeg-protocols.html#srt).
 
@@ -145,9 +146,8 @@ A case where it's useful to set the mode to `listener` is when sending a stream 
 ![](https://i.imgur.com/PhH7why.png)
 
 **Known issues:**
-* At this time (v25 RC2 and later), a bug with MPEGTS muxer makes the stream not completely compliant with MPEGTS spec. In this case, SRT decoding fails when transmuxing SRT to another protocol/container than the combination SRT/MPEGTS. This is the case for instance with Nimble Streamer and Makito X Decoder. A dump of the MPEGTS stream therefore creates a non-conformant file (this can probably be fixed though by a remuxing with FFmpeg). This bug is under investigation.    
-    * bug fixed in this PR: [PR 2665](https://github.com/obsproject/obs-studio/pull/2665)  
-* However, transmuxing to RTMP works with Wowza, and more generally to UDP or TCP /MPEGTS. In particular, VLC, Wowza, SRT Live Server, and ffplay work well when selecting this simpler option to stream with SRT.
+* With v25, a bug with MPEGTS muxer makes the stream not completely compliant with MPEGTS spec. In this case, SRT decoding fails when transmuxing SRT to another protocol/container than the combination SRT/MPEGTS. This is the case for instance with Nimble Streamer and Makito X Decoder. A dump of the MPEGTS stream therefore creates a non-conformant file (this can probably be fixed though by a remuxing with FFmpeg).        
+    * bug fixed in obs v26 in this PR: [PR 2665](https://github.com/obsproject/obs-studio/pull/2665). Use obs version >= 26.  
 
 ## Option 2: Stream SRT with the Custom FFmpeg Record output
 
@@ -169,13 +169,12 @@ Note that several audio tracks can be selected. They can be identified on the in
 ![](https://i.imgur.com/QwQ8vzR.png)
 
 **Known issues:**
-There can be issues with Makito X Decoder. (under investigation)
+There can be issues with Makito X Decoder. (under investigation) Use Option 1 for Makito X decoder.
 
 **Pros/Cons in comparison with Option 1:**
 
 _Pros:_ 
-* MPEGTS is not malformed and can be dumped into a recording without issues.
-* Works with more servers, clients: Wowza, Nimble Streamer, SRT Live Server, FFmpeg, ffplay, VLC, etc.
+* MPEGTS muxer options can be customized (ex: set pid for video and audio tracks).    
 * Several audio tracks can be streamed (for instance, track 1: main track, track 2: background music, track 3: commentary etc.) while in option 1 only a single track can be selected. OBS Studio supports up to 6 audio tracks.
 
 _Cons:_
