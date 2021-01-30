@@ -721,7 +721,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 ***
 
 ### Linux portable mode (all distros)
-* Please note that you need to install the build dependencies for your repo before following this steps. See above.
+* Please note that you need to install the build dependencies for your distribution before following this steps. See above.
 
 * You can build in portable mode on Linux, which installs all the files to an isolated directory.
 
