@@ -60,6 +60,7 @@ NOTE: If using the .zip method for either the full or small install and installi
       * VS2019: https://obsproject.com/downloads/dependencies2019.zip
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
     * We currently deploy with Qt 5.15.2
+  * CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip))
   * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
   * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
   * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
@@ -102,6 +103,10 @@ NOTE: If using the .zip method for either the full or small install and installi
         Example Qt directories you would use if you installed Qt to D:\Qt would usually look something like this:
           * `QTDIR32=D:\Qt\5.15.2\msvc2019` (32-bit)
           * `QTDIR64=D:\Qt\5.15.2\msvc2019_64` (64-bit)
+
+      * `CEF_ROOT_DIR`
+
+        `CEF_ROOT_DIR` is the path to an extracted CEF Wrapper. We provide a custom prebuilt wrapper to simplify the build process. This custom build includes access to hardware acceleration and additional codecs. **This enables Browser Source and Custom Browser Docks.**
 
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)
