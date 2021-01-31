@@ -108,6 +108,8 @@ NOTE: If using the .zip method for either the full or small install and installi
 
         `CEF_ROOT_DIR` is the path to an extracted CEF Wrapper. We provide a custom prebuilt wrapper to simplify the build process. This custom build includes access to hardware acceleration and additional codecs. **This enables Browser Source and Custom Browser Docks.**
 
+        **Be sure to also enable the CMake flag `BUILD_BROWSER` otherwise this will do nothing**
+
     * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
       * `FFmpegPath` (Path to just FFmpeg include directory.)
       * `x264Path` (Path to just x264 include directory.)
