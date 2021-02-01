@@ -646,6 +646,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
   * If building with browser source:
    ```bash
+   apt install libnssutil3-dev
    wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
    tar -xjf ./cef_binary_4280_linux64.tar.bz2
    git clone --recursive https://github.com/obsproject/obs-studio.git
