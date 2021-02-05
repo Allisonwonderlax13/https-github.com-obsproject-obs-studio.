@@ -25,7 +25,7 @@ Minecraft does not default to the high performance GPU. In order to get it worki
 ***
 
 **If you're using a custom launcher, you might not find javaw.exe in the default location, but instead in a subfolder under the launcher, here is how to locate that:**
-* Launch Minecraft(the game, not just the launcher
+* Launch Minecraft(the game, not just the launcher)
 * Press Ctrl+Shift+ESC(Escape) to open Task Manager
 * Right click Java(TM) Platform SE binary and select "Open file location"
 * The folder that opens is the location of your javaw.exe. Scroll up and use that path to find the correct javaw.exe to set to High Performance Graphics.
