@@ -124,7 +124,7 @@ You can only add one display capture source per display. If you need your displa
 
 ### Game Capture
 
-Game Capture is one of the primary sources that many users will be looking to use. This Source lets you directly capture the game you are playing, so long as it's DirectX or OpenGL. Game Capture is the most efficient way you can add your games to OBS, and should always be tried first. There are only a very small number of games that do not work with Game Capture. If you have issues with it and cannot solve them on your own, stop by the [support chat](https://obsproject.com/chat)!
+Game Capture is one of the primary sources that many users will be looking to use. This Source lets you directly capture the game you are playing, so long as it's DirectX or OpenGL. Game Capture is the most efficient way you can add your games to OBS, and should always be tried first. There are only a very small number of games that do not work with Game Capture. For more detailed information, and common troubleshooting for game capture issues, see the [Game Capture Guide ](https://obsproject.com/wiki/Game-Capture-Guide). If you have issues with it and cannot solve them on your own, stop by the [support chat](https://obsproject.com/chat)!
 
 Once you add your Game Capture Source, you will need to select a few options that suit your current needs. First is the Mode.
 * Capture any fullscreen application
