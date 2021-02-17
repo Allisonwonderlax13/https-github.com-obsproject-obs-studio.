@@ -633,6 +633,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
               pkg-config \
               python3-dev \
               qtbase5-dev \
+              qtbase5-private-dev \
               libqt5svg5-dev \
               swig \
               libxcb-randr0-dev \
