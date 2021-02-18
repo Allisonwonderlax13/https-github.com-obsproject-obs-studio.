@@ -3,7 +3,7 @@ Before we do anything, we should do our best to thoroughly read the installation
 
 The instructions from the plugin developer might say something regarding which versions of OBS is supported. If it hasn't been updated for a long time, there is a decent chance it will no longer work on the latest release.
 
-Before you start, make sure obs is **closed**. If you get messages about files being in use, obs is most likely running. Either just restart (dont start any other software), og end obs64.exe in the task manager.
+Before you start, make sure obs is **closed**. If you get messages about files being in use, obs is most likely running. Either restart the computer (dont start any other software), or end obs64.exe in the task manager.
 
 
 ## Installation types
