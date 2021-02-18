@@ -535,6 +535,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           freetype-devel \
           fontconfig-devel \
           libXcomposite-devel \
+          libwayland-dev \
           libXinerama-devel \
           qt5-qtbase-devel \
           qt5-qtx11extras-devel \
@@ -624,6 +625,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
               libudev-dev \
               libv4l-dev \
               libvlc-dev \
+              libwayland-dev \
               libx11-dev \
               libx264-dev \
               libxcb-shm0-dev \
