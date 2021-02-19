@@ -1,7 +1,7 @@
 ## Intro
 Please do your best to thoroughly read the installation instructions. Not all plugins are identical, and there are going to be some variations depending on the plugin.
 
-Pay close attention to which versions of OBS is supported. If it hasn't been updated for a long time, its possible it will not work on the latest release.
+Pay close attention to which versions of OBS is supported. If it hasn't been updated in a long time, its possible it will not work on the latest release.
 
 Before you start, make sure obs is **closed**. If you get messages about files being in use, obs is most likely running. Either restart the computer (dont start any other software), or end obs64/32.exe in the task manager.
 
