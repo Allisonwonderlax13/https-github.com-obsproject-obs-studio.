@@ -31,6 +31,7 @@ They need to be extracted or copied into the obs-studio folder
 
 **Target**: The root folder of OBS (obs-studio), by default located in:
 > C:\Program Files\obs-studio
+   
 
 Want to check the location of your OBS?
 Right click your OBS shortcut, and chose "open file location".   
