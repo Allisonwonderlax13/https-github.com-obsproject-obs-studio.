@@ -9,13 +9,14 @@ Before you start, make sure obs is **closed**. If you get messages about files b
 ## Installation types
 
 Plugins usually come in two different installation types.
-* Installer / Executable (exe)
+### Installer / Executable (exe):
 
 **Recommended when the option is presented.** Mostly automatic, might require correcting the path to OBS.
 
 Exceptions would be when its a portable OBS, or you dont have admin access on the machine.
+   
 
-* Files (often compressed zip)
+### Files (often compressed zip):
 
 Compressed file (zip or other archive) containing the folders and files needed.
 They need to be extracted or copied into the obs-studio folder
