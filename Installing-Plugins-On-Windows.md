@@ -36,17 +36,15 @@ They need to be extracted or copied into the obs-studio folder
 Want to check the location of your OBS?
 Right click your OBS shortcut, and chose "open file location".   
 
-Keep in mind that it will take you a few levels into the folder structure (in `bin\64bit`(or 32bit)). The location we want is two steps up (the obs-studio location).
+Keep in mind that it will take you a few levels into the folder structure (in `bin\64bit`(or 32bit)). The location you want is two steps up (the obs-studio location).
 
 ![obs-studio folder](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/plugin-guide/obs-studio-folder.png)
-
-Now that we have our source and our target, we can get to copying/extracting the contents into our `obs-studio` folder.
 
 ***
 
 When you open the archive (zip) you should be able to see folders named "obs-plugins" and "data". Sometimes you will also see "bin" or other folder names. Its important to extract/copy all of the folders. If you dont see any folders with those names, you need to enter the next folder, often called "windows" or `<plugin name>`.
 
-At this point we are just playing the matching game. Drag or copy the folders into the `obs-studio` folder which should have matching folder names.
+At this point you are just playing the matching game. Drag or copy the folders into the `obs-studio` folder which should have matching folder names.
 
 
 ![obs-studio folder](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/plugin-guide/drag-me.png)  
