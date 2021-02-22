@@ -30,7 +30,8 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
       * [Void Installation (Unofficial)](#void-installation-unofficial)
       * [snappy (Unofficial)](#snappy-installation-unofficial)
     * [Build from source](#linux-build-directions)
-      * [Red Hat/Fedora-based](#red-hatfedora-based-build-directions)
+      * [Red Hat-Based](#red-hat-based-build-directions)
+      * [Fedora](#fedora-build-directions)
       * [Debian-based](#debian-based-build-directions)
       * [openSUSE](#opensuse-build-directions)
       * [Linux portable mode (all distros)](#linux-portable-mode-all-distros)
@@ -514,7 +515,7 @@ Note: as of May 1, 2019, [Facebook live now mandates the use of RTMPS](https://d
 
 Note: Do not use the GitHub source .tar as it does not include all the required source files. Always use the appropriate Git tag with the associated submodules.
 
-### Red Hat/Fedora-based Build Directions
+### Red Hat-based Build Directions
 * Get RPM Fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
 
 * Get the required packages:
@@ -582,7 +583,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 * By default OBS installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line
 
    ```bash
-   /usr/local/lib
+   
    ```
 
   and then run
@@ -590,6 +591,71 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    ```bash
    sudo ldconfig
    ```
+### Fedora Build Directions
+   ```bash
+   sudo dnf install \
+          make \
+          gcc \
+          gcc-c++ \
+          gcc-objc \
+          cmake \
+          git \
+          libX11-devel \
+          mesa-libGL-devel \
+          libv4l-devel \
+          pulseaudio-libs-devel \
+          speexdsp-devel \
+          x264-devel \
+          freetype-devel \
+          fontconfig-devel \
+          libXcomposite-devel \
+          wayland-devel \
+          libXinerama-devel \
+          qt5-qtbase-devel \
+          qt5-qtbase-private-devel \
+          qt5-qtx11extras-devel \
+          qt5-qtsvg-devel \
+          qt5-qtwayland-devel \
+          libcurl-devel \
+          systemd-devel \
+          ffmpeg \
+          ffmpeg-devel \
+          luajit-devel \
+          python3-devel \
+          mbedtls \
+          mbedtls-devel \
+          swig
+   ```
+
+* Building and installing OBS:
+
+  * If building with browser source:
+
+      ```bash
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
+      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      make -j$(nprocs)
+      sudo make install
+      sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
+      sudo ldconfig
+      ```
+
+  * If building without browser source:
+
+      ```bash
+      git clone --recursive https://github.com/obsproject/obs-studio.git
+      cd obs-studio
+      mkdir build && cd build
+      cmake -DUNIX_STRUCTURE=1 ..
+      make -j$(nprocs)
+      sudo make install
+      sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
+      sudo ldconfig
+      ```
 
 ***
 
