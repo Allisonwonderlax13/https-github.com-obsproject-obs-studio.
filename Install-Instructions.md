@@ -111,10 +111,14 @@ NOTE: If using the .zip method for either the full or small install and installi
 
         **Be sure to also enable the CMake flag `BUILD_BROWSER` otherwise this will do nothing**
 
-    * **Optional** (If these share the same directory as DepsPath, they do not need to be individually specified.)
-      * `FFmpegPath` (Path to just FFmpeg include directory.)
-      * `x264Path` (Path to just x264 include directory.)
-      * `curlPath` (Path to just cURL include directory.)
+    * **Optional**
+      * `VIRTUALCAM_GUID` - Set to any random GUID value.  This must be set to build the Virtual Camera features.
+
+      (If these components below share the same directory as DepsPath, they do not need to be individually specified.)
+      * `FFmpegPath` - Path to just FFmpeg include directory.
+      * `x264Path` - Path to just x264 include directory.
+      * `curlPath` - Path to just cURL include directory.
+
 
     * **INFORMATIONAL NOTE**: Search paths and search order for base dependency library/binary files, relative to their include directories:
 
