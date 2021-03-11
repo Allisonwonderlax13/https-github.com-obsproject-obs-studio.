@@ -279,6 +279,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 ## Linux Install Directions
 
 ### Ubuntu/Mint Installation
+
 **Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**  
 * xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
@@ -286,6 +287,12 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
    ```bash
    sudo apt install ffmpeg
    ```
+
+* If you want virtual camera support you need v4l2loopback-dkms installed. You can install it with the following command : 
+
+```bash
+sudo apt install v4l2loopback-dkms
+```
 
 * Make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of Ubuntu, adding a repository automatically apt updates.) Then you can install OBS with the following commands:
 
