@@ -4,7 +4,7 @@ A list of programs this is currently compatible with. Please note that this list
 ## Step 1
 The absolute first troubleshooting step to take is to quit the app completly that you are trying to use the virtual camera in, then start the virtual camera in OBS, then see if it works in the app. 
 
-_Note:_ These have all been tested and confirmed to work on MacOS Big Sur running OBS 26.1.2
+_Note:_ These have all been tested and confirmed to work on macOS Big Sur running OBS 26.1.2
 
 # Table of Contents 
 1. [Apps that just work](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#apps-that-just-work)
