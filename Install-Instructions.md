@@ -150,6 +150,17 @@ Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 6
 
   * The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
+  * If you want to use the Virtual Camera from this build, you will need to run its install script.  If you already have a standard OBS Studio installation, you will need to uninstall its Virtual Camera first.
+
+    To uninstall an OBS Virtual Camera:
+    1. Close any applications that were using the OBS Virtual Camera.
+    2. In the obs-studio installation directory, run `data\obs-plugins\win-dshow\virtualcam-uninstall.bat` as administrator.
+    
+    To install an OBS Virtual Camera:
+    1. In the obs-studio installation directory (for Visual Studio builds, this is '[build dir]/rundir/[build type]'), run `data\obs-plugins\win-dshow\virtualcam-install.bat` as administrator.
+
+    Don't forget to uninstall your build's virtual camera before cleaning/deleting your build files.
+
 * **Integrating clang-format into Visual Studio**
   * clang-format is required for pull requests, and OBS uses a newer version than the one VS2019 ships with.
   * Download and install [LLVM 8.0.0](http://releases.llvm.org/)
