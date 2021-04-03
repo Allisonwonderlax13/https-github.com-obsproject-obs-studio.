@@ -730,7 +730,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
               libxcb-xfixes0-dev \
               libx11-xcb-dev \
               libxcb1-dev \
-              libxss-dev
+              libxss-dev \
+              libpipewire-0.3-dev
    ```
 
 * Building and installing OBS:
