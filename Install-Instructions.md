@@ -731,7 +731,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
               libx11-xcb-dev \
               libxcb1-dev \
               libxss-dev \
-              libpipewire-0.3-dev
+              libpipewire-0.3-dev \
+              qtwayland5
    ```
 
 * Building and installing OBS:
