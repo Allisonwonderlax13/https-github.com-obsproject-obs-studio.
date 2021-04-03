@@ -555,7 +555,6 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           libgio-devel \
           libglvnd-devel \
           libv4l-devel \
-          libwayland-devel \
           libX11-devel \
           libXcomposite-devel \
           libXinerama-devel \
@@ -567,10 +566,12 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           python3-devel \
           qt5-qtbase-devel \
           qt5-qtsvg-devel \
+          qt5-qtwayland-devel \
           qt5-qtx11extras-devel \
           speexdsp-devel \
           swig \
           systemd-devel \
+          wayland-devel \
           x264-devel
    ```
 
