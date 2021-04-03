@@ -701,7 +701,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
            libfdk-aac-dev \
            libfontconfig-dev \
            libfreetype6-dev \
-           libgl1-mesa-dev \
+           libglvnd-dev \
            libjack-jackd2-dev \
            libjansson-dev \
            libluajit-5.1-dev \
