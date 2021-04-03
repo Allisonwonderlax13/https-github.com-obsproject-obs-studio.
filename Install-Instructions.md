@@ -551,8 +551,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           gcc-c++ \
           gcc-objc \
           git \
+          glib2-devel \
           libcurl-devel \
-          libgio-devel \
           libglvnd-devel \
           libv4l-devel \
           libX11-devel \
@@ -617,37 +617,36 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 ### Fedora Build Directions
    ```bash
    sudo dnf install \
-          make \
+          cmake \
+          ffmpeg-devel \
+          fontconfig-devel \
+          freetype-devel \
           gcc \
           gcc-c++ \
           gcc-objc \
-          cmake \
           git \
-          libX11-devel \
-          mesa-libGL-devel \
+          glib2-devel \
+          libcurl-devel \
+          libglvnd-devel \
           libv4l-devel \
-          pulseaudio-libs-devel \
-          speexdsp-devel \
-          x264-devel \
-          freetype-devel \
-          fontconfig-devel \
+          libX11-devel \
           libXcomposite-devel \
-          wayland-devel \
           libXinerama-devel \
+          luajit-devel \
+          make \
+          mbedtls-devel \
+          pipewire-devel \
+          pulseaudio-libs-devel \
+          python3-devel \
           qt5-qtbase-devel \
-          qt5-qtbase-private-devel \
-          qt5-qtx11extras-devel \
           qt5-qtsvg-devel \
           qt5-qtwayland-devel \
-          libcurl-devel \
+          qt5-qtx11extras-devel \
+          speexdsp-devel \
+          swig \
           systemd-devel \
-          ffmpeg \
-          ffmpeg-devel \
-          luajit-devel \
-          python3-devel \
-          mbedtls \
-          mbedtls-devel \
-          swig
+          wayland-devel \
+          x264-devel
    ```
 
 * Building and installing OBS:
