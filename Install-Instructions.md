@@ -543,38 +543,38 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 * Get the required packages:
    ```bash
    sudo yum install \
-          make \
+          cmake \
+          ffmpeg-devel \
+          fontconfig-devel \
+          freetype-devel \
           gcc \
           gcc-c++ \
           gcc-objc \
-          cmake \
           git \
-          libX11-devel \
-          mesa-libGL-devel \
-          libv4l-devel \
-          pulseaudio-libs-devel \
-          speexdsp-devel \
-          x264-devel \
-          freetype-devel \
-          fontconfig-devel \
-          libXcomposite-devel \
-          libwayland-dev \
-          libXinerama-devel \
-          qt5-qtbase-devel \
-          qt5-qtx11extras-devel \
-          qt5-qtsvg-devel \
           libcurl-devel \
-          systemd-devel \
-          ffmpeg \
-          ffmpeg-devel \
+          libgio-devel \
+          libglvnd-devel \
+          libv4l-devel \
+          libwayland-devel \
+          libX11-devel \
+          libXcomposite-devel \
+          libXinerama-devel \
           luajit-devel \
-          python3-devel \
-          mbedtls \
+          make \
           mbedtls-devel \
-          swig
+          pipewire-devel \
+          pulseaudio-libs-devel \
+          python3-devel \
+          qt5-qtbase-devel \
+          qt5-qtsvg-devel \
+          qt5-qtx11extras-devel \
+          speexdsp-devel \
+          swig \
+          systemd-devel \
+          x264-devel
    ```
 
-  * If `libspeexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
+  * If `speexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
 
 * Building and installing OBS:
 
