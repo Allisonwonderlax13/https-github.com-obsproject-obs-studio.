@@ -10,6 +10,8 @@ In the mask video, black pixels tell OBS where to show pixels from the current s
 
 ![2021-04-05_00-47-14](https://user-images.githubusercontent.com/1812130/113523577-8ac2d200-95a8-11eb-8b72-9807cb0f861b.png)
 
+*Left: Matte Video | Right: Result*
+
 Track Mattes for a Stinger Transition can be provided in three ways:
 
 - **In two separate video files**: the first file being the stinger video and the second file being the track matte video.
