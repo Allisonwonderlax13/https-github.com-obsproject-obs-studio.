@@ -385,34 +385,21 @@ sudo apt install v4l2loopback-dkms
   * For openSUSE Tumbleweed:
 
    ```bash
-   sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Tumbleweed packman
+   sudo zypper ar -cfp 90 http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
    ```
 
-  * For openSUSE Leap 15.0:
+  * For openSUSE Leap 15.2 (If you're using a derivative of Leap, replace $releasever by your leap release number) :
 
    ```bash
-   sudo zypper ar --refresh --priority 90 http://packman.inode.at/suse/openSUSE_Leap_15.0 packman
-   ```
-
-  * For openSUSE Leap 42.3:
-
-   ```bash
-   sudo zypper ar --refresh http://packman.inode.at/suse/openSUSE_Leap_42.3 packman
-   ```
-
-* It is recommended to set the priority for Packman lower so it takes
-  precedence over base repositories (skip on Tumbleweed as included in initial command).
-
-   ```bash
-   sudo zypper mr --priority 90 packman
+   sudo zypper ar -cfp 90 'https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/' packman
    ```
 
 * The Packman version of FFmpeg should be used for full codec support. To
-  ensure any existing FFmpeg packages are switched to Packman versions
+  ensure any existing codec packages are switched to Packman versions
   execute the following before installing obs-studio.
 
    ```bash
-   sudo zypper dup --repo packman
+   sudo zypper dup --from packman --allow-vendor-change
    ```
 
 * Install the obs-studio package.
