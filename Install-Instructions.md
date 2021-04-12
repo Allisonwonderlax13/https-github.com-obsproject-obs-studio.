@@ -639,6 +639,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           pulseaudio-libs-devel \
           python3-devel \
           qt5-qtbase-devel \
+          qt5-qtbase-private-devel \
           qt5-qtsvg-devel \
           qt5-qtwayland-devel \
           qt5-qtx11extras-devel \
