@@ -40,6 +40,7 @@ These resources can be helpful (feel free to add something):
 - Example scripts delivered with OBS in `[InstallationFolder]/data/obs-plugins/frontend-tools/scripts`
 - [An extensive OBS Python cheat sheet by upgradeQ](https://github.com/upgradeQ/OBS-Studio-Python-Scripting-Cheatsheet-obspython-Examples-of-API) (thanks to upgradeQ for this huge collection of code snippets)
 - The forum page [Tips and tricks for Lua scripts](https://obsproject.com/forum/threads/tips-and-tricks-for-lua-scripts.132256)
+- [A OBS Lua Cheat Sheet by MoreBackgroundsPlease](https://github.com/Chriscodinglife/get-started-with-lua) (Heavily inspired by upgradeQ's cheatsheet)
 
 ## Getting started
 
@@ -52,7 +53,7 @@ Two tutorials are proposed in this Wiki:
 
 Other tutorial resources (feel free to add something):
 
-- [Custom user interface tutorial](https://medium.com/@morebackgroundsplease/how-to-a-create-simple-custom-user-interface-inside-obs-studio-with-a-lua-script-ef0ff76cfa74) by More Backgrounds Please in Lua
+- [Part 1: Custom user interface tutorial](https://medium.com/@morebackgroundsplease/how-to-a-create-simple-custom-user-interface-inside-obs-studio-with-a-lua-script-ef0ff76cfa74) by More Backgrounds Please in Lua and [Part 2: Custom user interface, Adding sources and scenes](https://morebackgroundsplease.medium.com/use-a-lua-script-to-import-your-twitch-streaming-overlay-designs-into-obs-studio-b8f688aeb9e8) by More Backgrounds Please in Lua
 - [Bouncing background logo tutorial](https://jbscript.dev/my-first-lua-and-obs-script/) by Jonny Buchanan in Lua
 - [Current date display tutorial](https://dev.to/hectorleiva/start-to-write-plugins-for-obs-with-lua-1172) by Hector Leiva in Lua
 - Tutorial by upgradeQ in Lua, [part 1](https://translate.google.com/translate?sl=ru&tl=en&u=https%3A%2F%2Fhabr.com%2Fru%2Fpost%2F520684%2F) (global script functions, timers, hotkeys) and [part 2](https://translate.google.com/translate?sl=ru&tl=en&u=https%3A%2F%2Fhabr.com%2Fru%2Fpost%2F522278%2F) (setting filter parameters, events)
