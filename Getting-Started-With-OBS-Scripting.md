@@ -53,7 +53,7 @@ Two tutorials are proposed in this Wiki:
 
 Other tutorial resources (feel free to add something):
 
-- [Part 1: Custom user interface tutorial](https://medium.com/@morebackgroundsplease/how-to-a-create-simple-custom-user-interface-inside-obs-studio-with-a-lua-script-ef0ff76cfa74) by More Backgrounds Please in Lua and [Part 2: Custom user interface, Adding sources and scenes](https://morebackgroundsplease.medium.com/use-a-lua-script-to-import-your-twitch-streaming-overlay-designs-into-obs-studio-b8f688aeb9e8) by More Backgrounds Please in Lua
+- [Part 1: Custom user interface tutorial](https://medium.com/@morebackgroundsplease/how-to-a-create-simple-custom-user-interface-inside-obs-studio-with-a-lua-script-ef0ff76cfa74) and [Part 2: Custom user interface, Adding sources and scenes](https://morebackgroundsplease.medium.com/use-a-lua-script-to-import-your-twitch-streaming-overlay-designs-into-obs-studio-b8f688aeb9e8) by More Backgrounds Please in Lua
 - [Bouncing background logo tutorial](https://jbscript.dev/my-first-lua-and-obs-script/) by Jonny Buchanan in Lua
 - [Current date display tutorial](https://dev.to/hectorleiva/start-to-write-plugins-for-obs-with-lua-1172) by Hector Leiva in Lua
 - Tutorial by upgradeQ in Lua, [part 1](https://translate.google.com/translate?sl=ru&tl=en&u=https%3A%2F%2Fhabr.com%2Fru%2Fpost%2F520684%2F) (global script functions, timers, hotkeys) and [part 2](https://translate.google.com/translate?sl=ru&tl=en&u=https%3A%2F%2Fhabr.com%2Fru%2Fpost%2F522278%2F) (setting filter parameters, events)
