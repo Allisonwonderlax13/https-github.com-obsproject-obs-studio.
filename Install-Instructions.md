@@ -733,7 +733,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    git clone --recursive https://github.com/obsproject/obs-studio.git
    cd obs-studio
    mkdir build && cd build
-   # If you are on a modern debian platform (Ubuntu 2.10, Debian Sid) you can ENABLE_PIPEWIRE for wayland capture.
+   # Note Ubuntu 20.04/Debian 10 must set ENABLE_PIPEWIRE=OFF and do not support wayland capture.
+   # Modern platforms can use the default/enable pipewire for wayland capture support.
    cmake -DUNIX_STRUCTURE=1 -DENABLE_PIPEWIRE=OFF -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
    make -j4
    sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
