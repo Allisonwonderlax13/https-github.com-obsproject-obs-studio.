@@ -43,8 +43,4 @@ For other custom launchers see the info at the bottom of the guide for instructi
 ![](https://i.imgur.com/hF0in2S.png)
 
 Once this is completed, restart both OBS and your game (remember that they should have been closed at the beginning of this guide).
-***
 
-***
-
-***
