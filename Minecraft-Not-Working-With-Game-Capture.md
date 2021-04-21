@@ -3,7 +3,7 @@ Minecraft does not default to the high performance GPU. In order to get it worki
 **This is mainly for laptops and all-in-one systems.**
 A fist troubleshooting step is to make sure that the Game Capture source "Mode" is set to "Capture specific window", and select javaw/minecraft in the "Window" drop down
 
-![](https://i.imgur.com/wcjsYDa.png)
+![](https://i.imgur.com/Sbsrdmy.png)
 * Close OBS and Minecraft
 
 * Open the Windows 10 Settings App (Start button → Cogwheel icon)
