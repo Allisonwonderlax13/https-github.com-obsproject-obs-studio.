@@ -60,7 +60,7 @@ To get the Mac virtual camera to work on Discord:
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
 ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (Renderer).app"``` 
 
-_If step four doesn't allow the virtual camera to work on Discord after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (GPU) .app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (plugin).app"```_
+_If step four doesn't allow the virtual camera to work on Discord after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (GPU).app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (plugin).app"```_
 
 ### Microsoft Teams
 To get the Mac virtual camera to work on Microsoft Teams:
@@ -71,7 +71,7 @@ To get the Mac virtual camera to work on Microsoft Teams:
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
 ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (Renderer).app"```
 
-_If step four doesn't allow the virtual camera to work on Microsoft Teams after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (GPU) .app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (plugin).app"```_
+_If step four doesn't allow the virtual camera to work on Microsoft Teams after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (GPU).app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (plugin).app"```_
 
 ### Skype
 To get the Mac virtual camera to work on Skype:
@@ -113,7 +113,7 @@ If that does not work you can try the following, test one at a time
 ## SIP Workaround 
 ### ***WARNING*** 
 
-Only do this if you understand the possible consequenses that this can have, please read more about it [here](https://eclecticlight.co/2017/04/28/sierras-system-integrity-protection-sip-beyond-root/) before making any changes.
+Only do this if you understand the possible consequences that this can have, please read more about it [here](https://eclecticlight.co/2017/04/28/sierras-system-integrity-protection-sip-beyond-root/) before making any changes.
 
 One option to allow macOS to allow DAL plugins in system apps / codesigned apps is to disable the system integrity protections (SIP) that cause these plugins to fail to load.
 
