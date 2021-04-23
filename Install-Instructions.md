@@ -618,6 +618,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           libv4l-devel \
           libX11-devel \
           libXcomposite-devel \
+          libXdamage \
           libXinerama-devel \
           luajit-devel \
           make \
