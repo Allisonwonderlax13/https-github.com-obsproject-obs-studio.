@@ -9,6 +9,7 @@ From the main OBS window, click the "+" icon below the scenes list. Enter a name
 With your new scene selected in the scenes list, click the "+" icon under the sources list and then click "Image" in the drop-down to create a new image source. Select "Create New" in the dialogue box and give the source a name. Leave the box next to "Make source visible" checked and click ok.
 
 ![](https://i.imgur.com/Azqtf69.png)
+
 Click "Browse" and then select the image you want to use. You can use both static image files such as png or jpg, as well as animated gifs. Once you've selected your image, click ok.
 
 ![](https://i.imgur.com/Yh7tcpM.png)
@@ -24,6 +25,7 @@ Repeat steps two and three to add another image source and select an image conta
 Make sure the game you want to capture is running. Again, click the "+" icon below the sources list, but now click "Game Capture" instead. In the first dialogue box, give the new source a name such as the name of the game you want to capture.
 
 ![](https://i.imgur.com/5Zcn12x.png)
+
 In the properties window, select "Capture specific window" from the mode selection. Then next to "Window," select the game you want to capture (the game must be running). The remaining options can be left as default. Click ok.
 You can adjust the size and position of the game capture in the same way as the images.
 
