@@ -649,7 +649,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
       cd obs-studio
       mkdir build && cd build
       cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
-      make -j$(nprocs)
+      make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
       sudo ldconfig
@@ -662,7 +662,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
       cd obs-studio
       mkdir build && cd build
       cmake -DUNIX_STRUCTURE=1 ..
-      make -j$(nprocs)
+      make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
       sudo ldconfig
