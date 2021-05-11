@@ -43,6 +43,7 @@
       * [Manjaro](install-instructions#manjaro-installation-unofficial)
       * [Fedora](install-instructions#fedora-installation-unofficial)
       * [OpenMandriva Installation](install-instructions#openmandriva-installation-unofficial)
+      * [Solus](install-instructions#solus-installation-unofficial)
       * [openSUSE](install-instructions#opensuse-installation-unofficial)
       * [Gentoo](install-instructions#gentoo-installation-unofficial)
       * [NixOS](install-instructions#nixos-installation-unofficial)
