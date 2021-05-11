@@ -385,6 +385,7 @@ sudo apt install v4l2loopback-dkms
    ```bash
    eopkg install obs-studio
     ```
+***
 
 ### openSUSE Installation (Unofficial)
 * The Packman repository contains the obs-studio package since it requires
