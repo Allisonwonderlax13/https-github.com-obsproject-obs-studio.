@@ -22,6 +22,7 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
       * [Manjaro (Unofficial)](#manjaro-installation-unofficial)
       * [Fedora (Unofficial)](#fedora-installation-unofficial)
       * [OpenMandriva Installation (Unofficial)](#openmandriva-installation-unofficial)
+      * [Solus Installation (Unofficial)](#solus-installation-unofficial)
       * [openSUSE (Unofficial)](#opensuse-installation-unofficial)
       * [Gentoo (Unofficial)](#gentoo-installation-unofficial)
       * [NixOS (Unofficial)](#nixos-installation-unofficial)
@@ -377,6 +378,13 @@ sudo apt install v4l2loopback-dkms
    ```
 
 ***
+
+### Solus Installation (Unofficial)
+* Graphical: search `obs-studio` in Software Center
+* Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
+   ```bash
+   eopkg install obs-studio
+    ```
 
 ### openSUSE Installation (Unofficial)
 * The Packman repository contains the obs-studio package since it requires
