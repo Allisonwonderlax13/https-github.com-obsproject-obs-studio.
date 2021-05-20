@@ -4,7 +4,7 @@
 - A Unix environment, either MSYS2, WSL or a real Linux with `mingw64-binutils` installed.  
 - Perl
 - Ruby
-- CMake
+- CMake  
     I used CMake GUI. A window to choose the generator and the platform to use will appear before the configure begins.
     Choose `Visual Studio 16 2019` as the generator, and ARM64 as the platform.
     This applies to everything using CMake in this guide.
@@ -244,11 +244,11 @@ https://medium.com/@chuy.max/compile-libcurl-on-windows-with-visual-studio-2017-
 
 
 ## Compile Freetype  
-open `builds\windows\vc2010\freetype.sln`
-new solution platform ARM64, Copy settings from x64
-Switch to Release Static solution configuration
-Right click `freetype` **project**, then click properties
-Click Librarian on the left, change Target Machine to MachineARM64
+open `builds\windows\vc2010\freetype.sln`  
+new solution platform ARM64, Copy settings from x64  
+Switch to Release Static solution configuration  
+Right click `freetype` **project**, then click properties  
+Click Librarian on the left, change Target Machine to MachineARM64  
 
 ## Compile Detours
 https://github.com/Microsoft/Detours
@@ -275,6 +275,7 @@ Run CMake and point the build directory to the `build` folder created last step,
 Gather the binaries in `bin` folder and headers in `include` folder.   
 
 <details> <summary>It should be look like this:</summary>
+
 ```
 DepsARM64
 │   tree.txt
@@ -924,6 +925,7 @@ DepsARM64
     │   swig.exe
     |   ...
 ```
+
 </details>
 
 # Compile OBS
