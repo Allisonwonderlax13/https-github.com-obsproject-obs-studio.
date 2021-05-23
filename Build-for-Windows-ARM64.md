@@ -1,13 +1,28 @@
-# Prereq
+# Current Limitition
+1. CEF (current version 88) hardware acceleration does not work.
+Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware Acceleration" to use software rendering.
+2. RealSense is not included. I have little confidence that something intel will work on ARM platform.
+3. Virtual Camera is not included.
+4. Video Source is not available, yet. 
+5. `Speex` audio codec is not included, yet.
+6. There is no installer available, yet. 
+
+Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases
+
+# Prerequisites
+- ARM64 fork of `obs-studio`: https://github.com/tommyvct/obs-studio/
 - VS2019 with arm64 C++ toolchain, ATL, and Spectre mitigation (optional).
-- MSYS2 with `make`, `diffutils`, and `yasm` installed.
-- A Unix environment, either MSYS2, WSL or a real Linux with `mingw64-binutils` installed.  
-- Perl
-- Ruby
 - CMake  
     I used CMake GUI. A window to choose the generator and the platform to use will appear before the configure begins.
     Choose `Visual Studio 16 2019` as the generator, and ARM64 as the platform.
     This applies to everything using CMake in this guide.
+
+The following prerequisites are for building dependencies:
+
+- MSYS2 with `make`, `diffutils`, and `yasm` installed.
+- A Unix environment, either MSYS2, WSL or a real Linux with `mingw64-binutils` installed.  
+- Perl
+- Ruby
 - The [patch](https://github.com/RytoEX/obs-deps/tree/build-windows-deps)
 - Cross MSYS2 bash
 	1. Edit c:/msys64/msys2_shell.cmd and remove `rem` from the line `rem MSYS2_PATH_TYPE=inherit`  
@@ -23,6 +38,8 @@
 		We won't use the linker built-in with MSYS2.
 
 # Dependencies
+
+Prebuilt dependencies can be downloaded here: https://github.com/tommyvct/obs-deps/releases
 
 ## Compile Qt
 https://download.qt.io/archive/qt/
@@ -937,25 +954,20 @@ Use CMake.
 |`BUILD_AMD_DECODER`|`OFF`|
 |`COMPILE_D3D12_HOOK`|`ON`|
 |`PYTHON_LIB`|`DepsARM64/bin/python39.lib`|
+|`ENABLE_SCRIPTING`|`ON`|
+|`BUILD_BROWSER`|`ON`|
+|`COMPILE_PYTHON`|`ON`|
+|`DISABLE_QSV11`|`ON`|
+
 
 Also make sure `QTDIR`, `DepsPath` and `CEF_ROOT_DIR` are set.
 
 Note that CPython have support for Windows ARM64 only since version 3.9, while the Intel version of OBS Studio is still using version 3.6.
 
-
-## Prepare for compile  
-1. Unload following project:  
-	- `core/libobs-opengl`
-	- `deps/glad`
-	- `plugins/obs-qsv11`
-2. Fix `WinSock2.h` problem
-	Right-click on `plugins/obs-outputs` project, then select Properties. In Configuration Properties > C/C++ > Preprocessor, add `WIN32_LEAN_AND_MEAN` in Preprocessor Defenitions.
-3. Fix `std::min()` and `std::max()` redefinition
-    Select `frontend/decklink-ouput-ui`, `frontend/frontend-tools` and `frontend/obs`and right-click, then select Properties. In Configuration Properties > C/C++ > Preprocessor, add `NOMINMAX` in Preprocessor Defenitions.
-
 ## Compile
-Select `Release` configuration, and build. 
+Select `Release` or `RelWithDebInfo` configuration, and build. 
+> `Debug` configuration will cause link-time symbol errors with CEF (current version 88).
 
 ## After compile
-1. Rename `zlib.dll` to `zlibwapi.dll`
-2. Copy `avresample-4.dll` to the `bin/64bit` folder.
+1. Copy all DLL files in `DepsARM64/bin` to the `bin/64bit` folder.
+2. Copy `Qt5Core.dll`, `Qt5Gui.dll`, `Qt5Network.dll`, `Qt5Svg.dll`, `Qt5Widgets.dll`, `Qt5Xml.dll`, directory `iconengines`, `imageformats`, `platforms`, `styles` to the `bin/64bit` folder.
