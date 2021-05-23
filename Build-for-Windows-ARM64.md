@@ -277,6 +277,7 @@ Use the built-in sln.
 Grab the latest release from https://github.com/jay0lee/CPython-Windows-ARM64.
 Copy the `include` folder to `DepsARM64\include`, then rename it to `python`.
 Copy `python3.lib` and `python39.lib` to `DepsARM64\bin`.
+It may complain about `Pyconfig.h` not found. Grab one from https://github.com/python/cpython/blob/main/PC/pyconfig.h.
 
 
 ## Prepare swig
