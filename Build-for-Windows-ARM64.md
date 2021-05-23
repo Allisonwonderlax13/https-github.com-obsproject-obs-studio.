@@ -41,12 +41,14 @@ The following prerequisites are for building dependencies:
 
 Prebuilt dependencies can be downloaded here: https://github.com/tommyvct/obs-deps/releases
 
-## Compile Qt
-https://download.qt.io/archive/qt/
-Download Qt here
+All dependencies here are using the latest development version instead of certain old version unless specified. This is to minimize the potential incompatibility against Windows ARM64 platfrom/toolchain.
 
-> Only the following folders is needed in the source folder: `gnuwin32`, `qtbase`, `qtsvg` and `qtwinextras`.
+## Compile Qt
+Download Qt 5.15.2 here: https://download.qt.io/archive/qt/
+
+> Only the following folders is needed in the source folder: `gnuwin32`, `qtbase`, `qtsvg` and `qtwinextras`, remove the rest to speed things up.
 > Use `jom` instead of `nmake`. `nmake` is single-threaded only, and it will take days to compile qt.
+> Qt can figure out which compiler to use by itself, so just use a normal `x64` VS Developer Command Prompt instead of `x64_arm64` one
 
 ``` batch
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
