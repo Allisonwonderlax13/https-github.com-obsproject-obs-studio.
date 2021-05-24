@@ -14,7 +14,7 @@ In the mask video, black pixels tell OBS where to show pixels from the current s
 
 Track Mattes for a Stinger Transition can be provided in three ways:
 
-- ~~**In two separate video files**: the first file being the stinger video and the second file being the track matte video.~~ **NOTE:** Since OBS currently does not support lock-step video decoding, we have disabled this feature for the time being due to the fact that two separate videos cannot be guaranteed to play back in perfect sync. We recommend using the single-file video methods (side-by-side or stacked) instead.
+- ~~**In two separate video files**: the first file being the stinger video and the second file being the track matte video.~~ **NOTE:** Since OBS currently does not support lock-step video decoding, we have disabled this feature for the time being due to the fact that two separate videos cannot be guaranteed to play back in perfect sync. We recommend using the single-file video methods (side-by-side or stacked) instead. You can stack video files side-by-side using the following FFmpeg command: `ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4`
 
   <!-- TODO example image: two separate files -->
 
