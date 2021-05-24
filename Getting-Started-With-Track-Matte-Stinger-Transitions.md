@@ -14,16 +14,14 @@ In the mask video, black pixels tell OBS where to show pixels from the current s
 
 Track Mattes for a Stinger Transition can be provided in three ways:
 
-- ~~**In two separate video files**: the first file being the stinger video and the second file being the track matte video.~~ **NOTE:** Since OBS currently does not support lock-step video decoding, we have disabled this feature for the time being due to the fact that two separate videos cannot be guaranteed to play back in perfect sync. We recommend using the single-file video methods (side-by-side or stacked) instead. You can stack video files side-by-side using the following FFmpeg command: `ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4`
-
-  <!-- TODO example image: two separate files -->
-
 - **Everything in the same video file, side-by-side**: the stinger video and track matte video are merged into the same file, with the stinger video on the left and the track matte video on the right. If both the stinger video and track matte video have a 1920x1080 resolution, the combined video file must have a 3840x1080 resolution (2x 16:9 side-by-side).
 
   <!-- TODO example image: side-by-side video file -->
 
 - **Everything in the same video file, stacked**: same as side-by-side mode, but with a vertical layout. The stinger video is at the top, and the track matte video is at the bottom. If both the stinger video and track matte video have 1920x1080 resolution, the combined video file must have a 1920x2160 resolution (2x 16:9 on top of each other).
 
-  <!-- TODO example image: stacked video file -->
+  <!-- TODO example image: stacked video file -->- ~~**In two separate video files**: the first file being the stinger video and the second file being the track matte video.~~ **NOTE:** Since OBS currently does not support lock-step video decoding, we have disabled this feature for the time being due to the fact that two separate videos cannot be guaranteed to play back in perfect sync. We recommend using the single-file video methods (side-by-side or stacked) instead. You can stack video files side-by-side using the following FFmpeg command: `ffmpeg -i left.mp4 -i right.mp4 -filter_complex hstack output.mp4`
+
+  <!-- TODO example image: two separate files -->
 
 The side-by-side and stacked options give the best results. The "separate files" option is OK for testing and experimentation but doesn't guarantee synchronized playback of the stinger & track matte videos (which can result in problems where the stinger & track matte masking doesn't line up).
