@@ -3,9 +3,8 @@
 Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware Acceleration" to use software rendering.
 2. RealSense is not included. I have little confidence that something intel will work on ARM platform.
 3. Virtual Camera is not included.
-4. Video Source is not available, yet. 
-5. `Speex` audio codec is not included, yet.
-6. There is no installer available, yet. 
+4. Video Source is not available, unless there's a mingw toolchain targeting ARM64 Windows. 
+5. There is no installer available, yet. 
 
 Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases
 
