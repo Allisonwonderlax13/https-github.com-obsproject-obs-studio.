@@ -42,6 +42,9 @@ Prebuilt dependencies can be downloaded here: https://github.com/tommyvct/obs-de
 
 All dependencies here are using the latest development version instead of certain old version unless specified. This is to minimize the potential incompatibility against Windows ARM64 platfrom/toolchain.
 
+## A rough workflow
+f
+
 ## Compile Qt
 Download Qt 5.15.2 here: https://download.qt.io/archive/qt/
 
@@ -271,6 +274,10 @@ Click Librarian on the left, change Target Machine to MachineARM64
 ## Compile Detours
 https://github.com/Microsoft/Detours
 Use the built-in sln.
+
+## Compile libSpeex
+https://gitlab.xiph.org/xiph/speexdsp
+Use the build-in sln.
 
 ## Prepare Python
 Grab the latest release from https://github.com/jay0lee/CPython-Windows-ARM64.
