@@ -4,13 +4,13 @@ Starting with OBS Studio 27.0, Stinger transitions can now use a third mode: Tra
 
 An example: using a Track Matte in a Stinger transition can make the next scene appear from within a circle overlayed over the current scene. 
 
-![2021-04-05_00-39-43](https://user-images.githubusercontent.com/1812130/113523399-d1fc9300-95a7-11eb-9702-2773b7c9031a.gif)
+![Track Matte Result](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/track-matte/track-matte-result.gif)
 
 In the mask video, black pixels tell OBS where to show pixels from the current scene, where white pixels tell OBS where to show pixels from the next scene. Pixels inbetween plain black and plain white are allowed too, and allow for crossfades from the current scene to the next scene.
 
-![2021-04-05_00-47-14](https://user-images.githubusercontent.com/1812130/113523577-8ac2d200-95a8-11eb-8b72-9807cb0f861b.png)
+![Track Matte example](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/track-matte/track-matte-example.gif)
 
-*Left: Matte Video | Right: Result*
+*Example of a side-by-side track matte video file*
 
 Track Mattes for a Stinger Transition can be provided in three ways:
 
