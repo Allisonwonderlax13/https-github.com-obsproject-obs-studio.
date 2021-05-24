@@ -10,7 +10,7 @@ In the mask video, black pixels tell OBS where to show pixels from the current s
 
 ![Track Matte example](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/track-matte/track-matte-example.gif)
 
-*Example of a side-by-side track matte video file*
+*Example of a side-by-side track matte video file. The left half is the "overlay" portion and the right half tells OBS which scene to display, where black = "from" scene, white = "to" scene, gray = degree of fade between "from" scene and "to" scene*
 
 Track Mattes for a Stinger Transition can be provided in three ways:
 
