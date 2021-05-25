@@ -2,7 +2,7 @@
 1. CEF (current version 88) hardware acceleration does not work.
 Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware Acceleration" to use software rendering.
 2. RealSense is not included. I have little confidence that something intel will work on ARM platform.
-3. Virtual Camera is not included.
+3. Virtual Camera is not included, yet.
 4. Video Source is not available, unless there's a good enough mingw toolchain targeting ARM64 Windows, AND the VideoLAN is willing to use it. 
 5. There is no installer available, yet. 
 
