@@ -40,10 +40,15 @@ The following prerequisites are for building dependencies:
 
 Prebuilt dependencies can be downloaded here: https://github.com/tommyvct/obs-deps/releases
 
-All dependencies here are using the latest development version instead of certain old version unless specified. This is to minimize the potential incompatibility against Windows ARM64 platfrom/toolchain.
+Almost all dependencies used here are using the latest development version instead of certain old version unless specified. This is to minimize the potential incompatibility against Windows ARM64 platfrom/toolchain.
 
 ## A rough workflow
-f
+Have a copy of [Intel version of prebuilt dependencies](https://obsproject.com/downloads/dependencies2019.zip) for reference.
+Grab the dependencies from their upsteram and compile. If there's a built-in sln file then use it. If the sln didn't work or there is no sln, then use CMake. The worst situation is there is no cmake and sln, then you need to use MSYS2 commandline AND MSVC toolchain. See Cross MSYS2 bash above.
+
+The header files are usually gathered in the `include` directory. 
+
+Make sure you put the produced files in the same hierarchy as the intel one.
 
 ## Compile Qt
 Download Qt 5.15.2 here: https://download.qt.io/archive/qt/
