@@ -44,6 +44,7 @@ Almost all dependencies used here are using the latest development version inste
 
 ## A rough workflow
 Have a copy of [Intel version of prebuilt dependencies](https://obsproject.com/downloads/dependencies2019.zip) for reference.
+
 Grab the dependencies from their upsteram and compile. If there's a built-in sln file then use it. If the sln didn't work or there is no sln, then use CMake. The worst situation is there is no cmake and sln, then you need to use MSYS2 commandline AND MSVC toolchain. See Cross MSYS2 bash above.
 
 The header files are usually gathered in the `include` directory. 
