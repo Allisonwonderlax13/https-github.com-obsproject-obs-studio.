@@ -5,6 +5,7 @@ Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware
 3. Virtual Camera is not included, yet.
 4. Video Source is not available, unless there's a good enough mingw toolchain targeting ARM64 Windows, AND the VideoLAN is willing to use it. 
 5. There is no installer available, yet. 
+6. There is no hardware encoding, yet. Neither Microsoft nor Qualcomm released any documentation on this topic.
 
 Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases
 
