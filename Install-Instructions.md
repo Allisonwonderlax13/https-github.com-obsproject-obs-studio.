@@ -686,7 +686,6 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    ```bash
    sudo apt-get install \
            build-essential \
-           checkinstall \
            cmake \
            git \
            libmbedtls-dev \
@@ -730,8 +729,9 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
            libx11-xcb-dev \
            libxcb1-dev \
            libxss-dev \
-           libpipewire-0.3-dev \
-           qtwayland5
+           qtwayland5 \
+           libgles2-mesa \
+           libgles2-mesa-dev
    ```
 
 * Building and installing OBS:
