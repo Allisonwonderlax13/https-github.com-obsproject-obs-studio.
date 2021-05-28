@@ -748,6 +748,10 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    # Modern platforms can use the default/enable pipewire for wayland capture support.
    cmake -DUNIX_STRUCTURE=1 -DENABLE_PIPEWIRE=OFF -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
    make -j4
+   make install
+   ```
+   If you have `checkinstall` use this instead of `make install`
+   ```
    sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
    ```
 
@@ -759,6 +763,10 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    mkdir build && cd build
    cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
    make -j4
+   make install
+   ```
+   If you have `checkinstall` use this instead of `make install`
+   ```
    sudo checkinstall --default --pkgname=obs-studio --fstrans=no --backup=no --pkgversion="$(date +%Y%m%d)-git" --deldoc=yes
    ```
 
