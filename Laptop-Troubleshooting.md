@@ -2,6 +2,12 @@
 
 ***
 
+If you have OBS Version 27 or newer and Windows 10 v1903 or newer, here is a [quick setup guide video](https://www.youtube.com/watch?v=Z77oCZ3lojE) which goes over how to set up Display Capture with the new method, should you have problems with it. If your display capture still doesn't work after following that, seek support in the OBS discord or forums.
+
+If you have an older version of OBS or Windows 10 1809 or older, continue on to the appropriate section of the guide.
+
+***
+
 **Windows 10:** latest Windows 10 builds overwrite the selection you make in the NVIDIA Control Panel. The setting is now accessible in the main Settings app (cog icon in the start menu) > System > Display > Graphics settings (small link at the bottom) > Browse.
 
 ***
