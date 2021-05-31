@@ -2,6 +2,8 @@ Stinger Transitions in OBS Studio overlay a video over a cut-transition between 
 
 Starting with OBS Studio 27.0, Stinger transitions can now use a third mode: Track Matte. In this mode, no "cut point" is necessary. The transition between the current scene and the next scene is managed by an animated "mask video", with the stinger video overlayed on top of it.
 
+A selection of [free track matte stingers](https://cdn-fastly.obsproject.com/downloads/TrackMatteStingers.zip) have been made available for those wishing to try out the feature.
+
 An example: using a Track Matte in a Stinger transition can make the next scene appear from within a circle overlayed over the current scene. 
 
 ![Track Matte Result](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/track-matte/track-matte-result.gif)
