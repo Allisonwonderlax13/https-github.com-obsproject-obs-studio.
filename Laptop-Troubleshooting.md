@@ -2,9 +2,16 @@
 
 ***
 
-If you have OBS Version 27 or newer and Windows 10 v1903 or newer, here is a [quick setup guide video](https://www.youtube.com/watch?v=Z77oCZ3lojE) which goes over how to set up Display Capture with the new method, should you have problems with it. If your display capture still doesn't work after following that, seek support in the OBS discord or forums.
+If you have OBS Version 27 or newer and Windows 10 v1903 or newer, see the steps below in case the "automatic" method doesn't work.
 
-If you have an older version of OBS or Windows 10 1809 or older, continue on to the appropriate section of the guide.
+Click 'Properties' of your display capture source, and you should see "Automatic", "DXGI" or "Windows 10 (1903)". If you have a multi-GPU system, you will want to select "Windows 10 (1903)" to get it to show up, and make sure your OBS is running on the high-performance GPU. If you are on a single GPU system, automatic will work (using DXGI method).
+
+![](https://i.imgur.com/fB4PeDS.png)
+
+
+If you want a video showing this, here is a [quick setup guide video](https://www.youtube.com/watch?v=Z77oCZ3lojE) which goes over how to set up Display Capture with the new method, should you have problems with it. If your display capture still doesn't work after following that, seek support in the OBS discord or forums.
+
+If you have an older version of OBS or Windows 10 1809 or older, continue on to the appropriate section of the guide. It is highly recommended to use the latest version of OBS and Windows 10, as older versions of windows are EOL.
 
 ***
 
