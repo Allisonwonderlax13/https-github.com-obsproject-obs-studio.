@@ -10,6 +10,7 @@
   * [Surround Sound Streaming and Recording](Surround-Sound-Streaming-And-Recording)
   * [Understanding the Mixer](Understanding-The-Mixer)
   * [Streaming with SRT protocol](Streaming-With-SRT-Protocol)
+  * [Getting Started With Track Matte Stinger Transitions](Getting-Started-With-Track-Matte-Stinger-Transitions)
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Game Capture Troubleshooting](Game-Capture-Guide)
     * [Known Conflicts](Known-Conflicts)
