@@ -284,7 +284,7 @@ You can now run OBS with Xcode directly attached as debugger. You can debug the 
 
 # Linux
 
-Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not be up to date or stable.
+Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not provide all the features and/or be up to date or stable.
 
 **NOTE:** OpenGL 3.3 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing `glxinfo | grep "OpenGL"` on Terminal.
 
@@ -321,7 +321,7 @@ sudo apt install v4l2loopback-dkms
    ```bash
    sudo pacman -S obs-studio
    ```
-* "Git" version is available on [AUR](https://aur.archlinux.org/packages/obs-studio-git)
+* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
 
 ***
 
@@ -331,6 +331,7 @@ sudo apt install v4l2loopback-dkms
    ```bash
    sudo pacman -S obs-studio
    ```
+* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
 ***
 
 ### Fedora Installation (Unofficial)
