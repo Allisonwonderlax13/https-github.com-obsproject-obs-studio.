@@ -967,7 +967,7 @@ Use CMake.
 
 |Cache|Value|
 |---:|:---|
-|`BUILD_AMD_DECODER`|`OFF`|
+|`BUILD_AMD_ENCODER`|`OFF`|
 |`COMPILE_D3D12_HOOK`|`ON`|
 |`PYTHON_LIB`|`DepsARM64/bin/python39.lib`|
 |`ENABLE_SCRIPTING`|`ON`|
