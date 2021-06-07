@@ -955,8 +955,13 @@ DepsARM64
 │   |   ...
 │               
 ├───swig
-    │   swig.exe
-    |   ...
+│   │   swig.exe
+│   |   ...
+│
+├───VulkanSDK
+│   ├───Include
+    │   └───...
+    │   vulkan-1.lib
 ```
 
 </details>
@@ -974,6 +979,8 @@ Use CMake.
 |`BUILD_BROWSER`|`ON`|
 |`COMPILE_PYTHON`|`ON`|
 |`DISABLE_QSV11`|`ON`|
+|`VULKAN_INCLUDE_DIR`|`DepsARM64/VulkanSDK/include`|
+|`DVULKAN_LIB`|`DepsARM64/VulkanSDK/vulkan-1.lib`|
 
 
 Also make sure `QTDIR`, `DepsPath` and `CEF_ROOT_DIR` are set.
