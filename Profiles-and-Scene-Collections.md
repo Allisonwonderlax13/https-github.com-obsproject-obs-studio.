@@ -1,0 +1,3 @@
+First things first: Profiles do not include the scenes and sources!
+
+...to be continued...
