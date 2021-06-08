@@ -7,7 +7,8 @@ Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware
 5. There is no installer available, yet. 
 6. There is no hardware encoding, yet. Neither Microsoft nor Qualcomm released any documentation on this topic.
 
-Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases
+Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases   
+[![CI Multiplatform Build](https://github.com/tommyvct/obs-studio/actions/workflows/main.yml/badge.svg?branch=windows-arm64)](https://github.com/tommyvct/obs-studio/actions/workflows/main.yml)
 
 # Prerequisites
 - ARM64 fork of `obs-studio`: https://github.com/tommyvct/obs-studio/
