@@ -4,7 +4,7 @@
   * [Launch Parameters](Launch-Parameters) 
   * [Quickstart Guide](OBS-Studio-Quickstart)
   * [Overview Guide](OBS-Studio-Overview)
-  * [Profiles and Scene Collections](Profiles and Scene Collections)
+  * [Profiles and Scene Collections](https://github.com/obsproject/obs-studio/wiki/Profiles-and-Scene-Collections)
   * [Sources Guide](Sources-Guide)
   * [Filters Guide](Filters-Guide)
   * [Keyboard Shortcuts](Keyboard-Shortcuts)
