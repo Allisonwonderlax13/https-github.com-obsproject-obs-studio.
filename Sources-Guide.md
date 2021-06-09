@@ -67,9 +67,11 @@ Edit Transform menu:
 
 ### Audio Input/Output Capture
 
+![Audio Output Capture](https://i.imgur.com/FKmWGOT.png)
+
 **WARNING**: Audio Input/Output Capture source can cause an echo effect if you have the same device selected in Settings -> Audio. If you plan on adding audio devices directly to your scenes, make sure they are disabled globally first.
 
-This source allows you to add an audio input or output device (i.e. microphone or headset repsectively) to a specific scene. Simply pick the device you wish to capture, and the audio from that device will be captured when the source is active. These sources can be useful if you only want specific audio devices active in specific scenes, rather than globally through all of OBS.
+This source allows you to add an audio input or output device (i.e. microphone or headset respectively) to a specific scene. Simply pick the device you wish to capture, and the audio from that device will be captured when the source is active. These sources can be useful if you only want specific audio devices active in specific scenes, rather than globally through all of OBS.
 
 ***
 
@@ -85,7 +87,9 @@ Blackmagic Device source has the following options:
 
 ***
 
-### BrowserSource
+### Browser Source
+
+![Browser Source](https://i.imgur.com/r6nI13c.png)
 
 Browser source is one of the most versatile sources available in OBS. It is, quite literally, a web browser that you can add directly to OBS. This allows you to perform all sorts of custom layout, image, video, and even audio tasks. Anything that you can program to run in a normal browser (within reason, of course), can be added directly to OBS.
  
@@ -98,13 +102,15 @@ Browser Source is fairly straight forward with its options.
   * **Default CSS**: body { background-color: rgba(0, 0, 0, 0); margin: 0px auto; overflow: hidden; }
 * Shutdown source when not visible (Checkbox): Unloads the page when the source is no longer visible (by clicking the eye icon to hide, or not in the active scene).
 * Refresh browser source when scene becomes active (Checkbox): Refresh the page when it becomes active (scene is switched to)
-* Refresh cache of current page (Button): CLicking this will immediately refresh the page and reload any content.
+* Refresh cache of current page (Button): Clicking this will immediately refresh the page and reload any content.
 
 As Browser Source is based on CEF, any CEF flags (--enable-gpu for example) can be passed from the OBS Studio shortcut. A fairly comprehensive list can be found [here](https://peter.sh/experiments/chromium-command-line-switches/)
 
 ***
 
 ### Color Source
+
+![Color Source](https://i.imgur.com/Xy3Epnf.png)
 
 As the name implies, this source creates a solid color for you to add to your scene. This can be used for things like background colors or even a global color tint by using the alpha channel.
 
@@ -116,6 +122,8 @@ Color Source has the following options:
 
 ### Display Capture
 
+![Display Capture](https://i.imgur.com/6Yz1jcQ.png)
+
 Display Capture is used to capture your entire monitor. The options here are few, with a selection for the display you wish to capture, and a checkbox to enable or disable showing of your cursor.
  
 You can only add one display capture source per display. If you need your display in multiple scenes, make sure you use Add Existing!
@@ -123,6 +131,8 @@ You can only add one display capture source per display. If you need your displa
 ***
 
 ### Game Capture
+
+![Game Capture](https://i.imgur.com/IbEDzFi.png)
 
 Game Capture is one of the primary sources that many users will be looking to use. This Source lets you directly capture the game you are playing, so long as it's DirectX or OpenGL. Game Capture is the most efficient way you can add your games to OBS, and should always be tried first. There are only a very small number of games that do not work with Game Capture. For more detailed information, and common troubleshooting for game capture issues, see the [Game Capture Guide ](https://obsproject.com/wiki/Game-Capture-Guide). If you have issues with it and cannot solve them on your own, stop by the [support chat](https://obsproject.com/chat)!
 
@@ -150,6 +160,8 @@ There are several other options, and we'll give a short description of them. In 
 
 ### Image
 
+![Image](https://i.imgur.com/AjhMUO5.png)
+
 This source allows you to various image types to your scene. Most image formats are supported. Alpha channel support is also available where applicable.
 
 The only options in Image Source are the path to the image, and unload image when not showing. This checkbox will unload the image from memory while it is not active, which can be useful if you have a large amount of images and few system resources available.
@@ -159,6 +171,8 @@ Image Source supports the following image formats: .bmp, .tga, .png, .jpeg, .jpg
 ***
 
 ### Image Slide Show
+
+![Image Slide Show](https://i.imgur.com/e7Y27DA.png)
 
 The Image Slide Show Source allows you to add multiple images that will rotate through as a slide show. To use this source, click the + sign to add either individual files or directories to be loaded. Once you have all the images you want, you can configure how you want them to display.
 
@@ -180,6 +194,8 @@ This source type will allow you to use the digital green screen features of an I
 
 ### Media Source
 
+![Media Source](https://i.imgur.com/Qjz2ueR.png)
+
 Media source is a great option to add all sorts of different media types to your stream. The currently supported file types are:
 
 - Video: .mp4, .ts, .mov, .flv, .mkv, .avi, .gif, .webm
@@ -199,6 +215,8 @@ Once the file has been selected, there are only a few options that would need to
 
 ### Scene
 
+![Scene](https://i.imgur.com/XhNktQ5.png)
+
 This Source is often overlooked, and while one of the simplest in function, it can allow for some of the most powerful functionality in OBS Studio. Since all Scenes are considered Sources, you can add an entire Scene as a Source anywhere you want. 
 
 For example, this can allow you to create a static overlay that you want to use in every Scene, called Overlay. In several other scenes, let's say Main and Game, you can add the Overlay Scene. If any changes are necessary to any of the Sources in Overlay, you can just update them it will be updated everywhere else. This is just one of many examples on how this Source type can be used!
@@ -206,6 +224,8 @@ For example, this can allow you to create a static overlay that you want to use 
 ***
 
 ### Text (GDI+)
+
+![Text GDI+](https://i.imgur.com/UEFtn3l.png)
 
 Text source can allow you to add simple text renders to your stream or recording layout. To get going, most of the default settings will be fine (except maybe the colors), and you can just type what you want your text to say in the field labeled "Text."
 
@@ -225,6 +245,8 @@ Once the text is present, there are quite a few options for styling it. You can:
 
 ### VLC Video Source
 
+![VLC Video Source](https://i.imgur.com/hcFYiAo.png)
+
 Similar to Media Source, you can add video and other media files to this source to be played in your scenes. This source type will use the VLC libraries for extended media support over the built-in Media Source. It requires that VLC be installed on your system to show up as an available source in OBS. If you are using 64bit OBS, you must install 64bit VLC and if you are using 32bit OBS, you must install 32bit VLC.
 
 To add files, click the + sign to browse to your file, directory, or URL that you wish to add. If you add multiple, they will be played in the order they were added. If Loop playlist is checked, the playlist will start over once the end is reached.
@@ -234,6 +256,8 @@ The Visibility behavior drop down menu allows you to choose how visibility affec
 ***
 
 ### Video Capture Device
+
+![Video Capture Device](https://i.imgur.com/vQX3Gkl.png)
 
 The Video Capture Device Source allows you to add a variety of video devices, including but not limited to webcams and capture cards. On Windows, for a device to work with OBS the drivers needs to support DirectShow output. Since DirectShow is the standard output format for Windows, there's a good chance that this is what your device outputs. All major webcams and capture cards support DirectShow and will work with OBS.
 
@@ -259,11 +283,13 @@ You then have several options to configure it:
 
 ### Window Capture
 
+![Window Capture](https://i.imgur.com/oCBkHkY.png)
+
 Window Capture allows you to capture a specific window and its contents. The advantages to using this source over Display Capture is that only the selected window will be shown, even if there are other windows in front of it (**WIN7 NOTE**: Having Aero disabled can interfere with this functionality.).
 
 ***
 
 ### Deprecated Sources
-List of currently deprecated sources. Sources listed here should not be used unless aboslutely necessary, and are only left in for backwards compatibility reasons.
+List of currently deprecated sources. Sources listed here should not be used unless absolutely necessary, and are only left in for backwards compatibility reasons.
 
 * Text (FreeType2)
