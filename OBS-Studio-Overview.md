@@ -18,12 +18,12 @@ The 4-step Quickstart guide has been moved to [[OBS Studio Quickstart]]. Use it 
 ***
 
 ## Settings
-
-![OBS Settings Window](https://i.imgur.com/52Hu5NI.png)
-
 Overall, most settings will be fairly self-explanatory. This will not cover everything, but will be an overview of the basics and what you can do in each section.
 
 ### General
+
+![OBS Settings General Window](https://i.imgur.com/g1jTQuD.png)
+
 - Change theme (light/dark)
 - Enable/disable system tray icon (required for hiding to tray)
 - Show confirmation for starting/stopping streams
@@ -31,11 +31,17 @@ Overall, most settings will be fairly self-explanatory. This will not cover ever
 - Enable/Disable automatic recording when streaming
 
 ### Stream
+
+![OBS Settings Stream Window](https://i.imgur.com/ryaPQOK.png)
+
 - Select one of the included Services (Check "Show all services" to see the full list in the dropdown) or set Custom Streaming Server
 - Select the server (or enter its URL for Custom Streaming Servers)
-- Enter your Streamkey
+- Enter your Stream Key (this can generally be found using the 'Get Stream Key' button)
 
 ### Output
+
+![OBS Settings Output Window](https://i.imgur.com/4DkWnOo.png)
+
 Note: This section covers Simple output mode. Advanced output mode gives you further options to configure your Stream and Recording independently if you want to. We will not be covering advanced options in this guide (see links at the end). Generally, unless you know why you need to change it, the default options are recommended.
 
 #### For Streaming:
@@ -50,12 +56,18 @@ Note: This section covers Simple output mode. Advanced output mode gives you fur
 - Enable the Replay Buffer (hotkey to save the buffer must be set under the Hotkeys section)
 
 ### Audio
+
+![OBS Settings Audio Window](https://i.imgur.com/u4jnzjk.png)
+
 - Change the Sampling Rate
 - Select up to two Desktop Audio Devices
 - Select up to three Microphone/Auxiliary Devices
 - Enable Push-to-mute or Push-to-talk for each device (keys configured in the Hotkeys section)
 
 ### Video
+
+![OBS Settings Video Window](https://i.imgur.com/xAdiwLU.png)
+
 - Base (Canvas) Resolution
   - This is the amount of space you have to fit your sources. You usually want this to match your monitor display resolution, or if you are playing games, the game resolution. Default is your primary monitor.
 - Output (Scaled) Resolution should be the Stream Output Resolution (720p, 480p, etc)
@@ -64,6 +76,9 @@ Note: This section covers Simple output mode. Advanced output mode gives you fur
   - Note that 60-fps streaming can be very taxing on your system compared to 30-fps. Test ahead of time and ensure your system has enough resources available.
 
 ### Hotkeys
+
+![OBS Settings Hotkeys Window](https://i.imgur.com/6FJyoNC.png)
+
 Here you can set hotkeys that do a variety of things. Some examples:
 - Start/Stop Streaming/Recording
 - Hide/Show Sources
@@ -75,6 +90,9 @@ Here you can set hotkeys that do a variety of things. Some examples:
 Keyboard keys are supported. To use joysticks as hotkeys on Linux and Windows, you can use [antimicro](https://github.com/AntiMicro/antimicro) to map the joystick keys to common keyboard keys and then use them in OBS.
 
 ### Advanced
+
+![OBS Settings Advanced Window](https://i.imgur.com/24YIJuO.png)
+
 Most of these settings should not be changed unless you understand exactly why you need to change them. However, some settings can be useful for new streamers, such as:
 - Change the Filename Formatting (or use folders: %CCYY\%MM\%DD\%hh-%mm-%ss = 2016\07\10\12-35-25.flv)
   - Hover over the field for a popup that explains each available variable for naming
@@ -195,6 +213,7 @@ If you want more control over your Recording settings or want to record multiple
 - [Laptop troubleshooting](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
 - [In-depth filters guide](Filters-Guide)
 - [Enabled CoreAudio encoder for better audio quality](https://obsproject.com/forum/resources/obs-studio-enable-coreaudio-aac-encoder-windows.220/)
+- [Twitch.tv encoding guide](https://stream.twitch.tv/encoding/)
 
 `Original guide created by Jack0r, edits/updates by Fenrir`
 
