@@ -24,23 +24,21 @@ This should make it easier to author your assets with the same behavior as OBS 2
 
 ### Photoshop
 You can press Ctrl+Shift+K, and enable "Blend RGB Colors Using Gamma: 1.0.
-<ps.jpg>
+![photoshop](https://i.imgur.com/i47tM3V.png)
 
 ### After Effects
 Go to "Project Settings" -> "Color Settings" tab and set "Blend Colors Using 1.0 Gamma"
-<ae.jpg>
+![After Effects](https://i.imgur.com/MLPNy63.png)
 
 ### Adobe Premiere
 Sequence > Sequence Settings. At the bottom check "Composite in Linear Color"
-<premiere.jpg>
+![AdobePremiere](https://i.imgur.com/w6aYt8w.png)
 
 ### GIMP
 Image > Precision > Linear Light
-<gimp.jpg>
+![gimp](https://i.imgur.com/eP35v8R.png)
 
 Other software may have a similar feature under a different name. Try searching for your software + "linear light", "gamma 1.0", "linear color" or similar.
 ***
 If the exported images/videos have semi-transparency in them, you need to configure the image/media sources in OBS to use linear alpha. We don’t enable this by default for partial backwards compatibility with OBS 26. There is a new linear space checkbox in their source properties. (Media source will have the checkbox in the 27.0.1 release.)
-<checkbox.jpg>
-
-
+![obsCheckbox](https://i.imgur.com/ALC2H5l.png)
