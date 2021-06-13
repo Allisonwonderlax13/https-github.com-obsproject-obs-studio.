@@ -482,6 +482,8 @@ UOS/Deepin 20 or newer is required.
 Debian 9.0 or newer is required.  
 **Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**
 
+**Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**
+
 * First, make sure you have everything up-to-date.
 
    ```bash
@@ -596,7 +598,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 ..
+      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=OFF ..
       make -j4
       sudo make install
       ```
@@ -672,7 +674,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 ..
+      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=OFF ..
       make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
@@ -739,7 +741,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
   * If building with browser source:
    ```bash
-   apt install libnss3-dev
+   sudo apt install libnss3-dev
    wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
    tar -xjf ./cef_binary_4280_linux64.tar.bz2
    git clone --recursive https://github.com/obsproject/obs-studio.git
@@ -748,8 +750,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    # Note Ubuntu 20.04/Debian 10 must set ENABLE_PIPEWIRE=OFF and do not support wayland capture.
    # Modern platforms can use the default/enable pipewire for wayland capture support.
    cmake -DUNIX_STRUCTURE=1 -DENABLE_PIPEWIRE=OFF -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
-   make -j4
-   make install
+   make -j$(nproc)
+   sudo make install
    ```
    If you have `checkinstall` use this instead of `make install`
    ```
@@ -762,9 +764,11 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    git clone --recursive https://github.com/obsproject/obs-studio.git
    cd obs-studio
    mkdir build && cd build
-   cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
-   make -j4
-   make install
+   # Note Ubuntu 20.04/Debian 10 must set ENABLE_PIPEWIRE=OFF and do not support wayland capture.
+   # Modern platforms can use the default/enable pipewire for wayland capture support.
+   cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_PIPEWIRE=OFF -DBUILD_BROWSER=OFF ..
+   make -j$(nproc)
+   sudo make install
    ```
    If you have `checkinstall` use this instead of `make install`
    ```
@@ -824,7 +828,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr ..
+      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=OFF ..
       make -j4
       sudo make install
       ```
@@ -854,7 +858,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" ..
+      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=OFF ..
       make -j4 && make install
       ```
 
