@@ -44,6 +44,6 @@ Image > Precision > Linear Light
 
 Other software may have a similar feature under a different name. Try searching for your software + "linear light", "gamma 1.0", "linear color" or similar.
 ***
-If the exported images/videos have semi-transparency in them, you need to configure the image/media sources in OBS to use linear alpha. We don’t enable this by default for partial backwards compatibility with OBS 26. There is a new linear space checkbox in their source properties. (Media source will have the checkbox in the 27.0.1 release.)
+If the exported images/videos have semi-transparency in them, you need to configure the image/media sources in OBS to use linear alpha. We don’t enable this by default for partial backwards compatibility with OBS 26. There is a new linear space checkbox in their source properties. Media Sources will have the checkbox in the 27.0.1 release.
 
 ![obsCheckbox](https://i.imgur.com/ALC2H5l.png)
