@@ -182,7 +182,7 @@ Use CMake.
 ## Compile zlib  
 Use built-in vs sln.
 
-Right click on `zlibstat` project, click Properties, choose Configuration Properties > Librarian > All Options, frem Additional options, remove `/MACHINE:X64`.
+Right click on `zlibstat` project, click Properties, choose Configuration Properties > Librarian > All Options, frem Additional options, remove `/MACHINE:X64`. Make sure to build with `ReleaseWithoutAsm` configuration.
 
 Build projects one-by-one.
 
