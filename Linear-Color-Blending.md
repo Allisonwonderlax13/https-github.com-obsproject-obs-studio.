@@ -18,8 +18,7 @@ There have been fairly substantial changes in the graphics/color pipeline to sup
 
 # How do I deal with this?
 
-You can hopefully configure your content creation software to behave like OBS does. Photoshop, After Effects and others can be configured to behave like OBS 27.
-
+You can hopefully configure your content creation software to behave like OBS does.
 This should make it easier to author your assets with the same behavior as OBS 27, and make it more intuitive to achieve the look/style you want.
 
 ### Photoshop
