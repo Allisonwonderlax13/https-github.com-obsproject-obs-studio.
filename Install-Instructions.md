@@ -63,7 +63,6 @@ NOTE: If using the .zip method for either the full or small install and installi
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
     * We currently deploy with Qt 5.15.2
       * [Qt 5.15.2 Windows](https://cdn-fastly.obsproject.com/downloads/Qt_5.15.2.7z)
-      * [Qt 5.12.2 macOS](https://github.com/obsproject/obs-deps/releases/download/2020-12-22/macos-qt-5.15.2-2020-12-22.tar.gz)
   * CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip))
   * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
   * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
