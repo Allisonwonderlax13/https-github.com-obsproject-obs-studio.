@@ -93,7 +93,7 @@ We know the linear value of `1.0` is `1.0`, and `0.0` is `0.0`. Just add one-thi
 0.613 * 255 = 156
 ```
 
-So one-third white blended into `[0, 0, 0]` is `[156, 156, 156]`. You might be tempted to add `[156, 156, 156]` to `[127, 127, 127]` for the problem of blending one-third white into `[127, 127, 127]`, but then you get the invalid number of `[283, 283, 283]`. You need to add the contribution in linear space.
+So one-third white blended into `[0, 0, 0]` is `[156, 156, 156]`. You might be tempted to add `[156, 156, 156]` to `[127, 127, 127]` for the problem of blending one-third white into `[127, 127, 127]`, but then you get the invalid color of `[283, 283, 283]`. You need to add the contribution in linear space.
 
 From the previous example, we know the linear value for `127/255` is `0.212`. Add `0.333` to that to get `0.546`, then recompress.
 
