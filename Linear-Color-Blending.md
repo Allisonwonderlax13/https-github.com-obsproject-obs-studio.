@@ -53,8 +53,12 @@ Colors are often expressed as 8-bit sRGB gamma-encoded color channels between 0 
 
 ### Example: Find the color linearly halfway between `[127, 127, 127]` and `[255, 255, 255]`.
 
-Averaging the compressed values is not the right approach
-`[(127 + 255) / 2, (127 + 255) / 2 (127 + 255) / 2] = [191, 191, 191]`
+Averaging the compressed values is not the right approach.
+
+```
+(127 + 255) / 2 = 191
+[191, 191, 191]
+```
 
 Take the two values, and normalize them between `0` and `1`, `127/255 = 0.498` and `255/255 = 1.0`.
 
