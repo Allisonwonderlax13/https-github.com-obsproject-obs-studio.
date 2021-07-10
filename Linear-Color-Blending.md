@@ -51,7 +51,7 @@ If the exported images/videos have semi-transparency in them, you need to config
 
 Colors are often expressed as 8-bit sRGB gamma-encoded color channels between 0 and 255 inclusive.
 
-### Example: Find the color linearly halfway between R'G'B' `[127, 127, 127]` and `[255, 255, 255]`.
+### Example: Find the color linearly halfway between `[127, 127, 127]` and `[255, 255, 255]`.
 
 Averaging the compressed values is not the right approach
 `[(127 + 255) / 2, (127 + 255) / 2 (127 + 255) / 2] = [191, 191, 191]`
