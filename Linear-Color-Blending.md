@@ -46,3 +46,61 @@ Other software may have a similar feature under a different name. Try searching 
 If the exported images/videos have semi-transparency in them, you need to configure the image/media sources in OBS to use linear alpha. We don’t enable this by default for partial backwards compatibility with OBS 26. There is a new linear space checkbox in their source properties. Media Sources have the checkbox as of OBS Studio 27.0.1.
 
 ![obsCheckbox](https://i.imgur.com/ALC2H5l.png)
+
+# Doing the math
+
+Colors are often expressed as 8-bit sRGB gamma-encoded color channels between 0 and 255 inclusive.
+
+### Example: Find the color linearly halfway between R'G'B' `[127, 127, 127]` and `[255, 255, 255]`.
+
+Averaging the compressed values is not the right approach
+`[(127 + 255) / 2, (127 + 255) / 2 (127 + 255) / 2] = [191, 191, 191]`
+
+Take the two values, and normalize them between `0` and `1`, `127/255 = 0.498` and `255/255 = 1.0`.
+
+Decompress them to linear values. See https://en.wikipedia.org/wiki/SRGB for the functions.
+
+```
+0.498 > 0.04045
+((0.498 + 0.055) / 1.055) ^ 2.4 = 0.212
+1.0 > 0.04045
+((1.0 + .055) / 1.055) ^ 2.4 = 1.0
+```
+
+So `0.212` and `1.0` are the linear values. Take the average `(0.212 + 1.0) / 2 = 0.606` and convert back to compressed.
+
+```
+0.606 > 0.0031308
+(1.055 * (0.606 ^ (1 / 2.4))) - 0.055 = 0.801
+```
+
+Remapping back to `0 - 255`, `255 * 0.801 = 204`, so the halfway color is `[204, 204, 204]`.
+
+### Example: Blend one-third linear white into `[0, 0, 0]` and `[127, 127, 127]`
+
+You can't just divide `[255, 255, 255]` by 3 to get `[85, 85, 85]` and add them to the background colors. This would be the wrong approach:
+
+```
+[0, 0, 0] + [85, 85, 85] = [85, 85, 85]
+[127, 127, 127] + [85, 85, 85] = [212, 212, 212]
+```
+
+We know the linear value of `1.0` is `1.0`, and `0.0` is `0.0`. Just add one-third white to black, `1/3 * 1.0 + 0.0 = 0.333`
+
+```
+0.333 > 0.0031308
+(1.055 * (0.333 ^ (1 / 2.4))) - 0.055 = 0.613
+0.613 * 255 = 156
+```
+
+So one-third white blended into `[0, 0, 0]` is `[156, 156, 156]`. You might be tempted to add `[156, 156, 156]` to `[127, 127, 127]` for the problem of blending one-third white into `[127, 127, 127]`, but then you get the invalid number of `[283, 283, 283]`. You need to add the contribution in linear space.
+
+From the previous example, we know the linear value for `127/255` is `0.212`. Add `0.333` to that to get `0.546`, then recompress.
+
+```
+0.546 > 0.0031308
+(1.055 * (0.546 ^ (1 / 2.4))) - 0.055 = 0.765
+0.765 * 255 = 195
+```
+
+Adding one-third white to `[127, 127, 127]` is `[195, 195, 195]`.
