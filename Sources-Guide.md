@@ -5,7 +5,7 @@ Table of Contents
   * [Audio Input Capture](#audio-inputoutput-capture)
   * [Audio Output Capture](#audio-inputoutput-capture)
   * [Blackmagic Device](#blackmagic-device)
-  * [BrowserSource](#browsersource)
+  * [Browser Source](#browser-source)
   * [Color Source](#color-source)
   * [Display Capture](#display-capture)
   * [Game Capture](#game-capture)
