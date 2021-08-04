@@ -26,6 +26,7 @@ We've created a process to ensure multiple contributors aren’t competing on th
 
 1. Read the Request For Proposal document completely.
 2. If you want to move forward, submit an proposal to the OBS team on your suggested implementation by replying to the RFP posting. Be sure to include as many details as requested by the spec, and be sure to address each of the completion criteria. For proposals that include UI changes, mockups are strongly encouraged.
+    * Be sure to consult the **[Tips for Writing a Good Proposal](https://github.com/obsproject/obs-studio/wiki/Tips-for-Writing-a-Good-Proposal)** for advice on how to author a good proposal.
 3. Work with the OBS team to finalize plans for the best implementation. Proposals will be judged on their maintainability, design quality, and adherence to spec. Note that other developers may submit competing proposals at this time as well.
 4. If your proposal is accepted, you may begin code implementation that adheres to your proposal and following the [OBS contributing guidelines](https://github.com/obsproject/obs-studio/blob/master/CONTRIBUTING.rst).
 5. Submit code as a draft in the appropriate `obsproject` repositories so OBS community leaders can track progress.
