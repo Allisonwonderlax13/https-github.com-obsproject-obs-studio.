@@ -152,6 +152,8 @@ Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 6
 
   * The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
+  * The PACKAGE target uses Wix Installer, and seems to be obsolete. Discussion on discord indicates that the current installer uses NSIS, but the process seems not to be fully documented.
+
   * If you want to use the Virtual Camera from this build, you will need to run its install script.  If you already have a standard OBS Studio installation, you will need to uninstall its Virtual Camera first.
 
     To uninstall an OBS Virtual Camera:
