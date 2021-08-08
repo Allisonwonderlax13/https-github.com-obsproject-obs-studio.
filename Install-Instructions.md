@@ -166,8 +166,8 @@ Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 6
     Don't forget to uninstall your build's virtual camera before cleaning/deleting your build files.
 
 * **Integrating clang-format into Visual Studio**
-  * clang-format is required for pull requests, and OBS uses a newer version than the one VS2019 ships with.
-  * Download and install [LLVM 8.0.0](http://releases.llvm.org/). (Discussion on discord suggests that LVMM 10 is also acceptable, but that  version 11 and later may have undesired changes.)
+  * clang-format is required for pull requests, and our CI uses a specific version that may not match the one VS2019 ships with.
+  * Download and install [LLVM 10.0.0](http://releases.llvm.org/).  LLVM 11+ currently introduces extra clang-format changes that we do not want to handle at this time.
   * Run VS, and go to Tools -> Options...
     * Text Editor -> C/C++ -> Code Style -> Formatting -> General
       * Enable "Use custom clang-format.exe" and enter the file name. For example:
