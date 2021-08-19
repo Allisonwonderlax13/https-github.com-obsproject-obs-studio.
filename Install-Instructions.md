@@ -78,7 +78,7 @@ NOTE: If using the .zip method for either the full or small install and installi
 
   * If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**.
 
-  * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create an use within the repository base directory.
+  * Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create and use within the repository base directory.
 
   * Run cmake-gui, and set the following fields:
     * In "where is the source code", enter in the repo directory (example: D:/obs).
@@ -88,7 +88,7 @@ NOTE: If using the .zip method for either the full or small install and installi
     * **Required**
       * `DepsPath`
 
-        `DepsPath` is the path to folder containing the dependencies, not including Qt. Set this to the win32 or win64 directory from the Pre-built dependencies package that you downloaded earlier.
+        `DepsPath` is the path to the folder containing the dependencies, not including Qt. Set this to the win32 or win64 directory from the Pre-built dependencies package that you downloaded earlier.
         For example, if you extracted the dependencies .zip to C:\obs-deps, `DepsPath` should be one of these:
         * `C:\obs-deps\win32`
         * `C:\obs-deps\win64`
@@ -152,7 +152,7 @@ Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 6
 
   * The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
 
-  * The PACKAGE target uses Wix Installer, and seems to be obsolete. Discussion on discord indicates that the current installer uses NSIS, but the process seems not to be fully documented.
+  * The PACKAGE target uses Wix Installer and seems to be obsolete. Discussion on discord indicates that the current installer uses NSIS, but the process seems not to be fully documented.
 
   * If you want to use the Virtual Camera from this build, you will need to run its install script.  If you already have a standard OBS Studio installation, you will need to uninstall its Virtual Camera first.
 
@@ -393,9 +393,7 @@ sudo apt install v4l2loopback-dkms
 ***
 
 ### openSUSE Installation (Unofficial)
-* The Packman repository contains the obs-studio package since it requires
-  the fuller version of FFmpeg which is in Packman for legal reasons. If you
-  do not already have the Packman repository add it as shown below.
+* The Packman repository contains the obs-studio package since it requires the fuller version of FFmpeg which is in Packman for legal reasons. If you do not already have the Packman repository add it as shown below.
   * For openSUSE Tumbleweed:
 
    ```bash
@@ -880,7 +878,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 ***
 
 ### FreeBSD Build Directions
-* The easiest way to build OBS Studio from source is to use the [FreeBSD Ports](https://www.freebsd.org/doc/handbook/ports-using.html) and modify the `multimedia/obs-studio` port to suite your needs.
+* The easiest way to build OBS Studio from source is to use the [FreeBSD Ports](https://www.freebsd.org/doc/handbook/ports-using.html) and modify the `multimedia/obs-studio` port to suit your needs.
 
 * First you have to set up the ports infrastructure on your system. See the related chapter in the [FreeBSD Handbook](https://www.freebsd.org/doc/handbook/ports-using.html).
 
