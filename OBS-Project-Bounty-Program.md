@@ -5,7 +5,7 @@ The OBS Project has worked to create a program where community developers can wo
 
 ## Bounty Process Flowchart
 
-1. The OBS team publishes a [Request For Proposals (RFP)](https://github.com/obsproject/obs-studio/discussions/categories/requests-for-proposals) describing a feature that the team has decided should be prioritized, or a bug that is in need of being researched and fixed.
+1. The OBS team publishes a [Request For Proposals (RFP)](https://github.com/obsproject/obs-studio/discussions/categories/requests-for-proposals-bounties) describing a feature that the team has decided should be prioritized, or a bug that is in need of being researched and fixed.
     * Initial Bounty Status set to **Accepting Proposals**
 2. Developers write proposals for how they would implement the feature or fix the bug described in the RFP.
 3. The OBS team works with developers to clarify and refine their proposals.
