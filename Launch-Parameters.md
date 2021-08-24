@@ -1,3 +1,5 @@
+## List of Launch Parameters
+
 OBS Studio supports the following launch parameters for automation and portable use
 
 | Parameter                | Description |
@@ -22,3 +24,8 @@ OBS Studio supports the following launch parameters for automation and portable 
 | `--allow-opengl`        | Allow OpenGL renderer on Windows. |
 
 \* = Not available on Windows
+
+## Windows-specific Instructions
+To launch OBS via scheduled tasks or other automated means, make sure to also set a working directory ("Start in...") which must point to the folder where `obs64.exe` is located.
+
+This is required, as OBS loads its files and plugins via relative paths starting from the working directory.
