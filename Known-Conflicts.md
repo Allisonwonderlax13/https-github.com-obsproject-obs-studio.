@@ -11,6 +11,9 @@ This backup and recovery software is often bundled with Dell and Alienware syste
 
 Programs which draw on top of games and other software to show additional details such as FPS monitors, temperature / GPU monitors, etc often cause issues due to hook conflicts. These applications include, but are not limited to: 
 
+- Athenascope
+- Lowkey.gg
+- Medal.tv
 - MSI Afterburner
 - RivaTuner
 - EVGA Precision
