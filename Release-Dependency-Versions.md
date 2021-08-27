@@ -1,6 +1,6 @@
 This page is intended to document the version of dependencies shipped with OBS on Windows (and eventually, macOS). These are the versions that the release builds downloaded from [obsproject.com/download](https://obsproject.com/download) are built with, but not necessarily the only compatible versions. Please use your best judgement when selecting a version to build with. 
 
-That said, it is recommended that when building on Windows yourself to use our provided dependency zip file [located here](https://obsproject.com/downloads/dependencies2017.zip) using Visual Studio 2017/2019.
+That said, it is recommended that when building on Windows yourself to use our provided dependency zip file [located here](https://cdn-fastly.obsproject.com/downloads/dependencies2019.zip) using Visual Studio 2019.
 
 *Note: This is a rough first draft and not all dependencies are currently listed.*
 
