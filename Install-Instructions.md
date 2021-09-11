@@ -66,7 +66,7 @@ NOTE: If using the .zip method for either the full or small install and installi
   * CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip))
   * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
   * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
-  * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
+  * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
     * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 
 * **Installation Procedure**
