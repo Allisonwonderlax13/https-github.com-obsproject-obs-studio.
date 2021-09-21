@@ -740,6 +740,9 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
 * Building and installing OBS:
 
+  * If you have configured your environment with a umask 077 or a noexec home dir you may 
+    want to change your `CMAKE_INSTALL_PREFIX`, as it is reported `/usr` may change permissions on `/usr/bin` and `/usr/lib`. 
+
   * If building with browser source:
    ```bash
    sudo apt install libnss3-dev
