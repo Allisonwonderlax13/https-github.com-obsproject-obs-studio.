@@ -22,6 +22,7 @@ OBS Studio supports the following launch parameters for automation and portable 
 | `--unfiltered_log`      | Disable log filter (do not suppress repeated lines). |
 | `--disable-updater`     | Disable built-in updater (Windows/macOS only). |
 | `--allow-opengl`        | Allow OpenGL renderer on Windows. |
+| `--disable-missing-files-check` | Disable missing file check dialog on startup. |
 
 \* = Not available on Windows
 
