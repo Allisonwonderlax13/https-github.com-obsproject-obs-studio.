@@ -81,4 +81,4 @@ https://github.com/obsproject/obs-deps/pull/25/files#diff-3c554084078352bb2c198a
 
 | lib | git commit | version |
 | :--- | :---: | :---: |
-| CEF | gf19c584 | CEF 76.1.13 & chromium-76.0.3809.13 |
+| CEF | g03f9336 | CEF 87.1.12 & chromium-87.0.4280.88 |
