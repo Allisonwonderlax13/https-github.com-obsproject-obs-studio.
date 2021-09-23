@@ -628,6 +628,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           git \
           glib2-devel \
           libcurl-devel \
+          libdrm-devel \
           libglvnd-devel \
           libv4l-devel \
           libX11-devel \
@@ -648,6 +649,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           speexdsp-devel \
           swig \
           systemd-devel \
+          vlc-devel \
           wayland-devel \
           x264-devel
    ```
