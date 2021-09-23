@@ -11,7 +11,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | AMF | [802f92ee52](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/commit/802f92ee52b9efa77bf0d3ea8bfaed6040cdd35e) | 1.4.16.1 |
 | cURL | | 7.73.0 |
 | CEF |  | 75.0.3770 [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip) [x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip) |
-| FFmpeg | [f9f95ceebf](https://github.com/FFmpeg/FFmpeg/commit/f9f95ceebfbd7b7f43c1b7ad34e25d366e6e2d2b) | n4.2.4 |
+| FFmpeg<sup><a href="#ffmpeg-footnote-01">1</a>, <a href="#ffmpeg-footnote-02">2</a></sup> | [f9f95ceebf](https://github.com/FFmpeg/FFmpeg/commit/f9f95ceebfbd7b7f43c1b7ad34e25d366e6e2d2b) | n4.2.4 |
 | VLC | | [3.0.0-git](https://cdn-fastly.obsproject.com/downloads/vlc.zip) |
 | FreeType2 | | 2.10.4 |
 | libogg | [31bd3f2707](https://github.com/xiph/ogg/commit/31bd3f2707fb7dbae539a7093ba1fc4b2b37d84e) | [no version] |
@@ -28,6 +28,33 @@ That said, it is recommended that when building on Windows yourself to use our p
 | Speex | | |
 | x264 | [d198931a63](https://github.com/mirror/x264/commit/d198931a63049db1f2c92d96c34904c69fde8117) | 0.161.3020 r3020 |
 | zlib | [cacf7f1d4e](https://github.com/madler/zlib/commit/cacf7f1d4e3d44d871b605da3b647f07d718623f) | [1.2.11](https://github.com/madler/zlib/releases/tag/v1.2.11) |
+
+<a name="ffmpeg-footnote-01">1</a>: Our pre-built FFmpeg for Windows is built with the FFmpeg n4.2.4 tag with the following commits cherry-picked:
+* 1f7b527194a2a10c334b0ff66ec0a72f4fe65e08
+* f9d6addd60b3f9ac87388fe4ae0dc217235af81d
+* 79d907774d59119dcfd1c04dae97b52890aec3ec
+* 8d823e6005febef23ca10ccd9d8725e708167aeb
+* 952fd0c768747a0f910ce8b689fd23d7c67a51f8
+* d7e2a2bb35e394287b3e3dc27744830bf0b7ca99
+* 3def315c5c3baa26c4f6b7ac4622aa8a3bfb46f8
+* f8990c5f414d4575415e2a3981c3b142222ca3d4
+* fee4cafbf52f81ffd6ad7ed4fd0a8096f8791886
+* b96bc946f219fbd28cffc1efea78fd42f34148ec
+* 006744bdbd83d98bc71cb041d9551bf6a64b45a2
+* aab9133d919bec4af54a06216d8629ebe4fb8f74
+* c112fae6603f8be33cf1ee2ae390ec939812f473
+* 86a7b77b60488758e0c080882899c32c4a5ee017
+* 7cc7680a802c1eee9e334a0653f2347e9c0922a4
+* 449e984192d94ac40713e9217871c884657dc79d
+* 290a35aefed250a797449c34d2f9e5af0c4e006a
+* 6e95ce8cc9ae30e0e617e96e8d7e46a696b8965e
+* e9b35a249d224b2a93ffe45a1ffb7448972b83f3
+* 7c59e1b0f285cd7c7b35fcd71f49c5fd52cf9315
+* 86f5fd471d35423e3bd5c9d2bd0076b14124faee
+* fb0304fcc9f79a4c9cbdf347f20f484529f169ba
+
+<a name="ffmpeg-footnote-02">2</a>: Our pre-built FFmpeg for Windows is built with the following patch: 
+https://github.com/obsproject/obs-deps/pull/25/files#diff-3c554084078352bb2c198ad3ccdc2a9337272635b8641a11a75a438a719b6b19
 
 ## macOS
 
