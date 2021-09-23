@@ -53,10 +53,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 * 86f5fd471d35423e3bd5c9d2bd0076b14124faee
 * fb0304fcc9f79a4c9cbdf347f20f484529f169ba
 
-<a name="ffmpeg-footnote-02">2</a>: Our pre-built FFmpeg for Windows is built with the following patch: 
-https://github.com/obsproject/obs-deps/pull/25/files#diff-3c554084078352bb2c198ad3ccdc2a9337272635b8641a11a75a438a719b6b19
-
-The full branch for the FFmpeg build we currently distribute on Windows is available here:
+<a name="ffmpeg-footnote-02">2</a>: Our pre-built FFmpeg for Windows is built with the following branch: 
 https://github.com/obsproject/FFmpeg/commits/n4.2.4-plus-srt-and-flv-fixes
 
 ## macOS
