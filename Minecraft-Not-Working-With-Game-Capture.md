@@ -16,7 +16,7 @@ A first troubleshooting step is to make sure that the Game Capture source "Mode"
 * Choose "Classic app" or "Desktop app" (they are the same thing, only named differently on different windows versions) and hit "Browse". Navigate to javaw.exe, usually located here:
 
 For Minecraft Vanilla Java edition older than 1.17 the default path is 
-`C:\Program Files (x86)\Minecraft Launcher\runtime\jre-x64\bin\javaw.exe`
+`C:\Program Files (x86)\Minecraft Launcher\runtime\jre-legacy\windows-x64\jre-legacy\bin\javaw.exe`
 
 For Minecraft Vanilla Java edition 1.17 and newer the default path is 
 `C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-alpha\windows-x64\java-runtime-alpha\bin\javaw.exe`
