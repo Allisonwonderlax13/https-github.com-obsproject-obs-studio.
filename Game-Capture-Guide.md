@@ -32,15 +32,14 @@ Most of the time, your game capture should work once you apply the changes in th
 Here are some common things to look for or do if you are running into problems getting a game capture source to show up.
 
 * Run OBS as admin. A lot of games requires this for them to be captured, such as Call of Duty, Valorant, and others. This will also help with performance in some cases. 
-* Check for [Known Conflicts](https://obsproject.com/wiki/Known-Conflicts), such as overlays, FPS counters, Anti-virus programs, etc.
-* Certain games, like [Destiny 2](https://www.bungie.net/en/Help/Article/46101) and [CS:GO](https://blog.counter-strike.net/index.php/2020/07/30736/) do not allow OBS to hook in with game capture. We recommend running the game in either windowed or borderless fullscreen and using a Window Capture source instead. Emulators and older games may also need window capture.
+* Check for [Known Conflicts](https://obsproject.com/wiki/Known-Conflicts), such as overlays, FPS counters, Anti-virus programs, etc. As of 27.1, Rivatuner/MSI Afterburner are especially prevalent conflicts, even though they have always been listed as such. Turn those off before hooking into a game with OBS.
+* Certain games, like [Destiny 2](https://www.bungie.net/en/Help/Article/46101) and [CS:GO](https://blog.counter-strike.net/index.php/2020/07/30736/) do not allow OBS to hook in with game capture. We recommend running the game in either windowed or borderless fullscreen and using a Window Capture source instead. 
+* Emulators and older games may need to use window capture, as sometimes older software/emulators are not compatible with game capture
+* Sometimes you may see the red dot in the upper left corner of your preview with a game capture source, select the source in your list and press Ctrl+R then Ctrl+f to reset than fit the source to your preview screen. 
 * If a game is set to run in full-screen mode, when you alt+tab out the game, it will stop rendering. This means that you will not see the game in OBS while it is minimized. Either make a test recording and check it to verify the capture worked properly, or move OBS to a second monitor if you have one.
 * Certain DX12 games, like Fortnite when running on DX12 mode, may cause the game to crash if run with OBS, and DX12 capture may sometimes have weird frame issues, due to the graphics API. If the game has DX11 API it is recommended to try that option to see if problems resolve. 
 * If you are using a laptop, make sure your OBS and the game you are running are using the High-performance GPU, per the instructions [here](https://obsproject.com/wiki/Laptop-GPU-Selection-Windows-10). OBS and most games should do this by default, but certain games, like [Minecraft Java](https://obsproject.com/wiki/Minecraft-Not-Working-With-Game-Capture) and osu! default to the iGPU on multi-gpu systems. Use the method linked to change games to the high-performance GPU, then restart the game and OBS.
-* Trying to capture League Of Legends? - To best capture League of Legends, create two scenes.
-In the first scene, add a Window Capture of the LoL launcher/lobby (Windows 7 users should make sure Aero is enabled.).
-In the second scene, add a Game Capture of the game itself (you may need to be in a game to add this for the first time).
-Then configure the Scene Switcher to automatically swap between them.
-* Sometimes you may see the red dot in the upper left corner of your preview with a game capture source, select the source in your list and press Ctrl+R then Ctrl+f to reset than fit the source to your preview screen. 
+* Trying to capture League Of Legends? - To best capture League of Legends, create two scenes. In the first scene, add a Window Capture of the LoL launcher/lobby (Windows 7 users should make sure Aero is enabled.). In the second scene, add a Game Capture of the game itself (you may need to be in a game to add this for the first time), then configure the Scene Switcher to automatically swap between them.
+
 
 If at this point you are still having issues, please use either the [OBS Discord](https://obsproject.com/discord) or the [Forums](https://obsproject.com/forum/), explain your issue/troubleshooting steps in detail, and provide a current OBS log.
