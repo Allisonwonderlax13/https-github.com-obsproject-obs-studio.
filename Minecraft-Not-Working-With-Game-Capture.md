@@ -15,15 +15,19 @@ A first troubleshooting step is to make sure that the Game Capture source "Mode"
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
 * Choose "Classic app" or "Desktop app" (they are the same thing, only named differently on different windows versions) and hit "Browse". Navigate to javaw.exe, usually located here:
 
-For Minecraft Vanilla Java edition older than 1.17 the default path is 
+For Minecraft Vanilla Java edition older than 1.17 the default path is:
+
 `C:\Program Files (x86)\Minecraft Launcher\runtime\jre-legacy\windows-x64\jre-legacy\bin\javaw.exe`
 
-For Minecraft Vanilla Java edition 1.17 and newer the default path is 
+***
+For Minecraft Vanilla Java edition 1.17 and newer the default path is:
+
 `C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-alpha\windows-x64\java-runtime-alpha\bin\javaw.exe`
 
-For the Minecraft Lunar client, the default path is 
-`C:\Users\[your Windows account here]\.lunarclient\jre\zulu8.50.0.53-ca-fx-jre8.0.275-win_x64\bin`
-and then find the `javaw.exe` file and select that.
+***
+For the Minecraft Lunar client, the default path is
+
+`%userprofile%\.lunarclient\jre\zulu16.30.15-ca-fx-jre16.0.1-win_x64\bin\javaw.exe`
 
 For other custom launchers see the info at the bottom of the guide for instructions to find the path of the javaw.exe
 
