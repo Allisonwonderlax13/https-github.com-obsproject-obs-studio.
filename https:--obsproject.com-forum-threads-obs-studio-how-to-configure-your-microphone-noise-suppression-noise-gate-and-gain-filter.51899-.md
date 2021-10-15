@@ -1,0 +1,1 @@
+https://obsproject.com/forum/threads/obs-studio-how-to-configure-your-microphone-noise-suppression-noise-gate-and-gain-filter.51899/
