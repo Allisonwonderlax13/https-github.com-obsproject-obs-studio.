@@ -19,7 +19,7 @@ That said, it is recommended that when building on Windows yourself to use our p
 | libpng | [a40189cf88](https://github.com/glennrp/libpng/commit/a40189cf881e9f0db80511c382292a5604c3c3d1) | v1.6.37 |
 | libsrt | | [v1.4.2](https://github.com/Haivision/srt/releases/tag/v1.4.2) |
 | libvorbis | [83a82dd929](https://github.com/xiph/vorbis/commit/83a82dd9296400d811b78c06e9ca429e24dd1e5c) | [no version] |
-| libvpx | [e56e8dcd6f](https://chromium.googlesource.com/webm/libvpx/+/e56e8dcd6fc9e2b04316be5144c18ca6772f6263) | v1.9.0-git |
+| libvpx | [8ae686757b](https://chromium.googlesource.com/webm/libvpx/+/8ae686757b708cd8df1d10c71586aff5355cfe1e) | v1.8.1 |
 | LuaJIT | | 2.0.5 |
 | mbed TLS | [523f0554b6](https://github.com/ARMmbed/mbedtls/commit/523f0554b6cdc7ace5d360885c3f5bbcc73ec0e8) | [2.24.0](https://github.com/ARMmbed/mbedtls/releases/tag/v2.24.0) |
 | pthread-win32| [19fd5054b2](https://github.com/GerHobbelt/pthread-win32/commit/19fd5054b29af1b4e3b3278bfffbb6274c6c89f5) | 2.10.0.0 |
