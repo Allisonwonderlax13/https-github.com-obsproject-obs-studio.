@@ -1,1 +1,0 @@
-https://github.com/obsproject/obs-studio/blob/3c7139965080e29014639bb653a766f6a13d0e40/CONTRIBUTING.rst
