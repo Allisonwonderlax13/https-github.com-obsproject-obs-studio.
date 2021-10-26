@@ -994,7 +994,7 @@ Use CMake.
 |`COMPILE_PYTHON`|`ON`|
 |`ENABLE_QSV11`|`OFF`|
 |`VULKAN_INCLUDE_DIR`|`DepsARM64/VulkanSDK/include`|
-|`DVULKAN_LIB`|`DepsARM64/VulkanSDK/vulkan-1.lib`|
+|`VULKAN_LIB`|`DepsARM64/VulkanSDK/vulkan-1.lib`|
 
 
 Also make sure `QTDIR`, `DepsPath` and `CEF_ROOT_DIR` are set.
