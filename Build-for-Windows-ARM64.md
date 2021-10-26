@@ -32,6 +32,19 @@ The following prerequisites are for building dependencies:
 		call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" x64_arm64
 		call "C:\msys64\msys2_shell.cmd"
 		```
+        Or use this Windows Terminal profile:
+        ``` json
+        {
+            "acrylicOpacity": 0.80000000000000004,
+            "colorScheme": "One Half Dark",
+            "commandline": "%comspec% /k \"C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Preview\\VC\\Auxiliary\\Build\\vcvarsall.bat x64_arm64 & \"C:\\msys64\\msys2_shell.cmd\"  -defterm -no-start\"",
+            "guid": "{da0492f9-dea3-42b5-92b7-352872674bc9}",
+            "icon": "C:\\msys64\\msys2.ico",
+            "name": "MSYS2 MSVC ARM64",
+            "startingDirectory": null,
+            "useAcrylic": true
+        },
+        ```
 	3. Open MSYS2 console  
 		``` bash
 		mv /usr/bin/link.exe /usr/bin/link.exe.bak
