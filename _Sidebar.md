@@ -29,7 +29,6 @@
     * [Scripting Tutorial: Source Shake](Scripting-Tutorial-Source-Shake)
     * [Scripting Tutorial: Halftone Filter](Scripting-Tutorial-Halftone-Filter)
   * [Post Production Tools you can use](Post-Production-Tools-you-can-use)
-  * [Slack Community Guidelines](Slack Community Guidelines)
 
 # [Install Instructions](install-instructions)
   * [Windows](install-instructions#windows)
