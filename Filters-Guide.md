@@ -25,15 +25,15 @@ You can add them by right-click your desired Scene, Source or Device and selecti
 ## Scene and Source Filters
 
 ### Image Mask/Blend
-![Image Mask](https://helping-squad.com/wp-content/uploads/2015/07/image_mask.png)
+![Image Mask](https://i.imgur.com/76gmHPi.png)
 
 The Image Mask/Blend filter gives us the option to use the Color or Alpha Channel of an Image as a Mask or to Blend an Image (multiply, addition, subtraction) over your Scene or Source. This can be used to give your webcam a round border for example:
-![Image Mask Example](https://helping-squad.com/wp-content/uploads/2015/07/image_mask_example.png)
+![Image Mask Example](https://i.imgur.com/7AaPMLc.png)
 
 ***
 
 ### Crop
-![Crop Filter](https://helping-squad.com/wp-content/uploads/2015/07/crop_filter.png)
+![Crop Filter](https://i.imgur.com/vwOkBKR.png)
 
 The crop filter should explain itself but in short it lets you cut off the top/left/right/bottom of your source/scene to only show the parts you want.
 
@@ -47,7 +47,7 @@ Again, the name says it all. You can change the contrast, brightness and gamma o
 ***
 
 ### Scroll
-![Scroll Filter](https://helping-squad.com/wp-content/uploads/2015/07/scroll_filter.png)
+![Scroll Filter](https://i.imgur.com/37hqzYt.png)
 
 The scroll filter gives us the ability to give our text for example a scrolling effect, left-to-right and top-to-bottom. Negative and positive values will change the direction in which your source will scroll and you can limit the height and width if necessary.
 
@@ -57,11 +57,11 @@ The scroll filter gives us the ability to give our text for example a scrolling 
 
 Color Key:
 
-![Color Key Filter](https://helping-squad.com/wp-content/uploads/2015/07/color_key.png)
+![Color Key Filter](https://i.imgur.com/lU3iOnc.png)
 
 Chroma Key:
 
-![Chroma Key Filter](https://helping-squad.com/wp-content/uploads/2015/07/chroma_key.png)
+![Chroma Key Filter](https://i.imgur.com/h5SC8wr.png)
 
 Both the Color Key and Chroma Key filter can be used to remove a certain color of your source and make it transparent. This can be used for green screens and similar stuff. They behave slightly differently, so you will need to experiment and see which works best for your personal use case.
 
@@ -73,7 +73,7 @@ This filter allows you to apply a LUT to your video sources.
 ***
 
 ### Sharpen
-![Sharpen Filter](https://helping-squad.com/wp-content/uploads/2015/07/sharpen_filter.png)
+![Sharpen Filter](https://i.imgur.com/6jWeBsi.png)
 
 The sharpen filter should explain itself as well, if you feel your webcam input for example is a bit blurred and you want to improve the overall sharpness a bit, add the filter and test with different values.
 
