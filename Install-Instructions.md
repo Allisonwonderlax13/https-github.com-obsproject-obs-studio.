@@ -296,7 +296,7 @@ Any installation directions marked Unofficial are not maintained by the OBS Stud
 
 ### Ubuntu/Mint Installation
 
-**Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**  
+**Please note that OBS Studio does not work on Chrome OS.**  
 * xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following commands:
 
