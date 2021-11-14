@@ -270,7 +270,7 @@ This will create an `obs-studio.xcodeproj` project file in the build directory a
 * Navigate to the `/rundir/debug/bin` bin folder that the previous Xcode build process should have created and select the `obs` binary found there.
 * Next, switch to the `Options` tab and check the box to `Use custom working directory` and select the same `/rundir/debug/bin` directory in your Xcode build directory.
 
-**NOTE:** When running OBS directly from Xcode be aware that browser sources will not be available (as CEF requires to be run as part of an application bundle in macOS) and accessing the webcam will lead to a crash (as macOS requires a permission prompt text set in an application bundle's `Info.plist` which is, of course, not available). Breakpoints and stack traces are available though for debugging purposes if you don't need browser source. In that case, make sure to add -DBUILD_BROWSER=OFF, e;g. : 
+**NOTE:** When running OBS directly from Xcode be aware that browser sources will not be available (as CEF requires to be run as part of an application bundle in macOS) and accessing the webcam will lead to a crash (as macOS requires a permission prompt text set in an application bundle's `Info.plist` which is, of course, not available). Breakpoints and stack traces are available though for debugging purposes if you don't need browser source. In that case, make sure to add -DBUILD_BROWSER=OFF, e.g. : 
 
    ```bash
    cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DBUILD_BROWSER=OFF -DDISABLE_PYTHON=ON -G Xcode ..
