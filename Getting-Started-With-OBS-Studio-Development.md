@@ -4,7 +4,7 @@ So you want to contribute programming for OBS Studio? Great! Whether you're maki
 If you're interested in doing OBS Studio development, you should be experienced in both the C and C++ programming languages, and Objective-C for Apple systems (optionally). It is highly recommended that you read [OBS Studio's Contributing guide](https://github.com/obsproject/obs-studio/blob/master/CONTRIBUTING.rst) so that you know code guidelines as well as what is required when you want to submit a change.
 
 ## Developer Chat
-Our developer community is always helpful to new developers wanting to get their feet wet with OBS programming. If you ever need help you can join the developer chat on Discord here: **[https://discord.gg/obsproject](https://discord.gg/7hSSeQB)**
+Our developer community is always helpful to new developers wanting to get their feet wet with OBS programming. If you ever need help you can join the developer chat on Discord here: **[https://discord.gg/obsproject](https://discord.gg/obsproject)**
 
 ## Starting OBS Development
 
