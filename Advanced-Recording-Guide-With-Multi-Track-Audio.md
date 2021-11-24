@@ -1,42 +1,47 @@
-# Advanced Recording Guide With Multi Track Audio
-If you want to record multiple audio tracks you will need to switch to "Advanced Output" mode at the top which will give you full control of all the settings.
+If you want to record multiple audio tracks you will need to switch to "Advanced Output" mode at the top of the window, which will give you full control of all the settings.
 
-In order to access these options, you will need to enable the options shown in the image (pick any encoder that is not "same as stream".
+In order to access these options, you will need to enable the options shown in the image (pick any encoder that is **not** "same as stream".
 
 ![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/d5e9e963e6-1637689918/obs-adv.png)
 
 This will allow you to record multiple audio track (up to 6), as well as choose a different encoder from the stream encoder.
 
-There are some differences in terms of the quality based rate controls we recommend, although they all follow a similar paradigm of lower value = higher quality and larger files. Opposite higher numbers = lower quality, smaller files.
+In simple mode we make use of "quality based" rate control, and we will be mimicking those settings here as well.
+"Indistinguishable" means its visually lossless (Visually indistinguishable from lossless).
 
-Here is a list of recommended values.
+Here is a list of settings that will close to what you get in "Simple Mode".
 
 ## x264
-- Rate Control: CRF
-- CRF: 15-23
-- CPU Preset: veryfast or superfast
+* Rate Control: CRF
+* CRF Value:
+  * Indistinguishable = 16
+  * High Quality = 23
+- CPU Preset: veryfast
 
-## Nvenc
-- Rate Control: CQP
-- CRF: 15-23
+## NVENC
+* Rate Control: CQP
+* CQP Value
+  * Indistinguishable = 16
+  * High Quality = 23
 - Preset: Quality
 - Profile: High
 - look-ahead & Psycho Visual: off
 - Max B-frames: 2
 
 ## QuickSync (Intel)
-- Target Usage: quality (lower to balanced or speed if you encounter problems)
-- Profile: high
-- Rate Control: CQP / ICQ or LA_ICQ
-- on CQP: QPI/QPP/QPB: 15-23
-- on ICQ: ICQ Quality: 15-23
-- on LA_ICQ: ICQ Quality: 15-23, Lookahead Depth: 40-50
+* Target Usage: Balanced
+* Profile: high
+* Rate Control: CQP / ICQ or LA_ICQ
+* CQP/ICQ Value
+  * Indistinguishable = 16
+  * High Quality = 23
 
 ## AMD (AMF/VCE)
-- Preset: Indistinguishable
+* Preset: 
+  * Indistinguishable
+  * High Quality
 - Quality Preset: Balanced
 - Keyframe Interval: 2 Seconds
-There are also Presets for High Quality, Recording etc, which will set up the encoder for that type of usage.
 
 # Configuring multiple Audio tracks
 ![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/d4b4466a56-1637690638/rec-adv-audiotracks.png)
