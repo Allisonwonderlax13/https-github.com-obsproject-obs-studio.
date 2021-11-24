@@ -54,7 +54,7 @@ In order to set up our tracks, we need to access the "advanced audio properties"
 ![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/d14c425d07-1637690988/rec-adv-audio.png)
 
 Here we can assign which sources we want to go on which track.
-In this example, I'm going to leaver all my source enabled on "Track 1", because that is the default for the stream, and I want it to contain all sources.
+In this example, I'm going to leave all my source enabled on "Track 1", because that is the default for the stream, and I want it to contain all sources.
 
 ![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/e0fd987744-1637691333/rec-adv-track-setup.png)
 
