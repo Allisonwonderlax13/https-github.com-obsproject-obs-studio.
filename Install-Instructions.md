@@ -2,7 +2,11 @@ If you want to develop for OBS, please visit our [Discord](https://obsproject.co
 
 Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in Discord or IRC first.
 
-Please note that any install directions/packages for Linux/FreeBSD distributions listed as *Unofficial* means that they are community provided, and any support for those packages should be directed at the appropriate distro/package maintainers.
+#### About unofficial builds
+
+Please note that any install directions/packages for Linux/FreeBSD distributions listed as *Unofficial* means that they are community provided and may not provide all the features and/or be up to date or stable.
+
+And any support for those packages should be directed at the appropriate distro/package maintainers.
 
 ***
 
@@ -294,8 +298,6 @@ You can now run OBS with Xcode directly attached as debugger. You can debug the 
 
 # Linux
 
-Any installation directions marked Unofficial are not maintained by the OBS Studio author and may not provide all the features and/or be up to date or stable.
-
 **NOTE:** OpenGL 3.3 or later is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing `glxinfo | grep "OpenGL"` on Terminal.
 
 ## Linux Install Directions
@@ -326,7 +328,7 @@ sudo apt install v4l2loopback-dkms
 
 ***
 
-### Arch Linux Installation (Unofficial)
+### Arch Linux Installation ([Unofficial](#about-unofficial-builds))
 * "Release" version is available on the community repository:
    ```bash
    sudo pacman -S obs-studio
@@ -335,7 +337,7 @@ sudo apt install v4l2loopback-dkms
 
 ***
 
-### Manjaro Installation (Unofficial)
+### Manjaro Installation ([Unofficial](#about-unofficial-builds))
 * Graphical: search "obs-studio" on Pamac Manager or Octopi
 * Command-line: install it via pacman with the following command:
    ```bash
@@ -344,7 +346,7 @@ sudo apt install v4l2loopback-dkms
 * Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
 ***
 
-### Fedora Installation (Unofficial)
+### Fedora Installation ([Unofficial](#about-unofficial-builds))
 * OBS Studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
    ```bash
@@ -369,7 +371,7 @@ sudo apt install v4l2loopback-dkms
    ```
 ***
 
-### OpenMandriva Installation (Unofficial)
+### OpenMandriva Installation ([Unofficial](#about-unofficial-builds))
 * OBS Studio is included in OpenMandriva Lx3 non-free repository and in restricted repository for upcoming Lx4 release - available now as Cooker.
 
 #### For OpenMandriva Lx3
@@ -390,7 +392,7 @@ sudo apt install v4l2loopback-dkms
 
 ***
 
-### Solus Installation (Unofficial)
+### Solus Installation ([Unofficial](#about-unofficial-builds))
 * Graphical: search `obs-studio` in Software Center
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
    ```bash
@@ -399,7 +401,7 @@ sudo apt install v4l2loopback-dkms
 
 ***
 
-### openSUSE Installation (Unofficial)
+### openSUSE Installation ([Unofficial](#about-unofficial-builds))
 * The Packman repository contains the obs-studio package since it requires the fuller version of FFmpeg which is in Packman for legal reasons. If you do not already have the Packman repository add it as shown below.
   * For openSUSE Tumbleweed:
 
@@ -435,7 +437,7 @@ Links:
 
 ***
 
-### Gentoo Installation (Unofficial)
+### Gentoo Installation ([Unofficial](#about-unofficial-builds))
 Command-line: can be installed using portage by the following command:
 
 ```bash
@@ -446,7 +448,7 @@ See https://packages.gentoo.org/packages/media-video/obs-studio for available ve
 
 ***
 
-### NixOS Installation (Unofficial)
+### NixOS Installation ([Unofficial](#about-unofficial-builds))
 Command-line: can be installed by the following command:
 
 ```bash
@@ -457,7 +459,7 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ***
 
-### UOS/Deepin Installation (Unofficial)
+### UOS/Deepin Installation ([Unofficial](#about-unofficial-builds))
 UOS/Deepin 20 or newer is required.
 
 * First, make sure you have everything up-to-date.
@@ -486,7 +488,7 @@ UOS/Deepin 20 or newer is required.
 
 ***
 
-### Debian/LMDE Installation (Unofficial)
+### Debian/LMDE Installation ([Unofficial](#about-unofficial-builds))
 Debian 9.0 or newer is required.  
 **Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**
 
@@ -512,7 +514,7 @@ Debian 9.0 or newer is required.
 
 ***
 
-### Void Installation (Unofficial)
+### Void Installation ([Unofficial](#about-unofficial-builds))
 * First make sure your repositories are up-to-date. OBS is available on the `multilib` repos if you need the 32-bit build.
 
    ```bash
@@ -528,7 +530,7 @@ Debian 9.0 or newer is required.
 
 ***
 
-### snappy Installation (Unofficial)
+### snappy Installation ([Unofficial](#about-unofficial-builds))
 * If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is outdated).
 
 * Install OBS Studio.
@@ -879,7 +881,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
 
 # FreeBSD
 
-### FreeBSD Installation (Unofficial)
+### FreeBSD Installation ([Unofficial](#about-unofficial-builds))
 
 * Install OBS Studio:
 
