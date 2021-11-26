@@ -499,11 +499,6 @@ Debian 9.0 or newer is required.
    ```bash
    sudo apt update
    ```
-* Optionally, you may also wish to make sure all the packages on your system are up to date.
-
-   ```bash
-   sudo apt upgrade
-   ```
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
 
