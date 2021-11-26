@@ -2,7 +2,7 @@ If you want to record multiple audio tracks you will need to switch to "Advanced
 
 In order to access these options, you will need to enable the options shown in the image (pick any encoder that is **not** "same as stream".
 
-![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/d5e9e963e6-1637689918/obs-adv.png)
+![](https://obsproject.com/media/pages/kb/advanced-recording-guide-and-multi-track-audio/59acfcd526-1637689918/obs-adv.png)
 
 This will allow you to record multiple audio track (up to 6), as well as choose a different encoder from the stream encoder.
 
@@ -44,19 +44,19 @@ Here is a list of settings that will close to what you get in "Simple Mode".
 - Keyframe Interval: 2 Seconds
 
 # Configuring multiple Audio tracks
-![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/d4b4466a56-1637690638/rec-adv-audiotracks.png)
+![](https://obsproject.com/media/pages/kb/advanced-recording-guide-and-multi-track-audio/266933d6df-1637690638/rec-adv-audiotracks.png)
 
 Not all recording formats (containers) allow for multi track audio. We suggest using mkv (you can remux later to mp4).
 Once the tracks are enabled, we're free to send different audio outputs to different tracks. Most video players will only play a single track a time, but editors (assuming its supported) will allow you to manage each track separately.
 
 In order to set up our tracks, we need to access the "advanced audio properties".
 
-![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/d14c425d07-1637690988/rec-adv-audio.png)
+![](https://obsproject.com/media/pages/kb/advanced-recording-guide-and-multi-track-audio/a252098223-1637875066/rec-adv-audio.png)
 
 Here we can assign which sources we want to go on which track.
 In this example, I'm going to leave all my source enabled on "Track 1", because that is the default for the stream, and I want it to contain all sources.
 
-![](https://obsproject.com/media/pages/knowledge-base/advanced-recording-guide-and-multi-track-audio/e0fd987744-1637691333/rec-adv-track-setup.png)
+![](https://obsproject.com/media/pages/kb/advanced-recording-guide-and-multi-track-audio/04f0e0e0a4-1637848734/rec-adv-track-setup.png)
 
 Then I'm going to spend my remaining tracks 2-4 to have full control over the sources I want in post (editing).
 * Track 2, only "comms" (discord, skype etc) is selected, so that I can add/remove, mute it later.
