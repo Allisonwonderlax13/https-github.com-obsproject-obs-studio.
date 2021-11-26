@@ -15,7 +15,7 @@ Programs which draw on top of games and other software to show additional detail
 - Lowkey.gg
 - Medal.tv
 - MSI Afterburner
-- RivaTuner
+- RivaTuner / RTSS
 - EVGA Precision
 - Dolby Axon
 - ASUS GPU Tweak II
