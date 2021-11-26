@@ -462,7 +462,7 @@ See https://nixos.org/wiki/OBS for further instructions
 ### UOS/Deepin Installation ([Unofficial](#about-unofficial-builds))
 UOS/Deepin 20 or newer is required.
 
-* First, make sure you have everything up-to-date.
+* First, make sure apt has access to the latest versions of packages.
 
    ```bash
    sudo apt-get update
@@ -494,10 +494,15 @@ Debian 9.0 or newer is required.
 
 **Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**
 
-* First, make sure you have everything up-to-date.
+* First, make sure apt has access to the latest versions of packages.
 
    ```bash
    sudo apt update
+   ```
+* Optionally, you may also wish to make sure all the packages on your system are up to date.
+
+   ```bash
+   sudo apt upgrade
    ```
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
