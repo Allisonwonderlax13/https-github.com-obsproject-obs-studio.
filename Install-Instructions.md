@@ -251,7 +251,7 @@ These dependencies are also available via `obs-deps` (https://github.com/obsproj
    cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13 -DDISABLE_PYTHON=ON ..
    ```
 
-* *NOTE*: `cmake` might require additional parameters to find `Qt5` libraries present on this system, this can either be provided via `-DQTDIR="/usr/local/opt/qt"` or setting an environment variable, e.g.: `export QTDIR=/usr/local/opt/qt`
+* *NOTE*: `cmake` might require additional parameters to find `Qt5` libraries present on this system, this can either be provided via `-DQTDIR="/usr/local/opt/qt5"` or setting an environment variable, e.g.: `export QTDIR=/usr/local/opt/qt5`
 * Build OBS by running `make`
 * Run OBS from the `/rundir/RelWithDebInfo/bin` directory in your build directory, by running `./obs` from a Terminal
 * *NOTE*: If you are running via command prompt, you *must* be in the 'bin' directory specified above, otherwise it will not be able to find its files relative to the binary.
