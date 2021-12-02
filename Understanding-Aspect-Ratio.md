@@ -17,7 +17,7 @@ An image with a 1:1 aspect ratio is a perfect square, because for every 1 pixel 
 The most common aspect ratio found on computer displays is 16:9. Example resolutions that have a 16:9 aspect ratio are 1920x1080 (aka "1080p"), 1280x720 (aka "720p"), and 3840x2160 (aka "4K").
 
 This illustration shows how the different aspect ratios would look like on a 16:9 monitor or canvas.
-![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/fe73e721a3-1638295171/aspectratio_0-5x.png)
+![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/6e5353c737-1638477482/16by9-aspect-ratio-examples.png)
 
 ## What should you target?
 As we mentioned above, the most common aspect ratio for viewing devices is still **16:9**.
