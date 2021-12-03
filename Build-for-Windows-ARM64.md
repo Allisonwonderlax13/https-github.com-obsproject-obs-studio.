@@ -12,7 +12,64 @@ Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-st
 
 # Prerequisites
 - ARM64 fork of `obs-studio`: https://github.com/tommyvct/obs-studio/
-- VS2022 with arm64 C++ toolchain, ATL, and Spectre mitigation (optional).
+- VS2022 with arm64 C++ toolchain, ATL, and Spectre mitigation (optional).  
+  Reference `.vsconfig`
+  <details>
+
+
+
+  ``` json
+    {
+        "version": "1.0",
+        "components": [
+            "Microsoft.VisualStudio.Component.CoreEditor",
+            "Microsoft.VisualStudio.Workload.CoreEditor",
+            "Microsoft.VisualStudio.Component.TypeScript.TSServer",
+            "Microsoft.VisualStudio.Component.TypeScript.SDK.4.4",
+            "Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions",
+            "Microsoft.VisualStudio.Component.Roslyn.Compiler",
+            "Microsoft.Component.MSBuild",
+            "Microsoft.VisualStudio.Component.TextTemplating",
+            "Microsoft.VisualStudio.Component.Debugger.JustInTime",
+            "Microsoft.VisualStudio.Component.IntelliCode",
+            "Microsoft.VisualStudio.Component.VC.CoreIde",
+            "Microsoft.VisualStudio.Component.Windows10SDK",
+            "Microsoft.VisualStudio.Component.VC.Tools.x86.x64",
+            "Microsoft.VisualStudio.Component.Graphics.Tools",
+            "Microsoft.VisualStudio.Component.VC.DiagnosticTools",
+            "Microsoft.VisualStudio.Component.Windows10SDK.19041",
+            "Microsoft.VisualStudio.Component.VC.Redist.14.Latest",
+            "Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core",
+            "Microsoft.VisualStudio.Component.VC.Tools.ARM64",
+            "Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions.CMake",
+            "Microsoft.VisualStudio.Component.VC.CMake.Project",
+            "Microsoft.VisualStudio.Component.VC.ATL",
+            "Microsoft.VisualStudio.Component.VC.ATLMFC",
+            "Microsoft.VisualStudio.Component.VC.ASAN",
+            "Microsoft.VisualStudio.Component.Windows11SDK.22000",
+            "Microsoft.VisualStudio.Component.VC.Tools.ARM64EC",
+            "Microsoft.VisualStudio.Component.VC.CoreBuildTools",
+            "Microsoft.VisualStudio.Workload.NativeDesktop",
+            "Microsoft.VisualStudio.Component.VC.ATL.ARM64",
+            "Microsoft.VisualStudio.Component.VC.ATL.ARM64EC",
+            "Microsoft.VisualStudio.Component.VC.ATL.Spectre",
+            "Microsoft.VisualStudio.Component.VC.ATL.ARM64.Spectre",
+            "Microsoft.VisualStudio.Component.VC.ATL.ARM64EC.Spectre",
+            "Microsoft.VisualStudio.Component.VC.ATLMFC.Spectre",
+            "Microsoft.VisualStudio.Component.VC.MFC.ARM64.Spectre",
+            "Microsoft.VisualStudio.Component.VC.MFC.ARM64EC.Spectre",
+            "Microsoft.VisualStudio.Component.VC.Runtimes.ARM64.Spectre",
+            "Microsoft.VisualStudio.Component.VC.Runtimes.ARM64EC.Spectre",
+            "Microsoft.VisualStudio.Component.VC.MFC.ARM64",
+            "Microsoft.VisualStudio.Component.VC.MFC.ARM64EC"
+        ]
+    }
+  ```
+
+
+
+  </details>
+
 - CMake  
     - When using CMake GUI, there will be a prompt to choose the generator and the platform to use will appear before the configure begins. Choose `Visual Studio 17 2022` as the generator, and ARM64 as the platform.   
     - If using CMake from command line, use `-G"Visual Studio 17 2022" -A"ARM64"`.  
