@@ -12,6 +12,7 @@
   * [Understanding the Mixer](Understanding-The-Mixer)
   * [Streaming with SRT protocol](Streaming-With-SRT-Protocol)
   * [Getting Started With Track Matte Stinger Transitions](Getting-Started-With-Track-Matte-Stinger-Transitions)
+  * [Understanding Video Aspect Ratio}(Understanding-Aspect-Ratio)
   * [Troubleshooting Guides](Troubleshooting-Guides)
     * [Game Capture Troubleshooting](Game-Capture-Guide)
     * [Known Conflicts](Known-Conflicts)
