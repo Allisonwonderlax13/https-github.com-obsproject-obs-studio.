@@ -1,10 +1,10 @@
-# Current Limitition
+# Current Limitation
 1. CEF (current version 88) hardware acceleration does not work.
 Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware Acceleration" to use software rendering.
-2. RealSense is not included. I have little confidence that something intel will work on ARM platform.
-3. Virtual Camera is not included, yet.
-4. Video Source is not available, unless there's a good enough mingw toolchain targeting ARM64 Windows, AND the VideoLAN is willing to use it. 
 5. There is no installer available, yet. 
+3. Virtual Camera should work, in theory. A manual registration of Virtual Camera is needed.
+2. RealSense is not included. I have little confidence that something intel will work on ARM platform.
+4. Video Source is not available, unless there's a good enough MinGW toolchain targeting ARM64 Windows, AND the VideoLAN is willing to use it. 
 6. There is no hardware encoding, yet. Neither Microsoft nor Qualcomm released any documentation on this topic.
 
 Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases   
@@ -12,11 +12,11 @@ Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-st
 
 # Prerequisites
 - ARM64 fork of `obs-studio`: https://github.com/tommyvct/obs-studio/
-- VS2019 with arm64 C++ toolchain, ATL, and Spectre mitigation (optional).
+- VS2022 with arm64 C++ toolchain, ATL, and Spectre mitigation (optional).
 - CMake  
-    I used CMake GUI. A window to choose the generator and the platform to use will appear before the configure begins.
-    Choose `Visual Studio 16 2019` as the generator, and ARM64 as the platform.
-    This applies to everything using CMake in this guide.
+    - When using CMake GUI, there will be a prompt to choose the generator and the platform to use will appear before the configure begins. Choose `Visual Studio 17 2022` as the generator, and ARM64 as the platform.   
+    - If using CMake from command line, use `-G"Visual Studio 17 2022" -A"ARM64"`.  
+    - This applies to everything using CMake in this guide.
 
 The following prerequisites are for building dependencies:
 
@@ -24,33 +24,41 @@ The following prerequisites are for building dependencies:
 - A Unix environment, either MSYS2, WSL or a real Linux with `mingw64-binutils` installed.  
 - Perl
 - Ruby
-- The [patch](https://github.com/RytoEX/obs-deps/tree/build-windows-deps)
+- The [patch](https://github.com/RytoEX/obs-deps/tree/build-windows-deps-v02/CI)
 - Cross MSYS2 bash
 	1. Edit c:/msys64/msys2_shell.cmd and remove `rem` from the line `rem MSYS2_PATH_TYPE=inherit`  
-	2. Save the following content to a batch file.
-		``` batch
-		call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" x64_arm64
-		call "C:\msys64\msys2_shell.cmd"
-		```
-        Or use this Windows Terminal profile:
+	2. Use this Windows Terminal profile:
         ``` json
         {
-            "acrylicOpacity": 0.80000000000000004,
-            "colorScheme": "One Half Dark",
-            "commandline": "%comspec% /k \"C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Preview\\VC\\Auxiliary\\Build\\vcvarsall.bat x64_arm64 & \"C:\\msys64\\msys2_shell.cmd\"  -defterm -no-start\"",
-            "guid": "{da0492f9-dea3-42b5-92b7-352872674bc9}",
+            "commandline": "%comspec% /k \"C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat x64_arm64 & \"C:\\msys64\\msys2_shell.cmd\"  -defterm -no-start\"",
             "icon": "C:\\msys64\\msys2.ico",
             "name": "MSYS2 MSVC ARM64",
             "startingDirectory": null,
-            "useAcrylic": true
         },
         ```
+        Or save the following content to a batch file:
+		``` bat
+		call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" x64_arm64
+		call "C:\msys64\msys2_shell.cmd"
+		```
 	3. Open MSYS2 console  
 		``` bash
 		mv /usr/bin/link.exe /usr/bin/link.exe.bak
 		```
 		We won't use the linker built-in with MSYS2.
-
+- MSVC ARM64 Developer Command Prompt / Powershell  
+    - Use this Windows Terminal profile:
+        ``` json
+        {
+            "commandline": "powershell.exe -noe -c \"&{$vsPath = &(Join-Path ${env:ProgramFiles(x86)} '\\Microsoft Visual Studio\\Installer\\vswhere.exe') -prerelease -property installationpath; Import-Module (Join-Path $vsPath 'Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll'); Enter-VsDevShell -VsInstallPath $vsPath  -SkipAutomaticLocation -Arch arm64 -hostArch amd64;}\"",
+            "icon": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-80.png",
+            "name": "MSVC ARM64",
+        },
+        ```
+        Or save the following content to a batch file:
+        ``` bat
+        call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" x64_arm64
+        ```
 # Dependencies
 
 Prebuilt dependencies can be downloaded here: https://github.com/tommyvct/obs-deps/releases
@@ -69,8 +77,8 @@ Make sure you put the produced files in the same hierarchy as the intel one.
 ## Compile Qt
 Download Qt 5.15.2 here: https://download.qt.io/archive/qt/
 
-> Only the following folders is needed in the source folder: `gnuwin32`, `qtbase`, `qtsvg` and `qtwinextras`, remove the rest to speed things up.
-> Use `jom` instead of `nmake`. `nmake` is single-threaded only, and it will take days to compile qt.
+> Only the following folders is needed in the source folder: `gnuwin32`, `qtbase`, `qtsvg` and `qtwinextras`, remove the rest to speed things up.  
+> Use `jom` instead of `nmake`. `nmake` is single-threaded only, and it will take days to compile qt.  
 > Qt can figure out which compiler to use by itself, so just use a normal `x64` VS Developer Command Prompt instead of `x64_arm64` one
 
 ``` batch
@@ -274,7 +282,7 @@ cd ffmpeg
 
 export CC=cl
 
-./../../sources/ffmpeg/configure --prefix=./../../installed --toolchain=msvc --arch=aarch64 --target-os=win32 --enable-asm --enable-shared --disable-postproc --disable-programs --enable-avresample --enable-decoder=png --enable-zlib --enable-libx264 --enable-gpl --extra-ldflags="-LIBPATH:./../../installed/lib/"   --extra-cflags="-I./../../installed/include/" --enable-cross-compile --enable-runtime-cpudetect --enable-d3d11va --disable-dxva2 --disable-doc --disable-debug
+./../../sources/ffmpeg/configure --prefix=./../../installed --toolchain=msvc --arch=aarch64 --target-os=win32 --enable-asm --enable-shared --disable-postproc --disable-programs  --enable-decoder=png --enable-zlib --enable-libx264 --enable-gpl --extra-ldflags="-LIBPATH:./../../installed/lib/"   --extra-cflags="-I./../../installed/include/" --enable-cross-compile --enable-runtime-cpudetect --enable-d3d11va --disable-dxva2 --disable-doc --disable-debug
 
 
 make V=1 -j
@@ -336,8 +344,6 @@ DepsARM64
 │       avfilter.lib
 │       avformat-58.dll
 │       avformat.lib
-│       avresample-4.dll
-│       avresample.lib
 │       avutil-56.dll
 │       avutil.lib
 │       cmocka.dll
@@ -540,9 +546,6 @@ DepsARM64
 │   │       avio.h
 │   │       version.h
 │   │       
-│   ├───libavresample
-│   │       avresample.h
-│   │       version.h
 │   │       
 │   ├───libavutil
 │   │       adler32.h
