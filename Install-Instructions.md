@@ -2,13 +2,13 @@ If you want to develop for OBS, please visit our [Discord](https://obsproject.co
 
 Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in Discord or IRC first.
 
-#### About unofficial builds
+### About unofficial builds
 
 Please note that any install directions/packages for Linux/FreeBSD distributions listed as *Unofficial* means that they are community provided and may not provide all the features and/or be up to date or stable.
 
 And any support for those packages should be directed at the appropriate distro/package maintainers.
 
-##### About missing browser source and docks
+#### About missing browser source and docks
 The CEF (Chromium Embedded Framework) adds any browser-related feature to OBS as a vendored dependency, but many distributions don't provide it when building OBS for their official repository. Reasons could be that:
 - OBS Studio supports a specific version of CEF which is sometimes an issue with fixed releases and even with rolling releases.
 - almost all distributions want to build the CEF package from scratch, so using an already compiled binary to save time is a no-go.
