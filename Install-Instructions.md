@@ -27,8 +27,7 @@ The CEF (Chromium Embedded Framework) adds any browser-related feature to OBS as
   * [Linux](#linux)
     * [Install](#linux-install-directions)
       * [Ubuntu/Mint](#ubuntumint-installation)
-      * [Arch Linux (Unofficial)](#arch-linux-installation-unofficial)
-      * [Manjaro (Unofficial)](#manjaro-installation-unofficial)
+      * [Arch Linux/Manjaro (Unofficial)](#arch-linuxmanjaro-installation-unofficial)
       * [Fedora (Unofficial)](#fedora-installation-unofficial)
       * [OpenMandriva Installation (Unofficial)](#openmandriva-installation-unofficial)
       * [Solus Installation (Unofficial)](#solus-installation-unofficial)
@@ -333,22 +332,29 @@ sudo apt install v4l2loopback-dkms
 
 ***
 
-### Arch Linux Installation ([Unofficial](#about-unofficial-builds))
-* "Release" version is available on the community repository:
+### Arch Linux/Manjaro Installation ([Unofficial](#about-unofficial-builds))
+
+#### Install from AUR
+There is OBS packages present in the [AUR](https://wiki.archlinux.org/title/Arch_User_Repository).
+
+Use your favorite AUR helper or Pamac (Add/Remove Software) with AUR enabled in the settings.
+
+* `obs-studio-tytan652` provide OBS Studio with VST and browser modules with the same CEF as official builds with some quality of life patches and fixes.
+
+* `obs-studio-browser` provide OBS Studio with VST and browser modules.
+
+* `obs-studio-rc` provide OBS Studio latest version (including Release Candidates) with VST and browser modules with the same CEF as official builds.
+
+Most of those packages also replace `vlc` with `vlc-luajit` to provide VLC sources.
+
+More [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
+
+#### Install from Arch Linux/Manjaro official repository
+* Graphical: search `obs-studio` package on Pamac (Add/Remove Software)
+* Command Line:
    ```bash
    sudo pacman -S obs-studio
    ```
-* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
-
-***
-
-### Manjaro Installation ([Unofficial](#about-unofficial-builds))
-* Graphical: search "obs-studio" on Pamac Manager or Octopi
-* Command-line: install it via pacman with the following command:
-   ```bash
-   sudo pacman -S obs-studio
-   ```
-* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
 ***
 
 ### Fedora Installation ([Unofficial](#about-unofficial-builds))
