@@ -8,6 +8,13 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
 
 And any support for those packages should be directed at the appropriate distro/package maintainers.
 
+##### About missing browser source and docks
+The CEF (Chromium Embedded Framework) adds any browser related feature in OBS as a vendored dependency, but many distributions doesn't provide it when building OBS for their official repository for some reason:
+- OBS Studio support a specific version of CEF which is sometimes an issue with fixed releases and even with rolling releases.
+- Almost any distributions want to build CEF package from scratch, so using already compiled binary to save time is a no-go.
+
+So no browser features is not present in many unofficial packages.
+
 ***
 
 ### Table of Contents:
