@@ -593,7 +593,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           swig \
           systemd-devel \
           wayland-devel \
-          x264-devel
+          x264-devel \
+          pciutils-devel
    ```
 
   * If `speexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
@@ -671,7 +672,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           systemd-devel \
           vlc-devel \
           wayland-devel \
-          x264-devel
+          x264-devel \
+          pciutils-devel
    ```
 
 * Building and installing OBS:
@@ -757,7 +759,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
            libxss-dev \
            qtwayland5 \
            libgles2-mesa \
-           libgles2-mesa-dev
+           libgles2-mesa-dev \
+           libpci-dev
    ```
 
 * Building and installing OBS:
@@ -830,7 +833,8 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
                 mbedtls \
                 swig \
                 python3-devel \
-                libxss-dev
+                libxss-dev \
+                pciutils-devel
    ```
 
 * Building and installing OBS:
