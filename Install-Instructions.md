@@ -792,12 +792,11 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
    ```bash
    git clone --recursive https://github.com/obsproject/obs-studio.git
    cd obs-studio
-   mkdir build && cd build
    # Note Ubuntu 20.04/Debian 10 must set ENABLE_PIPEWIRE=OFF and do not support wayland capture.
    # Modern platforms can use the default/enable pipewire for wayland capture support.
-   cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_PIPEWIRE=OFF -DBUILD_BROWSER=OFF ..
-   make -j$(nproc)
-   sudo make install
+   cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_PIPEWIRE=OFF -DBUILD_BROWSER=OFF -Bbuild
+   make -j$(nproc) -Cbuild
+   sudo make install -Cbuild
    ```
    If you have `checkinstall` use this instead of `make install`
    ```
