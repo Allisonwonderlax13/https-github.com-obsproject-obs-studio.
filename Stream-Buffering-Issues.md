@@ -7,7 +7,7 @@ If this counter is showing dropped frames, the issue is likely with your own con
 Often, you will not drop frames and still have viewers complaining about lag, buffering, or the stream constantly loading. Why is that and what can we do against it? First of all let us take a look at the **why**.
 
 ### Why does my stream lag/buffer/load for my viewers?
-![Connection Paths](https://helping-squad.com/wp-content/uploads/2014/08/provider_differences_small.png)
+![Connection Paths](https://i.imgur.com/QWs5gRt.png)
 
 Let's analyze the above picture, which shows two possible scenarios. 
 - Provider A has no (or does not always do) balancing of its streams. This means that all streams are served to all viewers from a single server. Twitch.tv for instance, does not use its full Content Delivery Network (CDN) for non-partnered streams. This can lead to very mixed results. User Z can watch your stream just fine, because the route from your Provider to him is very fast or no server on the route is overloaded. But User X might experience problems. He could live in the same country as you, but if the route between him and the provider is too long or is overloaded, he might have problems watching your stream.
