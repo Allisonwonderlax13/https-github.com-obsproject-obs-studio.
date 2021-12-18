@@ -7,11 +7,11 @@ The absolute first troubleshooting step to take is to quit the app completly tha
 _Note:_ These have all been tested and confirmed to work on macOS Big Sur running OBS 26.1.2
 
 # Table of Contents 
-1. [Apps that just work](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#apps-that-just-work)
-2. [Apps that will **not** work](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#apps-that-will-not-work)
-3. [Apps that may or may **not** work](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#apps-that-may-or-may-not-work)
-4. [App Specific Guides](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#App-Specific-Guides)
-5. [SIP Workaround](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#sip-workaround)
+1. [Apps that just work](#apps-that-just-work)
+2. [Apps that will **not** work](#apps-that-will-not-work)
+3. [Apps that may or may **not** work](#apps-that-may-or-may-not-work)
+4. [App Specific Guides](#App-Specific-Guides)
+5. [SIP Workaround](#sip-workaround)
 
 ## Apps that just work
 * AdobeConnect
@@ -40,16 +40,16 @@ _Note:_ These have all been tested and confirmed to work on macOS Big Sur runnin
 
 ## Apps that _MAY_ or may not work 
 * FireFox - _Works for some people, doesn't work for others_
-* Screen (screen.so) - _May work by changing the entitlements, you can try the steps listed [here](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#generic-instructions-to-allow-the-dal-plugin) with `Screen` replacing `APPLICATION NAME HERE` in step 4_
-* Slack - _May work by changing the entitlements, you can try the steps listed [here](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#generic-instructions-to-allow-the-dal-plugin) with `Slack` replacing `APPLICATION NAME HERE` in step 4_
+* Screen (screen.so) - _May work by changing the entitlements, you can try the steps listed [here](#generic-instructions-to-allow-the-dal-plugin) with `Screen` replacing `APPLICATION NAME HERE` in step 4_
+* Slack - _May work by changing the entitlements, you can try the steps listed [here](#generic-instructions-to-allow-the-dal-plugin) with `Slack` replacing `APPLICATION NAME HERE` in step 4_
 
 ## App Specific Guides
-1. [Discord](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#discord)
-2. [Microsoft Teams](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#microsoft-teams)
-3. [Skype](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#skype)
-4. [Webex (Webex Teams)](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#webex-webex-teams)
-5. [Webex Meetings](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#Webex-Meetings)
-6. [Generic instructions to allow the DAL plugin](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#generic-instructions-to-allow-the-dal-plugin)
+1. [Discord](#discord)
+2. [Microsoft Teams](#microsoft-teams)
+3. [Skype](#skype)
+4. [Webex (Webex Teams)](#webex-webex-teams)
+5. [Webex Meetings](#Webex-Meetings)
+6. [Generic instructions to allow the DAL plugin](#generic-instructions-to-allow-the-dal-plugin)
 
 ### Discord 
 To get the Mac virtual camera to work on Discord:
@@ -92,7 +92,7 @@ To get the Mac virtual camera to work on Webex Teams:
 ```sudo codesign --remove-signature "/Applications/Webex.app/"```
 
 ### Webex Meetings 
-Possible to run by changing entitlements as described [here](https://github.com/obsproject/obs-studio/wiki/MacOS-Virtual-Camera-Compatibility-Guide#generic-instructions-to-allow-the-dal-plugin) with `Webex Meetings` replacing `APPLICATION NAME HERE` in step 4. Can be fixed by removing the signature of the Meeting Centre.app (needs to be done for every version that may be called). Then launch the meeting which will fail, then from a command line launch the app by hand. The apps are in the folder ```~/Library/Application Support/WebEx``` Folder with versions being in the format T33_64UMC_40.9.6.11 and the manual launch command is ```Meeting\ Center.app/Contents/MacOS/Meeting\ Center```. This will lose the menu at the top of the screen so is a partial workaround. Webex (Webex Teams) is easier to get working.
+Possible to run by changing entitlements as described [here](#generic-instructions-to-allow-the-dal-plugin) with `Webex Meetings` replacing `APPLICATION NAME HERE` in step 4. Can be fixed by removing the signature of the Meeting Centre.app (needs to be done for every version that may be called). Then launch the meeting which will fail, then from a command line launch the app by hand. The apps are in the folder ```~/Library/Application Support/WebEx``` Folder with versions being in the format T33_64UMC_40.9.6.11 and the manual launch command is ```Meeting\ Center.app/Contents/MacOS/Meeting\ Center```. This will lose the menu at the top of the screen so is a partial workaround. Webex (Webex Teams) is easier to get working.
 An easier and a more confirmed way to get it to work is to run Webex Web app in the browser instead of the desktop app. Open the URL for your meeting, select Cancel when prompted to "Open Cisco Webex Start?", click "Join from your browser", login and select the OBS Virtual Camera.
 
 ### Generic instructions to allow the DAL plugin
