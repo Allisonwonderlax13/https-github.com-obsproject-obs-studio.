@@ -81,11 +81,10 @@ The following prerequisites are for building dependencies:
 - Ruby
 - The [patch](https://github.com/RytoEX/obs-deps/tree/build-windows-deps-v02/CI)
 - Cross MSYS2 bash
-	1. Edit c:/msys64/msys2_shell.cmd and remove `rem` from the line `rem MSYS2_PATH_TYPE=inherit`  
-	2. Use this Windows Terminal profile:
+	1. Use this Windows Terminal profile:
         ``` json
         {
-            "commandline": "%comspec% /k \"C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat x64_arm64 & \"C:\\msys64\\msys2_shell.cmd\"  -defterm -no-start\"",
+            "commandline": "%comspec% /k \"C:\\\"Program Files\"\\\"Microsoft Visual Studio\"\\2022\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat x64_arm64 & \"C:\\msys64\\msys2_shell.cmd\"  -defterm -no-start -use-full-path\"",
             "icon": "C:\\msys64\\msys2.ico",
             "name": "MSYS2 MSVC ARM64",
             "startingDirectory": null,
@@ -96,7 +95,7 @@ The following prerequisites are for building dependencies:
 		call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat" x64_arm64
 		call "C:\msys64\msys2_shell.cmd"
 		```
-	3. Open MSYS2 console  
+	2. Open MSYS2 console  
 		``` bash
 		mv /usr/bin/link.exe /usr/bin/link.exe.bak
 		```
