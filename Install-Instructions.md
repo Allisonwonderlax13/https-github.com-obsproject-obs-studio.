@@ -580,8 +580,10 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           libXcomposite-devel \
           libXinerama-devel \
           luajit-devel \
+          libxkbcommon-devel \
           make \
           mbedtls-devel \
+          pciutils-devel \
           pipewire-devel \
           pulseaudio-libs-devel \
           python3-devel \
@@ -593,8 +595,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           swig \
           systemd-devel \
           wayland-devel \
-          x264-devel \
-          pciutils-devel
+          x264-devel
    ```
 
   * If `speexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
@@ -656,9 +657,11 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           libXcomposite-devel \
           libXdamage \
           libXinerama-devel \
+          libxkbcommon-devel \
           luajit-devel \
           make \
           mbedtls-devel \
+          pciutils-devel \
           pipewire-devel \
           pulseaudio-libs-devel \
           python3-devel \
@@ -672,8 +675,7 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
           systemd-devel \
           vlc-devel \
           wayland-devel \
-          x264-devel \
-          pciutils-devel
+          x264-devel
    ```
 
 * Building and installing OBS:
