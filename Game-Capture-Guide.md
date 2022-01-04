@@ -2,11 +2,14 @@ This guide is specifically for configuring the [Game Capture Source](https://obs
 
 Sections of this guide:
 
-* [How to Set up Game Capture](https://github.com/obsproject/obs-studio/wiki/Game-Capture-Guide#how-to-set-up-game-capture)
-* [Common Issue Troubleshooting/Resolution](https://github.com/obsproject/obs-studio/wiki/Game-Capture-Guide#common-resolutions-for-game-capture-issues)
+* [How to Set Up Game Capture](#how-to-set-up-game-capture)
+* [Common Issue Troubleshooting/Resolution](#common-resolutions-for-game-capture-issues)
+* [Games with Known Issues](#games-with-known-issues)
 
 ***
-# How To Set Up Game Capture
+# How to Set Up Game Capture
+
+**Note**: these instructions are currently for Windows only. macOS users should use Display Capture for the best performance.
 
 In your Sources Box, select the + and choose Game Capture, it will bring up the window below 
 
@@ -23,7 +26,6 @@ For the options you can check, it's generally a good idea to leave them on the d
 If you change games often, try out the hotkey mode, which lets you press a key to select your active game. Otherwise create individual scenes with the single game capture set to specified window to keep scenes clean.
 
 Most of the time, your game capture should work once you apply the changes in the Game Capture Properties window, and it will show up in your OBS preview if you have the source selected and the game active. If it doesn't, continue on for troubleshooting and common resolutions.
-
 
 ***
 
@@ -62,6 +64,8 @@ Certain games, such as Minecraft: Java Edition and osu! default to the integrate
 ## Game captured at the wrong size in OBS Studio
 
 Sometimes you may see the red dot in the upper left corner of your preview with a Game Capture source. This means that the source's size has become stuck. Right-click on the source, select the Transform menu, then click Reset Transform (Ctrl-R). In the same menu, click Fit to Screen (Ctrl-F). This will fit the source to your preview screen so that the game takes up as much of the screen as possible.
+
+***
 
 # Games with known issues
 
