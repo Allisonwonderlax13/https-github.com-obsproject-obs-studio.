@@ -36,23 +36,23 @@ To check your version:
 * Open the Settings App (Start button → Cogwheel icon)
     * Windows 10: Go to System → Display and select "Graphics settings" near the bottom
     * Windows 11: On the left, click System. On the right, click Display → "Graphics" near the bottom
-    * <img src="https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png" alt="Graphics settings" width=500>
+    * ![Graphics settings](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
 
 * Select "Classic app" or "Desktop app" and click "Browse" under Graphics performance preference
-    * <img src="https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/02-add-application.png" alt="Adding an app" width=500>
+    * ![Adding an app](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/02-add-application.png)
 * Navigate and find your OBS Studio executable. By default this is `C:\Program Files\obs-studio\bin\64bit\obs64.exe`
 * Once selected, click "Options" under the OBS Studio entry
-    * <img src="https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/03-open-options.png" alt="Graphics settings" width=500>
+    * ![Graphics options](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/03-open-options.png)
 
 Then follow the steps below, depending on which mode you need.
 
 * For **Window Capture** and **Game Capture**
     * Choose "High performance" and click Save
-    * <img src="https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/05-high-perf.png" alt="Game capture setting" width=500>
+    * ![Game capture setting](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/05-high-perf.png)
 * For **Display Capture**
     * Choose "Power saving" and click Save
     * Also read the [Display Capture](#display-capture) section below
-    * <img src="https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/04-power-saving.png" alt="Display capture setting" width=500>
+    * ![Display capture setting](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/04-power-saving.png)
 
 ***
 
