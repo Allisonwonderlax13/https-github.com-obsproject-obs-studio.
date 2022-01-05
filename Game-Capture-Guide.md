@@ -9,7 +9,7 @@ Sections of this guide:
 ***
 # How to Set Up Game Capture
 
-**Note**: these instructions are currently for Windows only. macOS users should use Display Capture for the best performance.
+**Note**: Game Capture is only available as a source on Windows. macOS users should use Display Capture for the best performance instead.
 
 In your Sources Box, select the + and choose Game Capture, it will bring up the window below 
 
