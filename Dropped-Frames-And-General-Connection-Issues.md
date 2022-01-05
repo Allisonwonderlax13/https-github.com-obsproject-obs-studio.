@@ -16,8 +16,9 @@
     * [Avoid streaming over Wi-Fi](#avoid-streaming-over-wi-fi)
     * [Check your firewall/router](#check-your-firewallrouter)
     * [Bad router or bad networking hardware](#bad-router-or-bad-networking-hardware)
-* [If you still cannot solve the issue]
+* [If you still cannot solve the issue](#if-you-still-cannot-solve-the-issue)
   * [Contact your ISP](#contact-your-isp)
+  * [Get support](#get-support)
 
 ***
 
@@ -161,4 +162,4 @@ Tt is common for Internet Service Providers (ISPs) to run maintenance or change 
 
 ## Get support
 
-***If you tried everything in this guide and are still having issues, please make a post on the forums or stop by the OBS Discord server.***
+***If you tried everything in this guide and are still having issues, please make a post on the [forums or stop by the OBS Discord server](https://obsproject.com/help).***
