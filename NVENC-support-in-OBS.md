@@ -1,4 +1,10 @@
-# NVIDIA Support in OBS
+* [NVIDIA GPUs without NVENC Support](#NVIDIA-GPUs-without-NVENC-support)
+  * [Turing (TU117)](#turing-tu117)
+  * [Pascal (GP108/GP108B)](#pascal)
+  * [Maxwell (GM108)](#maxwell-gm108)
+  * [Older generations](#older-generations)
+
+****
 
 Some GPUs from the Kepler generation and most GPUs from the Maxwell generation onwards support NVENC. This covers most GPUs manufactured 2012 onwards, starting with select entries GeForce 600 series and the majority of the GeForce 700 series.
 
@@ -8,14 +14,16 @@ In each generation, there were many exceptions that do *not* support NVENC. Thes
 
 ## NVIDIA GPUs without NVENC Support
 
-### TU117 (Turing)
+### Turing (TU117)
 
 - Consumer
   - GeForce MX450
 - Professional
   - NVIDIA T500 Mobile
 
-### GP108 (Pascal)
+### Pascal
+
+#### GP108
 
 - Consumer
   - GeForce GT 1030
@@ -26,16 +34,18 @@ In each generation, there were many exceptions that do *not* support NVENC. Thes
   - Quadro P500 Mobile
   - Quadro P520
 
-### GP108B (Pascal)
+#### GP108B
 
 - GeForce MX250
 
-### GM108 (Maxwell)
+### Maxwell (GM108)
 
 - Consumer
   - GeForce 830M
   - GeForce 840M
-  - GeForce 845M (NVENC depends on hardware revision - GM107 vs GM108)
+  - GeForce 845M
+    - GM107 revision supports NVENC
+    - GM108 revision does **not** support NVENC
   - GeForce 920MX
   - GeForce 930M
   - GeForce 930MX
@@ -49,14 +59,13 @@ In each generation, there were many exceptions that do *not* support NVENC. Thes
   - Quadro M500M
   - Quadro M520 Mobile
 
-### GF116 (Fermi 2.0)
+### Older generations
 
-- GeForce GTX 550 Ti
-
-### Other (Older generation)
-
+- GeForce GTX 550 Ti (Fermi 2.0)
 - GeForce GT 705 (Fermi)
-- GeForce GT 730 (NVENC depends on hardware revision - Fermi GF108 vs Kepler GK208)
+- GeForce GT 730
+  - Fermi (GF108) revision supports NVENC
+  - Older Kepler (GK208) revision does **not** support NVENC
 
 ----
 
