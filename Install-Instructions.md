@@ -318,9 +318,9 @@ You can now run OBS with Xcode directly attached as debugger. You can debug the 
 
 * If you want virtual camera support you need v4l2loopback-dkms installed. You can install it with the following command : 
 
-```bash
-sudo apt install v4l2loopback-dkms
-```
+   ```bash
+   sudo apt install v4l2loopback-dkms
+   ```
 
 * Make sure you enabled the multiverse repo in Ubuntu's software center (NOTE: On newer versions of Ubuntu, adding a repository automatically apt updates.) Then you can install OBS with the following commands:
 
