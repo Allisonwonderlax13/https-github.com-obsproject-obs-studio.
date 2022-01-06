@@ -18,7 +18,7 @@ The CPU requirements vary considerably depending on the chosen encoder, resoluti
 ## Linux/Unix
 
 - OpenGL 3.3-compatible GPU
-- X window system
+- X window system or Wayland
 
 # Hardware Encoders
 
@@ -33,11 +33,10 @@ Consumer-level hardware encoders are built into the following GPUs:
 NVIDIA's NVENC encoder is supported on Windows and Linux.
 
 * You will need a GeForce 600-series (Kepler) or higher.
-* The best results are currently available in GPUs with 6th generation NVENC.
+  * Check the [[list of NVIDIA GPUs with NVENC|NVENC-support-in-OBS]].
+* For best results, use a GPU with 6th generation NVENC (Turing).
   * This includes the GTX 1650 rev 2 and higher.
   * Note: GTX 1650 rev 1 contains 5th generation NVENC.
-* Support for mobile GPUs can exist but most will not support NVENC.
-  * MX GPUs mostly do not support NVENC, though some do.
 
 Make sure you have the [latest drivers](https://www.nvidia.com/en-us/geforce/drivers/) for your GPU.
 
