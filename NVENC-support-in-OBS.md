@@ -1,46 +1,67 @@
-### NVIDIA GPUs that do not support NVENC
+# NVIDIA Support in OBS
 
-#### GM108 (Maxwell):
+Some GPUs from the Kepler generation and most GPUs from the Maxwell generation onwards support NVENC. This covers most GPUs manufactured 2012 onwards, starting with select entries GeForce 600 series and the majority of the GeForce 700 series.
 
-- NVIDIA GeForce 830M
-- NVIDIA GeForce 840M
-- NVIDIA GeForce 845M (NVENC depends on hardware revision - GM107 vs GM108)
-- NVIDIA GeForce 920MX
-- NVIDIA GeForce 930M
-- NVIDIA GeForce 930MX
-- NVIDIA GeForce 940M
-- NVIDIA GeForce 940MX
-- NVIDIA GeForce 945M
-- NVIDIA GeForce MX110
-- NVIDIA GeForce MX130
-- NVIDIA Quadro K620M
-- NVIDIA Quadro M500M
-- NVIDIA Quadro M520 Mobile
+If your GPU's name starts with GTX or RTX, it more than likely supports NEVNC.
 
-#### GP108 (Pascal):
+In each generation, there were many exceptions that do *not* support NVENC. These are mostly mobile and low-end GPUs. Please check the listing below. If your card does not support NVENC, you may need to use another hardware encoder (such as Intel Quick Sync) or use a software encoder, normally x264.
 
-- NVIDIA GeForce GT 1030
-- NVIDIA GeForce MX150
-- NVIDIA GeForce MX230
-- NVIDIA GeForce MX250
-- NVIDIA Quadro P500 Mobile
+## NVIDIA GPUs without NVENC Support
 
-#### GP108B (Pascal):
+### TU117 (Turing)
 
-- NVIDIA GeForce MX250
+- Consumer
+  - GeForce MX450
+- Professional
+  - NVIDIA T500 Mobile
 
-#### GF116 (Fermi 2.0):
+### GP108 (Pascal)
+
+- Consumer
+  - GeForce GT 1030
+  - GeForce MX150
+  - GeForce MX230
+  - GeForce MX250
+- Professional
+  - Quadro P500 Mobile
+  - Quadro P520
+
+### GP108B (Pascal)
+
+- GeForce MX250
+
+### GM108 (Maxwell)
+
+- Consumer
+  - GeForce 830M
+  - GeForce 840M
+  - GeForce 845M (NVENC depends on hardware revision - GM107 vs GM108)
+  - GeForce 920MX
+  - GeForce 930M
+  - GeForce 930MX
+  - GeForce 940M
+  - GeForce 940MX
+  - GeForce 945M
+  - GeForce MX110
+  - GeForce MX130
+- Professional
+  - Quadro K620M
+  - Quadro M500M
+  - Quadro M520 Mobile
+
+### GF116 (Fermi 2.0)
+
 - GeForce GTX 550 Ti
 
-#### Other (Older generation)
+### Other (Older generation)
 
-- NVIDIA GeForce GT 705 (Fermi)
-- NVIDIA GeForce GT 730 (NVENC depends on hardware revision - Fermi GF108 vs Kepler GK208)
+- GeForce GT 705 (Fermi)
+- GeForce GT 730 (NVENC depends on hardware revision - Fermi GF108 vs Kepler GK208)
 
 ----
 
 ### TechPowerUp GPU Database
 
-- [https://www.techpowerup.com/gpu-specs/nvidia-gm108.g761](https://www.techpowerup.com/gpu-specs/nvidia-gm108.g761)
-- [https://www.techpowerup.com/gpu-specs/nvidia-gp108.g808](https://www.techpowerup.com/gpu-specs/nvidia-gp108.g808)
-- [https://www.techpowerup.com/gpu-specs/nvidia-gp108b.g887](https://www.techpowerup.com/gpu-specs/nvidia-gp108b.g887)
+- [https://www.techpowerup.com/gpu-specs/-gm108.g761](https://www.techpowerup.com/gpu-specs/-gm108.g761)
+- [https://www.techpowerup.com/gpu-specs/-gp108.g808](https://www.techpowerup.com/gpu-specs/-gp108.g808)
+- [https://www.techpowerup.com/gpu-specs/-gp108b.g887](https://www.techpowerup.com/gpu-specs/-gp108b.g887)
