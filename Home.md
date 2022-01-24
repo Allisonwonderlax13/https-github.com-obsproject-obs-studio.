@@ -14,7 +14,7 @@ The community has created a few guides on how to use OBS Studio:
 * General Troubleshooting Guides: [[Troubleshooting Guides]]
 * Volume meters guide (v21+): [[Understanding the Mixer]]
 * Surround sound features: [[Surround Sound Streaming and Recording]]
-* Streaming with srt or rist protocols: [[Streaming With SRT Or RIST Protocols]]
+* Streaming with srt or rist protocols: [[Streaming With SRT or RIST Protocols]]
 
 For Support Questions, Discord, the forum and IRC are available:  
 * [OBS Studio Discord](http://discord.gg/obsproject)
