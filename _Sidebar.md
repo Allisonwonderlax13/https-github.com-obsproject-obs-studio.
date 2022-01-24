@@ -20,7 +20,7 @@
 * [Launch Parameters](Launch-Parameters) 
 * [Keyboard Shortcuts](Keyboard-Shortcuts)
 * [Surround Sound Streaming and Recording](Surround-Sound-Streaming-And-Recording)
-* [Streaming with SRT protocol](Streaming-With-SRT-Protocol)
+* [Streaming with SRT or RIST protocol](Streaming-With-SRT-Or-RIST-Protocol)
 * [Getting Started With Track Matte Stinger Transitions](Getting-Started-With-Track-Matte-Stinger-Transitions)
 * [Understanding Video Aspect Ratio](Understanding-Aspect-Ratio)
 
