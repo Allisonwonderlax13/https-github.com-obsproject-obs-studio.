@@ -128,6 +128,7 @@ Media Source restrictions: SRT work on all platforms; RIST will only work for re
 * In a Media Source, uncheck 'Local File'.    
   * SRT stream: 
     * For 'Input', enter the srt URL. If the stream is received from a server (in listener mode), the srt connexion will be in mode=caller (which is the default one so the option can be omitted). If however the stream is received straight from an encoder in caller mode, add the mode=listener to the URL (see screenshot).    
+    * If you experience reconnection issues, some users report that the parameter `timeout=5000000` helped them. So enter the URL as `srt://IP:PORT?mode=listener&timeout=5000000`    
     * For 'Input Format', enter mpegts.
 ![](https://i.imgur.com/CMS57Jx.png)
 
