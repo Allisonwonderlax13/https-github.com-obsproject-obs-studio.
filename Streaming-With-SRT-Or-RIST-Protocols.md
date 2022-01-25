@@ -123,8 +123,13 @@ Just launch the command-line:
 # Play srt or rist streams within OBS
 This could be useful to two pc setups (although NDI is probably a more common solution).    
 One can use either VLC Source or Media Source.
-VLC restrictions: SRT will work only on macos/linux; RIST will only work for receiving Simple Profile.   
-Media Source restrictions: SRT work on all platforms; RIST will only work for receiving Main Profile.  
+VLC restrictions: SRT work on all platforms in caller mode; RIST will only work for receiving Simple Profile.   
+Media Source restrictions: SRT work on all platforms; RIST will only work for receiving Main Profile. 
+* In a VLC Source in obs : 
+  * Add a Path/URL
+  * SRT: the URL must be in caller mode : `srt://IP:PORT` and not in listener mode; this implies the stream played in obs must be sent from an IP in listener mode.   
+  * RIST: enter the URL in the format `rist://SERVER:PORT?cname=OBS&bandwidth=5000` where cname is whatever name you want (it just serves for logging and could be omitted) and bandwidth is the maximum bandwidth you expect in kbps (this is important for the resending of lost packets because the protocol will not go above that limit). Make sure the sender uses Simple Profile.    
+
 * In a Media Source, uncheck 'Local File'.    
   * SRT stream: 
     * For 'Input', enter the srt URL. If the stream is received from a server (in listener mode), the srt connexion will be in mode=caller (which is the default one so the option can be omitted). If however the stream is received straight from an encoder in caller mode, add the mode=listener to the URL (see screenshot).    
