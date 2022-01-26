@@ -71,7 +71,7 @@ NOTE: If using the .zip method for either the full or small install and installi
   * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
     * We currently deploy with Qt 5.15.2
       * [Qt 5.15.2 Windows](https://cdn-fastly.obsproject.com/downloads/Qt_5.15.2.7z)
-  * CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_75.1.16+g16a67c4+chromium-75.0.3770.100_windows32_minimal.zip))
+  * CEF Wrapper 4638 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip))
   * Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
   * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
   * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
@@ -605,12 +605,12 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" ..
       make -j4
       sudo make install
       ```
@@ -683,12 +683,12 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" ..
       make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
@@ -773,14 +773,14 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
   * If building with browser source:
    ```bash
    sudo apt install libnss3-dev
-   wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-   tar -xjf ./cef_binary_4280_linux64.tar.bz2
+   wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+   tar -xjf ./cef_binary_4638_linux64.tar.bz2
    git clone --recursive https://github.com/obsproject/obs-studio.git
    cd obs-studio
    mkdir build && cd build
    # Note Ubuntu 20.04/Debian 10 must set ENABLE_PIPEWIRE=OFF and do not support wayland capture.
    # Modern platforms can use the default/enable pipewire for wayland capture support.
-   cmake -DUNIX_STRUCTURE=1 -DENABLE_PIPEWIRE=OFF -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+   cmake -DUNIX_STRUCTURE=1 -DENABLE_PIPEWIRE=OFF -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" ..
    make -j$(nproc)
    sudo make install
    ```
@@ -843,12 +843,12 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" ..
       make -j4
       sudo make install
       ```
@@ -874,12 +874,12 @@ Note: Do not use the GitHub source .tar as it does not include all the required 
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" ..
       make -j4 && make install
       ```
 
