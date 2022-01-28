@@ -93,7 +93,7 @@ NOTE: If using the .zip method for either the full or small install and installi
     * In "where is the source code", enter in the repo directory (example: D:/obs).
     * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
 
-  * Set the following variables. You can set them in cmake-gui, or you can set them as Windows Environment Variables to persist across configurations.
+  * Set the following variables. You can set them in cmake-gui by clicking the "Add Entry" button, or you can specify them when invoking the [cmake executable](https://cmake.org/cmake/help/v3.16/manual/cmake.1.html) via command-line with the `-DName=Value` syntax. Some variables may be able to be set as Windows Environment Variables to persist across configurations.
     * **Required**
       * `DepsPath`
 
@@ -106,6 +106,8 @@ NOTE: If using the .zip method for either the full or small install and installi
         * `DepsPath32`: `C:\obs-deps\win32`
         * `DepsPath64`: `C:\obs-deps\win64`
 
+        `DepsPath` and its variants can be set as a Windows Environment Variable.
+
       * `QTDIR`
 
         `QTDIR` is the path to the Qt install directory.  The OBS UI is built by default, which requires Qt.  Set the CMake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch.
@@ -116,9 +118,14 @@ NOTE: If using the .zip method for either the full or small install and installi
           * `QTDIR32=D:\Qt\5.15.2\msvc2019` (32-bit)
           * `QTDIR64=D:\Qt\5.15.2\msvc2019_64` (64-bit)
 
+        `QTDIR` and its variants can be set as a Windows Environment Variable.
+
       * `CEF_ROOT_DIR`
 
         `CEF_ROOT_DIR` is the path to an extracted CEF Wrapper. We provide a custom prebuilt wrapper to simplify the build process. This custom build includes access to hardware acceleration and additional codecs. **This enables Browser Source and Custom Browser Docks.**
+
+        An example `CEF_ROOT_DIR` directory you might use if you extracted our provided package to your C drive would be:
+          * `CEF_ROOT_DIR=C:\cef_binary_4638_windows_x64` (64-bit)
 
         **Be sure to also enable the CMake flag `BUILD_BROWSER` otherwise this will do nothing**
 
