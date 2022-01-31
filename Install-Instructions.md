@@ -508,7 +508,7 @@ UOS/Deepin 20 or newer is required.
 
 ### Debian/LMDE Installation ([Unofficial](#about-unofficial-builds))
 Debian 9.0 or newer is required.  
-**Please note that OBS Studio is not fully working on Chrome OS and features like Screen and Window Capture do not work.**
+**Please note that OBS Studio does not work on Chrome OS.**
 
 **Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**
 
