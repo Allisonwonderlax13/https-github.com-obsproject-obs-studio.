@@ -77,6 +77,6 @@ Sometimes you may see the red dot in the upper left corner of your preview with 
 | Fortnite | If you experience crashes or framerate issues in DX12 mode, switch to DX11 mode |
 | League of Legends | Create two scenes. In the first scene, add a Window Capture of the LoL launcher/lobby. In the second scene, run the game to add a Game Capture of the game itself. Finally, configure the Scene Switcher to automatically swap between them. |
 | Minecraft: Java Edition | For laptops and all-in-one computers, follow the [Minecraft guide](https://obsproject.com/wiki/Minecraft-Not-Working-With-Game-Capture) |
-| Valorant | Run OBS as administrator |
+| Genshin Impact | Run OBS as administrator |
 
 If at this point you are still having issues, please use either the [OBS Discord](https://obsproject.com/discord) or the [Forums](https://obsproject.com/forum/), explain your issue/troubleshooting steps in detail, and provide a current OBS log.
