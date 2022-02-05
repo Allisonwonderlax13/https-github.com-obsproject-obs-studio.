@@ -15,19 +15,19 @@ A first troubleshooting step is to make sure that the Game Capture source "Mode"
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
 * Choose "Classic app" or "Desktop app" (they are the same thing, only named differently on different windows versions) and hit "Browse". Navigate to javaw.exe, usually located here:
 
-For Minecraft Vanilla Java edition older than 1.17 the default path is:
+For Minecraft Vanilla Java edition 1.16 and older:
 
-`C:\Program Files (x86)\Minecraft Launcher\runtime\jre-legacy\windows-x64\jre-legacy\bin\javaw.exe`
-
-***
-For Minecraft Vanilla Java edition 1.17 and newer the default path is:
-
-`C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-alpha\windows-x64\java-runtime-alpha\bin\javaw.exe`
+`%localappdata%\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\jre-legacy\windows-x64\jre-legacy\bin\javaw.exe`
 
 ***
-For Minecraft Java edition 1.17 and newer with Optifine installed the default path is:
+For Minecraft Vanilla Java edition 1.17:
 
-`%userprofile%\AppData\Local\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-beta\windows-x64\java-runtime-beta\bin\javaw.exe`
+`%localappdata%\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-alpha\windows-x64\java-runtime-alpha\bin\javaw.exe`
+
+***
+For Minecraft Java edition 1.18:
+
+`%localappdata%\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-beta\windows-x64\java-runtime-beta\bin\javaw.exe`
 
 ***
 For the Minecraft Lunar client, the default path is
