@@ -52,7 +52,7 @@ For other custom launchers or if you can't find the folder see the info at the b
 * Press Ctrl+Shift+ESC(Escape) to open Task Manager
 * Right-click Java(TM) Platform SE binary and select "Open file location"
 * The folder that opens is the location of your javaw.exe. Scroll up and use that path to find the correct javaw.exe to set to High-Performance Graphics.
-![](https://i.imgur.com/uFBPKNh.png)
+![](https://i.imgur.com/UCAlDC7.png)
 
 Once this is completed, restart both OBS and your game (remember that they should have been closed at the beginning of this guide).
 
