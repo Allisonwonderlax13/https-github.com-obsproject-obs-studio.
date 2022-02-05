@@ -25,6 +25,11 @@ For Minecraft Vanilla Java edition 1.17 and newer the default path is:
 `C:\Program Files (x86)\Minecraft Launcher\runtime\java-runtime-alpha\windows-x64\java-runtime-alpha\bin\javaw.exe`
 
 ***
+For Minecraft Java edition 1.17 and newer with Optifine installed the default path is:
+
+`%userprofile%\AppData\Local\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-beta\windows-x64\java-runtime-beta\bin`
+
+***
 For the Minecraft Lunar client, the default path is
 
 `%userprofile%\.lunarclient\jre\zulu16.30.15-ca-fx-jre16.0.1-win_x64\bin\javaw.exe`
