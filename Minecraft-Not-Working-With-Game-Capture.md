@@ -38,7 +38,7 @@ For other custom launchers or if you can't find the folder see the info at the b
 
 ![](https://i.imgur.com/aDSvJbl.png)
 
-![](https://i.imgur.com/kphrwU3.png)
+![](https://i.imgur.com/a/hCoeNx7)
 
 * Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
 
@@ -52,7 +52,7 @@ For other custom launchers or if you can't find the folder see the info at the b
 * Press Ctrl+Shift+ESC(Escape) to open Task Manager
 * Right-click Java(TM) Platform SE binary and select "Open file location"
 * The folder that opens is the location of your javaw.exe. Scroll up and use that path to find the correct javaw.exe to set to High-Performance Graphics.
-![](https://i.imgur.com/hF0in2S.png)
+![](https://i.imgur.com/a/VoEVKlK)
 
 Once this is completed, restart both OBS and your game (remember that they should have been closed at the beginning of this guide).
 
