@@ -13,7 +13,18 @@ A first troubleshooting step is to make sure that the Game Capture source "Mode"
 * Navigate to System → Display and select "Graphics settings" near the bottom
 
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
-* Choose "Classic app" or "Desktop app" (they are the same thing, only named differently on different windows versions) and hit "Browse". Navigate to javaw.exe, usually located here:
+* Choose "Classic app" or "Desktop app" (they are the same thing, only named differently on different windows versions) and hit "Browse". 
+
+![](https://i.imgur.com/aDSvJbl.png)
+
+![](https://i.imgur.com/BJUhcC7.png)
+
+* Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
+
+![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/05-high-perf.png)
+
+***
+**The javaw.exe is usually located here**:
 
 For Minecraft Vanilla Java edition 1.16 and older:
 
@@ -30,28 +41,12 @@ For Minecraft Java edition 1.18:
 `%localappdata%\Packages\Microsoft.4297127D64EC6_8wekyb3d8bbwe\LocalCache\Local\runtime\java-runtime-beta\windows-x64\java-runtime-beta\bin\javaw.exe`
 
 ***
-For the Minecraft Lunar client, the default path is
 
-`%userprofile%\.lunarclient\jre\1.18\zulu17.30.15-ca-fx-jre17.0.1-win_x64\bin\javaw.exe`
-
-For other custom launchers or if you can't find the folder see the info at the bottom of the guide for instructions to find the path of the javaw.exe
-
-![](https://i.imgur.com/aDSvJbl.png)
-
-![](https://i.imgur.com/BJUhcC7.png)
-
-* Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
-
-![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/05-high-perf.png)
-
-
-***
-
-**If you're using a custom launcher, you might not find javaw.exe in the default location, but instead in a subfolder under the launcher, here is how to locate that:**
+**If you're using a the Lunar Client or a Custom Launcher, you might not find javaw.exe in the default location, but instead in a subfolder under the launcher. Here is how to locate that:**
 * Launch Minecraft(the game, not just the launcher)
 * Press Ctrl+Shift+ESC(Escape) to open Task Manager
-* Right-click Java(TM) Platform SE binary and select "Open file location"
-* The folder that opens is the location of your javaw.exe. Scroll up and use that path to find the correct javaw.exe to set to High-Performance Graphics.
+* Right-click `OpenJDK Platform binary` and select "Open file location"
+* The folder that opens is the location of your `javaw.exe`. Scroll up and use that path to find the correct javaw.exe to set to High-Performance Graphics.
 ![](https://i.imgur.com/UCAlDC7.png)
 
 Once this is completed, restart both OBS and your game (remember that they should have been closed at the beginning of this guide).
