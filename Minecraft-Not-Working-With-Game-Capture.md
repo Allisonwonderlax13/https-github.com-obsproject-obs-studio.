@@ -32,7 +32,7 @@ For Minecraft Java edition 1.18:
 ***
 For the Minecraft Lunar client, the default path is
 
-`%userprofile%\.lunarclient\jre\zulu16.30.15-ca-fx-jre16.0.1-win_x64\bin\javaw.exe`
+`%userprofile%\.lunarclient\jre\1.18\zulu17.30.15-ca-fx-jre17.0.1-win_x64\bin\javaw.exe`
 
 For other custom launchers or if you can't find the folder see the info at the bottom of the guide for instructions to find the path of the javaw.exe
 
