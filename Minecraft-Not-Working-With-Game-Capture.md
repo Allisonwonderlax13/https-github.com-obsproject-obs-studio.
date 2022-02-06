@@ -42,7 +42,7 @@ For Minecraft Java edition 1.18:
 
 ***
 
-**If you're using a the Lunar Client or a Custom Launcher, you might not find javaw.exe in the default location, but instead in a subfolder under the launcher. Here is how to locate that:**
+**If you're using the Lunar Client or a Custom Launcher, you might not find javaw.exe in the default location, but instead in a subfolder under the launcher. Here is how to locate that:**
 * Launch Minecraft(the game, not just the launcher)
 * Press Ctrl+Shift+ESC(Escape) to open Task Manager
 * Right-click `OpenJDK Platform binary` and select "Open file location"
