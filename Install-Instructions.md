@@ -483,21 +483,21 @@ UOS/Deepin 20 or newer is required.
 * First, make sure apt has access to the latest versions of packages.
 
    ```bash
-   sudo apt-get update
+   sudo apt update
    ```
 
 * FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
 
    ```bash
-   sudo apt-get install ffmpeg
+   sudo apt install ffmpeg
    ```
 
 * Finally, install OBS Studio.
 
    ```bash
-   sudo apt-get install obs-studio
+   sudo apt-get install com.obsproject
    ```
-
+* if UOS not using this command, using AppStore search OBS Studio
 * or with [Spark Store](https://www.spark-app.store/download.html):
 
    ```bash
