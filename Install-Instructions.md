@@ -348,7 +348,7 @@ Use your favorite AUR helper or Pamac (Add/Remove Software) with AUR enabled in 
 
 * `obs-studio-tytan652` provide OBS Studio with VST and browser modules with the same CEF as official builds with some quality of life patches and fixes.
 
-* `obs-studio-browser` provide OBS Studio with VST and browser modules.
+* `obs-studio-browser` provide OBS Studio with VST and browser modules with the same CEF as official builds.
 
 * `obs-studio-rc` provide OBS Studio latest version (including Release Candidates) with VST and browser modules with the same CEF as official builds.
 
