@@ -20,7 +20,7 @@ Follow the steps below for your operating system to clear OBS browser cookies.
 3. Start OBS
 4. Settings -> Stream -> Disconnect Account -> Connect Account
 
-# Mac OS
+# macOS
 
 1. Exit OBS (make sure OBS is not running)
 2. Delete the folder ~/Library/Application Support/obs-studio/plugin_config/obs-browser
