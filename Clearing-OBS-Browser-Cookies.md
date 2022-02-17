@@ -11,19 +11,27 @@ Follow the steps below for your operating system to clear OBS browser cookies.
 1. Exit OBS (make sure OBS is not running)
 2. Delete the folder %appdata%\obs-studio\plugin_config\obs-browser\obs_profile_cookies
 3. Start OBS
-4. Settings -> Stream -> disconnect -> connect
+4. Settings -> Stream -> Disconnect Account -> Connect Account
 
 **Clearing Browser Dock Cookies**
 
 1. Exit OBS (make sure OBS is not running)
 2. Delete the folder %appdata%\obs-studio\plugin_config\obs-browser\Cookies
 3. Start OBS
-4. Settings -> Stream -> disconnect -> connect
+4. Settings -> Stream -> Disconnect Account -> Connect Account
 
 ## Mac OS
 
-_To Do_
+1. Exit OBS (make sure OBS is not running)
+2. Delete the folder ~/Library/Application Support/obs-studio/plugin_config/obs-browser
+3. Start OBS
+4. Settings -> Stream -> Disconnect Account -> Connect Account
 
 ## Linux
 
-_To Do_
+1. Exit OBS (make sure OBS is not running)
+2. Delete the folder ~/.config/obs-studio/plugin_config/obs-browser
+3. Start OBS
+4. Settings -> Stream -> Disconnect Account -> Connect Account
+
+*Please note that the location of OBS browser cookies on Linux could differ depending on your distro and whether or not you are using an official release. OBS is available officially as an Ubuntu PPA and via Flathub*
