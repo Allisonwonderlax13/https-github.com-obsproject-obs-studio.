@@ -1,6 +1,6 @@
-Like a normal browser, the browser sources and docks in OBS store information for things like logins and website settings in cookies.
+Much like a standard browser, the browser sources and docks in OBS store information for things like logins and website settings in cookies.
 
-In some cases it may be necessary to clear your cookies in OBS due to compatibility with third party plugins after an update.
+In some cases it may be necessary to clear your cookies in OBS due to changes to the underlying browser systems, or due to compatibility with third party plugins after an update.
 
 Follow the steps below for your operating system to clear OBS browser cookies.
 
