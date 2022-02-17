@@ -4,7 +4,7 @@ In some cases it may be necessary to clear your cookies in OBS due to changes to
 
 Follow the steps below for your operating system to clear OBS browser cookies.
 
-## Windows
+# Windows
 
 **Clearing Browser Source Cookies**
 
@@ -20,14 +20,14 @@ Follow the steps below for your operating system to clear OBS browser cookies.
 3. Start OBS
 4. Settings -> Stream -> Disconnect Account -> Connect Account
 
-## Mac OS
+# Mac OS
 
 1. Exit OBS (make sure OBS is not running)
 2. Delete the folder ~/Library/Application Support/obs-studio/plugin_config/obs-browser
 3. Start OBS
 4. Settings -> Stream -> Disconnect Account -> Connect Account
 
-## Linux
+# Linux
 
 1. Exit OBS (make sure OBS is not running)
 2. Delete the folder ~/.config/obs-studio/plugin_config/obs-browser
