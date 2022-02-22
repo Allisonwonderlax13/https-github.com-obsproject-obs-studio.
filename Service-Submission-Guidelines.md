@@ -81,7 +81,7 @@ To test your changes locally you can replace the `services.json` and `package.js
 Commits must be prefixed with `rtmp-services: ` and should be in present-tense. In General `rtmp-services: Add <service name>` is sufficient when adding a new service.
 When updating you may specify what is being updated, for example `rtmp-services: Update <service name> recommendations` or `rtmp-services: Update <service name> ingests`.
 
-When making the PR be sure to follow the PR guidelines outlines in the PR template.
+When making the PR be sure to follow the PR guidelines outlined in the PR template.
 
 # JSON Format Reference
 
