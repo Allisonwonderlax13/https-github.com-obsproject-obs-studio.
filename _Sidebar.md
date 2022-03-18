@@ -53,32 +53,16 @@
 
 * [Post Production Tools you can use](Post-Production-Tools-you-can-use)
 
-# [Install Instructions](install-instructions)
+**Install instructions**
 
 * [Windows](install-instructions#windows)
-  * [Install](install-instructions#windows-install-directions)
-  * [Build from source](install-instructions#windows-build-directions)
 * [macOS](install-instructions#macos)
-  * [Install](install-instructions#macos-install-directions)
-  * [Build from source](install-instructions#macos-build-directions)
-  * [Xcode Project](install-instructions#macos-xcode-project)
 * [Linux](install-instructions#linux)
-  * [Install Directions](install-instructions#linux-install-directions)
-    * [Ubuntu/Mint](install-instructions#ubuntumint-installation)
-    * [Arch Linux](install-instructions#arch-linux-installation-unofficial)
-    * [Manjaro](install-instructions#manjaro-installation-unofficial)
-    * [Fedora](install-instructions#fedora-installation-unofficial)
-    * [OpenMandriva Installation](install-instructions#openmandriva-installation-unofficial)
-    * [Solus](install-instructions#solus-installation-unofficial)
-    * [openSUSE](install-instructions#opensuse-installation-unofficial)
-    * [Gentoo](install-instructions#gentoo-installation-unofficial)
-    * [NixOS](install-instructions#nixos-installation-unofficial)
-    * [UOS/Deepin](install-instructions#uosdeepin-installation-unofficial)
-    * [Debian/LMDE](install-instructions#debianlmde-installation-unofficial)
-    * [snappy](install-instructions#snappy-installation-unofficial)
-  * [Build Directions](install-instructions#linux-build-directions)
-    * [Red Hat-based](install-instructions#red-hat-based-build-directions)
-    * [Fedora](install-instructions#fedora-build-directions)
-    * [Debian-based](install-instructions#debian-based-build-directions)
-    * [openSUSE](install-instructions#opensuse-build-directions)
-    * [Linux portable mode (all distros)](install-instructions#linux-portable-mode-all-distros)
+* [FreeBSD](install-instructions#freebsd)
+
+**Build instructions**
+
+* [Windows](build-instructions-(windows))
+* [macOS](build-instructions-(macos))
+* [Linux](build-instructions-(linux))
+* [BSD](build-instructions-(bsd))
