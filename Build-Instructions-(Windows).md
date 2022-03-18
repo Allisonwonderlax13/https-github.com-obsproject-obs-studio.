@@ -1,126 +1,133 @@
-# Requirements
+# Option A: Automatic Windows builds
 
-* Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`.
-  * Pre-built versions of these dependencies for VS2019 on Windows can be found here:
-    * VS2019: https://obsproject.com/downloads/dependencies2019.zip
-* [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
-  * We currently deploy with Qt 5.15.2
-    * [Qt 5.15.2 Windows](https://cdn-fastly.obsproject.com/downloads/Qt_5.15.2.7z)
-* CEF Wrapper 4638 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip))
-* Windows version of [CMake](http://www.cmake.org/) (3.16 or higher, latest preferred)
-* Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-  * Ensure that the `Desktop development with C++` workload is selected when installing Visual Studio.
-  * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
+Automatic Windows builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
 
-# Installation procedure
+* **Necessary Preconditions for Automatic Windows Builds:**
+    * Windows Powershell (v5+ and more recent)
+    * Visual Studio 2019 (at least Community Edition)
+        * Windows 10 SDK (minimum 10.0.19041.0)
+    * Git for Windows
 
-* Clone the repository and **submodules**:
-  ```bash
-  git clone --recursive https://github.com/obsproject/obs-studio.git
-  ```
+**Do note** that the automatic build scripts can use [Chocolatey](https://chocolatey.org) to automatically install additional build dependencies (CMake and 7-Zip), by passing the `-Choco` switch.
 
-* If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**.
+## Build procedure
 
-* Create one or more of the following subdirectories within the cloned repository for building: `release`, `debug`, and `build` (suffixed with or without 32/64 to specify architecture). They are excluded from the repo in .gitignore for the sake of building, so they are safe to create and use within the repository base directory.
+* Clone the repository including **submodules**:
 
-* Run cmake-gui, and set the following fields:
-  * In "where is the source code", enter in the repo directory (example: D:/obs).
-  * In "where to build the binaries", enter the repo directory path with the 'build' subdirectory (example: D:/obs/build).
+    `git clone --recursive https://github.com/obsproject/obs-studio.git`
 
-* Set the following variables. You can set them in cmake-gui by clicking the "Add Entry" button, or you can specify them when invoking the [cmake executable](https://cmake.org/cmake/help/v3.16/manual/cmake.1.html) via command-line with the `-DName=Value` syntax. Some variables may be able to be set as Windows Environment Variables to persist across configurations.
-  * **Required**
-    * `DepsPath`
+* To do a **fully automated** build, open a Powershell window, switch to the checkout directory then run one of the following commands:
 
-      `DepsPath` is the path to the folder containing the dependencies, not including Qt. Set this to the win32 or win64 directory from the Pre-built dependencies package that you downloaded earlier.
-      For example, if you extracted the dependencies .zip to C:\obs-deps, `DepsPath` should be one of these:
-      * `C:\obs-deps\win32`
-      * `C:\obs-deps\win64`
+```
+# Download and set up dependencies, then build OBS for local host 
+# architecture with common feature set
+CI/build-windows.ps1
 
-      If you want to specify both 32 and 64 bit dependencies to avoid changing the variable between builds, you can instead set `DepsPath32` and `DepsPath64` like so:
-      * `DepsPath32`: `C:\obs-deps\win32`
-      * `DepsPath64`: `C:\obs-deps\win64`
+# Check for dependencies installable via Chocolatey
+CI/build-windows.ps1 -Choco
 
-      `DepsPath` and its variants can be set as a Windows Environment Variable.
+# Skip download and setup of dendencies
+CI/build-windows.ps1 -SkipDependencyChecks
 
-    * `QTDIR`
+# Build 32-bit only
+CI/build-windows.ps1 -BuildArch '32-bit'
 
-      `QTDIR` is the path to the Qt install directory.  The OBS UI is built by default, which requires Qt.  Set the CMake boolean variable DISABLE_UI to TRUE if you don't want the GUI and this is no longer required. Can be optionally suffixed with 32 or 64 to specify target arch.
+# Build both architectures
+CI/build-windows.ps1 -CombinedArchs
 
-      **NOTE**: Make sure to download Qt prebuilt components for your version of MSVC (32 or 64 bit).
+# Create a zip archive with OBS and all required libraries
+CI/build-windows.ps1 -Package
 
-      Example Qt directories you would use if you installed Qt to D:\Qt would usually look something like this:
-        * `QTDIR32=D:\Qt\5.15.2\msvc2019` (32-bit)
-        * `QTDIR64=D:\Qt\5.15.2\msvc2019_64` (64-bit)
+# Create a debug build
+CI/build-windows.ps1 -BuildConfiguration Debug
 
-      `QTDIR` and its variants can be set as a Windows Environment Variable.
+# Use `my_build_dir` prefix as build directory
+CI/build-windows.ps1 -BuildDirectory my_build_dir
 
-    * `CEF_ROOT_DIR`
+# Build and package a combined 64-bit and 32-bit of OBS with Release configuration, 
+# using more verbose output and skipping dependency checks
+CI/build-windows.ps1 -SkipDependencyChecks -CombinedArchs -BuildConfiguration Release -Verbose
 
-      `CEF_ROOT_DIR` is the path to an extracted CEF Wrapper. We provide a custom prebuilt wrapper to simplify the build process. This custom build includes access to hardware acceleration and additional codecs. **This enables Browser Source and Custom Browser Docks.**
+# Show all available options
+CI/build-windows.ps1 -Help
+```
 
-      An example `CEF_ROOT_DIR` directory you might use if you extracted our provided package to your C drive would be:
-        * `CEF_ROOT_DIR=C:\cef_binary_4638_windows_x64` (64-bit)
+# Option B: Custom Windows builds
 
-      **Be sure to also enable the CMake flag `BUILD_BROWSER` otherwise this will do nothing**
+Custom Windows builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
 
-  * **Optional**
-    * `VIRTUALCAM_GUID` - Set to any random GUID value.  This must be set to build the Virtual Camera features.
+* **Necessary Preconditions for Custom Windows Builds:**
+    * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
+        * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
+    * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
+    * Pre-built Windows dependencies for Visual Studio 2019 can be found here: [dependencies2019](https://obsproject.com/downloads/dependencies2019.zip)
+    * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
+        * OBS officially supports building with Qt 5.15.2
+    * CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows32_minimal.zip))
+    * Windows version of [CMake](http://www.cmake.org/) (3.20 or higher, latest preferred)
+    * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
 
-    (If these components below share the same directory as DepsPath, they do not need to be individually specified.)
-    * `FFmpegPath` - Path to just FFmpeg include directory.
-    * `x264Path` - Path to just x264 include directory.
-    * `curlPath` - Path to just cURL include directory.
+## Build procedure
 
+### 1. Get the source code
 
-  * **INFORMATIONAL NOTE**: Search paths and search order for base dependency library/binary files, relative to their include directories:
+* Clone the repository including **submodules**: `git clone --recursive https://github.com/obsproject/obs-studio.git`
 
-    Library files
-    * ../lib
-    * ../lib32 (if 32bit)
-    * ../lib64 (if 64bit)
-    * ./lib
-    * ./lib32 (if 32bit)
-    * ./lib64 (if 64bit)
+(If you do not know what submodules are, or you are not using Git from the command line, **PLEASE make sure to fetch the submodules too**).
 
-    Binary files:
-    * ../bin
-    * ../bin32 (if 32bit)
-    * ../bin64 (if 64bit)
-    * ./bin
-    * ./bin32 (if 32bit)
-    * ./bin64 (if 64bit)
+### 2. Get the dependencies
 
-* In cmake-gui, press 'Configure' and select the generator that fits to your installed VS Version:
-Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 64bit version of OBS
-    * NOTE: If you need to change your dependencies from a build already configured, you will need to uncheck COPIED_DEPENDENCIES and run Configure again.
+* Download and set up most preconditions mentioned above, you can also run the script `CI/windows/01_install_dependencies.ps1` (run it with the `-Help` switch to see all available options). 
 
-* If you did not set up Environment Variables earlier you can now configure the DepsPath and if necessary the x264, FFmpeg and cUrl path in the cmake-gui.
+**NOTE:** You cannot change the directory where the script will download and setup the dependencies in.
 
-* In cmake-gui, press 'Generate' to generate Visual Studio project files in the 'build' subdirectory.
+### 3. Set up the build project
 
-* Open obs-studio.sln from the subdirectory you specified under "where to build the binaries" (e.g. D:/obs/build) in Visual Studio (or click the "Open Project" button from within cmake-gui).
+1. Run cmake-gui, and set the following fields:
+    * In "where is the source code", enter in the repository directory (example: `D:/obs`).
+    * In "where to build the binaries", enter the repository directory path with the 'build' subdirectory (example: `D:/obs/build` - if this directory does not exist, it will be created by CMake).
 
-* The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The output is built in the 'rundir/[build type]' directory of your 'build' subdirectory.
+2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables - check the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System) for a full list and description of these variables:
+    * `CMAKE_PREFIX_PATH` - **REQUIRED** 
+    * `DepsPath` (`DepsPath32` and `DepsPath64` as architecture-specific variants) - **LEGACY** 
+    * `QTDIR` (`QTDIR32` and `QTDIR64` as architecture-specific variants) - **LEGACY** 
+    * `CEF_ROOT_DIR` (when building with browser support)
+    * `VIRTUALCAM_GUID` (when building with Virtual Camera support)
 
-* The PACKAGE target uses Wix Installer and seems to be obsolete. Discussion on discord indicates that the current installer uses NSIS, but the process seems not to be fully documented.
+3. In cmake-gui, press `Configure` and select the generator that corresponds with the desired installed Visual Studio version:
+    * Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 64bit version of OBS
+    * **NOTE**: If you need to change your dependencies from a build already configured, you will need to uncheck `COPIED_DEPENDENCIES` and run `Configure` again.
 
-* If you want to use the Virtual Camera from this build, you will need to run its install script.  If you already have a standard OBS Studio installation, you will need to uninstall its Virtual Camera first.
+4. If you did not set up environment variables earlier you can now configure the variables named above in cmake-gui
 
-  To uninstall an OBS Virtual Camera:
-  1. Close any applications that were using the OBS Virtual Camera.
-  2. In the obs-studio installation directory, run `data\obs-plugins\win-dshow\virtualcam-uninstall.bat` as administrator.
-    
-  To install an OBS Virtual Camera:
-  1. In the obs-studio installation directory (for Visual Studio builds, this is '[build dir]/rundir/[build type]'), run `data\obs-plugins\win-dshow\virtualcam-install.bat` as administrator.
+5. In cmake-gui, press `Generate` to generate Visual Studio project files in the `build` subdirectory.
 
-  Don't forget to uninstall your build's virtual camera before cleaning/deleting your build files.
+### 4. Open the Visual Studio project
 
-* **Integrating clang-format into Visual Studio**
-  * clang-format is required for pull requests, and our CI uses a specific version that may not match the one VS2019 ships with.
-  * Download and install [LLVM 12.0.0](http://releases.llvm.org/).  LLVM 12.0.1+ currently introduces extra clang-format changes that we do not want to handle at this time.
-  * Run VS, and go to Tools -> Options...
-    * Text Editor -> C/C++ -> Code Style -> Formatting -> General
-      * Enable "Use custom clang-format.exe" and enter the file name. For example:
-        * C:\Program Files\LLVM\bin\clang-format.exe
-  * The default command for formatting a document (Edit.FormatDocument) is Ctrl+K, Ctrl+D.
+1. Open `obs-studio.sln` from the subdirectory you specified under "where to build the binaries" (e.g. `D:/obs/build`) in Visual Studio (or click the `Open Project` button from within cmake-gui).
+
+2. The project should now be ready to build and run. All required dependencies should be copied on compile and it should be a fully functional build environment. The build artifacts are installed into a subdirectory called `rundir/<CONFIG>` within your chose build directory (with `<CONFIG>` being `Debug`, `RelWithDebInfo` or any other build configuration that was successfully built). 
+
+### 5. Install the virtual camera
+
+If you want to use the Virtual Camera created by this build, you will have to run its install script and also remove the Virtual Camera from a standard OBS installation first:
+
+* To uninstall the OBS Virtual Camera
+    1. Close any applications that were using the OBS Virtual Camera.
+    2. In the OBS Studio installation directory, run `data\obs-plugins\win-dshow\virtualcam-uninstall.bat` as administrator.
+
+* To install an OBS Virtual Camera:
+
+    1. In the OBS Studio artifact directory (for Visual Studio builds, this is `<BUILD DIRECTORY>/rundir/<CONFIG>`), run `data\obs-plugins\win-dshow\virtualcam-install.bat` as administrator.
+
+**Don't forget to uninstall your build's virtual camera before cleaning/deleting your build files.**
+
+### 6. Integrating clang-format into Visual Studio
+
+Use of `clang-format` is required for pull requests, and OBS uses a more recent version than is shipped with Visual Studio 2019:
+
+1. Download and install [LLVM 8.0.0](http://releases.llvm.org/)
+2. Run Visual Studio, select `Tools -> Options` from the menu
+    * Go to `Text Editor -> C/C++ -> Code Style -> Formatting -> General`
+    * Enable "Use custom clang-format.exe" and enter the file name, e.g. `C:\Program Files\LLVM\bin\clang-format.exe`
+    * The default keyboard shortcut for formatting a document (Edit.FormatDocument) is Ctrl+K, Ctrl+D.
