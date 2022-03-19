@@ -6,13 +6,28 @@ For official builds of OBS Studio, see the [Install Instructions](install-instru
 
 # Unofficial builds
 
-## Arch Linux
+## Arch Linux/Manjaro
 
-* "Release" version is available on the community repository:
-   ```bash
-   sudo pacman -S obs-studio
-   ```
-* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
+### Install from AUR
+
+There is OBS packages present in the [AUR](https://wiki.archlinux.org/title/Arch_User_Repository).
+
+* Use your favorite AUR helper or Pamac (Add/Remove Software) with AUR enabled in the settings.
+  * `obs-studio-tytan652` provides OBS Studio with VST and browser modules with the same CEF as official builds with some quality of life patches and fixes.
+  * `obs-studio-browser` provides OBS Studio with VST and browser modules with the same CEF as official builds.
+  * `obs-studio-rc` provides OBS Studio latest version (including Release Candidates) with VST and browser modules with the same CEF as official builds.
+
+Most of those packages also replace `vlc` with `vlc-luajit` to provide VLC sources.
+
+* More [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
+
+### Install from Arch Linux/Manjaro official repository
+
+* Graphical: search obs-studio package on Pamac (Add/Remove Software)
+* Command Line:
+  ```bash
+  sudo pacman -S obs-studio
+  ```
 
 ## Debian
 
@@ -72,15 +87,6 @@ sudo emerge media-video/obs-studio
 ```
 
 See https://packages.gentoo.org/packages/media-video/obs-studio for available versions and more information.
-
-## Manjaro
-
-* Graphical: search "obs-studio" on Pamac Manager or Octopi
-* Command-line: install it via pacman with the following command:
-   ```bash
-   sudo pacman -S obs-studio
-   ```
-* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
 
 ## NixOS
 
