@@ -42,10 +42,10 @@ The CEF (Chromium Embedded Framework) adds any browser-related feature to OBS as
 # Build from source
 
 Please see the build instructions for:
-* [Windows](build-instructions-(windows))
-* [macOS](build-instructions-(macos))
-* [Linux](build-instructions-(linux))
-* [BSD](build-instructions-(bsd)) (currently FreeBSD)
+* [Windows](build-instructions-for-windows)
+* [macOS](build-instructions-for-macos)
+* [Linux](build-instructions-for-linux)
+* [FreeBSD](build-instructions-for-freebsd)
 
 # Windows
 
