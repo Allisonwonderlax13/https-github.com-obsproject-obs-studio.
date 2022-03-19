@@ -39,9 +39,10 @@ The CEF (Chromium Embedded Framework) adds any browser-related feature to OBS as
 
 ***
 
-# Build from source
+# [Building OBS Studio](building-obs-studio)
 
 Please see the build instructions for:
+
 * [Windows](build-instructions-for-windows)
 * [macOS](build-instructions-for-macos)
 * [Linux](build-instructions-for-linux)
