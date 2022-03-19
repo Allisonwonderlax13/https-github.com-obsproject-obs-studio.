@@ -69,15 +69,6 @@ Please see the build instructions for:
 
 * xserver-xorg version 1.18.4 or newer is recommended to avoid potential performance issues with certain features in OBS, such as the fullscreen projector.
 * OpenGL 3.3 (or later) support is required to use OBS Studio on Linux. You can check what version of OpenGL is supported by your system by typing `glxinfo | grep "OpenGL"` on Terminal.
-* FFmpeg is required.  If you do not have the FFmpeg installed, you can get it with the following commands:
-  * Debian/Ubuntu-based:
-    ```bash
-    sudo apt install ffmpeg
-    ```
-  * Red Hat/Fedora-based:
-    ```bash
-    sudo dnf install
-    ```
 * For virtual camera support, you need the v4l2loopback-dkms module installed. You can install it with the following command: 
   * Debian/Ubuntu-based: 
     ```bash
@@ -87,6 +78,14 @@ Please see the build instructions for:
     ```bash
     sudo dnf install kmod-v4l2loopback
     ```
+  * Arch Linux-based/Manjaro:
+    
+    You will need to install the kernel headers package of your actual kernel beforehand or the module will not be completely installed.
+    ```bash
+    sudo pacman -Sy v4l2loopback-dkms
+    ```
+
+
 
 ## Supported builds
 
