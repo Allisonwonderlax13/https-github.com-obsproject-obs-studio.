@@ -62,7 +62,7 @@
 
 **Build instructions**
 
-* [Windows](build-instructions-(windows))
-* [macOS](build-instructions-(macos))
-* [Linux](build-instructions-(linux))
-* [BSD](build-instructions-(bsd))
+* [Windows](build-instructions-for-windows)
+* [macOS](build-instructions-for-macos)
+* [Linux](build-instructions-for-linux)
+* [FreeBSD](build-instructions-for-freebsd)
