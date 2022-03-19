@@ -2,13 +2,14 @@
 
 Automatic macOS builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
 
-* **Necessary Preconditions for Automatic macOS Builds:**
-    * macOS 10.13 or newer for x86_64-based builds
-    * macOS 11.0 or newer for arm64-based builds
-    * Command Line Tools (CLT) for Xcode (pick one):
-        * Install by running `xcode-select --install` in Terminal
-        * Download from https://developer.apple.com/downloads
-        * Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835)
+## Prerequisites for automatic builds
+
+* macOS 10.13 or newer for x86_64-based builds
+* macOS 11.0 or newer for arm64-based builds
+* Command Line Tools (CLT) for Xcode:
+    * Install by running `xcode-select --install` in Terminal, **or**
+    * Download from https://developer.apple.com/downloads, **or**
+    * Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835)
 
 **NOTE:** Automatic build scripts use [Homebrew](https://brew.sh) to automatically install additional build dependencies. If Homebrew is already installed on the system, that Homebrew environment will be used.
 
@@ -55,12 +56,13 @@ Automatic macOS builds allow building OBS with minimal input and setup - necessa
 
 Custom macOS builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
 
-* **Necessary Preconditions for Custom macOS Builds:**
-    * macOS 10.15 or newer
-    * Command Line Tools (CLT) for Xcode (pick one):
-        * Install by running `xcode-select --install` in Terminal
-        * Download from https://developer.apple.com/downloads
-        * Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835)
+## Prerequisites for automatic builds
+
+* macOS 10.15 or newer
+* Command Line Tools (CLT) for Xcode:
+    * Install by running `xcode-select --install` in Terminal, **or**
+    * Download from https://developer.apple.com/downloads, **or**
+    * Install [Xcode](https://itunes.apple.com/us/app/xcode/id497799835)
     * CMake
     * Ninja
     * *Optional:* CCache to improve compilation speeds on consecutive builds
