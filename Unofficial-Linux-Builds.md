@@ -1,8 +1,24 @@
+## Table of Contents
+
+* [Arch Linux/Manjaro](#arch-linuxmanjaro)
+* [Debian](#debian)
+* [Fedora](#fedora)
+* [Gentoo](#gentoo)
+* [NixOS](#nixos)
+* [OpenMandriva](#openmandriva)
+* [OpenSUSE](#opensuse)
+* [snappy](#snappy)
+* [Solus](#solus)
+* [UOS/Deepin](#uosdeepin)
+* [Void](#void)
+
+***
+
 # About unofficial builds
 
 Please note that the instructions for the following Linux distributions means that they are community provided, and any support for those packages should be directed at the appropriate distro/package maintainers.
 
-For official builds of OBS Studio, see the [Install Instructions](install-instructions#linux).
+For official builds of OBS Studio for Flatpak (all distributions) and Ubuntu, see the [Install Instructions](install-instructions#linux).
 
 # Unofficial builds
 
