@@ -1,13 +1,14 @@
-# FreeBSD Build Directions
+# FreeBSD
 
 ## Option A: Automatic FreeBSD builds
 
 Automatic FreeBSD builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
 
-* **Necessary Preconditions for Automatic FreeBSD Builds:**
-    * FreeBSD 13
-    * Git
-    * Pkg
+### Prerequisites
+
+* FreeBSD 13
+* Git
+* Pkg
 
 ### Build procedure
 
@@ -38,13 +39,14 @@ Custom FreeBSD builds allow full customization of the desired build configuratio
 
 **NOTE:** FreeBSD is not officially supported by the OBS team and is provided as-is.
 
-* **Necessary Preconditions for Custom FreeBSD Builds:**
-    * FreeBSD 13 or newer
-    * CMake 3.16 or newer
-    * Git
-    * Ninja
-    * *Optional:* CCache to improve compilation speeds on consecutive builds
-    * Several additional dependencies (see step 2 below)
+### Prerequisites
+
+* FreeBSD 13 or newer
+* CMake 3.16 or newer
+* Git
+* Ninja
+* *Optional:* CCache to improve compilation speeds on consecutive builds
+* Several additional dependencies (see step 2 below)
 
 ### Build Procedure
 
