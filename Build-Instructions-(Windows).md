@@ -2,13 +2,14 @@
 
 Automatic Windows builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
 
-* **Necessary Preconditions for Automatic Windows Builds:**
-    * Windows Powershell (v5+ and more recent)
-    * Visual Studio 2019 (at least Community Edition)
-        * Windows 10 SDK (minimum 10.0.19041.0)
-    * Git for Windows
+## Prerequisites
 
-**Do note** that the automatic build scripts can use [Chocolatey](https://chocolatey.org) to automatically install additional build dependencies (CMake and 7-Zip), by passing the `-Choco` switch.
+* Windows Powershell (v5+ and more recent)
+* Visual Studio 2019 (at least Community Edition)
+  * Windows 10 SDK (minimum 10.0.19041.0)
+* Git for Windows
+
+**Note** that the automatic build scripts can use [Chocolatey](https://chocolatey.org) to automatically install additional build dependencies (CMake and 7-Zip), by passing the `-Choco` switch.
 
 ## Build procedure
 
@@ -56,16 +57,17 @@ CI/build-windows.ps1 -Help
 
 Custom Windows builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
 
-* **Necessary Preconditions for Custom Windows Builds:**
-    * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
-        * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
-    * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
-    * Pre-built Windows dependencies for Visual Studio 2019 can be found here: [dependencies2019](https://obsproject.com/downloads/dependencies2019.zip)
-    * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
-        * OBS officially supports building with Qt 5.15.2
-    * CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows32_minimal.zip))
-    * Windows version of [CMake](http://www.cmake.org/) (3.20 or higher, latest preferred)
-    * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
+## Prerequisites
+
+* [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
+  * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
+* Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
+* Pre-built Windows dependencies for Visual Studio 2019 can be found here: [dependencies2019](https://obsproject.com/downloads/dependencies2019.zip)
+* [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
+  * OBS officially supports building with Qt 5.15.2
+* CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows32_minimal.zip))
+* Windows version of [CMake](http://www.cmake.org/) (3.20 or higher, latest preferred)
+* Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
 
 ## Build procedure
 
