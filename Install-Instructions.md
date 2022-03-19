@@ -1,12 +1,25 @@
 # Table of Contents
 
 * [Building OBS Studio](#building-obs-studio)
-
 * [Windows](#windows)
 * [macOS](#macos)
 * [Linux](#linux)
   * [Supported builds](#supported-builds)
+    * Flatpak
+    * Ubuntu
   * [Unofficial builds](#unofficial-builds)
+    * Arch Linux
+    * Debian
+    * Fedora
+    * Gentoo
+    * Manjaro
+    * NixOS
+    * OpenMandriva
+    * OpenSUSE
+    * snappy
+    * Solus
+    * UOS/Deepin
+    * Void
 * [FreeBSD](#freebsd)
 
 ***
@@ -101,15 +114,23 @@ Please note that any install directions/packages for Linux/FreeBSD distributions
 
 Read the [Unofficial Linux builds](unofficial-linux-builds) guide for installation instructions on other Linux distributions, including:
 
-- Arch Linux
-- Debian
-- Fedora
-- Gentoo
-- Manjaro
-- NixOS
-- OpenMandriva
-- OpenSUSE
-- snappy
-- Solus
-- UOS/Deepin
-- Void
+* Arch Linux
+* Debian
+* Fedora
+* Gentoo
+* Manjaro
+* NixOS
+* OpenMandriva
+* OpenSUSE
+* snappy
+* Solus
+* UOS/Deepin
+* Void
+
+# FreeBSD
+
+Install OBS Studio:
+
+    ```bash
+    pkg install obs-studio
+    ```
