@@ -29,7 +29,7 @@
 Please see the build instructions for:
 
 * [Windows](build-instructions-for-windows)
-* [macOS](build-instructions-for-macos)
+* [macOS](build-instructions-for-mac)
 * [Linux](build-instructions-for-linux)
 * [FreeBSD](build-instructions-for-freebsd)
 
