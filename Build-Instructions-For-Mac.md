@@ -2,7 +2,7 @@
 
 Automatic macOS builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
 
-## Prerequisites for automatic builds
+## Prerequisites
 
 * macOS 10.13 or newer for x86_64-based builds
 * macOS 11.0 or newer for arm64-based builds
@@ -56,7 +56,7 @@ Automatic macOS builds allow building OBS with minimal input and setup - necessa
 
 Custom macOS builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
 
-## Prerequisites for automatic builds
+## Prerequisites
 
 * macOS 10.15 or newer
 * Command Line Tools (CLT) for Xcode:
