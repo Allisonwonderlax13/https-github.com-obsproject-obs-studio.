@@ -53,14 +53,14 @@
 
 * [Post Production Tools you can use](Post-Production-Tools-you-can-use)
 
-**Install instructions**
+**[Install instructions](install-instructions)**
 
 * [Windows](install-instructions#windows)
 * [macOS](install-instructions#macos)
 * [Linux](install-instructions#linux)
 * [FreeBSD](install-instructions#freebsd)
 
-**Build instructions**
+**[Build instructions](building-obs-studio)**
 
 * [Windows](build-instructions-for-windows)
 * [macOS](build-instructions-for-macos)
