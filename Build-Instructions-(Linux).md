@@ -10,9 +10,10 @@ Debian-based Linux distributions and FreeBSD can use automatic build scripts sup
 
 Automatic Debian builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
 
-* **Necessary Preconditions for Automatic Debian Builds:**
-    * Debian Bullseye
-    * Git
+### Prerequisites
+
+* Debian Bullseye
+* Git
 
 ### Build procedure
 
@@ -41,15 +42,16 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
 
 Custom Debian builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
 
-* **Necessary Preconditions for Custom Debian Builds:**
-    * Debian Bullseye
-    * CMake 3.16 or newer
-    * Git
-    * Ninja
-    * *Optional:* CCache to improve compilation speeds on consecutive builds
-    * For browser source and browser panel support, the pre-built CEF framework is needed:
-        * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2)
-    * Several additional dependencies (see step 2 below)
+### Prerequisites
+
+* Debian Bullseye
+* CMake 3.16 or newer
+* Git
+* Ninja
+* *Optional:* CCache to improve compilation speeds on consecutive builds
+* For browser source and browser panel support, the pre-built CEF framework is needed:
+  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2)
+* Several additional dependencies (see step 2 below)
 
 ### Build procedure
 
@@ -123,13 +125,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
 
 1. Run `cmake --package <YOUR_BUILD_DIRECTORY>` - CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
 
-***
-
 # Red Hat-based
 
 * Get RPM Fusion at http://rpmfusion.org/Configuration/ ([Nux Desktop](http://li.nux.ro/repos.html) is an alternative that may include better packages for RHEL/CentOS 7)
 
 * Get the required packages:
+
    ```bash
    sudo yum install \
           cmake \
@@ -206,6 +207,8 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
 
 # Fedora
 
+* Get the required packages:
+
    ```bash
    sudo dnf install \
           cmake \
@@ -272,13 +275,11 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       sudo ldconfig
       ```
 
-***
-
 # openSUSE
 
-* See openSUSE installation instructions (above) for details on adding Packman repository.
+* See [openSUSE install instructions](install-instructions#opensuse-unofficial) for details on adding Packman repository.
 
-* Install build dependencies:
+* Get the required packages:
 
    ```bash
    sudo zypper in cmake \
@@ -330,8 +331,6 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       make -j4
       sudo make install
       ```
-
-***
 
 # Linux portable mode (all distros)
 
