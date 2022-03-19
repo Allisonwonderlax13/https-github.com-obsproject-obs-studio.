@@ -24,7 +24,6 @@ For official builds of OBS Studio for Flatpak (all distributions) and Ubuntu, se
 
 ## Arch Linux/Manjaro
 
-
 ### Install from AUR
 
 There is OBS packages present in the [AUR](https://wiki.archlinux.org/title/Arch_User_Repository).
