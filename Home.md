@@ -1,10 +1,29 @@
-**OBS Studio** is free and open source software for video recording and live streaming.  Currently Linux, Mac and Windows Builds are available.
+**OBS Studio** is free and open source software for video recording and live streaming.
 
-* Official OBS Studio Builds: https://github.com/obsproject/obs-studio/releases
-* Building OBS Studio Manually: [[Install Instructions]]
+* [Install OBS Studio](install-instructions) using the official builds
+  * [Windows](install-instructions#windows)
+  * [macOS](install-instructions#macos)
+  * [Linux](install-instructions#linux)
+  * [FreeBSD](install-instructions#freebsd)
+* [Build OBS Studio](building-obs-studio) from source
+  * [Windows](build-instructions-for-windows)
+  * [macOS](build-instructions-for-mac)
+  * [Linux](build-instructions-for-linux)
+  * [FreeBSD](build-instructions-for-bsd)
 
-If you're looking for any kind of assistance with OBS Studio, the site has a help portal with links to resources and our support channels.
+# Support
+
+If you're looking for any kind of assistance with OBS Studio, the site has a help portal with links to resources and our support channels:
+
 * [OBS Studio Help Portal](https://obsproject.com/help)
+
+For Support Questions, Discord, the Discord server, IRC chat, and forums are available:
+
+* [OBS Studio Discord](http://discord.gg/obsproject)
+* [OBS Studio Forum](https://obsproject.com/forum/#obs-studio-support.3)  
+* [OBS Community Chat](https://obsproject.com/chat)
+
+# Guides
 
 The community has created a few guides on how to use OBS Studio:
 * Quickstart Guide: [[OBS Studio Quickstart]]
@@ -15,11 +34,6 @@ The community has created a few guides on how to use OBS Studio:
 * Volume meters guide (v21+): [[Understanding the Mixer]]
 * Surround sound features: [[Surround Sound Streaming and Recording]]
 * Streaming with srt or rist protocols: [[Streaming With SRT or RIST Protocols]]
-
-For Support Questions, Discord, the forum and IRC are available:  
-* [OBS Studio Discord](http://discord.gg/obsproject)
-* [OBS Studio Forum](https://obsproject.com/forum/#obs-studio-support.3)  
-* [OBS Community Chat](https://obsproject.com/chat)
 
 More info about OBS Studio can be found in the Readme:
 * [ReadMe](https://github.com/obsproject/obs-studio/blob/master/README.rst)
