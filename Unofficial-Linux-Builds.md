@@ -14,14 +14,29 @@ For official builds of OBS Studio, see the [Install Instructions](install-instru
    ```
 * Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
 
-## Manjaro
+## Debian
 
-* Graphical: search "obs-studio" on Pamac Manager or Octopi
-* Command-line: install it via pacman with the following command:
+Debian 9.0 "Stretch" or newer is required.  
+
+**Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**
+
+* First, make sure you have everything up-to-date.
+
    ```bash
-   sudo pacman -S obs-studio
+   sudo apt update
    ```
-* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
+
+* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
+
+   ```bash
+   sudo apt install ffmpeg
+   ```
+
+* Finally, install OBS Studio.
+
+   ```bash
+   sudo apt install obs-studio
+   ```
 
 ## Fedora
 
@@ -48,13 +63,38 @@ For official builds of OBS Studio, see the [Install Instructions](install-instru
    sudo dnf install xorg-x11-drv-nvidia-340xx-cuda
    ```
 
-***
+## Gentoo
+
+Command-line: can be installed using portage by the following command:
+
+```bash
+sudo emerge media-video/obs-studio
+```
+
+See https://packages.gentoo.org/packages/media-video/obs-studio for available versions and more information.
+
+## Manjaro
+
+* Graphical: search "obs-studio" on Pamac Manager or Octopi
+* Command-line: install it via pacman with the following command:
+   ```bash
+   sudo pacman -S obs-studio
+   ```
+* Some [AUR](https://aur.archlinux.org/packages/?O=0&K=obs-studio-) packages are also available.
+
+## NixOS
+
+Command-line: can be installed by the following command:
+
+    ```bash
+    nix-env -i obs-studio
+    ```
 
 ## OpenMandriva
 
 * OBS Studio is included in OpenMandriva Lx3 non-free repository and in restricted repository for upcoming Lx4 release - available now as Cooker.
 
-### For OpenMandriva Lx3
+### OpenMandriva Lx3
 
 * Graphical: search and install "obs-studio" on "OpenMandriva Install and Remove Software" (Rpmdrake)
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
@@ -63,20 +103,13 @@ For official builds of OBS Studio, see the [Install Instructions](install-instru
    urpmi obs-studio
    ```
 
-### For OpenMandriva Lx4
+### OpenMandriva Lx4
 * Graphical: search and install "obs-studio" on "OpenMandriva Software Management" (dnfdragora)
 * Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
 
    ```bash
    dnf install obs-studio
    ```
-
-## Solus
-* Graphical: search `obs-studio` in Software Center
-* Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
-   ```bash
-   eopkg install obs-studio
-    ```
 
 ## openSUSE
 * The Packman repository contains the obs-studio package since it requires
@@ -114,23 +147,23 @@ Links:
 * Build information:
     https://pmbs.links2linux.de/package/show/Multimedia/obs-studio
 
-## Gentoo
+## snappy
 
-Command-line: can be installed using portage by the following command:
+* If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is outdated).
 
-```bash
-sudo emerge media-video/obs-studio
-```
+* Install OBS Studio.
 
-See https://packages.gentoo.org/packages/media-video/obs-studio for available versions and more information.
+   ```bash
+   sudo snap install obs-studio
+   ```
 
-## NixOS
+## Solus
 
-Command-line: can be installed by the following command:
-
-```bash
-nix-env -i obs-studio
-```
+* Graphical: search `obs-studio` in Software Center
+* Command-line: install it as root (su or sudo) via terminal/konsole with the following command:
+   ```bash
+   eopkg install obs-studio
+   ```
 
 See https://nixos.org/wiki/OBS for further instructions
 
@@ -162,30 +195,6 @@ UOS/Deepin 20 or newer is required.
    sudo apt install com.obsproject.studio
    ```
 
-## Debian/LMDE
-
-Debian 9.0 or newer is required.  
-
-**Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**
-
-* First, make sure you have everything up-to-date.
-
-   ```bash
-   sudo apt update
-   ```
-
-* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
-
-   ```bash
-   sudo apt install ffmpeg
-   ```
-
-* Finally, install OBS Studio.
-
-   ```bash
-   sudo apt install obs-studio
-   ```
-
 ## Void
 
 * First make sure your repositories are up-to-date. OBS is available on the `multilib` repos if you need the 32-bit build.
@@ -199,14 +208,4 @@ Debian 9.0 or newer is required.
 
    ```bash
    sudo xbps-install obs
-   ```
-
-## snappy
-
-* If you haven't already, [install snapd](https://docs.snapcraft.io/core/install) (ignore the Support Overview which is outdated).
-
-* Install OBS Studio.
-
-   ```bash
-   sudo snap install obs-studio
    ```
