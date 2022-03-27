@@ -94,7 +94,7 @@ Custom Debian builds allow full customization of the desired build configuration
 1. Run CMake to generate a build environment
 
 ```
-cmake -S . -B <YOUR_BUILD_DIRECTORY> -G Ninja \
+cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
     -DCEF_ROOT_DIR="~/development/obs-build-dependencies/cef_binary_4638_linux64" \
     -DLINUX_PORTABLE=ON \
     -DENABLE_PIPEWIRE=OFF
