@@ -111,20 +111,20 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 
 #### 4. Build the project
 
-1. Run `cmake --build <YOUR_BUILD_DIRECTORY>` to build the entire OBS project
-2. Run `cmake --build <YOUR_BUILD_DIRECTORY> -t libobs` to build only libobs or any other valid target
-3. Run `cmake --build <YOUR_BUILD_DIRECTORY> -t clean` to clean your current build directory
+1. Run `cmake --build YOUR_BUILD_DIRECTORY` to build the entire OBS project
+2. Run `cmake --build YOUR_BUILD_DIRECTORY -t libobs` to build only libobs or any other valid target
+3. Run `cmake --build YOUR_BUILD_DIRECTORY -t clean` to clean your current build directory
 
 #### 6. Install the project
 
 Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or can be customised with the `--prefix` switch:
 
-1. Run `cmake --install <YOUR_BUILD_DIRECTORY>` to install OBS to the prefix the project was configured with
-2. Run `cmake --install <YOUR_BUILD_DIRECTORY> --prefix <YOUR_INSTALL_LOCATION>` to install OBS to a custom location
+1. Run `cmake --install YOUR_BUILD_DIRECTORY` to install OBS to the prefix the project was configured with
+2. Run `cmake --install YOUR_BUILD_DIRECTORY --prefix <YOUR_INSTALL_LOCATION>` to install OBS to a custom location
 
 #### 7. Create Debian package
 
-1. Run `cmake --package <YOUR_BUILD_DIRECTORY>` - CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
+1. Run `cmake --package YOUR_BUILD_DIRECTORY` - CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
 
 # Red Hat-based
 
