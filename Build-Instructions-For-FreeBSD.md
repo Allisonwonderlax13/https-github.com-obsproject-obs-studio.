@@ -33,7 +33,7 @@ Automatic FreeBSD builds allow building OBS with minimal input and setup - neces
 
 # Option B: Custom FreeBSD builds
 
-Custom FreeBSD builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
+Custom FreeBSD builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/building-obs-studio#cmake).
 
 **NOTE:** FreeBSD is not officially supported by the OBS team and is provided as-is.
 
