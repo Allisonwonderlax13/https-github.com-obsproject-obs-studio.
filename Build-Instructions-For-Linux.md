@@ -104,7 +104,7 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 **Optional Settings:**
 
 2. To enable PipeWire support change `-DENABLE_PIPEWIRE` to `ON`
-3. To disable browser source support (e.g. for 32-bit builds) set `-DENABLE_BROWSER_SOURCE` to `OFF`
+3. To disable browser source support (e.g. for 32-bit builds) set `-DENABLE_BROWSER` to `OFF`
 4. To change the build type, pass either `Debug`, `Release`, `RelWithDebInfo`, or `MinSizeRel` as `-DCMAKE_BUILD_TYPE`
 
 **NOTE:** When building OBS with `LINUX_PORTABLE` disabled, OBS expects GNU-based install paths (e.g. `/usr/local/[bin,lib,share]`) and is built for a single architecture only. To create separate builds for 32-bit and 64-bit architectures, always enable portable builds.
@@ -173,12 +173,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
       make -j4
       sudo make install
       ```
@@ -189,7 +189,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=OFF ..
+      cmake -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF ..
       make -j4
       sudo make install
       ```
@@ -251,12 +251,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
       make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
@@ -269,7 +269,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DBUILD_BROWSER=OFF ..
+      cmake -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF ..
       make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
@@ -312,12 +312,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
       make -j4
       sudo make install
       ```
@@ -328,7 +328,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=OFF ..
+      cmake -DLINUX_PR=1 -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_BROWSER=OFF -DENABLE_AJA=OFF ..
       make -j4
       sudo make install
       ```
@@ -342,12 +342,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2
-      tar -xjf ./cef_binary_4280_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
+      tar -xjf ./cef_binary_4638_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4280_linux64" ..
+      cmake -DLINUX_PORTABLE=ON -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
       make -j4 && make install
       ```
 
@@ -357,7 +357,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DUNIX_STRUCTURE=0 -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DBUILD_BROWSER=OFF ..
+      cmake -DLINUX_PORTABLE=ON -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF ..
       make -j4 && make install
       ```
 
