@@ -55,7 +55,7 @@ CI/build-windows.ps1 -Help
 
 # Option B: Custom Windows builds
 
-Custom Windows builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System).
+Custom Windows builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/building-obs-studio#cmake).
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ Custom Windows builds allow full customization of the desired build configuratio
     * In "where is the source code", enter in the repository directory (example: `D:/obs`).
     * In "where to build the binaries", enter the repository directory path with the 'build' subdirectory (example: `D:/obs/build` - if this directory does not exist, it will be created by CMake).
 
-2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables - check the [CMake build system documentation](https://github.com/PatTheMav/obs-studio/wiki/OBS-Build-System) for a full list and description of these variables:
+2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables - check the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/building-obs-studio#cmake) for a full list and description of these variables:
     * `CMAKE_PREFIX_PATH` - **REQUIRED** 
     * `DepsPath` (`DepsPath32` and `DepsPath64` as architecture-specific variants) - **LEGACY** 
     * `QTDIR` (`QTDIR32` and `QTDIR64` as architecture-specific variants) - **LEGACY** 
