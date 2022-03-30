@@ -46,6 +46,10 @@ Please see the build instructions for:
 
 * Install OBS Studio from the [Microsoft Store](ms-windows-store://pdp/?ProductId=XPFFH613W8V6LV&mode=mini)
 
+## Steam
+
+* Install OBS Studio from [Steam](https://store.steampowered.com/app/1905180/OBS_Studio/)
+
 ## Portable version
 
 * Download the official ZIP version of OBS Studio from:
