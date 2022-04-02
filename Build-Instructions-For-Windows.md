@@ -65,7 +65,7 @@ Custom Windows builds allow full customization of the desired build configuratio
 * Pre-built Windows dependencies for Visual Studio 2019 can be found here: [dependencies2019](https://obsproject.com/downloads/dependencies2019.zip)
 * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
   * OBS officially supports building with Qt 5.15.2
-* CEF Wrapper 3770 ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows64_minimal.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_3770_windows32_minimal.zip))
+* CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x86.zip))
 * Windows version of [CMake](http://www.cmake.org/) (3.20 or higher, latest preferred)
 * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
 
