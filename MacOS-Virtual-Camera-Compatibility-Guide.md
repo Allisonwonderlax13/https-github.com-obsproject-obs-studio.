@@ -58,7 +58,9 @@ To get the Mac virtual camera to work on Discord:
 ```Xcode-select --install```
 3) Put in your password. NOTE: you will not see the password being put in, but it will be registering it.
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
-```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (Renderer).app"``` 
+```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (Renderer).app"```
+5) Now, re-sign the application.
+```sudo codesign --sign - "/Applications/Discord.app/Contents/Frameworks/Discord Helper (Renderer).app"```
 
 _If step four doesn't allow the virtual camera to work on Discord after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (GPU).app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (plugin).app"```_
 
@@ -70,6 +72,8 @@ To get the Mac virtual camera to work on Microsoft Teams:
 3) Put in your password. NOTE: you will not see the password being put in, but it will be registering it.
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
 ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (Renderer).app"```
+5) Now, re-sign the application.
+```sudo codesign --sign - "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (Renderer).app"```
 
 _If step four doesn't allow the virtual camera to work on Microsoft Teams after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (GPU).app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Microsoft Teams.app/Contents/Frameworks/Microsoft Teams Helper (plugin).app"```_
 
@@ -80,7 +84,10 @@ To get the Mac virtual camera to work on Skype:
 ```Xcode-select --install```
 3) Put in your password. NOTE: you will not see the password being put in, but it will be registering it.
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
-```sudo codesign --remove-signature "/Applications/Skype.app/Contents/Frameworks/Skype Helper (Renderer).app"``` 
+```sudo codesign --remove-signature "/Applications/Skype.app/Contents/Frameworks/Skype Helper (Renderer).app"```
+5) Now, re-sign the application.
+```sudo codesign --sign - "/Applications/Skype.app/Contents/Frameworks/Skype Helper (Renderer).app"```
+
 
 ### Webex (Webex Teams) 
 To get the Mac virtual camera to work on Webex Teams:
@@ -90,6 +97,8 @@ To get the Mac virtual camera to work on Webex Teams:
 3) Put in your password. NOTE: you will not see the password being put in, but it will be registering it.
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
 ```sudo codesign --remove-signature "/Applications/Webex.app/"```
+5) Now, re-sign the application.
+```sudo codesign --sign - "/Applications/Webex.app/"```
 
 ### Webex Meetings 
 Possible to run by changing entitlements as described [here](#generic-instructions-to-allow-the-dal-plugin) with `Webex Meetings` replacing `APPLICATION NAME HERE` in step 4. Can be fixed by removing the signature of the Meeting Centre.app (needs to be done for every version that may be called). Then launch the meeting which will fail, then from a command line launch the app by hand. The apps are in the folder ```~/Library/Application Support/WebEx``` Folder with versions being in the format T33_64UMC_40.9.6.11 and the manual launch command is ```Meeting\ Center.app/Contents/MacOS/Meeting\ Center```. This will lose the menu at the top of the screen so is a partial workaround. Webex (Webex Teams) is easier to get working.
@@ -103,6 +112,8 @@ To get the Mac virtual camera to work on a generic app not already listed:
 3) Put in your password. NOTE: you will not see the password being put in, but it will be registering it.
 4) Once the previous step finishes installing, paste the following command into the terminal app and then input your password again
 ```sudo codesign --remove-signature "/Applications/APPLICATION NAME HERE.app/"```
+5) Now, re-sign the application.
+```sudo codesign --sign - "/Applications/APPLICATION NAME HERE.app/"```
 
 If that does not work you can try the following, test one at a time
 * ```sudo codesign --remove-signature "/Applications/APPLICATION NAME HERE.app/Contents/Frameworks/APPLICATION NAME HERE Helper (Renderer).app"``` 
