@@ -1,8 +1,6 @@
 # [Home](Home)
 
 # Guides/Info
-**SUB TO MEOWCODE!!!**
-* [His Channel](https://www.youtube.com/channel/UCQ49856maCOmHCi0oQa4O-g)
 ** **
 **Getting Started**
 
