@@ -46,25 +46,25 @@
 
 **Development & Scripting**
 
-* [Getting Started with OBS Studio Development](Getting-Started-with-OBS-Studio-Development)
-* [Getting Started With OBS Scripting](Getting-Started-With-OBS-Scripting)
-  * [Scripting Tutorial: Source Shake](Scripting-Tutorial-Source-Shake)
-  * [Scripting Tutorial: Halftone Filter](Scripting-Tutorial-Halftone-Filter)
-
+* [Getting Started with OBS Studio Development/Начало работы с разработкой OBS Studio](Getting-Started-with-OBS-Studio-Development)
+* [Getting Started With OBS Scripting/Начало работы С OBS-Скриптингом](Getting-Started-With-OBS-Scripting)
+  * [Scripting Tutorial: Source Shake/Учебное пособие по написанию сценариев: Source Shake](Scripting-Tutorial-Source-Shake)
+  * [Scripting Tutorial: Halftone Filter/Учебное пособие по написанию сценариев: Фильтр полутонов](Scripting-Tutorial-Halftone-Filter)
+[Translated by MeowCode](https://www.youtube.com/channel/UCQ49856maCOmHCi0oQa4O-g)
 **Post Production**
 
-* [Post Production Tools you can use](Post-Production-Tools-you-can-use)
+* [Post Production Tools you can use/Инструменты постпродакшена, которые вы можете использовать](Post-Production-Tools-you-can-use)
 
-**[Install instructions](install-instructions)**
+**[Install instructions/Инструкция по установке](install-instructions) [Translated by MeowCode](https://www.youtube.com/channel/UCQ49856maCOmHCi0oQa4O-g)**
 
-* [Windows](install-instructions#windows)
-* [macOS](install-instructions#macos)
-* [Linux](install-instructions#linux)
+* [Windows/Винда](install-instructions#windows)
+* [macOS/МакОС](install-instructions#macos)
+* [Linux/Линукс](install-instructions#linux)
 * [FreeBSD](install-instructions#freebsd)
 
-**[Build instructions](building-obs-studio)**
+**[Build instructions/Инструкции по сборке](building-obs-studio) [Translated by MeowCode](https://www.youtube.com/channel/UCQ49856maCOmHCi0oQa4O-g)**
 
-* [Windows](build-instructions-for-windows)
-* [macOS](build-instructions-for-mac)
-* [Linux](build-instructions-for-linux)
+* [Windows/Винда](build-instructions-for-windows)
+* [macOS/МакОС](build-instructions-for-mac)
+* [Linux/Линукс](build-instructions-for-linux)
 * [FreeBSD](build-instructions-for-freebsd)
