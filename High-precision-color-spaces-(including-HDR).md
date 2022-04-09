@@ -21,7 +21,7 @@ The first three of these color spaces are "relative" in that the values do not h
 
 ![image](https://user-images.githubusercontent.com/10396506/162562966-1218bedf-7f0c-4ecd-9bce-2bdf7711ca61.png)
 
-This setting is analogous to "SDR content brightness" in Windows HDR settings. They have a [0, 100] scale that defaults to 40. That translates to [80, 480] nits with a default of 240 nits. It should be noted that OBS does not use this setting for any of its computations, so don't be surprised if SDR content looks different in OBS on an HDR monitor.
+This setting is analogous to "SDR content brightness" in Windows HDR settings. They have a [0, 100] scale that defaults to 40. That translates to [80, 480] nits with a default of 240 nits. It should be noted that OBS does not use the OS setting for any of its computations, so don't be surprised if SDR content looks different in OBS on an HDR monitor.
 
 ![image](https://user-images.githubusercontent.com/10396506/162563005-6695dc6b-3adf-48b6-986f-3145710ad837.png)
 
@@ -112,7 +112,21 @@ If Game Capture is implemented with a little more effort (and it is):
 
 # Preview
 
-[TODO]
+Preview windows on OBS take many forms. There's the main preview, the scene preview in Studio Mode, source/filter previews, windows/fullscreen projectors, and multiview. These are backed by Direct3D or OpenGL swap chains. There is one important rule to keep in mind.
+
+**Previews do not care what your OBS settings are. If it is on an SDR monitor, the preview will be SDR. If it on an HDR monitor, the preview will be HDR.**
+
+On Windows, a monitor is HDR if this setting is enabled.
+
+![image](https://user-images.githubusercontent.com/10396506/162563197-3a6682b0-d8fd-45a0-b5fd-9ed3534abfe8.png)
+
+For the time being, Mac and Linux are limited to SDR previews. Mac support seems to be a little buggy at the moment, and Linux support is largely nonexistent for now.
+
+This is how preview windows handle content:
+- sRGB content on sRGB/EDR window: Normal draw
+- sRGB/EDR content on CCCS window: Normal draw, adjusted by SDR White Level / 80.0
+- EDR content on SDR window: Normal draw, tonemapped, lossy
+- EDR content on EDR window: Normal draw
 
 # Video format conversion
 
