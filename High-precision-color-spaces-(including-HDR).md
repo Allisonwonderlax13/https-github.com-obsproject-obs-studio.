@@ -126,7 +126,7 @@ This is how preview windows handle content:
 - sRGB content on sRGB window: Normal draw
 - sRGB content on EDR (Mac) window: Normal draw
 - sRGB/EDR content on CCCS (Windows) window: Normal draw, adjusted by SDR White Level / 80.0
-- EDR content on SDR window: Normal draw, tonemapped, lossy
+- EDR content on sRGB window: Normal draw, tonemapped, lossy
 - EDR content on EDR (Mac) window: Normal draw
 
 # Video format conversion
