@@ -123,10 +123,11 @@ On Windows, a monitor is HDR if this setting is enabled.
 For the time being, Mac and Linux are limited to SDR previews. Mac support seems to be a little buggy at the moment, and Linux support is largely nonexistent for now.
 
 This is how preview windows handle content:
-- sRGB content on sRGB/EDR window: Normal draw
-- sRGB/EDR content on CCCS window: Normal draw, adjusted by SDR White Level / 80.0
+- sRGB content on sRGB window: Normal draw
+- sRGB content on EDR (Mac) window: Normal draw
+- sRGB/EDR content on CCCS (Windows) window: Normal draw, adjusted by SDR White Level / 80.0
 - EDR content on SDR window: Normal draw, tonemapped, lossy
-- EDR content on EDR window: Normal draw
+- EDR content on EDR (Mac) window: Normal draw
 
 # Video format conversion
 
