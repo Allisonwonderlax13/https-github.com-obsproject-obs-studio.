@@ -19,11 +19,11 @@ OBS now supports four color spaces for canvas composition.
 
 The first three of these color spaces are "relative" in that the values do not have a specific luminance. OBS has a new setting "SDR White Level (nits)" to allow users to specify the absolute value for 1.0. Our default of 300 nits is a common recommendation in game development to composite SDR UI against HDR gameplay.
 
-[TODO: add screenshot of SDR White Level setting]
+![image](https://user-images.githubusercontent.com/10396506/162562966-1218bedf-7f0c-4ecd-9bce-2bdf7711ca61.png)
 
 This setting is analogous to "SDR content brightness" in Windows HDR settings. They have a [0, 100] scale that defaults to 40. That translates to [80, 480] nits with a default of 240 nits. It should be noted that OBS does not use this setting for any of its computations, so don't be surprised if SDR content looks different in OBS on an HDR monitor.
 
-[TODO: add screenshot of SDR content brightness setting]
+![image](https://user-images.githubusercontent.com/10396506/162563005-6695dc6b-3adf-48b6-986f-3145710ad837.png)
 
 ## sRGB (SDR, 8 bits per channel, unsigned normalized, [0, 1] range used)
 
@@ -59,18 +59,6 @@ Canvas format/space:
 - ~~NV12/I420/I444/RGB + Rec. 2020~~
 - P010/I010 + Rec. 2020 = EDR
 
-## Automatic color space conversion
-
-libobs will automatically convert colors when it detects color space mismatches along a source chain.
-
-- sRGB8 -> sRGB8, sRGB16F -> sRGB16F, EDR -> EDR, CCCS -> CCCS: No extra draw
-- sRGB8 -> sRGB16F, sRGB16F -> sRGB8: Regular draw with GPU SRGB automatic conversions enabled
-- sRGB8/sRGB16F -> EDR: Regular draw since the [0, 1] range maps identically to the [0, 1] range of EDR
-- sRGB8/sRGB16F/EDR -> CCCS: Draw that multiplies RGB with a factor of SDR white level divided by 80.0 to go from relative to absolute.
-- EDR -> sRGB8/sRGB16F: Draw that tonemaps HDR to SDR.
-- CCCS -> EDR: Draw that multiplies RGB with a factor of 80.0 divided by SDR white level.
-- CCCS -> sRGB8/sRGB16F: Draw that multiplies RGB with a factor of 80.0 divided by SDR white level to go from absolute to relative, then tonemaps from HDR to SDR.
-
 # Sources
 
 There are three public types of sources: input, filter, transition. It is important to us not to break the existing ecosystem of external plugins, so OBS has decided on an important guideline.
@@ -86,6 +74,18 @@ Adding an legacy filter that lacks knowledge of extended color spaces will to pr
 Input [HDR] -> (implicit HDR to SDR conversion) -> Filter [SDR] -> Scene [SDR] -> Transition [SDR] -> (implicit SDR to HDR conversion) -> Canvas [HDR]
 
 Note: By the time you read this, all filters and transitions included with OBS should have been upgraded.
+
+## Automatic color space conversion
+
+libobs will automatically convert colors when it detects color space mismatches along a source chain.
+
+- sRGB8 -> sRGB8, sRGB16F -> sRGB16F, EDR -> EDR, CCCS -> CCCS: No extra draw
+- sRGB8 -> sRGB16F, sRGB16F -> sRGB8: Regular draw with GPU SRGB automatic conversions enabled
+- sRGB8/sRGB16F -> EDR: Regular draw since the [0, 1] range maps identically to the [0, 1] range of EDR
+- sRGB8/sRGB16F/EDR -> CCCS: Draw that multiplies RGB with a factor of SDR white level divided by 80.0 to go from relative to absolute.
+- EDR -> sRGB8/sRGB16F: Draw that tonemaps HDR to SDR.
+- CCCS -> EDR: Draw that multiplies RGB with a factor of 80.0 divided by SDR white level.
+- CCCS -> sRGB8/sRGB16F: Draw that multiplies RGB with a factor of 80.0 divided by SDR white level to go from absolute to relative, then tonemaps from HDR to SDR.
 
 A source opts into extended color space support by supplying a `video_get_color_space` callback. The signature looks like this:
 `enum gs_color_space (*video_get_color_space)(void *data, size_t count, const enum gs_color_space *preferred_spaces);`
