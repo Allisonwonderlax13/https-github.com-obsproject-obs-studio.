@@ -39,11 +39,11 @@ Unlike its 8-bit counterpart, GPUs do not have automatic linear/nonlinear conver
 
 You may notice that between sRGB, Rec. 709, and Rec. 601, OBS only performs YCbCr conversions, but does not convert primaries or transfer functions. We treat Rec. 709 and Rec. 601 as if they are sRGB for various reasons.
 
-## "Extended Dynamic Range" (EDR) (HDR, 16 bits per channel, floating-point, [0, 65504] range used)
+## "Extended Dynamic Range" (EDR) (HDR, 16 bits per channel, floating-point, [0, 125] range used)
 
 This is similar to our 16-bit sRGB space, but values above 1.0 are valid, and represent colors that are "whiter" than diffuse white, e.g. the Sun, specular highlights. The EDR term comes from Apple as far we know.
 
-## "Canonical Compositing Color Space" (CCCS) (HDR, 16 bits per channel, floating-point, [0, 65504] range used)
+## "Canonical Compositing Color Space" (CCCS) (HDR, 16 bits per channel, floating-point, [0, 125] range used)
 
 Similar to EDR, but 1.0 has an absolute value of 80 nits. You may also see this referred to as scRGB or "floating-point scRGB" since scRGB didn't originally involve a floating-point representation. The CCCS term comes from Microsoft as far we know.
 
