@@ -2,7 +2,7 @@
 
 **NOTE: This is still a work-in-progress. Features are subject to change.**
 
-Prior to version 28, OBS has only supported sRGB implicitly using 8 bits per channel. Given increasing HDR display adoption across users and industry, it makes sense for OBS to expand its support for color spaces.
+Given increasing HDR display adoption across users and industry, it makes sense for OBS to expand its support for color spaces.
 
 OBS has been upgraded in the following areas:
 
@@ -15,7 +15,7 @@ OBS has been upgraded in the following areas:
 
 OBS operates by combining video from various sources, and it does so in a master texture that we don't have a formal name for. I'll refer to it as the canvas.
 
-OBS now supports four color spaces for canvas composition.
+Prior to version 28, OBS has only supported sRGB implicitly using 8 bits per channel. OBS now supports four color spaces for canvas composition.
 
 The first three of these color spaces are "relative" in that the values do not have a specific luminance. OBS has a new setting "SDR White Level (nits)" to allow users to specify the absolute value for 1.0. Our default of 300 nits is a common recommendation in game development to composite SDR UI against HDR gameplay.
 
@@ -35,17 +35,19 @@ GPUs typically have support for "SRGB" textures, which can convert color values 
 
 The same color space, but with more bits of precision. This can be helpful to reduce banding typically seen by 8-bit sRGB.
 
-Unlike its 8-bit counterpart, GPUs do not have automatic linear/nonlinear conversions, and values are always manipulated "linearly." (Floating-point itself being a nonlinear representation is largely an implementation detail).
+Unlike its 8-bit counterpart, GPUs do not have automatic linear/nonlinear conversions, and values are always stored/manipulated "linearly." (Floating-point itself being a nonlinear representation is largely an implementation detail.)
+
+You may notice that between sRGB, Rec. 709, and Rec. 601, OBS only performs YCbCr conversions, but does not convert primaries or transfer functions. We treat Rec. 709 and Rec. 601 as if they are sRGB for various reasons.
 
 ## "Extended Dynamic Range" (EDR) (HDR, 16 bits per channel, floating-point, [0, 65504] range used)
 
-This is similar to our 16-bit sRGB space, but values above 1.0 are valid, and represent colors that are "whiter" than diffuse white, e.g. the Sun, specular highlights. The EDR term comes from Apple.
+This is similar to our 16-bit sRGB space, but values above 1.0 are valid, and represent colors that are "whiter" than diffuse white, e.g. the Sun, specular highlights. The EDR term comes from Apple as far we know.
 
 ## "Canonical Compositing Color Space" (CCCS) (HDR, 16 bits per channel, floating-point, [0, 65504] range used)
 
-Similar to EDR, but 1.0 has an absolute value of 80 nits. You may also see this referred to as scRGB, but that didn't originally involve floating-point numbers.
+Similar to EDR, but 1.0 has an absolute value of 80 nits. You may also see this referred to as scRGB or "floating-point scRGB" since scRGB didn't originally involve a floating-point representation. The CCCS term comes from Microsoft as far we know.
 
-It should be noted that this color space is mainly used by HDR windows on Windows. OBS uses this space only for window preview because compositing is simplified if 1.0 is kept relative.
+It should be noted that this color space is mainly used by HDR windows on Windows. OBS uses this space only for window preview and not for composition because the math simplifies if diffuse white is consistently 1.0.
 
 Mac preview can use EDR directly; CCCS preview may be useful when Linux eventually receives HDR support.
 
@@ -56,7 +58,7 @@ The canvas color space is chosen implicitly by "Color Format" and "Color Space" 
 Video color format/space -> Canvas color space:
 - NV12/I420/I444/RGB + sRGB/Rec. 709/Rec. 601 = sRGB (8-bit)
 - P010/I010 + sRGB/Rec. 709/Rec. 601 = sRGB (16-bit floating-point)
-- ~~NV12/I420/I444/RGB + Rec. 2020~~
+- ~~NV12/I420/I444/RGB + Rec. 2020~~ These combinations are not valid.
 - P010/I010 + Rec. 2020 = EDR
 
 # Sources
@@ -73,7 +75,14 @@ Adding an legacy filter that lacks knowledge of extended color spaces will to pr
 
 Input [HDR] -> (implicit HDR to SDR conversion) -> Filter [SDR] -> Scene [SDR] -> Transition [SDR] -> (implicit SDR to HDR conversion) -> Canvas [HDR]
 
-Note: By the time you read this, all filters and transitions included with OBS should have been upgraded.
+Note: By the time you read this, all filter/transition sources included with OBS should have been upgraded to support HDR to avoid this problem.
+
+Input Sources that have been upgraded to support HDR include:
+
+- Media Source
+- Display Capture (Windows)
+- Game Capture (Windows)
+- Window Capture (Windows)
 
 ## Automatic color space conversion
 
@@ -90,9 +99,11 @@ libobs will automatically convert colors when it detects color space mismatches 
 A source opts into extended color space support by supplying a `video_get_color_space` callback. The signature looks like this:
 `enum gs_color_space (*video_get_color_space)(void *data, size_t count, const enum gs_color_space *preferred_spaces);`
 
+It is important that a source be able to change its answer from frame to frame. For example, someone might change Display Capture to point from an SDR monitor to an HDR monitor.
+
 Prior to rendering a source, libobs (or perhaps a filter/transition) will "ask" the next source what color space it wants to render in, providing the set of "preferred spaces" that will lead to fewest unnecessary conversions and/or highest quality. A source is free to ignore the preferred spaces to simplify its implementation, but matching a preferred source is generally, well, preferred, and usually leads to better performance.
 
-As an example, let's say a video game streamer is playing an HDR game and sending an SDR video stream to a popular streaming service. If Game Capture were implemented lazily:
+As an example, let's say a video game streamer is playing an HDR game, and sending an SDR video stream to a popular streaming service. If Game Capture were implemented lazily:
 
 - libobs: "Hey Game Capture: What color space are you going to render to? I prefer SDR."
 - Game Capture: "HDR"
@@ -116,10 +127,6 @@ Preview windows on OBS take many forms. There's the main preview, the scene prev
 
 **Previews do not care what your OBS settings are. If it is on an SDR monitor, the preview will be SDR. If it on an HDR monitor, the preview will be HDR.**
 
-Another rule:
-
-**Previews are just previews. You can still process and make HDR videos with OBS without an HDR monitor although it's obviously a better experience if you can see the real colors instead of tonemapped colors.**
-
 On Windows, a monitor is HDR if this setting is enabled.
 
 ![image](https://user-images.githubusercontent.com/10396506/162563197-3a6682b0-d8fd-45a0-b5fd-9ed3534abfe8.png)
@@ -133,15 +140,21 @@ This is how preview windows handle content:
 - EDR content on sRGB window: Normal draw, tonemapped, lossy
 - EDR content on EDR (Mac) window: Normal draw
 
+Another important note:
+
+**Previews are just previews. They do not play a role in composition. You can still process and make HDR videos with OBS without an HDR monitor although it's obviously a better experience if you can see the real colors instead of tonemapped colors.**
+
 # Video format conversion
 
-There are two new input/output video formats: P010/I010. You can read about them elsewhere, but they are 10-bit formats for higher-quality SDR or HDR.
+There are two new input/output video formats in the settings: P010/I010. You can read about them elsewhere, but they are 10-bit formats appropriate for higher-quality SDR or HDR.
 
-There are also two new video color spaces, Rec. 2020 (PQ), and Rec. 2020 (HLG).
+There are also two new video color spaces in the settings, Rec. 2020 (PQ), and Rec. 2020 (HLG).
+
+[TODO: Add image]
 
 - P010 works well with NVENC HEVC to generate both high-precision sRGB, and PQ/HLG video.
-- I010 can be used by AOM AV1 to generate PQ/HLG video.
+- I010 can be used by AOM AV1 to generate PQ/HLG video. SVT-AV1 does not currently support HDR.
 
 (NVENC HEVC support may or may not be available at this time.)
 
-OBS can leverage these new formats/spaces both in the media source for video playback, and output for streaming/recording.
+OBS can leverage these new formats/spaces both as input in the media source for video playback, and as output for streaming/recording.
