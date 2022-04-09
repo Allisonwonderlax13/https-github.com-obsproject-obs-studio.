@@ -51,13 +51,25 @@ Mac preview can use EDR directly; CCCS preview may be useful when Linux eventual
 
 The canvas color space is chosen implicitly by "Color Format" and "Color Space" settings.
 
-[TODO: add screenshot of color format/space settings]
+![image](https://user-images.githubusercontent.com/10396506/162562528-85fa13b1-0845-416c-a727-070df53a350e.png)
 
-[TODO: List format + video space = canvas space. Highlight new settings.]
+Canvas format/space:
+- NV12/I420/I444/RGB + sRGB/Rec. 709/Rec. 601 = sRGB (8-bit)
+- P010/I010 + sRGB/Rec. 709/Rec. 601 = sRGB (16-bit floating-point)
+- ~~NV12/I420/I444/RGB + Rec. 2020~~
+- P010/I010 + Rec. 2020 = EDR
 
 ## Automatic color space conversion
 
-[TODO: Explain how all the permutations work.]
+libobs will automatically convert colors when it detects color space mismatches along a source chain.
+
+- sRGB8 -> sRGB8, sRGB16F -> sRGB16F, EDR -> EDR, CCCS -> CCCS: No extra draw
+- sRGB8 -> sRGB16F, sRGB16F -> sRGB8: Regular draw with GPU SRGB automatic conversions enabled
+- sRGB8/sRGB16F -> EDR: Regular draw since the [0, 1] range maps identically to the [0, 1] range of EDR
+- sRGB8/sRGB16F/EDR -> CCCS: Draw that multiplies RGB with a factor of SDR white level divided by 80.0 to go from relative to absolute.
+- EDR -> sRGB8/sRGB16F: Draw that tonemaps HDR to SDR.
+- CCCS -> EDR: Draw that multiplies RGB with a factor of 80.0 divided by SDR white level.
+- CCCS -> sRGB8/sRGB16F: Draw that multiplies RGB with a factor of 80.0 divided by SDR white level to go from absolute to relative, then tonemaps from HDR to SDR.
 
 # Sources
 
