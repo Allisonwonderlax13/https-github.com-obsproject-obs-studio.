@@ -63,7 +63,7 @@ The canvas color space is chosen implicitly by "Color Format" and "Color Space" 
 
 There are three public types of sources: input, filter, transition. It is important to us not to break the existing ecosystem of external plugins, so OBS has decided on an important guideline.
 
-**Sources are sRGB by default, and need to opt into extended color spaces.**
+**Sources are 8-bit sRGB by default, and need to opt into extended color spaces.**
 
 For an input source, this is not such a big deal, but you have to be careful with filters and transitions. If you have a setup like this:
 
