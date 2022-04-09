@@ -90,7 +90,7 @@ libobs will automatically convert colors when it detects color space mismatches 
 A source opts into extended color space support by supplying a `video_get_color_space` callback. The signature looks like this:
 `enum gs_color_space (*video_get_color_space)(void *data, size_t count, const enum gs_color_space *preferred_spaces);`
 
-Prior to rendering a source, libobs (or perhaps a filter/transition) will "ask" the next source what color space it wants to render in, providing the set of "preferred spaces" that will lead to fewest unnecessary conversions and/or highest quality. A source is free to ignore the preferred space to simplify its implementation, but matching a preferred source is generally, well, preferred, and usually leads to better performance.
+Prior to rendering a source, libobs (or perhaps a filter/transition) will "ask" the next source what color space it wants to render in, providing the set of "preferred spaces" that will lead to fewest unnecessary conversions and/or highest quality. A source is free to ignore the preferred spaces to simplify its implementation, but matching a preferred source is generally, well, preferred, and usually leads to better performance.
 
 As an example, let's say a video game streamer is playing an HDR game and sending an SDR video stream to a popular streaming service. If Game Capture were implemented lazily:
 
