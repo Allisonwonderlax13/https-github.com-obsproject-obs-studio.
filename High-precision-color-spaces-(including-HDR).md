@@ -112,15 +112,19 @@ If Game Capture is implemented with a little more effort (and it is):
 
 # Preview
 
-Preview windows on OBS take many forms. There's the main preview, the scene preview in Studio Mode, source/filter previews, windows/fullscreen projectors, and multiview. These are backed by Direct3D or OpenGL swap chains. There is one important rule to keep in mind.
+Preview windows on OBS take many forms. There's the main preview, the scene preview in Studio Mode, source/filter previews, windows/fullscreen projectors, and multiview. These are backed by Direct3D or OpenGL swap chains. There is an important rule to keep in mind.
 
 **Previews do not care what your OBS settings are. If it is on an SDR monitor, the preview will be SDR. If it on an HDR monitor, the preview will be HDR.**
+
+Another rule:
+
+**Previews are just previews. You can still process and make HDR videos with OBS without an HDR monitor although it's obviously a better experience if you can see the real colors instead of tonemapped colors.**
 
 On Windows, a monitor is HDR if this setting is enabled.
 
 ![image](https://user-images.githubusercontent.com/10396506/162563197-3a6682b0-d8fd-45a0-b5fd-9ed3534abfe8.png)
 
-For the time being, Mac and Linux are limited to SDR previews. Mac support seems to be a little buggy at the moment, and Linux support is largely nonexistent for now.
+For the time being, Mac and Linux are limited to SDR previews. Mac support is a bit challenging at the moment, and Linux needs to step up their HDR game before we attempt to add HDR preview support.
 
 This is how preview windows handle content:
 - sRGB content on sRGB window: Normal draw
@@ -131,4 +135,13 @@ This is how preview windows handle content:
 
 # Video format conversion
 
-[TODO]
+There are two new input/output video formats: P010/I010. You can read about them elsewhere, but they are 10-bit formats for higher-quality SDR or HDR.
+
+There are also two new video color spaces, Rec. 2020 (PQ), and Rec. 2020 (HLG).
+
+- P010 works well with NVENC HEVC to generate both high-precision sRGB, and PQ/HLG video.
+- I010 can be used by AOM AV1 to generate PQ/HLG video.
+
+(NVENC HEVC support may or may not be available at this time.)
+
+OBS can leverage these new formats/spaces both in the media source for video playback, and output for streaming/recording.
