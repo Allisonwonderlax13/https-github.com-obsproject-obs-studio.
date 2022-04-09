@@ -157,4 +157,4 @@ There are also two new video color spaces in the settings, Rec. 2020 (PQ), and R
 
 (NVENC HEVC support may or may not be available at this time.)
 
-OBS can leverage these new formats/spaces both as input in the media source for video playback, and as output for streaming/recording.
+OBS can leverage the new 10-bit formats both as input in the media source for video playback, and as output for streaming/recording.
