@@ -53,7 +53,7 @@ The canvas color space is chosen implicitly by "Color Format" and "Color Space" 
 
 ![image](https://user-images.githubusercontent.com/10396506/162562528-85fa13b1-0845-416c-a727-070df53a350e.png)
 
-Canvas format/space:
+Video color format/space -> Canvas color space:
 - NV12/I420/I444/RGB + sRGB/Rec. 709/Rec. 601 = sRGB (8-bit)
 - P010/I010 + sRGB/Rec. 709/Rec. 601 = sRGB (16-bit floating-point)
 - ~~NV12/I420/I444/RGB + Rec. 2020~~
