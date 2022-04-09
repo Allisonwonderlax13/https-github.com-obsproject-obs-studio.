@@ -146,11 +146,11 @@ Another important note:
 
 # Video format conversion
 
-There are two new input/output video formats in the settings: P010/I010. You can read about them elsewhere, but they are 10-bit formats appropriate for higher-quality SDR or HDR.
+There are two new input/output video formats in the settings: P010/I010. You can read more about them elsewhere, but they are 10-bit formats appropriate for high-precision SDR or HDR.
 
 There are also two new video color spaces in the settings, Rec. 2020 (PQ), and Rec. 2020 (HLG).
 
-[TODO: Add image]
+![image](https://user-images.githubusercontent.com/10396506/162562528-85fa13b1-0845-416c-a727-070df53a350e.png)
 
 - P010 works well with NVENC HEVC to generate both high-precision sRGB, and PQ/HLG video.
 - I010 can be used by AOM AV1 to generate PQ/HLG video. SVT-AV1 does not currently support HDR.
