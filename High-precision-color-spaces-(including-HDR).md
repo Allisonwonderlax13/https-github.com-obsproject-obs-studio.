@@ -19,7 +19,7 @@ Prior to version 28, OBS has only supported sRGB implicitly using 8 bits per cha
 
 The first three of these color spaces are "relative" in that the values do not have a specific luminance. OBS has a new setting "SDR White Level (nits)" to allow users to specify the absolute value for 1.0. Our default of 300 nits is a common recommendation in game development to composite SDR UI against HDR gameplay.
 
-![image](https://user-images.githubusercontent.com/10396506/162562966-1218bedf-7f0c-4ecd-9bce-2bdf7711ca61.png)
+![image](https://user-images.githubusercontent.com/10396506/162606176-9dc19e01-f33d-4f47-8510-93b9557233b6.png)
 
 This setting is analogous to "SDR content brightness" in Windows HDR settings. They have a [0, 100] scale that defaults to 40. That translates to [80, 480] nits with a default of 240 nits. It should be noted that OBS does not use the OS setting for any of its computations, so don't be surprised if SDR content looks different in OBS on an HDR monitor.
 
@@ -53,13 +53,13 @@ Mac preview can use EDR directly; CCCS preview may be useful when Linux eventual
 
 The canvas color space is chosen implicitly by "Color Format" and "Color Space" settings.
 
-![image](https://user-images.githubusercontent.com/10396506/162562528-85fa13b1-0845-416c-a727-070df53a350e.png)
+![image](https://user-images.githubusercontent.com/10396506/162606204-d526364c-ade6-4ecc-9829-7385eebc213e.png)
 
 Video color format/space -> Canvas color space:
 - NV12/I420/I444/RGB + sRGB/Rec. 709/Rec. 601 = sRGB (8-bit)
 - P010/I010 + sRGB/Rec. 709/Rec. 601 = sRGB (16-bit floating-point)
-- ~~NV12/I420/I444/RGB + Rec. 2020~~ These combinations are not valid.
-- P010/I010 + Rec. 2020 = EDR
+- ~~NV12/I420/I444/RGB + Rec. 2100~~ These combinations are not valid.
+- P010/I010 + Rec. 2100 = EDR
 
 # Sources
 
@@ -148,9 +148,9 @@ Another important note:
 
 There are two new input/output video formats in the settings: P010/I010. You can read more about them elsewhere, but they are 10-bit formats appropriate for high-precision SDR or HDR.
 
-There are also two new video color spaces in the settings, Rec. 2020 (PQ), and Rec. 2020 (HLG).
+There are also two new video color spaces in the settings, Rec. 2100 (PQ), and Rec. 2100 (HLG).
 
-![image](https://user-images.githubusercontent.com/10396506/162562528-85fa13b1-0845-416c-a727-070df53a350e.png)
+![image](https://user-images.githubusercontent.com/10396506/162606204-d526364c-ade6-4ecc-9829-7385eebc213e.png)
 
 - P010 works well with NVENC HEVC to generate both high-precision sRGB, and PQ/HLG video.
 - I010 can be used by AOM AV1 to generate PQ/HLG video. SVT-AV1 does not currently support HDR.
