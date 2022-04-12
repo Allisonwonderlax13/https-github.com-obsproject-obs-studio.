@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://standwithukraine.pp.ua)
+
 **OBS Studio** is free and open source software for video recording and live streaming.
 
 * [Install OBS Studio](install-instructions) using the official builds
