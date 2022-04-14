@@ -6,7 +6,7 @@ Automatic Windows builds allow building OBS with minimal input and setup - neces
 
 * Windows Powershell (v5+ and more recent)
 * Visual Studio 2019 (at least Community Edition)
-  * Windows 10 SDK (minimum 10.0.19041.0)
+  * Windows 10 SDK (minimum 10.0.20348.0)
 * Git for Windows
 
 **Note** that the automatic build scripts can use [Chocolatey](https://chocolatey.org) to automatically install additional build dependencies (CMake and 7-Zip), by passing the `-Choco` switch.
@@ -60,7 +60,7 @@ Custom Windows builds allow full customization of the desired build configuratio
 ## Prerequisites
 
 * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
-  * Windows 10 SDK (minimum 10.0.19041.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
+  * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
 * Pre-built Windows dependencies for Visual Studio 2019 can be found here: [dependencies2019](https://obsproject.com/downloads/dependencies2019.zip)
 * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
