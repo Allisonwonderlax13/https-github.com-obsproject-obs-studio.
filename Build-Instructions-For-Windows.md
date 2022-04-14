@@ -1,10 +1,10 @@
 # Option A: Automatic Windows builds
 
-Automatic Windows builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.
+Automatic Windows builds allow building OBS with minimal input and setup. Necessary dependencies are installed automatically, build flags use a sane default, and the generated OBS build uses the application's full feature set.
 
 ## Prerequisites
 
-* Windows Powershell (v5+ and more recent)
+* Windows PowerShell (v5+ and more recent)
 * Visual Studio 2019 (at least Community Edition)
   * Windows 10 SDK (minimum 10.0.20348.0)
 * Git for Windows
@@ -17,7 +17,7 @@ Automatic Windows builds allow building OBS with minimal input and setup - neces
 
     `git clone --recursive https://github.com/obsproject/obs-studio.git`
 
-* To do a **fully automated** build, open a Powershell window, switch to the checkout directory then run one of the following commands:
+* To do a **fully automated** build, open a PowerShell window, switch to the checkout directory then run one of the following commands:
 
 ```
 # Download and set up dependencies, then build OBS for local host 
@@ -27,7 +27,7 @@ CI/build-windows.ps1
 # Check for dependencies installable via Chocolatey
 CI/build-windows.ps1 -Choco
 
-# Skip download and setup of dendencies
+# Skip download and setup of dependencies
 CI/build-windows.ps1 -SkipDependencyChecks
 
 # Build 32-bit only
@@ -87,16 +87,16 @@ Custom Windows builds allow full customization of the desired build configuratio
 
 1. Run cmake-gui, and set the following fields:
     * In "where is the source code", enter in the repository directory (example: `D:/obs`).
-    * In "where to build the binaries", enter the repository directory path with the 'build' subdirectory (example: `D:/obs/build` - if this directory does not exist, it will be created by CMake).
+    * In "where to build the binaries", enter the repository directory path with the 'build' subdirectory (example: `D:/obs/build`). If this directory does not exist, it will be created by CMake.
 
-2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables - check the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio#cmake) for a full list and description of these variables:
+2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables. Check the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio#cmake) for a full list and description of these variables:
     * `CMAKE_PREFIX_PATH` - **REQUIRED** 
     * `DepsPath` (`DepsPath32` and `DepsPath64` as architecture-specific variants) - **LEGACY** 
     * `QTDIR` (`QTDIR32` and `QTDIR64` as architecture-specific variants) - **LEGACY** 
     * `CEF_ROOT_DIR` (when building with browser support)
     * `VIRTUALCAM_GUID` (when building with Virtual Camera support)
 
-3. In cmake-gui, press `Configure` and select the generator that corresponds with the desired installed Visual Studio version:
+3. In cmake-gui, press `Configure`, and select the generator that corresponds with the desired installed Visual Studio version:
     * Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 64bit version of OBS
     * **NOTE**: If you need to change your dependencies from a build already configured, you will need to uncheck `COPIED_DEPENDENCIES` and run `Configure` again.
 
