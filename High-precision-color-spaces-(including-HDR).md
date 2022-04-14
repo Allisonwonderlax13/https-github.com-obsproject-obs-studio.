@@ -19,7 +19,7 @@ Prior to version 28, OBS has only supported sRGB implicitly using 8 bits per cha
 
 The first three of these color spaces are "relative" in that the values do not have a specific luminance. OBS has a new setting "SDR White Level (nits)" to allow users to specify the absolute value for 1.0. Our default of 300 nits is a common recommendation in game development to composite SDR UI against HDR gameplay.
 
-![image](https://user-images.githubusercontent.com/10396506/162606176-9dc19e01-f33d-4f47-8510-93b9557233b6.png)
+![image](https://user-images.githubusercontent.com/10396506/163323274-7cff145f-a3e7-42f9-b32a-b1a5b0f79bdd.png)
 
 This setting is analogous to "SDR content brightness" in Windows HDR settings. They have a [0, 100] scale that defaults to 40. That translates to [80, 480] nits with a default of 240 nits. It should be noted that OBS does not use the OS setting for any of its computations, so don't be surprised if SDR content looks different in OBS on an HDR monitor.
 
@@ -53,7 +53,7 @@ Mac preview can use EDR directly; CCCS preview may be useful when Linux eventual
 
 The canvas color space is chosen implicitly by "Color Format" and "Color Space" settings.
 
-![image](https://user-images.githubusercontent.com/10396506/162606204-d526364c-ade6-4ecc-9829-7385eebc213e.png)
+![image](https://user-images.githubusercontent.com/10396506/163323502-abb1ec23-7e64-4de6-b181-41b67d560bc7.png)
 
 Video color format/space -> Canvas color space:
 - NV12/I420/I444/RGB + sRGB/Rec. 709/Rec. 601 = sRGB (8-bit)
@@ -150,7 +150,7 @@ There are two new input/output video formats in the settings: P010/I010. You can
 
 There are also two new video color spaces in the settings, Rec. 2100 (PQ), and Rec. 2100 (HLG).
 
-![image](https://user-images.githubusercontent.com/10396506/162606204-d526364c-ade6-4ecc-9829-7385eebc213e.png)
+![image](https://user-images.githubusercontent.com/10396506/163323502-abb1ec23-7e64-4de6-b181-41b67d560bc7.png)
 
 - P010 works well with NVENC HEVC to generate both high-precision sRGB, and PQ/HLG video.
 - I010 can be used by AOM AV1 to generate PQ/HLG video. SVT-AV1 does not currently support HDR.
@@ -158,3 +158,17 @@ There are also two new video color spaces in the settings, Rec. 2100 (PQ), and R
 (NVENC HEVC support may or may not be available at this time.)
 
 OBS can leverage the new 10-bit formats both as input in the media source for video playback, and as output for streaming/recording.
+
+## HDR Nominal Peak Level
+
+You can find this setting near the other new color space settings.
+
+![image](https://user-images.githubusercontent.com/10396506/163323634-02b0d680-df18-4841-bca4-3a832d692e35.png)
+
+This value has a few uses.
+
+- For PQ output video, we set this value in the metadata to relay how bright a pixel can get. It is up to the discretion of the video player/device on the other end how to react to this number, but my understanding is that the receiving end should generally tonemap down the signal if it goes beyond the playback display's capabilities, or pass the color values through untouched otherwise.
+- For HLG output video, we do not inject this value into the metadata because HLG is designed to be sent without it. We still use this value however because OBS needs to convert its absolute nits representation to HLG's unitless relative representation. If the HDR nominal peak value is greater than 1000 nits, we tonemap down to 1000 nits using maxRGB EETF as specified in BT.2408. Otherwise, we do not modify the color values. From there, we use the standard PQ -> HLG conversion algorithm for 1000 nits. This is the recommendation of MovieLabs, which is controlled by the big movie studios, and therefore infallible.
+- For HLG input video, e.g. Media Source, we use the HDR nominal peak value to unpack the HLG video signal. 0.0 will be black, and 1.0 will be full peak nits, and the numbers in between will be what the HLG algorithm say they are.
+
+It is up to the user of OBS to ensure that the HDR nominal peak value is accurate, so be careful!
