@@ -62,7 +62,7 @@ Custom Windows builds allow full customization of the desired build configuratio
 * [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
   * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
-* Pre-built Windows dependencies for Visual Studio 2019 can be found here: [dependencies2019](https://obsproject.com/downloads/dependencies2019.zip)
+  * Pre-built Windows dependencies for Visual Studio 2019 can be found in the [obs-deps repo releases](https://github.com/obsproject/obs-deps/releases?q=windows)
 * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
   * OBS officially supports building with Qt 5.15.2
 * CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x86.zip))
