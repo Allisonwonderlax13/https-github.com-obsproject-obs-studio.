@@ -128,7 +128,7 @@ If you want to use the Virtual Camera created by this build, you will have to ru
 
 Use of `clang-format` is required for pull requests, and OBS uses a more recent version than is shipped with Visual Studio 2019:
 
-1. Download and install [LLVM 8.0.0](http://releases.llvm.org/)
+1. Download and install [LLVM 12.0.0](http://releases.llvm.org/)
 2. Run Visual Studio, select `Tools -> Options` from the menu
     * Go to `Text Editor -> C/C++ -> Code Style -> Formatting -> General`
     * Enable "Use custom clang-format.exe" and enter the file name, e.g. `C:\Program Files\LLVM\bin\clang-format.exe`
