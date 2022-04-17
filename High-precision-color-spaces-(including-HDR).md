@@ -159,6 +159,10 @@ There are also two new video color spaces in the settings, Rec. 2100 (PQ), and R
 
 OBS can leverage the new 10-bit formats both as input in the media source for video playback, and as output for streaming/recording.
 
+## Display primaries and white point
+
+For PQ and HLG metadata, we always set the primaries and white point in metadata to match P3-D65 for sanity. Someday we may expose these as configurable fields if more capable displays emerge, but for simplicity, we will set this metadata automatically. Please ensure your content does not use colors outside of this range.
+
 ## HDR Nominal Peak Level
 
 You can find this setting near the other new color space settings.
@@ -168,7 +172,7 @@ You can find this setting near the other new color space settings.
 This value has a few uses.
 
 - For PQ output video, we set this value in the metadata to relay how bright a pixel can get. It is up to the discretion of the video player/device on the other end how to react to this number, but my understanding is that the receiving end should generally tonemap down the signal if it goes beyond the playback display's capabilities, or pass the color values through untouched otherwise.
-- For HLG output video, we do not inject this value into the metadata because HLG is designed to be sent without it. We still use this value however because OBS needs to convert its absolute nits representation to HLG's unitless relative representation. If the HDR nominal peak value is greater than 1000 nits, we tonemap down to 1000 nits using maxRGB EETF as specified in BT.2408. Otherwise, we do not modify the color values. From there, we use the standard PQ -> HLG conversion algorithm for 1000 nits. This is the recommendation of MovieLabs, which is controlled by the big movie studios, and therefore infallible.
+- For HLG output video, we set this metadata on output even though it technically isn't needed since HLG is relative. We also use this value for converting our absolute nits representation to HLG's unitless relative representation. If the HDR nominal peak value is greater than 1000 nits, we tonemap down to 1000 nits using maxRGB EETF as specified in BT.2408. Otherwise, we do not modify the color values. From there, we use the standard PQ -> HLG conversion algorithm for 1000 nits. This is the recommendation of MovieLabs, which is controlled by the big movie studios, and therefore infallible.
 - For HLG input video, e.g. Media Source, we use the HDR nominal peak value to unpack the HLG video signal. 0.0 will be black, and 1.0 will be full peak nits, and the numbers in between will be what the HLG algorithm say they are.
 
 It is up to the user of OBS to ensure that the HDR nominal peak value is accurate, so be careful!
