@@ -133,7 +133,6 @@ Read the [Unofficial Linux builds](unofficial-linux-builds) guide for installati
 # FreeBSD
 
 Install OBS Studio:
-
-    ```bash
-    pkg install obs-studio
-    ```
+```sh
+pkg install obs-studio
+```
