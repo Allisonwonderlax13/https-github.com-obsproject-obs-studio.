@@ -103,18 +103,18 @@ It is important that a source be able to change its answer from frame to frame. 
 
 Prior to rendering a source, libobs (or perhaps a filter/transition) will "ask" the next source what color space it wants to render in, providing the set of "preferred spaces" that will lead to fewest unnecessary conversions and/or highest quality. A source is free to ignore the preferred spaces to simplify its implementation, but matching a preferred source is generally, well, preferred, and usually leads to better performance.
 
-As an example, let's say a video game streamer is playing an HDR game, and sending an SDR video stream to a popular streaming service. If Game Capture were implemented lazily:
+As an example, let's say a video game streamer is playing an HDR game, and sending an SDR video stream to a popular streaming service. If Game Capture were to pass the signal through naively:
 
-- libobs: "Hey Game Capture: What color space are you going to render to? I prefer SDR."
+- libobs: "Hey Game Capture, what color space are you going to render to? I prefer SDR."
 - Game Capture: "HDR"
 - libobs: "Okay, here's an HDR render target."
 - Game Capture renders HDR.
 - libobs re-renders from HDR to SDR.
 - GPU is sad.
 
-If Game Capture is implemented with a little more effort (and it is):
+If Game Capture is implemented to also process the color space difference:
 
-- libobs: "Hey Game Capture: What color space are you going to render to? I prefer SDR."
+- libobs: "Hey Game Capture, what color space are you going to render to? I prefer SDR."
 - Game Capture: "SDR"
 - libobs: "Okay, here's an SDR render target."
 - Game Capture renders its HDR image, tonemapping to SDR in the process.
