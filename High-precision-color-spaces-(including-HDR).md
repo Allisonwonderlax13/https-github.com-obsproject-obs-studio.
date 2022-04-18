@@ -35,13 +35,15 @@ GPUs typically have support for "SRGB" textures, which can convert color values 
 
 The same color space, but with more bits of precision. This can be helpful to reduce banding typically seen by 8-bit sRGB.
 
-Unlike its 8-bit counterpart, GPUs do not have automatic linear/nonlinear conversions, and values are always stored/manipulated "linearly." (Floating-point itself being a nonlinear representation is largely an implementation detail.)
+Unlike its 8-bit counterpart, GPUs do not have automatic linear/nonlinear conversions, and values are always stored/manipulated "linearly." This is fine for floating-point numbers because they are implicitly nonlinear, and also give more precision to the small numbers that represent dark colors.
 
-You may notice that between sRGB, Rec. 709, and Rec. 601, OBS only performs YCbCr conversions, but does not convert primaries or transfer functions. We treat Rec. 709 and Rec. 601 as if they are sRGB for various reasons.
+If you look at our codebase, you may notice that between sRGB, Rec. 709, and Rec. 601, OBS only performs YCbCr conversions, but does not convert primaries or transfer functions. We treat Rec. 709 and Rec. 601 as if they are sRGB for various reasons. One being that we don't want to exacerbate banding, and another being that most media players that we have tested also aliased other SDR color spaces as sRGB.
 
 ## "Extended Dynamic Range" (EDR) (HDR, 16 bits per channel, floating-point, [0, 125] range used)
 
 This is similar to our 16-bit sRGB space, but values above 1.0 are valid, and represent colors that are "whiter" than diffuse white, e.g. the Sun, specular highlights. The EDR term comes from Apple as far we know.
+
+The reason why we cannot use EDR for 16-bit sRGB despite having a bit-identical representation from [0, 1] is that we need to know whether we are SDR vs. HDR to apply tonemapping in the appropriate situations.
 
 ## "Canonical Compositing Color Space" (CCCS) (HDR, 16 bits per channel, floating-point, [0, 125] range used)
 
@@ -71,7 +73,7 @@ For an input source, this is not such a big deal, but you have to be careful wit
 
 Input [HDR] -> Scene [HDR] -> Transition [HDR] -> Canvas [HDR]
 
-Adding an legacy filter that lacks knowledge of extended color spaces will to premature tonemapping:
+Adding an legacy filter that lacks knowledge of extended color spaces will lead to premature tonemapping:
 
 Input [HDR] -> (implicit HDR to SDR conversion) -> Filter [SDR] -> Scene [SDR] -> Transition [SDR] -> (implicit SDR to HDR conversion) -> Canvas [HDR]
 
@@ -131,14 +133,14 @@ On Windows, a monitor is HDR if this setting is enabled.
 
 ![image](https://user-images.githubusercontent.com/10396506/162563197-3a6682b0-d8fd-45a0-b5fd-9ed3534abfe8.png)
 
-For the time being, Mac and Linux are limited to SDR previews. Mac support is a bit challenging at the moment, and Linux needs to step up their HDR game before we attempt to add HDR preview support.
+For the time being, Mac and Linux are limited to SDR previews. Mac support is a bit challenging at the moment, and no compositor on Linux has HDR capabilities ready to go as far as we know.
 
 This is how preview windows handle content:
-- sRGB content on sRGB window: Normal draw
-- sRGB content on EDR (Mac) window: Normal draw
-- sRGB/EDR content on CCCS (Windows) window: Normal draw, adjusted by SDR White Level / 80.0
-- EDR content on sRGB window: Normal draw, tonemapped, lossy
-- EDR content on EDR (Mac) window: Normal draw
+- sRGB content on sRGB window: Use color value
+- sRGB content on EDR (Mac) window: Use color value
+- sRGB/EDR content on CCCS (Windows) window: Multiply color value by SDR White Level / 80.0
+- EDR content on sRGB window: Tonemap color value (Reinhard), lossy
+- EDR content on EDR (Mac) window: Use color value
 
 Another important note:
 
@@ -172,7 +174,7 @@ You can find this setting near the other new color space settings.
 This value has a few uses.
 
 - For PQ output video, we set this value in the metadata to relay how bright a pixel can get. It is up to the discretion of the video player/device on the other end how to react to this number, but my understanding is that the receiving end should generally tonemap down the signal if it goes beyond the playback display's capabilities, or pass the color values through untouched otherwise.
-- For HLG output video, we set this metadata on output even though it technically isn't needed since HLG is relative. We also use this value for converting our absolute nits representation to HLG's unitless relative representation. If the HDR nominal peak value is greater than 1000 nits, we tonemap down to 1000 nits using maxRGB EETF as specified in BT.2408. Otherwise, we do not modify the color values. From there, we use the standard PQ -> HLG conversion algorithm for 1000 nits. This is the recommendation of MovieLabs, which is controlled by the big movie studios, and therefore infallible.
+- For HLG output video, we set this metadata on output even though it technically isn't needed since HLG is relative. We also use this value for converting our absolute nits representation to HLG's unitless relative representation. If the HDR nominal peak value is greater than 1000 nits, we tonemap down to 1000 nits using maxRGB EETF as specified in BT.2408. Otherwise, we do not modify the color values. From there, we use the standard PQ -> HLG conversion algorithm for 1000 nits, but without the PQ part since we already have the linear nit values. This is the recommendation of MovieLabs, which has ties to the big movie studios, and is therefore infallible.
 - For HLG input video, e.g. Media Source, we use the HDR nominal peak value to unpack the HLG video signal. 0.0 will be black, and 1.0 will be full peak nits, and the numbers in between will be what the HLG algorithm say they are.
 
 It is up to the user of OBS to ensure that the HDR nominal peak value is accurate, so be careful!
