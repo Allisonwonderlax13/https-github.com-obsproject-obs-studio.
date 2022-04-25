@@ -71,7 +71,7 @@ Custom Debian builds allow full customization of the desired build configuration
 * Alternatively the required dependencies can be installed using `apt`:
     * Build system dependencies
     ```
-    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache
+    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git
     ```
 
     * OBS dependencies (core):
