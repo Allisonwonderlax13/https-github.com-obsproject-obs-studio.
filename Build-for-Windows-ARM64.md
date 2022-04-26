@@ -1,9 +1,8 @@
 # Current Limitation
-1. CEF (current version 88) hardware acceleration does not work.
+1. CEF hardware acceleration does not work.
 Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware Acceleration" to use software rendering.
 5. There is no installer available, yet. 
 3. Virtual Camera should work, in theory. A manual registration of Virtual Camera is needed.
-2. RealSense is not included. I have little confidence that something intel will work on ARM platform.
 4. Video Source is not available, unless there's a good enough MinGW toolchain targeting ARM64 Windows, AND the VideoLAN is willing to use it. 
 6. There is no hardware encoding, yet. Neither Microsoft nor Qualcomm released any documentation on this topic.
 
@@ -1043,25 +1042,22 @@ Use CMake.
 
 |Cache|Value|
 |---:|:---|
+|`ENABLE_AJA`|`OFF`|
 |`BUILD_AMD_ENCODER`|`OFF`|
-|`COMPILE_D3D12_HOOK`|`ON`|
-|`PYTHON_LIB`|`DepsARM64/bin/python39.lib`|
-|`ENABLE_SCRIPTING`|`ON`|
-|`BUILD_BROWSER`|`ON`|
-|`COMPILE_PYTHON`|`ON`|
 |`ENABLE_QSV11`|`OFF`|
-|`VULKAN_INCLUDE_DIR`|`DepsARM64/VulkanSDK/include`|
-|`VULKAN_LIB`|`DepsARM64/VulkanSDK/vulkan-1.lib`|
+|`ENABLE_D3D12_HOOK`|`ON`|
+|`ENABLE_SCRIPTING`|`ON`|
+|`ENABLE_BROWSER`|`ON`|
+|`ENABLE_SCRIPTING`|`ON`|
+|`ENABLE_SCRIPTING_LUA`|`OFF`|
+|`PYTHON_LIB`|`DepsARM64/bin/python310.lib`|
+|`Vulkan_INCLUDE_DIR`|`DepsARM64/VulkanSDK/include`|
+|`Vulkan_LIBRARY`|`DepsARM64/VulkanSDK/vulkan-1.lib`|
 
 
 Also make sure `QTDIR`, `DepsPath` and `CEF_ROOT_DIR` are set.
 
-Note that CPython have support for Windows ARM64 only since version 3.9, while the Intel version of OBS Studio is still using version 3.6.
+Note that CPython have support for Windows ARM64 only since version 3.9, while the X64 version of OBS Studio is still using version 3.6.
 
 ## Compile
 Select `Release` or `RelWithDebInfo` configuration, and build. 
-> `Debug` configuration will cause link-time symbol errors with CEF (current version 88).
-
-## After compile
-1. Copy all DLL files in `DepsARM64/bin` to the `bin/64bit` folder.
-2. Copy `Qt5Core.dll`, `Qt5Gui.dll`, `Qt5Network.dll`, `Qt5Svg.dll`, `Qt5Widgets.dll`, `Qt5Xml.dll`, directory `iconengines`, `imageformats`, `platforms`, `styles` to the `bin/64bit` folder.
