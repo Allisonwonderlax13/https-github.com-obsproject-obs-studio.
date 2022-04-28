@@ -47,7 +47,8 @@ And here is a list of them just for you:
     1. **[Fusion (from Blackmagic Design)](https://www.blackmagicdesign.com/products/fusion/) _(Windows/Mac/Linux)_**: Hollywood level effects, but with a bit of a learning curve (no more than After Effects though). Once you learn it you'll be blowing by anything done in After Effects. Also has powerful color correction, masking and keying tools. Takes advantage of your GPUs for faster rendering. (Fusion is now integrated with Resolve, so you might be able to take advantage of that integration by using Resolve outright).
 
     2. **[Blender (from the Blender Foundation)](https://www.blender.org/) _(Linux/Mac/Windows)_**: Wait, Blender again? Well it's a versatile program that in recent years has added compositing tools to it's arsenal. Also open source.
-Linux/Mac/Windows - Natron: http://natron.fr/ A Multi-platform compositor. On the surface appears to be similar to Blackmagic Designs' Fusion. Open source as well.
+Linux/Mac/Windows 
+    3. **[Natron](https://natrongithub.github.io/) _(Linux/Mac/Windows)_**: A Multi-platform compositor. On the surface appears to be similar to Blackmagic Designs' Fusion. Open source as well.
 
 4. **3D Graphics.** 3D is hard, but the stuff you can create with even just a little bit of skill can truly separate your content from everyone else. Even if just used as elements that you composit together, 3D is a very powerful tool in your post-production toolkit.
 
