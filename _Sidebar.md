@@ -48,6 +48,7 @@
 * [Getting Started With OBS Scripting](Getting-Started-With-OBS-Scripting)
   * [Scripting Tutorial: Source Shake](Scripting-Tutorial-Source-Shake)
   * [Scripting Tutorial: Halftone Filter](Scripting-Tutorial-Halftone-Filter)
+* [Service Submission Guidelines](Service-Submission-Guidelines)
 
 **Post Production**
 
