@@ -199,13 +199,13 @@ Now it's time to start testing! Are the settings working? Is the stream running 
 
 If you have problems, start a thread in the [Support section of the forums](https://obsproject.com/forum/categories/obs-studio-support.30/). Be sure to [include a log file](https://obsproject.com/forum/threads/please-post-a-log-with-your-issue-heres-how.23074/). Alternately, you can join our [community chat](https://obsproject.com/chat/) to get live help from community volunteers.
 
-If you want more control over your Recording settings or want to record multiple audio tracks, switch the Output Mode to Advanced and check out this guide: [High quality recording and multiple Audio Tracks](../Advanced-Recording-Guide-With-Multi-Track-Audio)
+If you want more control over your Recording settings or want to record multiple audio tracks, switch the Output Mode to Advanced and check out this guide: [High quality recording and multiple Audio Tracks](./Advanced-Recording-Guide-With-Multi-Track-Audio)
 
 ***
 
 ## Resource Links
 
-- [Advanced local recording guide](../Advanced-Recording-Guide-With-Multi-Track-Audio)
+- [Advanced local recording guide](./Advanced-Recording-Guide-With-Multi-Track-Audio)
 - [Video guide for OBS Studio](https://obsproject.com/forum/resources/full-video-guide-for-obs-studio-and-twitch.377/)
 - [Buffering issues](https://obsproject.com/forum/threads/my-stream-lags-buffers-loads-constantly-for-my-viewers-but-why.18465/)
 - [CPU overload/High Encoding issues](https://obsproject.com/forum/threads/high-cpu-usage-high-encoding-taking-too-long-to-encode-read-this-first.23334/)
