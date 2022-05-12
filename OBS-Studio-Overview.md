@@ -199,7 +199,7 @@ Now it's time to start testing! Are the settings working? Is the stream running 
 
 If you have problems, start a thread in the [Support section of the forums](https://obsproject.com/forum/categories/obs-studio-support.30/). Be sure to [include a log file](https://obsproject.com/forum/threads/please-post-a-log-with-your-issue-heres-how.23074/). Alternately, you can join our [community chat](https://obsproject.com/chat/) to get live help from community volunteers.
 
-If you want more control over your Recording settings or want to record multiple audio tracks, switch the Output Mode to Advanced and check out this guide: [High quality recording and multiple Audio Tracks](https://github.com/obsproject/obs-studio/wiki/Advanced-Recording-Guide-With-Multi-Track-Audio)
+If you want more control over your Recording settings or want to record multiple audio tracks, switch the Output Mode to Advanced and check out this guide: [High quality recording and multiple Audio Tracks](Advanced-Recording-Guide-With-Multi-Track-Audio)
 
 ***
 
