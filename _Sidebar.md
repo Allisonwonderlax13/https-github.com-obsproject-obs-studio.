@@ -61,9 +61,9 @@
 * [Linux](install-instructions#linux)
 * [FreeBSD](install-instructions#freebsd)
 
-**[Build instructions](building-obs-studio)**
+**[Build instructions](Building-OBS-Studio)**
 
-* [Windows](build-instructions-for-windows)
-* [macOS](build-instructions-for-mac)
-* [Linux](build-instructions-for-linux)
-* [FreeBSD](build-instructions-for-freebsd)
+* [Windows](Build-Instructions-For-Windows)
+* [macOS](Build-Instructions-For-Mac)
+* [Linux](Build-Instructions-For-Linux)
+* [FreeBSD](Build-Instructions-For-Freebsd)
