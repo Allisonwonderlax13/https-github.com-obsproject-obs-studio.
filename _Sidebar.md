@@ -66,4 +66,4 @@
 * [Windows](Build-Instructions-For-Windows)
 * [macOS](Build-Instructions-For-Mac)
 * [Linux](Build-Instructions-For-Linux)
-* [FreeBSD](Build-Instructions-For-Freebsd)
+* [FreeBSD](Build-Instructions-For-FreeBSD)
