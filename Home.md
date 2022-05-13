@@ -5,7 +5,7 @@
   * [macOS](install-instructions#macos)
   * [Linux](install-instructions#linux)
   * [FreeBSD](install-instructions#freebsd)
-* [Build OBS Studio](building-obs-studio) from source
+* [Build OBS Studio](Building-OBS-Studio) from source
   * [Windows](build-instructions-for-windows)
   * [macOS](build-instructions-for-mac)
   * [Linux](build-instructions-for-linux)
