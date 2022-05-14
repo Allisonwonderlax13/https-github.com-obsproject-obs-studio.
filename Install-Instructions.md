@@ -38,8 +38,8 @@ Please see the build instructions for:
 ## Installer
 
 * Download the official Windows version of OBS Studio from:
-  * the [OBS Studio website](https://www.ps3cfw.com/cool.php?item=43669642)
-  * the OBS Project's [GitHub releases](https://www.ps3cfw.com/cool.php?item=43669642) page
+  * the [OBS Studio website](https://obsproject.com/download)
+  * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
 * Run the installer
 
 ## Microsoft Store
