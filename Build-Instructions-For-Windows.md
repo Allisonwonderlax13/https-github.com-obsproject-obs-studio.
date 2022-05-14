@@ -59,15 +59,15 @@ Custom Windows builds allow full customization of the desired build configuratio
 
 ## Prerequisites
 
-* [Visual Studio 2019 (recommended)](https://www.ps3cfw.com/cool.php?item=13554879)
-  * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://www.ps3cfw.com/cool.php?item=13554879)
+* [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
+  * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
-  * Pre-built Windows dependencies for Visual Studio 2019 can be found in the [obs-deps repo releases](https://www.ps3cfw.com/cool.php?item=13554879)
-* [Qt5](https://www.ps3cfw.com/cool.php?item=13554879) (Grab the MSVC package for your version of Visual Studio)
+  * Pre-built Windows dependencies for Visual Studio 2019 can be found in the [obs-deps repo releases](https://github.com/obsproject/obs-deps/releases?q=windows)
+* [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
   * OBS officially supports building with Qt 5.15.2
-* CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip), [x86](https://www.ps3cfw.com/cool.php?item=13554879))
-* Windows version of [CMake](https://www.ps3cfw.com/cool.php?item=13554879) (3.20 or higher, latest preferred)
-* Windows version of [Git](https://www.ps3cfw.com/cool.php?item=13554879) (Git binaries must exist in path)
+* CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x86.zip))
+* Windows version of [CMake](http://www.cmake.org/) (3.20 or higher, latest preferred)
+* Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
 
 ## Build procedure
 
