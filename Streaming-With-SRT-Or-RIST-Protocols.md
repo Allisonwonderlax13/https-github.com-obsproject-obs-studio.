@@ -144,6 +144,13 @@ Media Source restrictions: SRT work on all platforms; RIST will only work for re
   * For 'Input Format', enter mpegts.    
 ![](https://i.imgur.com/MsecE88.png)
 
+### Latency
+
+If lower latency is more important than stability, or if you are operating the stream on a solid local network, there are some optimizations you can do to reduce latency.
+
+First and foremost is the "Network Buffering", which you can push all the way down to 0 MB.
+
+Additionally, in the current master branch (and eventually release), the media source exposes "FFmpeg Options", which can be used to reduce latency further. By specifying `probesize=32` as input, you can get sub 0.5 sec latency if conditions (encoders, lookahead, b-frames, GOP etc) are right.
 
 # How to stream with OBS Studio to srt or rist destinations
 
