@@ -17,7 +17,7 @@ An image with a 1:1 aspect ratio is a perfect square, because for every 1 pixel 
 The most common aspect ratio found on computer displays is 16:9. Example resolutions that have a 16:9 aspect ratio are 1920x1080 (aka "1080p"), 1280x720 (aka "720p"), and 3840x2160 (aka "4K").
 
 This illustration shows how the different aspect ratios would look like on a 16:9 monitor or canvas.
-![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/6e5353c737-1638477482/16by9-aspect-ratio-examples.png)
+![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/2992b6897c-1638563958/16by9-aspect-ratio-examples.png)
 
 ## What should you target?
 As we mentioned above, the most common aspect ratio for viewing devices is still **16:9**.
@@ -30,7 +30,7 @@ You may have sources, or content that doesn't fit into your preferred aspect rat
 
 A different method would be to scale the source larger, so that some of the content/image falls outside of the preview/canvas. That will mean losing some of the "source", for instance the top and bottom (pan and scan).
 
-![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/49e17d716a-1638003520/pan-scan.jpg)
+![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/ac8ef5b93e-1638003520/pan-scan.jpg)
 
 The red parts would be lost.
 
@@ -38,12 +38,12 @@ The red parts would be lost.
 If you play retro games, older consoles, or have content that does not fit neatly into the the 16:9 aspect ratio, then you can get a little bit creative with your scene setup.
 
 ### Older console (example)
-![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/0c4445063c-1638005000/ar-example1.png)
+![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/86c9ec5bde-1638005000/ar-example1.png)
 Here we have the Snes, which is approximately 4:3 aspect ratio. Here we've chosen to carefully scale in order to maintain the sharpness, and maintain the whole source. Instead we've filled the remaining space on the left with chat, socials, and some background elements.
 
 # Scaling, cropping, stretching and filtering
 There are several tools you may need to use in order to make sources fit the way you want.
-![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/6f3a8ab9d9-1638007061/kb-shortcuts.png)
+![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/c43b41f50b-1638007061/kb-shortcuts.png)
 
 ## Scaling
 The easiest way to scale is to drag the red squares at the edges of your source. Make sure you have it selected first.
@@ -62,4 +62,4 @@ You can still drag the red dots of the source, but you need to hold down the `sh
 Certain scaling filters will work better for different kinds of sources. You can access these by right clicking the source -> scale filtering.
 
 If you find your source looks blurry/soft, try changing it to bicubic for instance. Retro and pixel art can use "point" or "area" to maintain the original sharp look.
-![](https://obsproject.com/media/pages/kb/understanding-aspect-ratio/d8cdfc0f70-1638007340/scale-filtering.png)
+![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/ef93fbf06b-1638007340/scale-filtering.png)
