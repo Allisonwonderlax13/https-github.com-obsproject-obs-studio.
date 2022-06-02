@@ -15,9 +15,11 @@ A first troubleshooting step is to make sure that the Game Capture source "Mode"
 ![](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/01-graphics-settings.png)
 * Choose "Classic app" or "Desktop app" (they are the same thing, only named differently on different windows versions) and hit "Browse". 
 
-![](https://i.imgur.com/aDSvJbl.png)
+![aDSvJbl](https://user-images.githubusercontent.com/50419942/171719151-816cab5d-ab66-4694-ac26-f76ffdf6eeab.png)
 
-![](https://i.imgur.com/BJUhcC7.png)
+
+![kphrwU3](https://user-images.githubusercontent.com/50419942/171719879-e88fd089-cb16-4e20-9b34-9c6ed7c2d973.png)
+
 
 * Once Minecraft/javaw.exe is added, click "Options" and choose "High Performance"
 
@@ -47,7 +49,8 @@ For Minecraft Java edition 1.18:
 * Press Ctrl+Shift+ESC(Escape) to open Task Manager
 * Right-click `OpenJDK Platform binary` and select "Open file location"
 * The folder that opens is the location of your `javaw.exe`. Scroll up and use that path to find the correct javaw.exe to set to High-Performance Graphics.
-![](https://i.imgur.com/UCAlDC7.png)
+![hF0in2S](https://user-images.githubusercontent.com/50419942/171719510-2eb5e81b-46c3-4311-b120-053f2586bd87.png)
+
 
 Once this is completed, restart both OBS and your game (remember that they should have been closed at the beginning of this guide).
 
