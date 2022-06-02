@@ -38,8 +38,8 @@ The red parts would be lost.
 If you play retro games, older consoles, or have content that does not fit neatly into the the 16:9 aspect ratio, then you can get a little bit creative with your scene setup.
 
 ### Older console (example)
-![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/86c9ec5bde-1638005000/ar-example1.png)
-Here we have the Snes, which is approximately 4:3 aspect ratio. Here we've chosen to carefully scale in order to maintain the sharpness, and maintain the whole source. Instead we've filled the remaining space on the left with chat, socials, and some background elements.
+![](https://obsproject.com/media/pages/kb/aspect-ratio-guide/b8be0e992f-1654198825/run3-896px.png)
+Here we have a Snes scene, where the game does not conform to 16:9. We've chosen to carefully scale the game in order to maintain the sharpness, aspect ratio, and maintain the whole source. We've added chat, socials, and some background elements to fill out the frame.
 
 # Scaling, cropping, stretching and filtering
 There are several tools you may need to use in order to make sources fit the way you want.
