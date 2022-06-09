@@ -50,7 +50,7 @@ Custom Debian builds allow full customization of the desired build configuration
 * Ninja
 * *Optional:* CCache to improve compilation speeds on consecutive builds
 * For browser source and browser panel support, the pre-built CEF framework is needed:
-  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4280_linux64.tar.bz2)
+  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2)
 * Several additional dependencies (see step 2 below)
 
 ### Build procedure
