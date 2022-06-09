@@ -123,6 +123,57 @@ If Game Capture is implemented to also process the color space difference:
 - libobs does not need to re-render from HDR to SDR.
 - GPU is happy.
 
+## Color conversion examples
+
+For the purposes of understanding the color values better, here are some example calculations performed under the following conditions:
+
+* SDR monitor - full white calibrated to 120 nits
+* HDR monitor - can display up to 1000 nits
+* Windows SDR setting - 240 nits
+* OBS SDR setting - 300 nits
+* Theoretical player that uses Reinhard, and Windows SDR setting for HDR to SDR
+
+Calculations:
+
+* Rec. 709 color space
+  * SDR source white (1.0)
+    * SDR monitor
+      * source preview = 1.0 * 120 = 120 nits
+      * scene preview = 1.0 * 120 = 120 nits
+      * theoretical media player = 1.0 * 120 = 120 nits
+    * HDR monitor
+      * source preview = 1.0 * 300 = 300 nits (use OBS SDR setting)
+      * scene preview = 1.0 * 300 = 300 nits (use OBS SDR setting)
+      * theoretical media player = 1.0 * 240 = 240 nits (use Windows SDR setting)
+  * HDR source color (1000 nits)
+    * SDR monitor
+      * source preview = ((1000/300) / ((1000/300) + 1)) * 120 = 92 nits
+      * scene preview = ((1000/300) / ((1000/300) + 1)) * 120 = 92 nits
+      * media player = ((1000/300) / ((1000/300) + 1)) * 120 = 92 nits
+    * HDR monitor
+      * source preview = 1000 nits (show pure source)
+      * scene preview = ((1000/300) / ((1000/300) + 1)) * 300 = 231 nits (use OBS SDR setting)
+      * theoretical media player = ((1000/300) / ((1000/300) + 1)) * 240 = 185 nits (use Windows SDR setting)
+* Rec. 2100 (PQ) color space
+  * SDR source white (1.0)
+    * SDR monitor
+      * source preview = 1.0 * 120 = 120 nits (show pure source)
+      * scene preview = ((300/300) / ((300/300) + 1)) * 120 = 60 nits
+      * theoretical media player = ((300/240) / ((300/240) + 1)) * 120 = 67 nits (300 in video, tonemap for 240)
+    * HDR monitor
+      * source preview = 1.0 * 300 = 300 nits
+      * scene preview = 1.0 * 300 = 300 nits
+      * theoretical media player = 300 nits (300 in video, Windows SDR setting unused)
+  * HDR source color (1000 nits)
+    * SDR monitor
+      * source preview = ((1000/300) / ((1000/300) + 1)) * 120 = 92 nits
+      * scene preview = ((1000/300) / ((1000/300) + 1)) * 120 = 92 nits
+      * theoretical media player = ((1000/240) / ((1000/240) + 1)) * 120 = 97 nits (1000 in video, tonemap for 240)
+    * HDR monitor
+      * source preview = 1000 nits
+      * scene preview = 1000 nits
+      * theoretical media player = 1000 nits
+
 # Preview
 
 Preview windows on OBS take many forms. There's the main preview, the scene preview in Studio Mode, source/filter previews, windows/fullscreen projectors, and multiview. These are backed by Direct3D or OpenGL swap chains. There is an important rule to keep in mind.
