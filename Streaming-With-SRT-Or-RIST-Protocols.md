@@ -71,7 +71,7 @@ The following servers support SRT and/or RIST  ingest:
 * [SRT Live Server](https://github.com/Edward-Wu/srt-live-server) (free, open source)
   * This option only *serves* SRT streams and does **not** transmux to HLS/RTMP/DASH. It is much more rudimentary than the other servers at this stage but it is FOSS and works fine with OBS Studio in our tests.
 * [OvenMediaEngine](https://github.com/AirenSoft/OvenMediaEngine) (free, open source)
-  * OvenMediaEngine (OME) can receive a video/audio source from an encoder or camera with SRT, WebRTC, RTMP, MPEG-2 TS, or RTSP-Pull as input. Then, OME transmits it using WebRTC, Low Latency MPEG-DASH (LLDASH), MPEG-DASH, and HLS as output.
+  * OvenMediaEngine (OME) can receive a video/audio source from an encoder or camera with SRT, WebRTC, RTMP, MPEG-2 TS, or RTSP-Pull as input. Then, OME transmits it over LLHLS (Low Latency HLS) and WebRTC as output.
 * [Amazon Elemental MediaConnect](https://aws.amazon.com/mediaconnect/)   
   * Supports SRT and RIST (Simple Profile only).   
 * [Sipradius](https://www.sipradius.com/) is the main librist sponsor and offers encoders and servers for both SRT and RIST.
