@@ -84,7 +84,7 @@ Due to OBS' modular structure, some build configuration settings are available g
 | ENABLE_V4L2 | Enable Video4Linux v2 support | `ON` | Linux |
 | ENABLE_VIRTUALCAM | Enable building with Virtual Camera modules | `ON` | Windows and macOS |
 | VIRTUALCAM_GUID | Specify global unique identifier (GUID) for Virtual Camera Plugin | None | Windows |
-| ENABLE_BROWSER_SOURCE | Enable buidling Browser Source plugin | `ON` | All |
+| ENABLE_BROWSER | Enable buidling Browser Source plugin | `ON` | All |
 | ENABLE_BROWSER_LEGACY | Enable building Browser Source plugin with legacy CEF version 3770 | `OFF` | Windows |
 | ENABLE_BROWSER_SHARED_TEXTURE | Enable building Browser Source plugin with shared texture support | `ON` | Windows and macOS |
 | ENABLE_BROWSER_QT_LOOP | Enable building Browser source plugin with Qt message loop | `ON` | macOS |
