@@ -125,7 +125,7 @@ The following legacy option switches are supported for a grace period as well an
 |-----------|---------|
 | BROWSER_LEGACY | ENABLE_BROWSER_LEGACY |
 | BROWSER_PANEL_SUPPORT_ENABLED | ENABLE_BROWSER_PANELS |
-| BUILD_BROWSER | ENABLE_BROWSER_SOURCE |
+| BUILD_BROWSER | ENABLE_BROWSER |
 | BUILD_CA_ENCODER | ENABLE_COREAUDIO_ENCODER |
 | BUILD_VST | ENABLE_VST |
 | BROWSER_LEGACY | ENABLE_BROWSER_LEGACY |
@@ -165,7 +165,7 @@ Other generators are supported by CMake but have neither been tested nor are off
 
 ### Change Configuration Options
 
-To change a configuration option, supported variables can be passed via the `-D` switch. E.g. to disable building with the browser source plugin, pass `-DENABLE_BROWSER_SOURCE=OFF`. While CMake supports several values as binary switches, within OBS `ON` or `OFF` are used.
+To change a configuration option, supported variables can be passed via the `-D` switch. E.g. to disable building with the browser plugin, pass `-DENABLE_BROWSER=OFF`. While CMake supports several values as binary switches, within OBS `ON` or `OFF` are used.
 
 These changes are additive, as CMake stores these options as "cache variables" in a file called `CMakeCache.txt` in the specified build directory and reads from this file when `cmake` is run again. As such cache options can either be changed in this file directly, or overwritten by specifying new values for them via the `-D` switch (see above).
 
