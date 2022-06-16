@@ -41,6 +41,8 @@ Many people want to get into OBS Studio development in order to make a plugin, r
 
 For more details on plugin development, check this page of the documentation: [https://obsproject.com/docs/plugins.html](https://obsproject.com/docs/plugins.html)
 
+We strongly recommend using the OBS plugin template as a starting point for new plugin development: **[https://github.com/obsproject/obs-plugintemplate](https://github.com/obsproject/obs-plugintemplate)**
+
 ### Example plugins
 
 * Example source plugin: [Color Source](https://github.com/obsproject/obs-studio/blob/master/plugins/image-source/color-source.c)
