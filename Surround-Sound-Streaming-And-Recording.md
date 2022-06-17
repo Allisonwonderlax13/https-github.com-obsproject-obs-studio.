@@ -99,7 +99,6 @@ NB: Flash player accepts rtmp surround sound in Dolby; it might work ==> unteste
 
 # **Streaming Music**
 
-For music bands, Djing, ... , bring your production with surround sound to the World !   
 Up to 7.1 surround sound is available. (For more channels (up to 16.0) check [this fork](https://github.com/pkviet/obs-studio/releases)).    
 
 ## **Filters and VST**
