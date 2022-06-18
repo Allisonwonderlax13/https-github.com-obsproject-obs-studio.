@@ -1042,21 +1042,14 @@ Use CMake.
 
 |Cache|Value|
 |---:|:---|
-|`ENABLE_AJA`|`OFF`|
-|`BUILD_AMD_ENCODER`|`OFF`|
-|`ENABLE_QSV11`|`OFF`|
-|`ENABLE_SCRIPTING`|`ON`|
-|`ENABLE_BROWSER`|`ON`|
-|`ENABLE_SCRIPTING`|`ON`|
-|`ENABLE_SCRIPTING_LUA`|`OFF`|
+|`DepsPath`|`DepsARM64`|
+|`QTDIR`|`DepsARM64/qt`|
 |`PYTHON_LIB`|`DepsARM64/bin/python310.lib`|
-|`Vulkan_INCLUDE_DIR`|`DepsARM64/VulkanSDK/include`|
-|`Vulkan_LIBRARY`|`DepsARM64/VulkanSDK/vulkan-1.lib`|
+|`ENABLE_BROWSER`|`ON`|
+|`CEF_ROOT_DIR`|`DepsARM64/cef`|
 
 
-Also make sure `QTDIR`, `DepsPath` and `CEF_ROOT_DIR` are set.
-
-Note that CPython have support for Windows ARM64 only since version 3.9, while the X64 version of OBS Studio is still using version 3.6.
+Note that CPython have support for Windows ARM64 only since version 3.9, while the x64 version of OBS Studio is still using version 3.6.
 
 ## Compile
 Select `Release` or `RelWithDebInfo` configuration, and build. 
