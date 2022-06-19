@@ -163,7 +163,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           swig \
           systemd-devel \
           wayland-devel \
-          x264-devel
+          x264-devel \
+          alsa-lib-devel \
+          libdrm-devel \
+          vlc-devel \
+          pciutils-devel \
+          qt5-qtbase-private-devel
    ```
 
   * If `speexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
