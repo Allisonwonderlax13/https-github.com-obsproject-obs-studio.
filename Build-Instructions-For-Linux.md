@@ -134,6 +134,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
 
    ```bash
    sudo yum install \
+          alsa-lib-devel \
           cmake \
           ffmpeg-devel \
           fontconfig-devel \
@@ -144,6 +145,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           git \
           glib2-devel \
           libcurl-devel \
+          libdrm-devel \
           libglvnd-devel \
           libv4l-devel \
           libX11-devel \
@@ -152,23 +154,21 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           luajit-devel \
           make \
           mbedtls-devel \
+          pciutils-devel \
           pipewire-devel \
           pulseaudio-libs-devel \
           python3-devel \
           qt5-qtbase-devel \
+          qt5-qtbase-private-devel \
           qt5-qtsvg-devel \
           qt5-qtwayland-devel \
           qt5-qtx11extras-devel \
           speexdsp-devel \
           swig \
           systemd-devel \
-          wayland-devel \
-          x264-devel \
-          alsa-lib-devel \
-          libdrm-devel \
           vlc-devel \
-          pciutils-devel \
-          qt5-qtbase-private-devel
+          wayland-devel \
+          x264-devel
    ```
 
   * If `speexdsp-devel` is not available, it can be built from source (https://gitlab.xiph.org/xiph/speexdsp)
