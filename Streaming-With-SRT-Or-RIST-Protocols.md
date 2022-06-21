@@ -92,6 +92,7 @@ The following players can be used to watch an SRT and/or RIST stream :
 * OBS Studio Media Source (an obvious case-use is to broadcast from any SRT or RIST source to an OBS instance).
 * [Haivision Play Pro](https://apps.apple.com/tr/app/haivision-play-pro/id1482925169) - iPhone and Android.
 * [Larix Player](https://softvelum.com/player/) for Android, iOS, Android TV and tvOS.
+* [CameraFi Live](https://play.google.com/store/apps/details?id=com.vaultmicro.camerafi.live) can bring in SRT sources.
 
 ### VLC usage
 
