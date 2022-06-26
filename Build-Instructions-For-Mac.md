@@ -122,11 +122,11 @@ Custom macOS builds allow full customization of the desired build configuration 
 1. Run CMake to generate a build environment
 
 ```
-cmake -S . -B build -G Xcode
+cmake -S . -B build -G Xcode \
     -DCEF_ROOT_DIR="~/development/obs-build-dependencies/cef_binary_4638_macos_x86_64" \
     -DCMAKE_PREFIX_PATH="~/development/obs-build-dependencies/obs-deps" \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
-    -DCMAKE_OSX_ARCHITECTURES="x86_64" \
+    -DCMAKE_OSX_ARCHITECTURES="x86_64"
 ```
 
 **Optional Settings:**
