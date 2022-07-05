@@ -30,11 +30,13 @@ There is OBS packages present in the [AUR](https://wiki.archlinux.org/title/Arch
 
 Use your favorite AUR helper to install one of those package, but avoid using Pamac (Add/Remove Software) for the first install\*.
 
+* **`obs-studio-browser`** provides OBS Studio with:
+  * VST 2 plugins, RIST protocol and AJA device support.
+  * Browser module with the same CEF as official builds.
 * **`obs-studio-tytan652`** provides OBS Studio with:
   * VST 2 plugins, RIST protocol and AJA device support.
   * Browser module with the same CEF as official builds.
   * Some quality of life patches and fixes.
-* **`obs-studio-browser`** provides OBS Studio with VST and browser modules with the same CEF as official builds.
 * **`obs-studio-rc`** provides OBS Studio latest version (including Beta and Release Candidates) with:
   * VST 2 plugins, RIST protocol and AJA device support.
   * Browser module with the same CEF as official builds.
