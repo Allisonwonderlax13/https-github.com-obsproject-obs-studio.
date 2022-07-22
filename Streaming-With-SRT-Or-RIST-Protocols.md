@@ -140,7 +140,7 @@ Media Source restrictions: SRT work on all platforms; RIST will only work for re
 
 * RIST stream: 
   * For 'Input', enter the rist URL. 
-    * If the stream is received from a remote server, enter the URL in the format `rist://SERVER:PORT?cname=OBS&bandwidth=5000` where cname is whatever name you want (it just serves for logging and could be omitted) and bandwidth is the maximum bandwidth you expect in kbps (this is important for the resending of lost packets because the protocol will not go above that limit).
+    * If the stream is received from an IP which differs from that of obs, enter the URL in the format `rist://SERVER:PORT?cname=OBS&bandwidth=5000` where cname is whatever name you want (it just serves for logging and could be omitted) and bandwidth is the maximum bandwidth you expect in kbps (this is important for the resending of lost packets because the protocol will not go above that limit).
     * If however the IP is that of the machine running OBS, use the syntax: `rist://@LOCAL_IP:PORT?cname=OBS&bandwidth=5000`. Note that on the receiver side, we place an @ sign in front of the destination address, because it is the receiver/host's own address.        
   * For 'Input Format', enter mpegts.    
 ![](https://i.imgur.com/MsecE88.png)
