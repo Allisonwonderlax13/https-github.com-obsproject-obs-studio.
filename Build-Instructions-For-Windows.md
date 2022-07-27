@@ -126,10 +126,10 @@ If you want to use the Virtual Camera created by this build, you will have to ru
 
 ### 6. Integrating clang-format into Visual Studio
 
-Use of `clang-format` is required for pull requests, and OBS uses a more recent version than is shipped with Visual Studio 2019:
+Use of `clang-format` is required for pull requests, and OBS targets the version shipped with Visual Studio 2022 17.2, `clang-format 13.0.1`. To configure any Visual Studio installation to use `clang-format 13.0.1`:
 
-1. Download and install [LLVM 12.0.0](http://releases.llvm.org/)
-2. Run Visual Studio, select `Tools -> Options` from the menu
-    * Go to `Text Editor -> C/C++ -> Code Style -> Formatting -> General`
-    * Enable "Use custom clang-format.exe" and enter the file name, e.g. `C:\Program Files\LLVM\bin\clang-format.exe`
+1. Download and install [LLVM 13.0.1](https://releases.llvm.org/).
+2. Run Visual Studio, select `Tools -> Options` from the menu.
+    * Go to `Text Editor -> C/C++ -> Code Style -> Formatting -> General`.
+    * Enable "Use custom clang-format.exe" and enter the file name, e.g. `C:\Program Files\LLVM\bin\clang-format.exe`.
     * The default keyboard shortcut for formatting a document (Edit.FormatDocument) is Ctrl+K, Ctrl+D.
