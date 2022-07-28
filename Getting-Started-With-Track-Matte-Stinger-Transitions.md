@@ -10,7 +10,7 @@ An example: using a Track Matte in a Stinger transition can make the next scene 
 
 In the mask video, black pixels tell OBS where to show pixels from the current scene, where white pixels tell OBS where to show pixels from the next scene. Pixels inbetween plain black and plain white are allowed too, and allow for crossfades from the current scene to the next scene.
 
-![Track Matte example](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/track-matte/track-matte-example.gif)
+![track-matte-example-imp](https://user-images.githubusercontent.com/50419942/181523548-bb12fdfd-5c21-4ff4-86e7-8dbc3385af92.gif)
 
 *Example of a side-by-side track matte video file. The left half is the "overlay" portion and the right half tells OBS which scene to display, where black = "from" scene, white = "to" scene, gray = degree of fade between "from" scene and "to" scene*
 
