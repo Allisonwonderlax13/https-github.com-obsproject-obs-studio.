@@ -53,16 +53,16 @@ To illustrate the format, here is an example containing all required and the two
                     "url": "rtmp://ingest.example.com/live"
                 }
             ],
-            "recommended": {
-                "keyint": 2,
-                "max video bitrate": 6000
-            },
             "supported video codecs": [
                 "h264"
             ],
             "supported audio codecs": [
                 "aac"
-            ]
+            ],
+            "recommended": {
+                "keyint": 2,
+                "max video bitrate": 6000
+            }
         }
 ```
 
@@ -103,6 +103,8 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
 | `servers[]`                                | **(Required)** List of servers                                                                                        |
 | `servers[].url`                            | **(Required)** RTMP(S) or HLS URL of the ingest server                                                                |
 | `servers[].name`                           | **(Required)** Name of the server (e.g. location, primary/backup)                                                     |
+| `supported video codecs`                   | **(Required)** List of supported video codecs. Valid options: h264, hevc                                                                                               |
+| `supported audio codecs`                   | **(Required)** List of supported audio codecs. Valid options: aac, opus                                                                                               |
 | `recommended`                              | Object containing recommended service settings                                                                        |
 | `recommended.keyint`                       | Keyframe interval (seconds)                                                                                           |
 | `recommended.profile`                      | H.264 Profile                                                                                                         |
@@ -137,6 +139,14 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
                     "name": "RTMP Example",
                     "url": "rtmp://ingest.example.com/live"
                 }
+            ],
+            "supported video codecs": [
+                "h264",
+                "hevc"
+            ],
+            "supported audio codecs": [
+                "aac",
+                "opus"
             ],
             "recommended": {
                 "keyint": 2,
