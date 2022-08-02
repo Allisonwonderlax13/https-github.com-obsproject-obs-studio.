@@ -56,7 +56,13 @@ To illustrate the format, here is an example containing all required and the two
             "recommended": {
                 "keyint": 2,
                 "max video bitrate": 6000
-            }
+            },
+            "supported video codecs": [
+                "h264"
+            ],
+            "supported audio codecs": [
+                "aac"
+            ]
         }
 ```
 
