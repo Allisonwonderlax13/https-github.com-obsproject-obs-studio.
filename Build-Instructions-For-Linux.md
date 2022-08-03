@@ -81,7 +81,7 @@ Custom Debian builds allow full customization of the desired build configuration
 
     * OBS dependencies (UI):
     ```
-    sudo apt install qtbase5-dev qtbase5-private-dev libqt5svg5-dev qtwayland5
+    sudo apt install qt6-base-dev qt6-base-private-dev libqt6svg6-dev qt6-wayland
     ```
 
     * Plugin dependencies:
