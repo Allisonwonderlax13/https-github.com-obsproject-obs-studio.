@@ -69,7 +69,7 @@ Custom Windows builds allow full customization of the desired build configuratio
     OR
   * You can install the official Qt 6 distribution from the [Qt website](http://www.qt.io/). Grab the MSVC package for your version of Visual Studio.
   * OBS officially builds with Qt 6.3.1, though you may be able to build with other versions of Qt.
-* CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x86.zip))
+* CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_windows_x64.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_windows_x86.zip))
 * Windows version of [CMake](http://www.cmake.org/) (3.20 or higher, latest preferred)
 * Windows version of [Git](https://git-scm.com/download/win) (Git binaries must exist in path)
 
