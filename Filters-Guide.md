@@ -9,6 +9,7 @@ In OBS Studio we have the ability to add filters to our Sources, Scenes and even
   * [LUT Filter](#lut-filter)
   * [Sharpen](#sharpen)
   * [Chroma Key](#color-key-and-chroma-key)
+  * [NVIDIA Background Removal](#nvidia-background-removal)
 * [Audio Device Filters](#audio-device-filters)
   * [Compressor](#compressor)
     * [Sidechain Compression/Ducking](#sidechain-compressionducking)
@@ -76,6 +77,15 @@ This filter allows you to apply a LUT to your video sources.
 ![Sharpen Filter](https://i.imgur.com/6jWeBsi.png)
 
 The sharpen filter should explain itself as well, if you feel your webcam input for example is a bit blurred and you want to improve the overall sharpness a bit, add the filter and test with different values.
+
+***
+
+### NVIDIA Background Removal
+![NVIDIA Background Removal filtr](https://user-images.githubusercontent.com/9283407/164523610-86c884e0-7284-41f0-bc5d-b84717d6dfe9.png)
+Requirements: obs-studio v28 or later. NVIDIA RTX GPU.  The redistributable of its SDK must also be installed [https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/).
+
+The FX does AI recognition to allow removal of a speaker background. 
+
 
 ## Audio Device Filters
 
@@ -158,6 +168,10 @@ The Noise Gate allows you to cut off all background noise while you are not talk
 The Noise Suppression filter can be used to remove mild background noise or white noise that may be in any of your audio sources. While this is generally not effective at large amounts of background noise (i.e. in a loud room) it can be quite effective at reducing things like PC fan noise or other environmental noises.
 
 0 is off. The further you move the slider to the left, the 'stronger' the filter will be, and the more sounds it will filter out. Keep in mind that this can distort other sounds (like your voice).
+
+The filter supports NVIDIA Noise removal. This requires an RTX GPU and downloading the redistributable of its SDK [https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/).
+
+v28 and later: Support added for NVIDIA Room Echo Removal. This is a dereverb fx to get rid of sound reflections in a room.
 
 ***
 
