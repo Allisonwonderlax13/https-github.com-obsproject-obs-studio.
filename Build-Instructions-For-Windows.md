@@ -5,7 +5,7 @@ Automatic Windows builds allow building OBS with minimal input and setup. Necess
 ## Prerequisites
 
 * Windows PowerShell (v5+ and more recent)
-* Visual Studio 2019 (at least Community Edition)
+* Visual Studio 2022 (at least Community Edition)
   * Windows 10 SDK (minimum 10.0.20348.0)
 * Git for Windows
 
@@ -59,10 +59,10 @@ Custom Windows builds allow full customization of the desired build configuratio
 
 ## Prerequisites
 
-* [Visual Studio 2019 (recommended)](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2022 (recommended)](https://visualstudio.microsoft.com/vs/)
   * Windows 10 SDK (minimum 10.0.20348.0). [Latest SDK](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk/)
 * Development packages of `FFmpeg`, `x264`, `cURL`, and `mbedTLS`
-  * Pre-built Windows dependencies for Visual Studio 2019 can be found in the [obs-deps repo releases](https://github.com/obsproject/obs-deps/releases?q=windows)
+  * Pre-built Windows dependencies for Visual Studio 2022 can be found in the [obs-deps repo releases](https://github.com/obsproject/obs-deps/releases?q=windows)
 * [Qt5](http://www.qt.io/) (Grab the MSVC package for your version of Visual Studio)
   * OBS officially supports building with Qt 5.15.2
 * CEF Wrapper ([x64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x64.zip), [x86](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_windows_x86.zip))
@@ -97,7 +97,7 @@ Custom Windows builds allow full customization of the desired build configuratio
     * `VIRTUALCAM_GUID` (when building with Virtual Camera support)
 
 3. In cmake-gui, press `Configure`, and select the generator that corresponds with the desired installed Visual Studio version:
-    * Visual Studio 16 2019, **or their 64bit equivalents** if you want to build the 64bit version of OBS
+    * Visual Studio 17 2022, **or their 64bit equivalents** if you want to build the 64bit version of OBS
     * **NOTE**: If you need to change your dependencies from a build already configured, you will need to uncheck `COPIED_DEPENDENCIES` and run `Configure` again.
 
 4. If you did not set up environment variables earlier you can now configure the variables named above in cmake-gui
