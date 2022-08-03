@@ -81,7 +81,7 @@ The sharpen filter should explain itself as well, if you feel your webcam input 
 ***
 
 ### NVIDIA Background Removal
-![NVIDIA Background Removal filtr](https://user-images.githubusercontent.com/9283407/164523610-86c884e0-7284-41f0-bc5d-b84717d6dfe9.png)
+![NVIDIA Background Removal filtr](https://user-images.githubusercontent.com/9283407/164522088-e7ccde6f-b831-4956-8234-9553cf499f81.png)
 Requirements: obs-studio v28 or later. NVIDIA RTX GPU.  The redistributable of its SDK must also be installed [https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-sdk/resources/).
 
 The FX does AI recognition to allow removal of a speaker background. 
