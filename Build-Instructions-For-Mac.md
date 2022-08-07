@@ -135,6 +135,7 @@ cmake -S . -B build -G Xcode \
 3. Specify the output directory for creating application bundles using `-DCMAKE_INSTALL_PREFIX=[YOUR INSTALL DESTINATION]`
 4. To build OBS without Xcode, change `Xcode` to `Ninja` as the `-G` option
 5. Specify the build configuration e.g. using `-DCMAKE_BUILD_TYPE=RelWithDebInfo` (Ninja or GNU Makefiles only)
+6. To debug code using Xcode, specify `-DCMAKE_BUILD_TYPE=Debug`
 
 ### 5. Open the Xcode project
 
