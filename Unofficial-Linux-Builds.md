@@ -118,9 +118,9 @@ See https://packages.gentoo.org/packages/media-video/obs-studio for available ve
 
 Command-line: can be installed by the following command:
 
-    ```bash
-    nix-env -i obs-studio
-    ```
+```bash
+nix-env -i obs-studio
+```
 
 ## OpenMandriva
 
