@@ -131,16 +131,18 @@ cmake -S . -B build -G Xcode \
 
 **Optional Settings:**
 
-2. Specify a codesigning identity using `-DOBS_BUNDLE_CODESIGN_IDENTITY="[YOUR_IDENTITY]"`
-3. Specify the output directory for creating application bundles using `-DCMAKE_INSTALL_PREFIX=[YOUR INSTALL DESTINATION]`
-4. To build OBS without Xcode, change `Xcode` to `Ninja` as the `-G` option
-5. Specify the build configuration e.g. using `-DCMAKE_BUILD_TYPE=RelWithDebInfo` (Ninja or GNU Makefiles only)
-6. To debug code using Xcode, specify `-DCMAKE_BUILD_TYPE=Debug`
+- Specify a codesigning identity using `-DOBS_BUNDLE_CODESIGN_IDENTITY="[YOUR_IDENTITY]"`
+- Specify the output directory for creating application bundles using `-DCMAKE_INSTALL_PREFIX=[YOUR INSTALL DESTINATION]`.
+- Build using Ninja or UNIX Makefiles with `-G Ninja` or `-G 'Unix Makefiles'`
+  - Specify the build configuration e.g. using `-DCMAKE_BUILD_TYPE=RelWithDebInfo`
 
 ### 5. Open the Xcode project
 
 1. Open `obs-studio.xcodeproj` from the build directory (or any other directory specified via the `-B` switch above)
-2. Build OBS using `OBS` schema, recognisable by the OBS app icon.
+2. Build OBS Studio using `obs` schema, recognisable by the OBS Studio app icon.
+3. To debug OBS Studio, make sure the Run scheme's Build Configuration is set to Debug. (This is the default.)
+
+<img width="950" alt="Xcode build configuration" src="https://user-images.githubusercontent.com/747351/183276594-5ef5523b-7797-4d44-bd0a-2af0b9c81073.png">
 
 ### 6. Install OBS.app bundle
 
