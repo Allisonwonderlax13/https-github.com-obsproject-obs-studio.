@@ -21,7 +21,7 @@ The input needs to be formatted as such: `parameter=value parameter=value` (spac
 
 For instance `BPicturesPattern=2 MaxConsecutiveBPictures=2`
 
-[Simplified list of H264 options.](https://gist.github.com/flaeri/8d187b4ca946ce8991a85b1c79d24d58)
+[Simplified list of H264 options.](https://github.com/obsproject/obs-studio/wiki/AMF-Options)
 
 # Examples
 
