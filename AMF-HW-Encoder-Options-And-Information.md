@@ -50,9 +50,9 @@ It is recommended to try the default settings first as it tries to strike balanc
 
 As a baseline the encoder uses the defaults of AMF (see [AMF docs](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/blob/master/amf/doc/AMF_Video_Encode_API.pdf)).
 
-In addition, OBS makse the following adjustments to the defaults:
+In addition, OBS makes the following adjustments to the defaults:
 
-## H264
+## H264    
 Option | Value | 
 -- | -- |
 VBAQ | True
@@ -64,7 +64,7 @@ CABAC | True
 Pre-Encode | True
 B-frames | 0
 
-## HEVC
+## HEVC    
 Option | Value | 
 -- | -- |
 VBAQ | True
