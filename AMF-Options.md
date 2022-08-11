@@ -7,7 +7,7 @@ b = boolean (true/false, 1/0)
 
 Default: Transcoding
 
-Explanation: Changes a lot of settings based on usage. Highly recommend sticking to "transcoding", as all others will heavily degrade quality.
+Explanation: Changes a lot of settings based on usage. Highly recommend sticking to "transcoding".
 ***
 **Quality**=speed, balanced, quality
 
@@ -28,6 +28,8 @@ Default: 42 (4.2)
 Explanation: H264 profile level. Specifies constraints for decode.
 ***
 **MaxNumRefFrames**=i
+
+Default: 4
 
 Explanation: Limits the max number of reference frames (0-16). This max is also limited by hardware and h264 levels. More ref frames means more encoder work, but potentially better compression. Stick to 4 or less, for the sake of compatibility and profile conformity. The encoder is currently likely to use a single reference frame unless b-frames are active.
 ***
