@@ -1,5 +1,5 @@
 i = int (whole number),
-b = boolean (true/false, 1/0)
+b = boolean (true/false)
 
 ## General
 
@@ -37,13 +37,13 @@ Explanation: Limits the max number of reference frames (0-16). This max is also 
 
 **EnablePreAnalysis**=b
 
-Default: false
+Default: False
 
 Explanation: Pseudo 2-pass for a certain number of frames. Enabled will disable VBAQ.
 ***
 **RateControlPreanalysisEnable**=i
 
-Default: enabled
+Default: True
 
 Explanation: Pre-encode assisted rate control.
 ***
@@ -55,7 +55,7 @@ Explanation: Enforce Hypothetical Reference Decoder. Constraints on QP variation
 ***
 **FillerDataEnable**=b
 
-Default: false (true if CBR)
+Default: False (True if CBR)
 
 Explanation: Filler data. Useful for strict CBR encoding, like live streaming.
 ***
@@ -96,7 +96,7 @@ Explanation: Sets the number of consecutive b-frames. 0=off.
 ***
 **AdaptiveMiniGOP**=b
 
-Default: false
+Default: False
 
 Explanation: Variable amount of b-frames.
 
