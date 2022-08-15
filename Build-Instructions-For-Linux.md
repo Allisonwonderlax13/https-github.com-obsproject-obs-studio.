@@ -84,6 +84,11 @@ Custom Debian builds allow full customization of the desired build configuration
     sudo apt install qt6-base-dev qt6-base-private-dev libqt6svg6-dev qt6-wayland
     ```
 
+    * If Qt6 is not available:
+    ```
+    sudo apt install qtbase5-dev qtbase5-private-dev libqt5svg5-dev qtwayland5
+    ```
+
     * Plugin dependencies:
     ```
     sudo apt install libasound2-dev libfdk-aac-dev libfontconfig-dev libfreetype6-dev libjack-jackd2-dev libpulse-dev libsndio-dev libspeexdsp-dev libudev-dev libv4l-dev libva-dev libvlc-dev libdrm-dev
