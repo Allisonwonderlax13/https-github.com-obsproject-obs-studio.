@@ -131,7 +131,7 @@ cmake -S . -B build -G Xcode \
 
 **Optional Settings:**
 
-- Specify a codesigning identity using `-DOBS_BUNDLE_CODESIGN_IDENTITY="[YOUR_IDENTITY]"`
+- Specify a codesigning identity using `-DOBS_BUNDLE_CODESIGN_IDENTITY="[YOUR_IDENTITY]"` or a team using `-DOBS_BUNDLE_CODESIGN_TEAM="[YOUR_TEAM_ID]"`
 - Specify the output directory for creating application bundles using `-DCMAKE_INSTALL_PREFIX=[YOUR INSTALL DESTINATION]`.
 - Build using Ninja or UNIX Makefiles with `-G Ninja` or `-G 'Unix Makefiles'`
   - Specify the build configuration e.g. using `-DCMAKE_BUILD_TYPE=RelWithDebInfo`
