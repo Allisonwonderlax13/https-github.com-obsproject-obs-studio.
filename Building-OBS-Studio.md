@@ -51,7 +51,7 @@ Due to OBS' modular structure, some build configuration settings are available g
 |-----------|-------------|---------|-----|
 | ENABLE_UI | Enable building with UI (main OBS application) | `ON` | All |
 | ENABLE_SCRIPTING | Enable scripting functionality (Lua and/or Python) | `ON` | All |
-| BUILD_QT | Specify Qt build version to use (minimum: 5) | `5` | All |
+| QT_VERSION | Specify Qt build version to use (allowed: `5` \| `6` \| `AUTO`) | `AUTO` | All |
 | USE_LIBCXX | Use libc++ instead of libstdc++ | `ON` | macOS |
 | LINUX_PORTABLE | Use a portable directory structure to run OBS | `OFF` | Linux |
 | USE_XDG | Utilize XDG base directory specification | `ON` | Linux | 
