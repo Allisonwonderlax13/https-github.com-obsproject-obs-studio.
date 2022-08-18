@@ -58,6 +58,7 @@ Due to OBS' modular structure, some build configuration settings are available g
 | OBS_VERSION_OVERRIDE | Specify OBS version for configured build | Most recent Git tag | All |
 | OBS_BUILD_NUMBER | Continuous build number for configured build | Automatically incremented on local builds | All |
 | OBS_BUNDLE_CODESIGN_IDENTITY | Identity to use for code signing when building OBS application bundle | `-`  | macOS |
+| OBS_BUNDLE_CODESIGN_TEAM | Team to use for code signing when building OBS application bundle | None | macOS |
 | OBS_CODESIGN_ENTITLEMENTS | Entitlements to use for code signing | Shipped entitlements file | macOS |
 | OBS_CODESIGN_LINKER | Enable automatic linker codesigning | `ON` on macOS 11.0+, `OFF` otherwise | macOS |
 | OBS_MULTIARCH_SUFFIX | Specific architecture suffix to use (available values are `32` or `64`) | None | Linux |
