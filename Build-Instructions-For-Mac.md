@@ -4,7 +4,7 @@ Automatic macOS builds allow building OBS with minimal input and setup - necessa
 
 ## Prerequisites
 
-* macOS 10.13 or newer for x86_64-based builds
+* macOS 10.15 or newer for x86_64-based builds
 * macOS 11.0 or newer for arm64-based builds
 * Command Line Tools (CLT) for Xcode:
     * Install by running `xcode-select --install` in Terminal, **or**
@@ -70,8 +70,8 @@ Custom macOS builds allow full customization of the desired build configuration 
         * Download the latest version for your desired architecture from https://github.com/obsproject/obs-deps/releases
         * Unpack the contents of the archive into `~/development/obs-build-dependencies/obs-deps`
     * For browser source and browser panel support, the pre-built CEF framework is needed:
-        * Chromium Embedded Framework (CEF) [Intel x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_macos_x86_64.tar.xz)
-        * Chromium Embedded Framework (CEF) [Apple M1](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_macos_arm64.tar.xz)
+        * Chromium Embedded Framework (CEF) [Intel x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_macos_x86_64.tar.xz)
+        * Chromium Embedded Framework (CEF) [Apple M1](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_macos_arm64.tar.xz)
         * Preparation of CEF for use in OBS requires some fixups and compilation of the static wrapper library (see below)
     * Alternatively download and setup the following dependencies manually:
         * FFmpeg
@@ -79,7 +79,7 @@ Custom macOS builds allow full customization of the desired build configuration 
         * freetype
         * mbedtls
         * swig
-        * Qt5 (requires additional patches, check the [obs-deps](https://github.com/obsproject/obs-deps) repository for more details)
+        * Qt 6.3
 
 ## Build procedure
 
@@ -123,7 +123,7 @@ Custom macOS builds allow full customization of the desired build configuration 
 
 ```
 cmake -S . -B build -G Xcode \
-    -DCEF_ROOT_DIR="~/development/obs-build-dependencies/cef_binary_4638_macos_x86_64" \
+    -DCEF_ROOT_DIR="~/development/obs-build-dependencies/cef_binary_5060_macos_x86_64" \
     -DCMAKE_PREFIX_PATH="~/development/obs-build-dependencies/obs-deps" \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
     -DCMAKE_OSX_ARCHITECTURES="x86_64"
