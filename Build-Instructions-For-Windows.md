@@ -94,7 +94,9 @@ Custom Windows builds allow full customization of the desired build configuratio
     * In "where to build the binaries", enter the repository directory path with the 'build' subdirectory (example: `D:/obs/build`). If this directory does not exist, it will be created by CMake.
 
 2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables. Check the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio#cmake) for a full list and description of these variables:
-    * `CMAKE_PREFIX_PATH` - **REQUIRED** Example: D:/obs-build-dependencies/windows-deps-2022-08-02-x64
+    * `CMAKE_PREFIX_PATH` - **REQUIRED**
+
+       Example: D:/obs-build-dependencies/windows-deps-2022-08-02-x64
     * `DepsPath` (`DepsPath32` and `DepsPath64` as architecture-specific variants) - **LEGACY** 
     * `QTDIR` (`QTDIR32` and `QTDIR64` as architecture-specific variants) - **LEGACY** 
     * `CEF_ROOT_DIR` (when building with browser support)
