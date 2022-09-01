@@ -96,10 +96,12 @@ Custom Windows builds allow full customization of the desired build configuratio
 2. Set required CMake variables either as Windows environment variables (allows usage across multiple projects) or directly as cache variables. Check the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio#cmake) for a full list and description of these variables:
     * `CMAKE_PREFIX_PATH` - **REQUIRED**
 
-       Example: D:/obs-build-dependencies/windows-deps-2022-08-02-x64
+       Example: `D:/obs-build-dependencies/windows-deps-2022-08-02-x64`
     * `DepsPath` (`DepsPath32` and `DepsPath64` as architecture-specific variants) - **LEGACY** 
     * `QTDIR` (`QTDIR32` and `QTDIR64` as architecture-specific variants) - **LEGACY** 
     * `CEF_ROOT_DIR` (when building with browser support)
+
+       Example: `D:/obs-build-dependencies/cef_binary_5060_windows_x64`
     * `VIRTUALCAM_GUID` (when building with Virtual Camera support)
 
 3. In cmake-gui, press `Configure`, and select the generator that corresponds with the desired installed Visual Studio version:
