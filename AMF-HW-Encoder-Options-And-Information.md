@@ -19,7 +19,7 @@ There are times where it could be useful to make some adjustments to the default
 
 The input needs to be formatted as such: `parameter=value parameter=value` (space between each).
 
-For instance `BPicturesPattern=2 MaxConsecutiveBPictures=2`
+For instance `RateControlPreanalysisEnable=false EnableVBAQ=false`
 
 [Simplified list of H264 options.](https://github.com/obsproject/obs-studio/wiki/AMF-Options)
 
@@ -27,9 +27,6 @@ For instance `BPicturesPattern=2 MaxConsecutiveBPictures=2`
 
 ### B-frames
 Currently it seems that *only* RDNA2 (RX 6000+) has access to B-Frames.
-
-There has been some reports of issues when b-frames are enabled, but if you would like to try, you can do so by specifying the following:
-`BPicturesPattern=x MaxConsecutiveBPictures=x`(replace the x with the number of b-frames (1-3)). 
 
 More b-frames is more difficult to encode, and more is not necessarily better, so try 1 or 2 first.
 
@@ -43,7 +40,7 @@ Ref: [AMF PreAnalysis Doc](https://github.com/GPUOpen-LibrariesAndSDKs/AMF/blob/
 ### Other
 VBAQ (Variance Based Adaptive Quantization). Set using `EnableVBAQ=true/false`.
 
-Explanation: Adaptive quantization. Prioritize bits to parts of the image human vision tend to care about. Similar to "Psycho Visual Tuning", somewhat mixed results.
+Explanation: Adaptive quantization. Tries to prioritize bits to parts of the image human vision tend to care about. Similar to "Psycho Visual Tuning" on the NVIDIA side.
 
 # Defaults
 It is recommended to try the default settings first as it tries to strike balance between quality and performance. Should you run into performance or image quality issues, please try with the defaults first (remove any extra options).
@@ -61,7 +58,7 @@ High Motion Quality Boost | False
 Deblocking Filter | True
 Low Latency Mode | False
 CABAC | True
-Pre-Encode | True
+RateControlPreAnalysis (Pre-Encode) | True
 B-frames | 0
 
 ## HEVC    
