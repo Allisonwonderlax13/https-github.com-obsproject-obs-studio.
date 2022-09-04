@@ -37,11 +37,14 @@ Here is a list of settings that will close to what you get in "Simple Mode".
   * High Quality = 23
 
 ## AMD (AMF/VCE)
-* Preset: 
-  * Indistinguishable
-  * High Quality
-- Quality Preset: Balanced
-- Keyframe Interval: 2 Seconds
+* Rate Control: CQP
+* CQ Value
+  * Indistinguishable = 16
+  * High Quality = 23
+- Preset: Balanced (speed if encoder lag)
+- Profile: High
+- Max B-frames: 0
+- AMF/FFMPEG Options: <nothing/empty>
 
 # Configuring multiple Audio tracks
 ![](https://obsproject.com/media/pages/kb/advanced-recording-guide-and-multi-track-audio/266933d6df-1637690638/rec-adv-audiotracks.png)
