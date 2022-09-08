@@ -239,6 +239,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           libXcomposite-devel \
           libXdamage \
           libXinerama-devel \
+          libxkbcommon-devel \
           luajit-devel \
           make \
           mbedtls-devel \
@@ -246,11 +247,10 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           pipewire-devel \
           pulseaudio-libs-devel \
           python3-devel \
-          qt5-qtbase-devel \
-          qt5-qtbase-private-devel \
-          qt5-qtsvg-devel \
-          qt5-qtwayland-devel \
-          qt5-qtx11extras-devel \
+          qt6-qtbase-devel \
+          qt6-qtbase-private-devel \
+          qt6-qtsvg-devel \
+          qt6-qtwayland-devel \
           speexdsp-devel \
           swig \
           systemd-devel \
