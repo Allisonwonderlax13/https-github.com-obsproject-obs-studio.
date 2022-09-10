@@ -201,31 +201,14 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ## UOS/Deepin
 
-UOS/Deepin 20 or newer is required.
+* First, visit App Store and search OBS Studio.
+   
+![image](https://user-images.githubusercontent.com/25455400/189478750-24a6976f-a449-4b77-9482-aa1da988cc5c.png)
 
-* First, make sure you have everything up-to-date.
+* Second, Click install(安装) and wait auto install to desktop or dde-applist
 
-   ```bash
-   sudo apt-get update
-   ```
-
-* FFmpeg is required.  If you do not have the FFmpeg installed (if you're not sure, then you probably don't have it), you can get it with the following command (or compile it yourself):
-
-   ```bash
-   sudo apt-get install ffmpeg
-   ```
-
-* Finally, install OBS Studio.
-
-   ```bash
-   sudo apt-get install obs-studio
-   ```
-
-* or with [Spark Store](https://www.spark-app.store/download.html):
-
-   ```bash
-   sudo apt install com.obsproject.studio
-   ```
+* Third, You can find OBS Studio on your desktop or in the app list
+Let's go to live boardcast it.
 
 ## Void
 
