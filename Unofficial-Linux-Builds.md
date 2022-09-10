@@ -9,7 +9,7 @@
 * [OpenSUSE](#opensuse)
 * [snappy](#snappy)
 * [Solus](#solus)
-* [UOS/Deepin](#uosdeepin)
+* [UOS/Deepin](#uniontechosdeepin)
 * [Void](#void)
 
 ***
@@ -199,7 +199,7 @@ Links:
 
 See https://nixos.org/wiki/OBS for further instructions
 
-## UOS/Deepin
+## UnionTechOS/Deepin
 
 * First, Open the App Store and search for OBS Studio.
    
@@ -208,7 +208,12 @@ See https://nixos.org/wiki/OBS for further instructions
 * Second, Click Install(安装) and wait for automatic installation to your desktop or dde-applist
 
 * Third, You can find OBS Studio on your desktop or dde-applist
+
 * Let's go to live boardcast it.
+* If you need NVIDIA's CUDA to use the NVENC encoder
+   ```bash
+   sudo apt install nvidia-cuda-toolkit
+   ```
 
 ## Void
 
