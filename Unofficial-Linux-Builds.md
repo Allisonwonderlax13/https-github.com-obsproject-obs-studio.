@@ -201,13 +201,13 @@ See https://nixos.org/wiki/OBS for further instructions
 
 ## UOS/Deepin
 
-* First, visit App Store and search OBS Studio.
+* First, Open the App Store and search for OBS Studio.
    
 ![image](https://user-images.githubusercontent.com/25455400/189478750-24a6976f-a449-4b77-9482-aa1da988cc5c.png)
 
-* Second, Click install(安装) and wait auto install to desktop or in the dde-applist
+* Second, Click Install(安装) and wait for automatic installation to your desktop or dde-applist
 
-* Third, You can find OBS Studio on your desktop or in the dde-applist
+* Third, You can find OBS Studio on your desktop or dde-applist
 * Let's go to live boardcast it.
 
 ## Void
