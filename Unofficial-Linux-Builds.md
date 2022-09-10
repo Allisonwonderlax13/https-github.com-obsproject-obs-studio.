@@ -9,7 +9,7 @@
 * [OpenSUSE](#opensuse)
 * [snappy](#snappy)
 * [Solus](#solus)
-* [UOS/Deepin](#uniontechosdeepin)
+* [UnionTechOS/Deepin](#uniontechosdeepin)
 * [Void](#void)
 
 ***
