@@ -205,10 +205,10 @@ See https://nixos.org/wiki/OBS for further instructions
    
 ![image](https://user-images.githubusercontent.com/25455400/189478750-24a6976f-a449-4b77-9482-aa1da988cc5c.png)
 
-* Second, Click install(安装) and wait auto install to desktop or dde-applist
+* Second, Click install(安装) and wait auto install to desktop or in the dde-applist
 
-* Third, You can find OBS Studio on your desktop or in the app list
-Let's go to live boardcast it.
+* Third, You can find OBS Studio on your desktop or in the dde-applist
+* Let's go to live boardcast it.
 
 ## Void
 
