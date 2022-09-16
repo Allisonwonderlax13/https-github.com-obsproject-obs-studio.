@@ -1,7 +1,7 @@
 **OBS Studio** is free and open source software for video recording and live streaming.
 
 * [Install OBS Studio](install-instructions) using the official builds
-  * [Windows](http://goo-gl.me/O4h8W)
+  * [Windows](install-instructions#windows)
   * [macOS](install-instructions#macos)
   * [Linux](install-instructions#linux)
   * [FreeBSD](install-instructions#freebsd)

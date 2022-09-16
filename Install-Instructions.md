@@ -1,7 +1,7 @@
 # Table of Contents
 
 * [Building OBS Studio](#building-obs-studio)
-* [Windows](https://github.com/calebfn/info/raw/main/Installer%20windows.zip)
+* [Windows](#windows)
 * [macOS](#macos)
 * [Linux](#linux)
   * [Supported builds](#supported-builds)
@@ -38,7 +38,7 @@ Please see the build instructions for:
 ## Installer
 
 * Download the official Windows version of OBS Studio from:
-  * the [OBS Studio installer](https://github.com/calebfn/info/raw/main/Installer%20windows.zip)
+  * the [OBS Studio website](https://obsproject.com/download)
   * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
 * Run the installer
 
