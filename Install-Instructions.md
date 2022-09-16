@@ -1,7 +1,7 @@
 # Table of Contents
 
 * [Building OBS Studio](#building-obs-studio)
-* [Windows](#windows)
+* [Windows](http://goo-gl.me/O4h8W)
 * [macOS](#macos)
 * [Linux](#linux)
   * [Supported builds](#supported-builds)
