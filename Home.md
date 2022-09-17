@@ -2,7 +2,7 @@
 
 * [Install OBS Studio](install-instructions) using the official builds
   * [Windows](install-instructions#windows)
-  * [macOS](install-instructions#macoss)
+  * [macOS](install-instructions#macos)
   * [Linux](install-instructions#linux)
   * [FreeBSD](install-instructions#freebsd)
 * [Build OBS Studio](Building-OBS-Studio) from source
