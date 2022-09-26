@@ -53,12 +53,6 @@ To illustrate the format, here is an example containing all required and the two
                     "url": "rtmp://ingest.example.com/live"
                 }
             ],
-            "supported video codecs": [
-                "h264"
-            ],
-            "supported audio codecs": [
-                "aac"
-            ],
             "recommended": {
                 "keyint": 2,
                 "max video bitrate": 6000
