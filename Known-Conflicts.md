@@ -50,6 +50,7 @@ If you have any of these apps installed, be sure to close them before using OBS.
 * Sendori
 * Astrill VPN Proxy
 * Nahimic Audio (MSI Audio Software)
+* Sonic Radar (Asus Sonic Studio)
 * Personify
 * Adobe Dynamic Link (Adobe CC)
 * Warsaw (bank software)
