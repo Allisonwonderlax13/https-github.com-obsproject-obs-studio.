@@ -7,7 +7,7 @@ The CPU requirements vary considerably depending on the chosen encoder, resoluti
 ## Windows
 
 - DirectX 10.1 compatible GPU
-- Windows 8.1, Windows 10, or Windows 11
+- Windows 10 release 1809 or later, or Windows 11
 
 ## macOS
 
