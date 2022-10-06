@@ -28,7 +28,7 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
     # architecture with common feature set
     CI/build-linux.sh
 
-    # Skip download and setup of dendencies
+    # Skip download and setup of dependencies
     CI/build-linux.sh --skip-dependency-checks
 
     # Show all available options
