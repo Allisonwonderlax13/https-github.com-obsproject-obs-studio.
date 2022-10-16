@@ -39,7 +39,7 @@ Please see the build instructions for:
 
 * Download the official Windows version of OBS Studio from:
   * the [OBS Studio website](https://obsproject.com/download)
-  * the OBS Project's [GitHub releases](https://yip.su/2Oxmy2) page
+  * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
 * Run the installer
 
 ## Microsoft Store
