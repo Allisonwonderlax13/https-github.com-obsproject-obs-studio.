@@ -64,6 +64,8 @@ To get the Mac virtual camera to work on Discord:
 
 _If step four doesn't allow the virtual camera to work on Discord after restarting your Mac, try using the following like you did with step four and see if that allows it to work ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper.app"``` and if it still does not work, you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (GPU).app"``` and if it still does not work you can try ```sudo codesign --remove-signature "/Applications/Discord.app/Contents/Frameworks/Discord Helper (plugin).app"```_
 
+On Ventura and above you may get a permission denied when signing. If you get this you need to open System Settings, Privacy & Security, App Management and give permission to your Terminal program. Alternatively, move Discord.app to your Downloads directory, modify it there and then move it back to Applications.
+
 ### Microsoft Teams
 To get the Mac virtual camera to work on Microsoft Teams:
 1) Open the Terminal app which can be found in Launchpad on every Mac.
