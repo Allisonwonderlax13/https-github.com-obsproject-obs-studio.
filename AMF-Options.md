@@ -35,12 +35,6 @@ Explanation: Limits the max number of reference frames (0-16). This max is also 
 ***
 ## Rate Control
 
-**EnablePreAnalysis**=b
-
-Default: False
-
-Explanation: Pseudo 2-pass for a certain number of frames. Enabled will disable VBAQ.
-***
 **RateControlPreanalysisEnable**=i
 
 Default: True
@@ -133,3 +127,31 @@ Default: true
 **QuarterPixel**=b
 
 Default: true
+
+## Pre-Analysis
+
+**EnablePreAnalysis**=b
+
+Default: False
+
+Explanation: Pseudo 2-pass for a certain number of frames. Enabling will disable VBAQ. GPU load hit (spends traditional 3d/render resources)
+***
+
+**PASceneChangeDetectionEnable**=b
+
+Default: True
+
+Explanation: Akin to scenecut (adaptive I-frame insertion). Safest to disable for HLS transcode platforms, as is potentially risky for muxer segment/split.
+***
+
+**PAFrameSadEnable**=b
+
+Default: True
+
+Explanation: Frame SAD (Sum of Absolute Difference) algorithm
+***
+**PALookAheadBufferDepth**=i
+
+Default: 0
+
+Explanation: Pre-Analysis lookahead buffer size
