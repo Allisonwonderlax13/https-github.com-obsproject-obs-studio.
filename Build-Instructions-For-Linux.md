@@ -190,7 +190,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j4
       sudo make install
       ```
@@ -275,7 +275,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j$(nproc)
       sudo make install
       sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
