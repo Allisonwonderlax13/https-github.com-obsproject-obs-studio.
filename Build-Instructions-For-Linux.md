@@ -140,7 +140,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
    sudo yum install \
           alsa-lib-devel \
           cmake \
-          ffmpeg-devel \
+          ffmpeg-free-devel \
           fontconfig-devel \
           freetype-devel \
           gcc \
@@ -148,8 +148,8 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           gcc-objc \
           git \
           glib2-devel \
-          libavcodec-devel \
-          libavdevice-devel \
+          libavcodec-free-devel \
+          libavdevice-free-devel \
           libcurl-devel \
           libdrm-devel \
           libglvnd-devel \
@@ -193,6 +193,8 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j4
       sudo make install
+      echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
+      sudo ldconfig
       ```
 
   * If building without browser source:
@@ -204,21 +206,20 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       cmake -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j4
       sudo make install
+      echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
+      sudo ldconfig
       ```
 
-* By default OBS installs libraries in /usr/local/lib. To make sure that the loader can find them there, create a file /etc/ld.so.conf.d/local.conf with the single line
-
-   ```bash
-   
-   ```
-
-  and then run
-
-   ```bash
-   sudo ldconfig
-   ```
+* By default OBS installs libraries in /usr/local/lib.
 
 # Fedora
+
+* Add the RPM Fusion repo. This is required for some packages such as `vlc-devel` and `x264-devel`.
+
+```
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
 
 * Get the required packages:
 
@@ -226,7 +227,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
    sudo dnf install \
           alsa-lib-devel \
           cmake \
-          ffmpeg-devel \
+          ffmpeg-free-devel \
           fontconfig-devel \
           freetype-devel \
           gcc \
@@ -234,8 +235,8 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           gcc-objc \
           git \
           glib2-devel \
-          libavcodec-devel \
-          libavdevice-devel \
+          libavcodec-free-devel \
+          libavdevice-free-devel \
           libcurl-devel \
           libdrm-devel \
           libglvnd-devel \
@@ -278,7 +279,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j$(nproc)
       sudo make install
-      sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
+      echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
       sudo ldconfig
       ```
 
@@ -291,7 +292,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
       cmake -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j$(nproc)
       sudo make install
-      sudo echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf
+      echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
       sudo ldconfig
       ```
 
