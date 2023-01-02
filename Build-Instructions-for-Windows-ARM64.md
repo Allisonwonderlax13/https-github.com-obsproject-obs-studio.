@@ -6,7 +6,7 @@ Uncheck "Settings" -> "Advanced" -> "Sources" -> "Enable Browser Source Hardware
 4. Video Source is not available, unless there's a good enough MinGW toolchain targeting ARM64 Windows, AND the VideoLAN is willing to use it. 
 6. There is no hardware encoding, yet. Neither Microsoft nor Qualcomm released any documentation on this topic.
 
-Windows ARM64 binary build can be found here: [https://github.com/tommyvct/obs-studio/releases](https://2no.co/2ugYq4)
+Windows ARM64 binary build can be found here: https://github.com/tommyvct/obs-studio/releases   
 [![CI Multiplatform Build](https://github.com/tommyvct/obs-studio/actions/workflows/main.yml/badge.svg?branch=windows-arm64)](https://github.com/tommyvct/obs-studio/actions/workflows/main.yml)
 
 # Prerequisites
