@@ -7,7 +7,7 @@
 * [Linux](install-instructions#linux)
 * [FreeBSD](install-instructions#freebsd)
 
-# [Build instructions](Building-OBS-Studio)**
+# [Build instructions](Building-OBS-Studio)
 
 * [Windows](Build-Instructions-For-Windows)
 * [macOS](Build-Instructions-For-Mac)
