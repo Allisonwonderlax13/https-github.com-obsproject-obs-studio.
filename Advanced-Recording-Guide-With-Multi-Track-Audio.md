@@ -2,7 +2,7 @@ If you want to record multiple audio tracks you will need to switch to "Advanced
 
 In order to access these options, you will need to enable the options shown in the image (pick any encoder that is **not** "same as stream".
 
-![](https://obsproject.com/media/pages/kb/advanced-recording-guide-and-multi-track-audio/59acfcd526-1637689918/obs-adv.png)
+![image](https://user-images.githubusercontent.com/50419942/212937340-7e1a4038-3ed8-4259-aac9-03541959a585.png)
 
 This will allow you to record multiple audio track (up to 6), as well as choose a different encoder from the stream encoder.
 
@@ -23,7 +23,8 @@ Here is a list of settings that will close to what you get in "Simple Mode".
 * CQP Value
   * Indistinguishable = 16
   * High Quality = 23
-- Preset: Quality
+- Preset: P5
+- Multipass Mode: Single Pass
 - Profile: High
 - look-ahead & Psycho Visual: off
 - Max B-frames: 2
