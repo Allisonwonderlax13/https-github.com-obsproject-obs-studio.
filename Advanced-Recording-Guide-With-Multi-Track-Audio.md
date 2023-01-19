@@ -23,7 +23,7 @@ Here is a list of settings that will close to what you get in "Simple Mode".
 * CQP Value
   * Indistinguishable = 16
   * High Quality = 23
-- Preset: P5
+- Preset: P5 (P1-P3 for 4k(2160p))
 - Multipass Mode: Single Pass
 - Profile: High
 - look-ahead & Psycho Visual: off
