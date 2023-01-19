@@ -153,6 +153,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           libcurl-devel \
           libdrm-devel \
           libglvnd-devel \
+          libjansson-devel \
           libva-devel \
           libv4l-devel \
           libX11-devel \
@@ -240,6 +241,7 @@ sudo dnf install \
           libcurl-devel \
           libdrm-devel \
           libglvnd-devel \
+          libjansson-devel \
           libva-devel \
           libv4l-devel \
           libX11-devel \
