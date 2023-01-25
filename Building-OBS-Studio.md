@@ -81,7 +81,7 @@ Due to OBS' modular structure, some build configuration settings are available g
 | ENABLE_DECKLINK | Enable building with Decklink support | `ON` | All |
 | ENABLE_ALSA | Enable building with Advanced Linux Sound Architecture (ALSA) support | `ON` | Linux |
 | ENABLE_JACK | Enable support for JACK audio server | `OFF` | Linux |
-| ENABLE_PULSEAUDIO | Enable Pulse Aduio support | `ON` | Linux |
+| ENABLE_PULSEAUDIO | Enable Pulse Audio support | `ON` | Linux |
 | ENABLE_V4L2 | Enable Video4Linux v2 support | `ON` | Linux |
 | ENABLE_VIRTUALCAM | Enable building with Virtual Camera modules | `ON` | Windows and macOS |
 | VIRTUALCAM_GUID | Specify global unique identifier (GUID) for Virtual Camera Plugin | None | Windows |
