@@ -24,7 +24,7 @@
 
 ***
 
-# [Building OBS Studio](building-obs-studio)
+# [Building OBS Studio](Building-OBS-Studio)
 
 Please see the build instructions for:
 
