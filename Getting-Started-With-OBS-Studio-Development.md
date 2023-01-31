@@ -20,7 +20,7 @@ Don't forget the `--recursive` argument to get all submodules.
 ### 2. Build the code
 The next step is to get the program building so that you can start making your modifications or plugins.
 
-A guide for building OBS Studio for your platform can be found here: [https://github.com/obsproject/obs-studio/wiki/Install-Instructions](https://github.com/obsproject/obs-studio/wiki/Install-Instructions)
+A guide for building OBS Studio for your platform can be found here: [https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio](https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio)
 
 ### 3. Read the documentation
 OBS's reference documentation can be found here: [https://obsproject.com/docs/](https://obsproject.com/docs/)
