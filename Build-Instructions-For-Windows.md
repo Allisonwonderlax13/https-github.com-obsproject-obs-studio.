@@ -55,7 +55,7 @@ CI/build-windows.ps1 -Help
 
 # Option B: Custom Windows builds
 
-Custom Windows builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/building-obs-studio#cmake).
+Custom Windows builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/Building-OBS-Studio#cmake).
 
 ## Prerequisites
 
