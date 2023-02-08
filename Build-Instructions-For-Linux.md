@@ -50,7 +50,7 @@ Custom Debian builds allow full customization of the desired build configuration
 * Ninja
 * *Optional:* CCache to improve compilation speeds on consecutive builds
 * For browser source and browser panel support, the pre-built CEF framework is needed:
-  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2)
+  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2)
 * Several additional dependencies (see step 2 below)
 
 ### Build procedure
@@ -100,7 +100,7 @@ Custom Debian builds allow full customization of the desired build configuration
 
 ```
 cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
-    -DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_4638_linux64" \
+    -DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
     -DENABLE_PIPEWIRE=OFF \
     -DENABLE_AJA=0
 ```
@@ -186,12 +186,12 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
-      tar -xjf ./cef_binary_4638_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2
+      tar -xjf ./cef_binary_5060_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_5060_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j4
       sudo make install
       echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
@@ -273,12 +273,12 @@ sudo dnf install \
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
-      tar -xjf ./cef_binary_4638_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2
+      tar -xjf ./cef_binary_5060_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_5060_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
       make -j$(nproc)
       sudo make install
       echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
@@ -334,12 +334,12 @@ sudo dnf install \
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
-      tar -xjf ./cef_binary_4638_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2
+      tar -xjf ./cef_binary_5060_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
+      cmake -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_5060_linux64" -DENABLE_AJA=OFF ..
       make -j4
       sudo make install
       ```
@@ -364,12 +364,12 @@ sudo dnf install \
   * If building with browser source:
 
       ```bash
-      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_4638_linux64.tar.bz2
-      tar -xjf ./cef_binary_4638_linux64.tar.bz2
+      wget https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2
+      tar -xjf ./cef_binary_5060_linux64.tar.bz2
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DLINUX_PORTABLE=ON -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_4638_linux64" -DENABLE_AJA=OFF ..
+      cmake -DLINUX_PORTABLE=ON -DCMAKE_INSTALL_PREFIX="${HOME}/obs-studio-portable" -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_5060_linux64" -DENABLE_AJA=OFF ..
       make -j4 && make install
       ```
 
