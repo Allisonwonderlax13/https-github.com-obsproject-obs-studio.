@@ -19,7 +19,7 @@ Automatic Windows builds allow building OBS with minimal input and setup. Necess
 
 * To do a **fully automated** build, open a PowerShell window, switch to the checkout directory then run one of the following commands:
 
-```
+```powershell
 # Download and set up dependencies, then build OBS for local host 
 # architecture with common feature set
 CI/build-windows.ps1
