@@ -22,7 +22,7 @@ Parameter | Options | Default | Explanation
 **EnforceHRD** | b | True | Enforce Hypothetical Reference Decoder. Constraints on QP variation within a picture to meet HRD requirements.
 **FillerDataEnable** | b | False (True if CBR) | Filler data. Useful for strict CBR encoding, like live streaming.
 **VBVBufferSize** | i | N/A | Note: in bits (bps)
-**InitialVBVBufferFullness** | i | Note: 0=0%, 64=100%
+**InitialVBVBufferFullness** | i | 64 (100%) | Note: 0=0%, 64=100%
 **PeakBitrate** | i | N/A | Note: in bits (bps)
 **MinQP** | i | 18 | 
 **MaxQP** | i | 46 | 
@@ -56,7 +56,7 @@ Parameter | Options | Default | Explanation
 **PASceneChangeDetectionEnable** | b | True | Akin to scenecut (adaptive I-frame insertion). Safest to disable for HLS transcode platforms, as is potentially risky for muxer segment/split.
 **PAFrameSadEnable** | b | True | Frame SAD (Sum of Absolute Difference) algorithm
 **PALookAheadBufferDepth** | i | 0 | Pre-Analysis lookahead buffer size
-**PAPerceptualAQMode** | Enum 0/1 | 0 (None, off) | PA Perceptual adaptive quantization mode
-**PATemporalAQMode** | Enum 0-2 | 0 (None, off) | PA Temporal adaptive quantization mode
-**PAHighMotionQualityBoostMode** | Enum 0/1 | 0 (off/none) | PA High motion quality boost mode
+**PAPerceptualAQMode** | Enum 0/1 | 0 (None, off) | PA Perceptual adaptive quantization mode.
+**PATemporalAQMode** | Enum 0-2 | 0 (None, off) | PA Temporal adaptive quantization mode. 1 for non-gaming applications, 2 gaming applications.
+**PAHighMotionQualityBoostMode** | Enum 0/1 | 0 (None, off) | PA High motion quality boost mode
 **PACAQStrength** | Enum (0-2) | 1 (medium) | 0=low, 1=med, 2=high. Content Adaptive Quantization (CAQ) strength
