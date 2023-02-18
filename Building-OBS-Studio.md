@@ -174,7 +174,7 @@ These changes are additive, as CMake stores these options as "cache variables" i
 
 CMake build configurations can also be managed using graphical user interfaces: On Windows `cmake-gui` is installed with the CMake package available for the platform and allows selection of source and build directories (`-S` and `-B` switches respectively) as well as direct manipulation of all cache variables. Detailed instructions for this GUI are available in the [Installation and Building]() article.
 
-On POSIX-based systems a `ncurses`-based user interface is available via the `ccmake` command which allows editing of cache variables. Note that due to CMake's internal processes, a configuration step (via the `c` shortcut) needs to be repeated until no *new* cache variables are created by it. Only then  the generation step (`g` shortcut) will be made available.
+On POSIX-based systems a `ncurses`-based user interface is available via the `ccmake` command which allows editing of cache variables. Note that due to CMake's internal processes, a configuration step (via the `c` shortcut) needs to be repeated until no *new* cache variables are created by it. Only then will the generation step (`g` shortcut) be made available.
 
 ### Apply Changes
 
