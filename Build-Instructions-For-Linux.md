@@ -4,6 +4,8 @@ Debian-based Linux distributions and FreeBSD can use automatic build scripts sup
 
 **Note:** Do not use the GitHub source .tar as it does not include all the required source files. Always use the appropriate Git tag with the associated submodules.
 
+**Note:** OBS will not run by default from within the build directory, throwing an error similar to "error while loading shared libraries: libobs-frontend-api.so.0: cannot open shared object file: No such file or directory". Use the portable mode options for running the binaries without doing a system install.
+
 # Debian-based build directions
 
 ## Option A: Automatic Debian builds
