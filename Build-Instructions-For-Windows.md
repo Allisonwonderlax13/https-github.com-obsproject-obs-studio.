@@ -7,6 +7,7 @@ Automatic Windows builds allow building OBS with minimal input and setup. Necess
 * Windows PowerShell (v5+ and more recent)
 * Visual Studio 2022 (at least Community Edition)
   * Windows 10 SDK (minimum 10.0.20348.0)
+  * C++ ATL for latest v143 build tools (x86 & x64)
 * Git for Windows
 
 **Note** that the automatic build scripts can use [Chocolatey](https://chocolatey.org) to automatically install additional build dependencies (CMake and 7-Zip), by passing the `-Choco` switch.
