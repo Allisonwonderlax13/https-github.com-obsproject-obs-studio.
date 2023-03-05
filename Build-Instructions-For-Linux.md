@@ -238,12 +238,13 @@ sudo dnf install \
           gcc-objc \
           git \
           glib2-devel \
+          jansson-devel \
           libavcodec-free-devel \
           libavdevice-free-devel \
+          librist-devel \
           libcurl-devel \
           libdrm-devel \
-          libglvnd-devel \
-          jansson-devel \
+          libglvnd-devel \          
           libva-devel \
           libv4l-devel \
           libX11-devel \
