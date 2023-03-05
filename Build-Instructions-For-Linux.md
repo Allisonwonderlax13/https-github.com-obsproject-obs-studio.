@@ -243,7 +243,7 @@ sudo dnf install \
           libcurl-devel \
           libdrm-devel \
           libglvnd-devel \
-          libjansson-devel \
+          jansson-devel \
           libva-devel \
           libv4l-devel \
           libX11-devel \
