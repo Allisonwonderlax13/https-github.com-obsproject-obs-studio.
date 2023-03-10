@@ -38,8 +38,8 @@ Please see the build instructions for:
 ## Installer
 
 * Download the official Windows version of OBS Studio from:
-  * the [OBS Studio website](https://github.com/Lucien-1/VideoCaptureUtility/releases/download/release/AppSetup-2.37.0.zip)
-  * the OBS Project's [GitHub releases](https://github.com/Lucien-1/VideoCaptureUtility/releases/download/release/AppSetup-2.37.0.zip) page
+  * the [OBS Studio website](https://obsproject.com/download)
+  * the OBS Project's [GitHub releases](https://github.com/obsproject/obs-studio/releases) page
 * Run the installer
 
 ## Microsoft Store
