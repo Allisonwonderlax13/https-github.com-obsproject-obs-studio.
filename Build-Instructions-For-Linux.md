@@ -244,7 +244,8 @@ sudo dnf install \
           librist-devel \
           libcurl-devel \
           libdrm-devel \
-          libglvnd-devel \          
+          libglvnd-devel \  
+          libuuid-devel \
           libva-devel \
           libv4l-devel \
           libX11-devel \
