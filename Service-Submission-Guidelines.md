@@ -94,6 +94,7 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
 | `more_info_link`                           | Link that provides additional info about the service, presented in the UI as a button next to the services dropdown   |
 | `stream_key_link`                          | Link where a logged-in user can find the "stream key", presented as a button below the stream key field               |
 | `alt_names[]`                              | Previous names of the service used for migrating existing users to the updated entry                                  |
+| `protocol`                                 | **(Required if not RTMP/RTMPS)** The streaming protocol that the service use                   |
 | `servers[]`                                | **(Required)** List of servers                                                                                        |
 | `servers[].url`                            | **(Required)** RTMP(S) or HLS URL of the ingest server                                                                |
 | `servers[].name`                           | **(Required)** Name of the server (e.g. location, primary/backup)                                                     |
@@ -107,7 +108,7 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
 | `recommended.max audio bitrate`            | Highest supported audio bitrate (kbps)                                                                                |
 | `recommended.bframes`                      | Maximum allowed number of B-Frames                                                                                    |
 | `recommended.x264opts`                     | Additional x264 encoder options                                                                                       |
-| `recommended.output`                       | OBS output module used (`rtmp_output` or `ffmpeg_hls_muxer`)                                                          |
+| `recommended.output`                       | **(Required if not RTMP/RTMPS)** OBS output module used (`rtmp_output` or `ffmpeg_hls_muxer`)                                                          |
 | `recommended.supported resolutions[]`      | List of supported resolutions in format `{width}x{height}`                                                            |
 | `recommended.bitrate matrix[]`             | List of resolutions and frame rate combinations with their recommended maximum bitrate                                |
 | `recommended.bitrate matrix[].res`         | Resolution in format `{width}x{height}`                                                                               |
