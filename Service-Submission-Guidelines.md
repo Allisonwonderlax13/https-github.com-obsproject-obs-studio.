@@ -121,6 +121,8 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
 | `recommended.bitrate matrix[].fps`         | Framerate (integer)                                                                                                   |
 | `recommended.bitrate matrix[].max bitrate` | Maximum bitrate in kbps                                                                                               |
 
+**Note:** The default for `supported video codecs` depends on the outputs. For RTMP this is AV1, HEVC, and H.264 as of [PR 8522](https://github.com/obsproject/obs-studio/pull/8522), for SRT/RIST/HLS output this is HEVC and H.264, and for FTL this is H.264 only. If your service does not support all of these codecs this key must be specified and only include supported ones.
+
 ### Full example utilising all properties
 ```json
         {
@@ -141,7 +143,7 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
                     "url": "rtmp://ingest.example.com/live"
                 }
             ],
-            "protocol": "RTMPs",
+            "protocol": "RTMPS",
             "supported video codecs": [
                 "h264",
                 "hevc"
