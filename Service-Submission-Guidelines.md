@@ -39,7 +39,10 @@ The JSON file currently does not use automatic formatting or checks, however we 
 * The JSON file must be valid (you can use an online validator to check)
 
 A full reference for the JSON format is provided [in the section below](#json-format-reference).
+
 For most services `name`, `servers[]` (with at least one entry), and `recommended.max video bitrate` as well as `recommended.keyint` are sufficient.
+
+**Note:** *If your service uses RTMP/RTMPS `supported video codecs` must be present and set to `["h264"]` unless the service implements [enhanced-rtmp v1](https://github.com/veovera/enhanced-rtmp) (or later).*
 
 To illustrate the format, here is an example containing all required and the two optional-but-recommended properties:
 
@@ -52,6 +55,9 @@ To illustrate the format, here is an example containing all required and the two
                     "name": "RTMP Example",
                     "url": "rtmp://ingest.example.com/live"
                 }
+            ],
+            "supported video codecs": [
+                "h264"
             ],
             "recommended": {
                 "keyint": 2,
@@ -98,7 +104,7 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
 | `servers[]`                                | **(Required)** List of servers                                                                                        |
 | `servers[].url`                            | **(Required)** RTMP(S) or HLS URL of the ingest server                                                                |
 | `servers[].name`                           | **(Required)** Name of the server (e.g. location, primary/backup)                                                     |
-| `supported video codecs`                   | List of supported video codecs. If none default to h264. Valid options: h264, hevc                                    |
+| `supported video codecs`                   | **(Required for RTMP/RTMPS)** List of supported video codecs. Valid options: h264, hevc, av1                                    |
 | `supported audio codecs`                   | List of supported audio codecs. If none default to aac. Valid options: aac, opus                                      |
 | `recommended`                              | Object containing recommended service settings                                                                        |
 | `recommended.keyint`                       | Keyframe interval (seconds)                                                                                           |
@@ -135,6 +141,7 @@ When making the PR be sure to follow the PR guidelines outlined in the PR templa
                     "url": "rtmp://ingest.example.com/live"
                 }
             ],
+            "protocol": "RTMPs",
             "supported video codecs": [
                 "h264",
                 "hevc"
