@@ -141,6 +141,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
    ```bash
    sudo yum install \
           alsa-lib-devel \
+          asio-devel \
           cmake \
           ffmpeg-free-devel \
           fontconfig-devel \
@@ -150,12 +151,14 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           gcc-objc \
           git \
           glib2-devel \
+          json-devel \
           libavcodec-free-devel \
           libavdevice-free-devel \
           libcurl-devel \
           libdrm-devel \
           libglvnd-devel \
           libjansson-devel \
+          libuuid-devel \
           libva-devel \
           libv4l-devel \
           libX11-devel \
@@ -178,6 +181,7 @@ Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or ca
           systemd-devel \
           vlc-devel \
           wayland-devel \
+          websocketpp-devel \
           x264-devel
    ```
 
@@ -229,6 +233,7 @@ sudo dnf install \
    ```bash
    sudo dnf install \
           alsa-lib-devel \
+          asio-devel \
           cmake \
           ffmpeg-free-devel \
           fontconfig-devel \
@@ -239,6 +244,7 @@ sudo dnf install \
           git \
           glib2-devel \
           jansson-devel \
+          json-devel \
           libavcodec-free-devel \
           libavdevice-free-devel \
           librist-devel \
@@ -269,6 +275,7 @@ sudo dnf install \
           systemd-devel \
           vlc-devel \
           wayland-devel \
+          websocketpp-devel \
           x264-devel
    ```
 
