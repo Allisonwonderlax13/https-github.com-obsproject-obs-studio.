@@ -1,4 +1,6 @@
 * [GPU Selection Guide](#gpu-selection-guide) (for laptops and all-in-one computers with multiple GPUs)
+  * [Windows 10/11](#windows-10--11)
+  * [Legacy Windows (7, 8 and legacy 10)](#windows-7-8-and-windows-10-up-to-and-including-1809)
 * [Notes on Specific Sources](#specific-sources)
     * [Display Capture](#display-capture)
     * [Browser Source](#browser-source)
@@ -17,12 +19,6 @@ OBS can only run on one of these GPUs, but your open applications and games coul
 Additionally, if OBS is not running on the discrete GPU, you might run into performance issues. In rare cases, trying to capture a game running on a different GPU than OBS can cause the game to crash. This is not really an issue with OBS, but rather a design choice by laptop manufacturers in order to save power and there's little that can be done on our side. However, we do have several troubleshooting suggestions to try and assist with any issues.
 
 This guide will show you how to select the graphics card OBS is running on using built-in Windows settings. It is applicable if you are running **Windows 10 version 1903 or newer**.
-
-## Windows 7, 8, and Windows 10 up to (and including) 1809
-
-If you run Windows 7 or 8, or Windows 10 up to (and including) version 1809, use our separate guides:
-- [NVIDIA](Laptop-GPU-Selection-Nvidia)
-- [AMD](Laptop-GPU-Selection-Amd)
 
 ## Windows 10 & 11
 
@@ -55,6 +51,12 @@ Then follow the steps below, depending on which mode you need.
     ![Display capture setting](https://raw.githubusercontent.com/wiki/obsproject/obs-studio/images/laptop-troubleshooting/win10/04-power-saving.png)
 
 ***
+
+## Windows 7, 8, and Windows 10 up to (and including) 1809
+
+If you run Windows 7 or 8, or Windows 10 up to (and including) version 1809, use our separate guides:
+- [NVIDIA](Laptop-GPU-Selection-Nvidia)
+- [AMD](Laptop-GPU-Selection-Amd)
 
 # Notes on Specific Sources
 
