@@ -13,7 +13,7 @@ The CPU requirements vary considerably depending on the chosen encoder, resoluti
 
 - Intel or Apple Silicon CPU
 - OpenGL 3.3-compatible GPU
-- macOS "Catalina" (10.15) or later
+- macOS 11 ("Big Sur") or later
 
 ## Linux/Unix
 
