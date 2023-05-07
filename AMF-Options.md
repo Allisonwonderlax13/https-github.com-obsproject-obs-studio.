@@ -24,8 +24,8 @@ Parameter | Options | Default | Explanation
 **VBVBufferSize** | i | N/A | Note: in bits (bps)
 **InitialVBVBufferFullness** | i | 64 (100%) | Note: 0=0%, 64=100%
 **PeakBitrate** | i | N/A | Note: in bits (bps)
-**MinQP** | i | 18 | 
-**MaxQP** | i | 46 | 
+**MinQP** | i | 0 | 
+**MaxQP** | i | 51 | 
 
 ## B-Frames
 **B-Frames and its features currently require RDNA2 (RX 6000 and higher). Seems to currently cause some issues, try 1 or 2.**
