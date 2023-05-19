@@ -59,7 +59,9 @@ Most of those packages also replace `vlc` with `vlc-luajit` to provide VLC sourc
 
 Debian 9.0 "Stretch" or newer is required.  
 
-**Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**
+~~**Also note that as of 2021-06-13, this package is the outdated 0.0.1 version. It should still work, but won't have all new improvements. Build from source to get the newest version.**~~
+
+As of 2023-05-19 Debian 11 "Bullseye" provides 26.1.2.
 
 * First, make sure you have everything up-to-date.
 
