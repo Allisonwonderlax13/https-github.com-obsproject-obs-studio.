@@ -14,7 +14,7 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
 
 ### Prerequisites
 
-* Debian Bullseye
+* Debian Bullseye / Bookworm
 * Git
 
 ### Build procedure
@@ -42,17 +42,18 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
 
 ## Option B: Custom Debian builds
 
-Custom Debian builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/building-obs-studio#cmake).
+Custom Debian builds allow full customization of the desired build configuration but also require manual setup and preparation.  
+Available CMake configuration variables can be found in the [CMake build system documentation](https://github.com/obsproject/obs-studio/wiki/building-obs-studio#cmake).
 
 ### Prerequisites
 
-* Debian Bullseye
-* CMake 3.16 or newer
+* Debian Bullseye / Bookworm
+* CMake 3.16 or newer (3.25+ on Bookworm)
 * Git
 * Ninja
 * *Optional:* CCache to improve compilation speeds on consecutive builds
-* For browser source and browser panel support, the pre-built CEF framework is needed:
-  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2)
+* For browser source and browser panel support, the pre-built CEF framework is needed:   
+  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2) - This is handled automatically with the linux dependencies script.
 * Several additional dependencies (see step 2 below)
 
 ### Build procedure
@@ -66,14 +67,10 @@ Custom Debian builds allow full customization of the desired build configuration
 
 #### 2. Get the dependencies
 
-* To download and set up most preconditions mentioned above, you can also run the script `CI/linux/01_install_dependencies.sh` from the checkout directory (run it with the `--help` switch to see all available options). 
-
-**NOTE:** The directory where the script will download and setup the dependencies in cannot be changed.
-
-* Alternatively the required dependencies can be installed using `apt`:
+* To download and set up the preconditions mentioned above install the following packages using `apt`:
     * Build system dependencies
     ```
-    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git
+    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git 
     ```
 
     * OBS dependencies (core):
@@ -81,7 +78,7 @@ Custom Debian builds allow full customization of the desired build configuration
     sudo apt install libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libavutil-dev libswresample-dev libswscale-dev libx264-dev libcurl4-openssl-dev libmbedtls-dev libgl1-mesa-dev libjansson-dev libluajit-5.1-dev python3-dev libx11-dev libxcb-randr0-dev libxcb-shm0-dev libxcb-xinerama0-dev libxcb-composite0-dev libxcomposite-dev libxinerama-dev libxcb1-dev libx11-xcb-dev libxcb-xfixes0-dev swig libcmocka-dev libxss-dev libglvnd-dev libgles2-mesa libgles2-mesa-dev libwayland-dev librist-dev libsrt-openssl-dev libpci-dev
     ```
 
-    * OBS dependencies (UI):
+    * OBS Qt6 dependencies (UI):
     ```
     sudo apt install qt6-base-dev qt6-base-private-dev libqt6svg6-dev qt6-wayland qt6-image-formats-plugins
     ```
@@ -95,16 +92,35 @@ Custom Debian builds allow full customization of the desired build configuration
     ```
     sudo apt install libasound2-dev libfdk-aac-dev libfontconfig-dev libfreetype6-dev libjack-jackd2-dev libpulse-dev libsndio-dev libspeexdsp-dev libudev-dev libv4l-dev libva-dev libvlc-dev libdrm-dev
     ```
+	* Use dependencies script to download & install the Chromium Embedded Framework (CEF) and run a dependencies check:  
+	```
+	./CI/linux/01-01_install_dependencies.sh
+	```
 
 #### 3. Set up the build project
 
 1. Run CMake to generate a build environment
 
+- 1.1. To generate a Qt6 build (The default since OBS Studio version 28+)  
+(This forces the use of Qt6 during CMake configuration as Qt5 is a default package in Debian Bullseye and Bookworm)
 ```
 cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
-    -DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
-    -DENABLE_PIPEWIRE=OFF \
-    -DENABLE_AJA=0
+	-DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
+	-DENABLE_PIPEWIRE=OFF \
+	-DENABLE_AJA=0 \
+	-DQT_VERSION=6 
+```
+
+
+- 1.2. If you need to generate a legacy Qt5 build:  
+(This forces the use of Qt5 during CMake configuration to generate legacy builds - can be used on Debian systems that may also have Qt6 installed when a legacy build is required)
+
+```
+cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
+	-DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
+	-DENABLE_PIPEWIRE=OFF \
+	-DENABLE_AJA=0 \
+	-DQT_VERSION=5 
 ```
 
 **Optional Settings:**
@@ -121,16 +137,38 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 2. Run `cmake --build YOUR_BUILD_DIRECTORY -t libobs` to build only libobs or any other valid target
 3. Run `cmake --build YOUR_BUILD_DIRECTORY -t clean` to clean your current build directory
 
+#### 5. Create a Debian package
+
+1. Run `cmake --build YOUR_BUILD_DIRECTORY --target package` - CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
+
 #### 6. Install the project
 
+**6.1. Holding back the PPA obs-studio Package**  
+
+The current Debian Bullseye and Bookworm PPA versions of obs-studio are built against Qt5 along with them being legacy builds of OBS it can break the functionality of plugins built for OBS 28+ as plugins for 28+ are built against Qt6, this Qt version mismatch has been shown to lead to OBS failing to start when plugins built for 28+ are installed in a system that has the Qt5 legacy OBS installed due to the way that Qt handles Qt version mismatch errors.  
+
+To avoid apt installing the PPA version over the local build version a package hold needs to be placed onto the obs-studio PPA package to block apt from installing the PPA version over the locally built version when running system updates, the effect of the package hold will preserve the locally built version of OBS through system updates.  
+
+To hold back the PPA package follow these instructions:  
+
+1. Run `sudo apt-mark hold obs-studio` to mark the PPA version of obs-studio as a held-back package.  
+
+If you need to undo the PPA package hold in the future run `sudo apt-mark unhold obs-studio`, afterwards when you run `sudo apt update && sudo apt upgrade` in the normal way apt will install the PPA version of obs-studio and remove the locally built version in the process.
+
+**2. Installing with the APT package manager**   
+
+Using apt to manage your locally built package means that installation and updating of the local package is all handled by apt which is the recommended method of package handling on Debian, this leaves your system clean after a package install or removal and makes package upgrades as simple as generating a new build and installing it with the method described in this section.  
+
+1. From your obs-studio folder navigate into your build directory.  
+2. Inside the build directory run `sudo apt install ./obs-studio-29.1.1-*-Linux.deb`  
+Replacing `29.1.1` in the command above with the version of obs-studio that you have packaged.  
+apt will then install the locally built obs-studio `.deb` package into `/usr/local/`.  
+
+**7. Custom install location**  
 Installation will use the directory specified via `-DCMAKE_INSTALL_PREFIX` or can be customised with the `--prefix` switch:
 
 1. Run `cmake --install YOUR_BUILD_DIRECTORY` to install OBS to the prefix the project was configured with
 2. Run `cmake --install YOUR_BUILD_DIRECTORY --prefix <YOUR_INSTALL_LOCATION>` to install OBS to a custom location
-
-#### 7. Create Debian package
-
-1. Run `cmake --build YOUR_BUILD_DIRECTORY --target package` - CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
 
 # Red Hat-based
 
