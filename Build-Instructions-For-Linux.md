@@ -51,9 +51,9 @@ Available CMake configuration variables can be found in the [CMake build system 
 * CMake 3.16 or newer (3.25+ on Bookworm)
 * Git
 * Ninja
-* *Optional:* CCache to improve compilation speeds on consecutive builds
-* For browser source and browser panel support, the pre-built CEF framework is needed:   
-  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2) - This is handled automatically with the linux dependencies script.
+* *Optional:* Ccache to improve compilation speeds on consecutive builds
+* For browser source and browser panel support, the pre-built CEF framework is needed:
+  * Chromium Embedded Framework (CEF) [x86_64](https://cdn-fastly.obsproject.com/downloads/cef_binary_5060_linux64.tar.bz2) - This is handled automatically with the Linux dependencies script.
 * Several additional dependencies (see step 2 below)
 
 ### Build procedure
@@ -70,7 +70,7 @@ Available CMake configuration variables can be found in the [CMake build system 
 * To download and set up the preconditions mentioned above install the following packages using `apt`:
     * Build system dependencies
     ```
-    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git 
+    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git
     ```
 
     * OBS dependencies (core):
@@ -90,19 +90,19 @@ Available CMake configuration variables can be found in the [CMake build system 
 
     * Plugin dependencies:
     ```
-    sudo apt install libasound2-dev libfdk-aac-dev libfontconfig-dev libfreetype6-dev libjack-jackd2-dev libpulse-dev libsndio-dev libspeexdsp-dev libudev-dev libv4l-dev  libva-dev libvlc-dev libdrm-dev nlohmann-json3-dev libwebsocketpp-dev libasio-dev
+    sudo apt install libasound2-dev libfdk-aac-dev libfontconfig-dev libfreetype6-dev libjack-jackd2-dev libpulse-dev libsndio-dev libspeexdsp-dev libudev-dev libv4l-dev libva-dev libvlc-dev libdrm-dev nlohmann-json3-dev libwebsocketpp-dev libasio-dev
     ```
 	* Use dependencies script to download & install the Chromium Embedded Framework (CEF) and run a dependencies check:  
 	```
-	./CI/linux/01-01_install_dependencies.sh
+	./CI/linux/01_install_dependencies.sh
 	```
 
 #### 3. Set up the build project
 
 1. Run CMake to generate a build environment
 
-- 1.1. To generate a Qt6 build (The default since OBS Studio version 28+)  
-(This forces the use of Qt6 during CMake configuration as Qt5 is a default package in Debian Bullseye and Bookworm)
+- 1.1. To generate a Qt6 build (the default since OBS Studio version 28+)  
+This forces the use of Qt6 during CMake configuration as Qt5 is a default package in Debian Bullseye and Bookworm.
 ```
 cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 	-DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
@@ -113,7 +113,7 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 
 
 - 1.2. If you need to generate a legacy Qt5 build:  
-(This forces the use of Qt5 during CMake configuration to generate legacy builds - can be used on Debian systems that may also have Qt6 installed when a legacy build is required)
+This forces the use of Qt5 during CMake configuration to generate legacy builds. This can be used on Debian systems that may also have Qt6 installed when a legacy build is required.
 
 ```
 cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
@@ -139,7 +139,7 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 
 #### 5. Create a Debian package
 
-1. Run `cmake --build YOUR_BUILD_DIRECTORY --target package` - CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
+1. Run `cmake --build YOUR_BUILD_DIRECTORY --target package`. CMake will handle all operations necessary to create a `.deb` package archive, including necessary dependencies.
 
 #### 6. Install the project
 
