@@ -84,5 +84,5 @@ If you're still having difficulty getting browser sources to render on a laptop 
 
 ***
 
-## Special note from Jim
+## Special note from Lain
 I know it's annoying. I'm not happy that this is the case either. Unfortunately, there's nothing anyone can really do about it. This is just the way laptops are designed in order to save power and battery life.
