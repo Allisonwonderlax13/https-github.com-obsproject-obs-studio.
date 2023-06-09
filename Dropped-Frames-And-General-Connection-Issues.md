@@ -46,7 +46,7 @@ Possible reasons for dropped frames are:
 
 It is nearly impossible for OBS Studio to cause dropped frames. Bear this in mind if you have recently updated OBS Studio and believe it is the cause of your dropped frames.
 
-For a detailed, technical explanation on what dropped frames are, please check [this post](https://gist.github.com/jp9000/5793a3f4ae15913c858913d6a00824b7) written by Jim.
+For a detailed, technical explanation on what dropped frames are, please check [this post](https://gist.github.com/jp9000/5793a3f4ae15913c858913d6a00824b7) written by Lain.
 
 # Solutions
 
