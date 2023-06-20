@@ -13,18 +13,23 @@
 
     `git clone --recursive https://github.com/obsproject/obs-studio.git`
 
-2. Check available CMake presets `cmake --list-presets`
-3. Select preset for desired build architecture (`macos-arm64` or `macos-x86_64`): `cmake --preset macos-arm64`
-
+2. Check available CMake presets: `cmake --list-presets`
+3. Select the `macos` preset: `cmake --preset macos`
+    - This selects the **local** system architecture by default
+    - To choose a different architecture, provide it via an additional CMake flag: `cmake --preset macos -DCMAKE_OSX_ARCHITECTURES=<ARCH>`
+    - Available and supported architectures are `x86_64` for Intel-Macs and `arm64` for Apple Silicon-Macs
+    - `arm64e` is **not** supported, as its not supported by macOS for anything but system frameworks
+    - Any other CMake variables can be provided as usual and can also override variables set by the preset if necessary
+ 
 ## Build obs-studio
 
-1. Open the Xcode project file in the generated build directory (`build_arm64` or `build_x86_64`)
+1. Open the Xcode project file in the generated build directory (`build_macos`)
 2. Select the `obs-studio` scheme from the scheme browser at the top of the Xcode window
 3. Press `<CMD>+<B>` to build the project (or `<CMD>+<R>` to build and run it).
 
 Alternatively the project can also be built on the command line:
 
-1. Change into the generated build directory (`build_arm64` or `build_x86_64`)
+1. Change into the generated build directory (`build_macos`)
 2. Run `xcodebuild -configuration <Debug|Release|RelWithDebInfo|MinSizeRel> -scheme obs-studio -parallelizeTargets -destination "generic/platform=macOS,name=Any Mac"`
 3. Run the app via `open UI/<Debug|Release|RelWithDebInfo|MinSizeRel>/OBS.app`
 
@@ -52,8 +57,8 @@ To generate optimised and fully codesigned application bundles, use the archive 
 
 Custom build options can be provided to CMake after specifying the CMake preset:
 
-* Either specify them directly as cache variables, e.g. `cmake --preset macos-arm64 -DENABLE-BROWSER:BOOL=OFF`
-* OR run the CLI UI with a preset to change options directly: `ccmake --preset macos-arm64` 
+* Either specify them directly as cache variables, e.g. `cmake --preset macos -DENABLE-BROWSER:BOOL=OFF`
+* OR run the CLI UI with a preset to change options directly: `ccmake --preset macos` 
 
 ## Codesigning
 
