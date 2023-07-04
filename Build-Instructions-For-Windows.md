@@ -4,7 +4,7 @@ Automatic Windows builds allow building OBS with minimal input and setup. Necess
 
 ## Prerequisites
 
-* Windows PowerShell (v5+ and more recent)
+* Windows PowerShell (v7+ and more recent)
 * Visual Studio 2022 (at least Community Edition)
   * Windows 10 SDK (minimum 10.0.20348.0)
   * C++ ATL for latest v143 build tools (x86 & x64)
@@ -23,35 +23,35 @@ Automatic Windows builds allow building OBS with minimal input and setup. Necess
 ```powershell
 # Download and set up dependencies, then build OBS for local host 
 # architecture with common feature set
-CI/build-windows.ps1
+.github/scripts/Build-Windows.ps1
 
 # Check for dependencies installable via Chocolatey
-CI/build-windows.ps1 -Choco
+.github/scripts/Build-Windows.ps1 -Choco
 
 # Skip download and setup of dependencies
-CI/build-windows.ps1 -SkipDependencyChecks
+.github/scripts/Build-Windows.ps1 -SkipDependencyChecks
 
 # Build 32-bit only
-CI/build-windows.ps1 -BuildArch '32-bit'
+.github/scripts/Build-Windows.ps1 -BuildArch '32-bit'
 
 # Build both architectures
-CI/build-windows.ps1 -CombinedArchs
+.github/scripts/Build-Windows.ps1 -CombinedArchs
 
 # Create a zip archive with OBS and all required libraries
-CI/build-windows.ps1 -Package
+.github/scripts/Build-Windows.ps1 -Package
 
 # Create a debug build
-CI/build-windows.ps1 -BuildConfiguration Debug
+.github/scripts/Build-Windows.ps1 -BuildConfiguration Debug
 
 # Use `my_build_dir` prefix as build directory
-CI/build-windows.ps1 -BuildDirectory my_build_dir
+.github/scripts/Build-Windows.ps1 -BuildDirectory my_build_dir
 
 # Build and package a combined 64-bit and 32-bit of OBS with Release configuration, 
 # using more verbose output and skipping dependency checks
-CI/build-windows.ps1 -SkipDependencyChecks -CombinedArchs -BuildConfiguration Release -Verbose
+.github/scripts/Build-Windows.ps1 -SkipDependencyChecks -CombinedArchs -BuildConfiguration Release -Verbose
 
 # Show all available options
-CI/build-windows.ps1 -Help
+.github/scripts/Build-Windows.ps1 -Help
 ```
 
 # Option B: Custom Windows builds
@@ -84,7 +84,7 @@ Custom Windows builds allow full customization of the desired build configuratio
 
 ### 2. Get the dependencies
 
-* Download and set up most preconditions mentioned above, you can also run the script `CI/windows/01_install_dependencies.ps1` (run it with the `-Help` switch to see all available options). 
+* Download and set up most preconditions mentioned above, you can also run the script `CI/windows/01_install_dependencies.ps1` (run it with the `-Help` switch to see all available options) (outdated). 
 
 **NOTE:** You cannot change the directory where the script will download and setup the dependencies in.
 
