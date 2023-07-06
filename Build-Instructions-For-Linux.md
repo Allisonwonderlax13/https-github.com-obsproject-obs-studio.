@@ -108,6 +108,7 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 	-DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
 	-DENABLE_PIPEWIRE=OFF \
 	-DENABLE_AJA=0 \
+        -DENABLE_WEBRTC=0 \
 	-DQT_VERSION=6 
 ```
 
@@ -120,6 +121,7 @@ cmake -S . -B YOUR_BUILD_DIRECTORY -G Ninja \
 	-DCEF_ROOT_DIR="../obs-build-dependencies/cef_binary_5060_linux64" \
 	-DENABLE_PIPEWIRE=OFF \
 	-DENABLE_AJA=0 \
+        -DENABLE_WEBRTC=0 \
 	-DQT_VERSION=5 
 ```
 
@@ -155,7 +157,7 @@ To hold back the PPA package follow these instructions:
 
 If you need to undo the PPA package hold in the future run `sudo apt-mark unhold obs-studio`, afterwards when you run `sudo apt update && sudo apt upgrade` in the normal way apt will install the PPA version of obs-studio and remove the locally built version in the process.
 
-**2. Installing with the APT package manager**   
+**6.2. Installing with the APT package manager**   
 
 Using apt to manage your locally built package means that installation and updating of the local package is all handled by apt which is the recommended method of package handling on Debian, this leaves your system clean after a package install or removal and makes package upgrades as simple as generating a new build and installing it with the method described in this section.  
 
