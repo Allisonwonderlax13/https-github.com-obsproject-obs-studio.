@@ -1,19 +1,26 @@
-Want to contribute to OBS but don't know how to program? Help us with our translations!
 
-To help us manage our translations, we use a service called [Crowdin](https://crowdin.com/), which is free to use for open source projects. You can check out the OBS Studio translation project [here](https://crowdin.com/project/obs-studio).
+Want to contribute to OBS but don't know how to program? Help us with our translations on [Crowdin](https://crowdin.com/)!
 
-**How do I contribute?**
+Please read the following before contributing.
 
-* Register an account on Crowdin.
-* Find the language you want to help contribute to.
+**Context is mandatory**
+
+In many instances, understanding the context is essential to providing a correct translation. Many strings do have screenshots added to their context section, although you have the best understanding by running OBS Studio yourself with the language you are translating. This is also a great way of proofreading.
+
+**Technical Level**
+
+Strings may contain words on a technical level. Do not suggest a translation if you do not understand at least the rough meaning of such a word. Sometimes technical words should not be translated.
+
+**After reading the above, how do I contribute?**
+* [Register an account](https://accounts.crowdin.com/register).
+* Go to the [project page](https://crowdin.com/project/obs-studio).
+* Find the language you want to contribute to.
+  * Contact [Vainock](https://crowdin.com/messages/create/15326052/51028) if your language is not available or you have other questions.
 * Open one of the strings files and look at the strings that can be translated or have already been translated.
 * If you see something that has not been translated yet, suggest a translation!
 * If you see something that has been translated well, vote it up!
 * If you see something that has been translated poorly, vote it down and make a new suggestion!
 
-**Tips**
+Crowdin's Knowledge Base provides information on [getting started](https://support.crowdin.com/for-volunteer-translators/#explore-your-workspace).
 
-* If you need more context about how a string is used, open a new issue in the translation editor and request additional contextualization.
-* If you're editing Website strings, keep an eye on the context to make sure translating them doesn't change the functionality.
-* Crowdin's Knowledge Base provides information on getting started as a translator. See [Work in the Editor](https://support.crowdin.com/for-volunteer-translators/#work-in-the-editor).
-* For any issues or questions you can directly contact [Vainock](https://crowdin.com/messages/create/15326052/51028) who is happy to assist.
+Changes you make on Crowdin will be included in the next major release.
