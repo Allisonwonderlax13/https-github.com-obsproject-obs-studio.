@@ -57,7 +57,7 @@ Live software encoders:
 * srt-live-transmit (which is a demo app from libsrt developpers; needs to be compiled from source)  
 * ristreceiver and ristsender apps (demo apps from librist developpers; can be downloaded [here](https://github.com/tsduck/rist-installer)).    
 * [Larix Broadcaster](https://softvelum.com/larix/) and Larix Screencaster can broadcast SRT & RIST from [Android](https://play.google.com/store/apps/details?id=com.wmspanel.larix_broadcaster) and [iOS](https://apps.apple.com/us/app/larix-broadcaster/id1042474385). [Larix Talkback](https://softvelum.com/larix/talkback/) feature allows receiving SRT audio return feed back to mobile devices.
-* [CameraFi Live](https://www.camerafi.com/camerafi-live/) ([Android](https://play.google.com/store/apps/details?id=com.vaultmicro.camerafi.live) and [iOS](https://apps.apple.com/app/id6448773005).
+* [CameraFi Live](https://www.camerafi.com/camerafi-live/) ([Android](https://play.google.com/store/apps/details?id=com.vaultmicro.camerafi.live) and [iOS](https://apps.apple.com/app/id6448773005)).
 
 Hardware encoders are also available at various vendors.
   
