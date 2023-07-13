@@ -88,7 +88,17 @@ Please see the build instructions for:
     ```bash
     sudo pacman -Sy v4l2loopback-dkms
     ```
+  * Optional: v4l2loopback-utils
 
+    You will generally have to load the kernel module every time you start OBS and use the Virtual Camera. This can be avoided using modprobe and the v4l2loopback-utils package, which adds command line utilities.
+    ```bash
+    sudo pacman -Sy v4l2loopback-utils
+    ```
+    After package installation, you can use the following command line commands to start a v4l2loopback device with the correct options for OBS on boot:
+    ```bash
+    echo "options v4l2loopback devices=1 video_nr=63 card_label='OBS Virtual Camera'    exclusive_caps=1" | sudo tee /etc/modprobe.d/v4l2loopback.conf
+    echo "v4l2loopback" | sudo tee /etc/modules-load.d/v4l2loopback.conf
+    ```
 
 
 ## Supported builds
