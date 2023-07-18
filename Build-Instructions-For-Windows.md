@@ -30,7 +30,7 @@
 
 Alternatively the project can also be built on the command line:
 
-1. Make sure the currenty directory is set to the `obs-studio` source code directory (if you continued from "Configuring Build Project" above, you are already there)
+1. Make sure the current directory is set to the `obs-studio` source code directory (if you continued from "Configuring Build Project" above, you are already there)
 2. Run `cmake --build --preset windows-x64`
 3. Run the app via `./UI/<Debug|Release|RelWithDebInfo|MinSizeRel>/rundir/bin/64bit/obs64.exe`
 
