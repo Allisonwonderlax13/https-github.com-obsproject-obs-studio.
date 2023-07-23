@@ -28,16 +28,13 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
 ```
     # Download and set up dependencies, then build OBS for local host 
     # architecture with common feature set
-    CI/build-linux.sh
+    .github/scripts/build-linux
 
     # Skip download and setup of dependencies
-    CI/build-linux.sh --skip-dependency-checks
+    .github/scripts/build-linux --skip-deps
 
     # Show all available options
-    CI/build-linux.sh --help
-
-    # Use `my_build_dir` prefix as build directory
-    CI/build-linux.sh --build-dir my_build_dir
+    .github/scripts/build-linux --help
 ```
 
 ## Option B: Custom Debian builds
@@ -70,7 +67,7 @@ Available CMake configuration variables can be found in the [CMake build system 
 * To download and set up the preconditions mentioned above install the following packages using `apt`:
     * Build system dependencies
     ```
-    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git
+    sudo apt install cmake ninja-build pkg-config clang clang-format build-essential curl ccache git zsh
     ```
 
     * OBS dependencies (core):
@@ -94,7 +91,7 @@ Available CMake configuration variables can be found in the [CMake build system 
     ```
 	* Use dependencies script to download & install the Chromium Embedded Framework (CEF) and run a dependencies check:  
 	```
-	./CI/linux/01_install_dependencies.sh
+	.github/scripts/build-linux --skip-build
 	```
 
 #### 3. Set up the build project
