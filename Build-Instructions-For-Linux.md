@@ -87,7 +87,7 @@ Available CMake configuration variables can be found in the [CMake build system 
 
     * Plugin dependencies:
     ```
-    sudo apt install libasound2-dev libfdk-aac-dev libfontconfig-dev libfreetype6-dev libjack-jackd2-dev libpulse-dev libsndio-dev libspeexdsp-dev libudev-dev libv4l-dev libva-dev libvlc-dev libdrm-dev nlohmann-json3-dev libwebsocketpp-dev libasio-dev
+    sudo apt install libasound2-dev libfdk-aac-dev libfontconfig-dev libfreetype6-dev libjack-jackd2-dev libpulse-dev libsndio-dev libspeexdsp-dev libudev-dev libv4l-dev libva-dev libvlc-dev libvpl-dev libdrm-dev nlohmann-json3-dev libwebsocketpp-dev libasio-dev
     ```
 	* Use dependencies script to download & install the Chromium Embedded Framework (CEF) and run a dependencies check:  
 	```
