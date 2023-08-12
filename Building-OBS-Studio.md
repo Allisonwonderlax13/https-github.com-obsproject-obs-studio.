@@ -160,7 +160,6 @@ To change the **CMake generator** (and the build tool used to compile the projec
 * Ninja
 * Xcode
 * Visual Studio 17 2022
-* Visual Studio 16 2019
 
 Other generators are supported by CMake but have neither been tested nor are officially supported by the OBS team.
 
