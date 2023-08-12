@@ -29,7 +29,7 @@ This article explains some intricacies of OBS' CMake build system structure and 
 
 ## OBS CMake Build System
 
-OBS requires at least CMake v3.16 or newer due to many quality-of-life changes introduced in this version. On Windows and macOS the most current CMake version (as of writing v3.22) is preferred, even if the current feature level is capped to v3.21.
+OBS requires at least CMake v3.22 or newer due to many quality-of-life changes introduced in this version. On Windows and macOS the most current CMake version (as of writing v3.27) is preferred, even if the current feature level is capped to v3.22.
 
 Due to OBS' modular structure, some build configuration settings are available globally, while others are introduced by modules. They are listed here in order of appearance (as defined by each `CMakeLists.txt` file, which is processed procedurally by CMake).
 
