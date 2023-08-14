@@ -30,9 +30,6 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
     # architecture with common feature set
     .github/scripts/build-linux
 
-    # Skip download and setup of dependencies
-    .github/scripts/build-linux --skip-deps
-
     # Show all available options
     .github/scripts/build-linux --help
 ```
