@@ -29,9 +29,6 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
     # Download and set up dependencies, then build OBS for local host 
     # architecture with common feature set
     .github/scripts/build-linux
-
-    # Show all available options
-    .github/scripts/build-linux --help
 ```
 
 ## Option B: Custom Debian builds
