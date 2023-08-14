@@ -23,14 +23,6 @@ Automatic Debian builds allow building OBS with minimal input and setup - necess
 
     `git clone --recursive https://github.com/obsproject/obs-studio.git`
 
-* To do a **fully automated** build, open Terminal, switch to the checkout directory then run one of the following commands:
-
-```
-    # Download and set up dependencies, then build OBS for local host 
-    # architecture with common feature set
-    .github/scripts/build-linux
-```
-
 ## Option B: Custom Debian builds
 
 Custom Debian builds allow full customization of the desired build configuration but also require manual setup and preparation.  
