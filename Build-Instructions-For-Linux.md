@@ -281,6 +281,7 @@ sudo dnf install \
           luajit-devel \
           make \
           mbedtls-devel \
+          oneVPL-devel \
           pciutils-devel \
           pipewire-devel \
           pulseaudio-libs-devel \
@@ -308,7 +309,7 @@ sudo dnf install \
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_5060_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
+      cmake -DENABLE_BROWSER=ON -DCEF_ROOT_DIR="../../cef_binary_5060_linux64" -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF -DENABLE_WEBRTC=OFF ..
       make -j$(nproc)
       sudo make install
       echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
@@ -321,7 +322,7 @@ sudo dnf install \
       git clone --recursive https://github.com/obsproject/obs-studio.git
       cd obs-studio
       mkdir build && cd build
-      cmake -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF ..
+      cmake -DENABLE_BROWSER=OFF -DENABLE_AJA=OFF -DENABLE_NEW_MPEGTS_OUTPUT=OFF -DENABLE_WEBRTC=OFF ..
       make -j$(nproc)
       sudo make install
       echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/local.conf -a
