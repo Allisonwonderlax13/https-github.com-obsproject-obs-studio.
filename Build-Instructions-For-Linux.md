@@ -388,7 +388,7 @@ sudo dnf install \
 
 # Linux portable mode (all distros)
 
-* Please note that you need to install the build dependencies for your distribution before following this steps. See above.
+* Please note that you need to install the build dependencies for your distribution before following these steps. See above.
 
 * You can build in portable mode on Linux, which installs all the files to an isolated directory.
 
