@@ -1,3 +1,6 @@
+# Note: This page contains legacy instructions that are no longer advised and only exists for archival purposes. Please refer to the [knowledge base](https://obsproject.com/kb/virtual-camera-troubleshooting) for up-to-date information.
+
+
 
 A list of programs this is currently compatible with. Please note that this list is not complete. Also note you have to fully restart the program you are using to recognize the virtual camera.
 
