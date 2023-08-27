@@ -1,9 +1,11 @@
 
-Want to contribute to OBS but don't know how to program? Help us with our translations on [Crowdin](https://crowdin.com/)!
+Want to contribute to OBS but don't know how to program? Help us with our translations on [Crowdin](https://crowdin.com/)! Please read the following before contributing.
 
-Please read the following before contributing.
+**Code of Conduct**
 
-**Context is mandatory**
+By participating in this translation project, you agree to abide by the [OBS Project Code of Conduct](https://github.com/obsproject/obs-studio/blob/master/COC.rst).
+
+**Context**
 
 In many instances, understanding the context is essential to providing a correct translation. Many strings do have screenshots added to their context section, although you have the best understanding by running OBS Studio yourself with the language you are translating. This is also a great way of proofreading.
 
