@@ -83,16 +83,22 @@ As of 2023-05-19 Debian 11 "Bullseye" provides 26.1.2.
 
 ## Fedora
 
-* OBS Studio is included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
+* OBS Studio is included in Fedora. You can install OBS with the following command:
+
+   ```bash
+   sudo dnf install obs-studio
+   ```
+
+* The NVIDIA driver, the OBS x264 plugin, and the OBS VLC plugins are included in RPM Fusion.  If you do not have it configured (if you're not sure, then you probably don't have it), you can do so with the following command:
 
    ```bash
    sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
    ```
 
-* Then you can install OBS with the following command (this pulls all dependencies, including NVENC-enabled FFmpeg):
+* For the OBS x264 and VLC plugins, you can install them with this command:
 
    ```bash
-   sudo dnf install obs-studio
+   sudo dnf install obs-studio-plugin-x264 obs-studio-plugin-vlc-video
    ```
 
 * For NVIDIA Hardware accelerated encoding, make sure you have CUDA installed:
