@@ -268,8 +268,10 @@ sudo dnf install \
           libavdevice-free-devel \
           librist-devel \
           libcurl-devel \
+          libdatachannel-devel \
           libdrm-devel \
           libglvnd-devel \
+          libqrcodegencpp-devel \
           libuuid-devel \
           libva-devel \
           libv4l-devel \
