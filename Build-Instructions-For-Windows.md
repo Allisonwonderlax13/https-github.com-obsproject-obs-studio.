@@ -39,7 +39,7 @@ Alternatively the project can also be built on the command line:
 Custom build options can be provided to CMake. You can either:
 
 * Specify them directly as cache variables
-  * From command line when Configuring Build Project: `cmake --preset windows-x64 -DENABLE-BROWSER:BOOL=OFF`)
+  * From command line when Configuring Build Project: `cmake --preset windows-x64 -DENABLE_BROWSER:BOOL=OFF`)
   * In the CMake GUI 
 * Override them in a CMake User Preset specified in your local CMakeUserPresets.json
 
