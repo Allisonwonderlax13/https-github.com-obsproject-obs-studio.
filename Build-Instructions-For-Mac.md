@@ -57,7 +57,7 @@ To generate optimised and fully codesigned application bundles, use the archive 
 
 Custom build options can be provided to CMake after specifying the CMake preset:
 
-* Either specify them directly as cache variables, e.g. `cmake --preset macos -DENABLE-BROWSER:BOOL=OFF`
+* Either specify them directly as cache variables, e.g. `cmake --preset macos -DENABLE_BROWSER:BOOL=OFF`
 * OR run the CLI UI with a preset to change options directly: `ccmake --preset macos` 
 
 ## Codesigning
